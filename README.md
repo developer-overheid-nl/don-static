@@ -2,7 +2,7 @@
 
 Repository with static files supporting open APIs, open repositories, and other functionalities. 
 
-All files under `srv` are available at https://developer.overheid.nl/srv
+All files under `cdn` are available at https://developer.overheid.nl/cdn
 
 ## development
 
