@@ -1,4 +1,4 @@
-# serve
+# static files
 
 Repository with static files supporting open APIs, open repositories, and other functionalities. 
 
