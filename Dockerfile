@@ -1,2 +1,2 @@
 FROM nginx:latest
-COPY ./openapi /usr/share/nginx/html/
+COPY ./srv /usr/share/nginx/html/

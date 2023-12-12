@@ -1,7 +1,8 @@
-# openAPI
+# serve
 
-Repository with static files supporting various openAPI functionalities. All
-files under `openapi` are available at https://developer.overheid.nl/openapi
+Repository with static files supporting open APIs, open repositories, and other functionalities. 
+
+All files under `srv` are available at https://developer.overheid.nl/srv
 
 ## development
 
