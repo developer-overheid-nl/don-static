@@ -1,0 +1,9 @@
+replicaCount: 2
+
+ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  host: developer.overheid.nl
+  path: /cdn
+  tls:
+    enabled: true

@@ -1,0 +1,47 @@
+include:
+  - project: commonground/don/ci/templates
+    file: templates/base.gitlab-ci.yml
+
+stages:
+  - build
+  - release
+  - deploy
+
+Build:
+  extends: .don_build_image
+
+Release:
+  extends: .don_release_image
+  dependencies:
+    - Build
+  needs:
+    - Build
+
+Deploy to production:
+  stage: deploy
+  image: registry.gitlab.com/commonground/core/review-app-deployer:latest
+  variables:
+    HELM_KUBECONTEXT: "commonground/don/ci/kubernetes-agents:production"
+    HELM_MAX_HISTORY: "2"
+    K8S_NAMESPACE: tn-commonground-don-static
+  before_script:
+    - RELEASE_IMAGE="`cat ci_release_image.txt`"
+    - IMAGE_REPOSITORY="${RELEASE_IMAGE%:*}"
+    - IMAGE_TAG="${RELEASE_IMAGE#*:}"
+  script:
+    - |
+      helm upgrade static ./helm/static \
+        --install \
+        --namespace ${K8S_NAMESPACE} \
+        --set-string image.repository=${IMAGE_REPOSITORY} \
+        --set-string image.tag=${IMAGE_TAG} \
+        --values helm/static/values-production.yaml
+  environment:
+    name: production
+    url: https://developer.overheid.nl/cdn
+  dependencies:
+    - Release
+  needs:
+    - Release
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

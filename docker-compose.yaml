@@ -1,0 +1,4 @@
+services:
+  static:
+    image: ${IMAGE_REPOSITORY:-don/static}:${IMAGE_TAG:-dev}
+    build: "."

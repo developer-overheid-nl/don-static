@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: don/static
+  tag: dev
+  pullPolicy: IfNotPresent
+
+ingress:
+  annotations: {}
+  host: static.minikube
+  path: /cdn
+  tls:
+    enabled: false
+    secretName: don-static-ingress-tls
+
+podAnnotations: {}
