@@ -2,26 +2,7 @@
 
 Repository with static files supporting open APIs, open repositories, and other functionalities. 
 
-All files under `cdn` are available at https://developer.overheid.nl/cdn
+All files in this repository are available at https://developer.overheid.nl/static
 
-## development
-
-Instructions for running and testing the webserver:
-
-### Prerequisites
-
-- Docker
-
-### Run
-
-```sh
-docker run --rm -p 1000:80 $(docker build -q .)
-```
-
-Visit the website at: http://localhost:1000/
-
-## Licence
-
-Copyright © VNG Realisatie 2023
-
-[Licensed under the EUPLv1.2](LICENCE.md)
+**NOTE**: don't create files under the folders `bundles`, `dist`, `images` and
+`vendor` because those folders are reserved for the site https://developer.overheid.nl
