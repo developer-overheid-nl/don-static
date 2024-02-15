@@ -1,6 +1,0 @@
-apiVersion: v2
-name: static
-description: static files provided by developer.overheid.nl
-type: application
-version: 0.1.0
-appVersion: "dev"
