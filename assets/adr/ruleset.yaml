@@ -130,7 +130,7 @@ rules:
   property-casing:
     severity: warn
     given:
-    - "$.*.schemas[*].properties."
+      - "$.*.schemas[*].properties."
     then:
       function: casing
       functionOptions:

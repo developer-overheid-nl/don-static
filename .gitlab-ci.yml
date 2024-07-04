@@ -1,9 +1,0 @@
-stages:
-  - pass
-
-myjob:
-  stage: pass
-  rules:
-      - when: always
-  script:
-      - echo "This pipeline should always pass. Required because all repositories in this group need passing pipelines before merging merge requests"
