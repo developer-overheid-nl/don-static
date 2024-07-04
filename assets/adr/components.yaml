@@ -18,12 +18,12 @@ headers:
         url: https://www.w3.org/wiki/LinkHeader
 
 responses:
-  '400':
+  "400":
     headers:
       API-Version:
-        $ref: '#/headers/API-Version'
+        $ref: "#/headers/API-Version"
       Link:
-        $ref: '#/headers/Link'
+        $ref: "#/headers/Link"
     description: Bad request
     content:
       application/problem+json:
@@ -42,28 +42,28 @@ responses:
                 reason:
                   type: string
                   example: Invalid URI format
-  '204':
+  "204":
     headers:
       API-Version:
-        $ref: '#/headers/API-Version'
+        $ref: "#/headers/API-Version"
     description: Removed
-  '404':
+  "404":
     headers:
       API-Version:
-        $ref: '#/headers/API-Version'
+        $ref: "#/headers/API-Version"
     description: Resource does not exist
-  '403':
+  "403":
     headers:
       API-Version:
-        $ref: '#/headers/API-Version'
+        $ref: "#/headers/API-Version"
     description: Forbidden
-  '401':
+  "401":
     headers:
       API-Version:
-        $ref: '#/headers/API-Version'
+        $ref: "#/headers/API-Version"
     description: Unauthorized
-  '501':
+  "501":
     headers:
       API-Version:
-        $ref: '#/headers/API-Version'
+        $ref: "#/headers/API-Version"
     description: Method not implemented
