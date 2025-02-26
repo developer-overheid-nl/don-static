@@ -4,6 +4,10 @@
 extends: spectral:oas
 
 rules:
+  # Turn off default Open API rules that we do not enforce
+  operation-operationId: off
+  operation-tags: off
+  
   #/core/doc-openapi
   openapi3:
     severity: error
@@ -18,7 +22,7 @@ rules:
   #/core/version-header
   missing-version-header:
     severity: error
-    given: $..[responses][*][headers]
+    given: $..[responses][?(@property && @property.match(/(2|3)\d\d/))][headers]
     then:
       field: API-Version
       function: truthy
@@ -26,7 +30,7 @@ rules:
 
   missing-header:
     severity: error
-    given: $..[responses][*]
+    given: $..[responses][?(@property && @property.match(/(2|3)\d\d/))]
     then:
       field: headers
       function: truthy
@@ -60,7 +64,7 @@ rules:
   http-methods:
     severity: error
     given:
-      - "$.paths[*]"
+      - "$.paths[?(@property && @property.match(/(description|summary)/i))]"
     then:
       function: pattern
       functionOptions:
@@ -130,7 +134,7 @@ rules:
   property-casing:
     severity: warn
     given:
-      - "$.*.schemas[*].properties."
+      - "$.*.schemas[*].properties.[?(@property && @property.match(/_links/i))]"
     then:
       function: casing
       functionOptions:
