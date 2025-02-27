@@ -4,10 +4,7 @@
 extends: spectral:oas
 
 rules:
-  # Turn off default Open API rules that we do not enforce
-  operation-operationId: off
-  operation-tags: off
-  
+
   #/core/doc-openapi
   openapi3:
     severity: error
