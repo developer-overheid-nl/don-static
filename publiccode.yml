@@ -1,0 +1,47 @@
+publiccodeYmlVersion: "0.5.0"
+
+name: DON Static
+url: https://github.com/developer-overheid-nl/don-static
+landingURL: https://static.developer.overheid.nl
+softwareType: standalone/web
+developmentStatus: stable
+
+platforms:
+  - web
+
+categories:
+  - it-development
+
+intendedAudience:
+  countries:
+    - NL
+
+description:
+  nl:
+    shortDescription: >-
+      Statische bestanden voor developer.overheid.nl,
+      waaronder OpenAPI-componenten en ADR-rulesets.
+
+    longDescription: |
+      DON Static is een repository met statische bestanden
+      die de functionaliteiten van developer.overheid.nl
+      ondersteunen. De bestanden in de assets-map worden
+      gepubliceerd op https://static.developer.overheid.nl.
+      Hieronder vallen onder andere OpenAPI-componenten,
+      ADR-rulesets en andere bestanden ten behoeve van open
+      API-standaarden en open repositories. De applicatie
+      wordt aangeboden via een nginx Docker-container.
+
+legal:
+  license: EUPL-1.2
+  mainCopyrightOwner: Geonovum
+
+maintenance:
+  type: internal
+  contacts:
+    - name: developer.overheid.nl
+
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - nl
