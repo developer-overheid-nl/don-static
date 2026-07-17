@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/sport-faciliteiten-en-aanbieders-6rlf1u6ng/sportzwembad",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/sport/openapi.json#/components/schemas/Sportzwembad"
+  ],
+  "type": "object",
+  "description": "zwembad",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `zwembad._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./SportzwembadLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aantalHallen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aantal Hallen",
+      "description": "Aantal hallen (ruimtes) in de sportfaciliteit."
+    },
+    "adres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Adres van de sportfaciliteit."
+    },
+    "emailadres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "E-mailadres",
+      "description": "E-mailadres van de sportfaciliteit."
+    },
+    "exploitant": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Exploitant van de sportfaciliteit."
+    },
+    "gebiedsgerichtwerkengebied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van gebiedsgerichtwerkengebied waaronder sportfaciliteit valt."
+    },
+    "geometry": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding van de sportfaciliteit."
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de sportfaciliteit."
+    },
+    "plaats": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Plaats van de sportfaciliteit."
+    },
+    "postcode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Postcode van de sportfaciliteit."
+    },
+    "stadsdeel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Stadsdeel waaronder de sportfaciliteit valt."
+    },
+    "telefoonnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Telefoonnummer van de sportfaciliteit."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Type Sportfaciliteit",
+      "description": "Type sportfaciliteit."
+    },
+    "vastgoedeigenaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Eigenaar van de sportfaciliteit incl. erfpacht/opstal."
+    },
+    "verhuuradministratie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Verhuuradministratie instantie van de sportfaciliteit."
+    },
+    "website": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "description": "Website van de sportfaciliteit.",
+      "maxLength": 200
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

@@ -1,0 +1,646 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/regeltekstannotatiesrenvooi",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/RegeltekstannotatiesRenvooi"
+  ],
+  "title": "Annotaties en renvooi bij artikelstructuur",
+  "type": "object",
+  "properties": {
+    "activiteiten": {
+      "type": "array",
+      "items": {
+        "title": "ActiviteitRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./ActiviteitSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./ActiviteitDelta.schema.json"
+              },
+              "groep": {
+                "title": "ActiviteitengroepRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Activiteitengroep.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./ActiviteitengroepDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "symboolcodes": {
+                "title": "SymboolcodesRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Symboolcodes.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./SymboolcodesDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "gebiedsaanwijzingen": {
+      "type": "array",
+      "items": {
+        "title": "GebiedsaanwijzingRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./GebiedsaanwijzingSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./GebiedsaanwijzingDelta.schema.json"
+              },
+              "groep": {
+                "title": "GebiedsaanwijzinggroepRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Gebiedsaanwijzinggroep.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./GebiedsaanwijzinggroepDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "symboolcodes": {
+                "title": "SymboolcodesRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Symboolcodes.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./SymboolcodesDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": {
+                "title": "TypeGebiedsaanwijzingRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./TypeGebiedsaanwijzing.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./TypeGebiedsaanwijzingDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "instructieregels": {
+      "type": "array",
+      "items": {
+        "title": "InstructieregelRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./InstructieregelSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./InstructieregelDelta.schema.json"
+              },
+              "idealisatie": {
+                "title": "IdealisatieRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Idealisatie.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./IdealisatieDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "instructieregelInstrumenten": {
+                "type": "array",
+                "items": {
+                  "title": "InstrumentRenvooi",
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "./Instrument.schema.json"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "_delta": {
+                          "$ref": "./InstrumentDelta.schema.json"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "instructieregelTaakuitoefeningen": {
+                "type": "array",
+                "items": {
+                  "title": "AdressaatRenvooi",
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "./Adressaat.schema.json"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "_delta": {
+                          "$ref": "./AdressaatDelta.schema.json"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "themas": {
+                "type": "array",
+                "items": {
+                  "title": "ThemaRenvooi",
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "./Thema.schema.json"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "_delta": {
+                          "$ref": "./ThemaDelta.schema.json"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "kaarten": {
+      "type": "array",
+      "items": {
+        "$ref": "./KaartRegeltekstRenvooi.schema.json"
+      }
+    },
+    "locaties": {
+      "type": "array",
+      "items": {
+        "title": "LocatieRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./LocatieSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./LocatieDelta.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "omgevingsnormen": {
+      "type": "array",
+      "items": {
+        "title": "NormRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./NormSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./NormDelta.schema.json"
+              },
+              "eenheid": {
+                "title": "EenheidRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Eenheid.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./EenheidDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "groep": {
+                "title": "NormgroepRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Normgroep.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./NormgroepDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "normwaarden": {
+                "type": "array",
+                "items": {
+                  "title": "NormwaardeRenvooi",
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "./NormwaardeSpec.schema.json"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "_delta": {
+                          "$ref": "./NormwaardeDelta.schema.json"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "symboolcodes": {
+                "title": "SymboolcodesRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Symboolcodes.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./SymboolcodesDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": {
+                "title": "TypeNormRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./TypeNorm.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./TypeNormDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "omgevingswaarden": {
+      "type": "array",
+      "items": {
+        "title": "NormRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./NormSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./NormDelta.schema.json"
+              },
+              "eenheid": {
+                "title": "EenheidRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Eenheid.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./EenheidDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "groep": {
+                "title": "NormgroepRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Normgroep.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./NormgroepDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "normwaarden": {
+                "type": "array",
+                "items": {
+                  "title": "NormwaardeRenvooi",
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "./NormwaardeSpec.schema.json"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "_delta": {
+                          "$ref": "./NormwaardeDelta.schema.json"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "symboolcodes": {
+                "title": "SymboolcodesRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Symboolcodes.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./SymboolcodesDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": {
+                "title": "TypeNormRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./TypeNorm.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./TypeNormDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "omgevingswaarderegels": {
+      "type": "array",
+      "items": {
+        "title": "OmgevingswaarderegelRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./OmgevingswaarderegelSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./OmgevingswaarderegelDelta.schema.json"
+              },
+              "idealisatie": {
+                "title": "IdealisatieRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Idealisatie.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./IdealisatieDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "themas": {
+                "type": "array",
+                "items": {
+                  "title": "ThemaRenvooi",
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "./Thema.schema.json"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "_delta": {
+                          "$ref": "./ThemaDelta.schema.json"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "regelsVoorIedereen": {
+      "type": "array",
+      "items": {
+        "title": "RegelVoorIedereenRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./RegelVoorIedereenSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./RegelVoorIedereenDelta.schema.json"
+              },
+              "activiteitLocatieaanduidingen": {
+                "type": "array",
+                "items": {
+                  "title": "ActiviteitLocatieaanduidingRenvooi",
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "./ActiviteitLocatieaanduiding.schema.json"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "_delta": {
+                          "$ref": "./ActiviteitLocatieaanduidingDelta.schema.json"
+                        },
+                        "activiteitregelkwalificatie": {
+                          "title": "ActiviteitRegelkwalificatieRenvooi",
+                          "type": "object",
+                          "allOf": [
+                            {
+                              "$ref": "./ActiviteitRegelkwalificatie.schema.json"
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "_delta": {
+                                  "$ref": "./ActiviteitRegelkwalificatieDelta.schema.json"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "idealisatie": {
+                "title": "IdealisatieRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Idealisatie.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./IdealisatieDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "themas": {
+                "type": "array",
+                "items": {
+                  "title": "ThemaRenvooi",
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "./Thema.schema.json"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "_delta": {
+                          "$ref": "./ThemaDelta.schema.json"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "regelteksten": {
+      "type": "array",
+      "items": {
+        "title": "RegeltekstRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./RegeltekstSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./RegeltekstDelta.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

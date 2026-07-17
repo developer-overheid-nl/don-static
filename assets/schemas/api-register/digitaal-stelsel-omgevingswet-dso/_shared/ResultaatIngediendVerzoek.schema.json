@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/resultaatingediendverzoek",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/ResultaatIngediendVerzoek",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/ResultaatIngediendVerzoek",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/ResultaatIngediendVerzoek"
+  ],
+  "description": "Het antwoord na een succesvolle indiening",
+  "properties": {
+    "_links": {
+      "$ref": "./Links2.schema.json"
+    }
+  },
+  "examples": [
+    {
+      "verzoeknummer": "2019012100003",
+      "volgnummer": "000",
+      "datumIngediend": "2019-01-21T10:01:47.457+01:00",
+      "bevoegdGezag": {
+        "organisatieIdentificatieNummer": "00000000000123456789",
+        "naam": "Provincie Zuid-Holland"
+      },
+      "behandeldienst": {
+        "organisatieIdentificatieNummer": "00000000000987654321",
+        "naam": "Behandeldienst Zuid-Holland"
+      },
+      "_links": {
+        "self": "https://api.dso.nl/verzoeken/75",
+        "intrekken": "https://api.dso.nl/verzoeken/2019012100003/intrekken"
+      }
+    }
+  ],
+  "$ref": "./ResultaatVerwerktVerzoek.schema.json"
+}

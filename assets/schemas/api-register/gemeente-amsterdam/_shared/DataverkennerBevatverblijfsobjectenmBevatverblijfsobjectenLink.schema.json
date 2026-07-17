@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/_shared/dataverkennerbevatverblijfsobjectenmbevatverblijfsobjectenlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bevatverblijfsobjecten/openapi.json#/components/schemas/DataverkennerBevatverblijfsobjectenBevatverblijfsobjectenLink",
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bevatverblijfsobjectenm/openapi.json#/components/schemas/DataverkennerBevatverblijfsobjectenmBevatverblijfsobjectenLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to bevatverblijfsobjecten.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "verblijfsobjectenIdentificatie": {
+      "type": "string",
+      "description": "Landelijke identificerende sleutel."
+    },
+    "verblijfsobjectenVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Volgnummer van de nummeraanduiding in de administratie van de bronhouder."
+    }
+  },
+  "required": [
+    "href",
+    "title",
+    "verblijfsobjectenIdentificatie"
+  ]
+}

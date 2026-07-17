@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/storingsmeldingen-openbare-verlichting-en-klokken-4mcwfxehg/storingsmeldingenovlenklokkenklokken",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/storingsmeldingen_ovl_en_klokken/openapi.json#/components/schemas/StoringsmeldingenOvlEnKlokkenklokken"
+  ],
+  "type": "object",
+  "description": "Gegevens over de storingsmeldingen van de klokken van de Gemeente van Amsterdam. Deze klokken zijn te herkennen aan de 3 rode kruizen op de klok.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `klokken._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./StoringsmeldingenOvlEnKlokkenklokkenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "breedtegraad": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Breedtegraad van een klok."
+    },
+    "geometry": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "lengtegraad": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Lengtegraad van een klok."
+    },
+    "meldingstatus": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Indicatie of een melding is gemaakt op een klok. Waarde 1 is melding, waarde 0 geen melding."
+    },
+    "objectId": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Een unieke aanduiding van een klok door de bron."
+    },
+    "objectnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een unieke aanduiding van een klok door de bron."
+    },
+    "objecttype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type aanduiding van een klok."
+    },
+    "objecttypeOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van type aanduiding van een klok."
+    },
+    "storingstatus": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Indicatie of een storing bekend is van een klok. Waarde 1 is storing, waarde 0 geen storing."
+    }
+  },
+  "required": [
+    "_links",
+    "objectId"
+  ]
+}

@@ -1,0 +1,1071 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/cbs-postcode6-statistieken-dvjmox3hr/propertiesgeojsonpostcode6",
+  "x-derived-from": [
+    "https://api.pdok.nl/cbs/postcode6/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_postcode6"
+  ],
+  "properties": {
+    "aantal_eenouderhuishoudens": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_eenpersoonshuishoudens": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_geboorten": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_huurwoningen_in_bezit_woningcorporaties": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_inwoners": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_inwoners_0_tot_15_jaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_inwoners_15_tot_25_jaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_inwoners_25_tot_45_jaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_inwoners_45_tot_65_jaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_inwoners_65_jaar_en_ouder": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_mannen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_meergezins_woningen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_meerpersoonshuishoudens_zonder_kind": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_niet_bewoonde_woningen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_part_huishoudens": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_personen_met_uitkering_onder_aowlft": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_tweeouderhuishoudens": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_vrouwen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_woningen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_woningen_bouwjaar_05_tot_15": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_woningen_bouwjaar_15_en_later": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_woningen_bouwjaar_45_tot_65": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_woningen_bouwjaar_65_tot_75": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_woningen_bouwjaar_75_tot_85": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_woningen_bouwjaar_85_tot_95": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_woningen_bouwjaar_95_tot_05": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_woningen_bouwjaar_voor_1945": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "attractiepark_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "attractiepark_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "attractiepark_aantal_binnen_50_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "basisonderwijs_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "basisonderwijs_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "basisonderwijs_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bioscoop_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bioscoop_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bioscoop_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "buitenschoolse_opvang_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "buitenschoolse_opvang_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "buitenschoolse_opvang_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafe_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafe_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafe_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafetaria_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafetaria_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafetaria_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_apotheek_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_attractiepark_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_basisonderwijs_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_bibliotheek_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_bioscoop_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_brandweerkazerne_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_buitenschoolse_opvang_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_cafe_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_cafetaria_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_grote_supermarkt_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_havo_vwo_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_hotel_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_huisartsenpost_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_huisartsenpraktijk_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_kinderdagverblijf_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_kunstijsbaan_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_museum_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_oprit_hoofdverkeersweg_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_overstapstation_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_poppodium_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_restaurant_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_sauna_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_theater_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_treinstation_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_vmbo_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_voortgezet_onderwijs_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_warenhuis_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_winkels_ov_dagel_levensm_afst_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_ziekenh_excl_buitenpoli_afst_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_ziekenh_incl_buitenpoli_afst_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_zonnebank_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dichtstbijzijnde_zwembad_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "einddatum": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gemiddeld_elektriciteitsverbruik_woning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_gasverbruik_woning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddelde_huishoudensgrootte": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "gemiddelde_woz_waarde_woning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "grote_supermarkt_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "grote_supermarkt_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "grote_supermarkt_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "havo_vwo_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "havo_vwo_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "havo_vwo_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hotel_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hotel_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hotel_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "huisartsenpraktijk_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "huisartsenpraktijk_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "huisartsenpraktijk_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "jaarcode": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "kinderdagverblijf_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "kinderdagverblijf_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "kinderdagverblijf_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "mediaan_inkomen_huishouden": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "museum_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "museum_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "museum_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "percentage_geb_buiten_nederland_herkmst_buiten_europa": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_geb_buiten_nederland_herkomst_europa": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_geb_nederland_herkomst_buiten_europa": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_geb_nederland_herkomst_nederland": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_geb_nederland_herkomst_overig_europa": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_huurwoningen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_koopwoningen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_nederlandse_achtergrond": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_niet_westerse_migr_achtergr": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_westerse_migr_achtergr": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "postcode6": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "restaurant_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "restaurant_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "restaurant_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "startdatum": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "theater_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "theater_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "theater_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "vmbo_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "vmbo_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "vmbo_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "voortgezet_onderwijs_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "voortgezet_onderwijs_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "voortgezet_onderwijs_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "warenhuis_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "warenhuis_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "warenhuis_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "winkels_ov_dagel_levensm_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "winkels_ov_dagel_levensm_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "winkels_ov_dagel_levensm_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_excl_buitenpoli_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_excl_buitenpoli_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_excl_buitenpoli_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_incl_buitenpoli_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_incl_buitenpoli_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_incl_buitenpoli_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

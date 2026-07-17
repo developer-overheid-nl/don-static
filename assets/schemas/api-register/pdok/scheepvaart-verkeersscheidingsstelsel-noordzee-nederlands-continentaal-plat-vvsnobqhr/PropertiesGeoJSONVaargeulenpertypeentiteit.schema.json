@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/scheepvaart-verkeersscheidingsstelsel-noordzee-nederlands-continentaal-plat-vvsnobqhr/propertiesgeojsonvaargeulenpertypeentiteit",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/scheepvaart-verkeersscheidingsstelsel-noordzee/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_vaargeulenpertypeentiteit"
+  ],
+  "properties": {
+    "aanldp_lat": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "entiteit_vaargeul": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "naam_ankergebied": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ngd_lat": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "shape_area": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "shape_len": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vak_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

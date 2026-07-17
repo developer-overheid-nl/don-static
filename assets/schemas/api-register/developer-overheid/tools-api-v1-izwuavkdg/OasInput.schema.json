@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/developer-overheid/tools-api-v1-izwuavkdg/oasinput",
+  "x-derived-from": [
+    "http://localhost:1338/v1/openapi.json#/components/schemas/OasInput"
+  ],
+  "properties": {
+    "oasBody": {
+      "type": "string"
+    },
+    "oasUrl": {
+      "type": "string"
+    },
+    "targetVersion": {
+      "description": "Doelversie. Voor conversie: 3.0 of 3.1. Voor validatie: 2.0 of 2.1.",
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "examples": [
+    {
+      "oasUrl": "oasUrl",
+      "oasBody": "oasBody",
+      "targetVersion": "3.1"
+    }
+  ]
+}

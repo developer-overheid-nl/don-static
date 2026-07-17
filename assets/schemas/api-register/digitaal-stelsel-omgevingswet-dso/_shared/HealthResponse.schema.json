@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/healthresponse",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167767/omgevingsdocumenten-geovalidatie-v1.json#/components/schemas/HealthResponse",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/204330/omgevingsdocumenten-downloaden-v1.json#/components/schemas/HealthResponse",
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/verbeelden/v3/openapi.json#/components/schemas/HealthResponse"
+  ],
+  "required": [
+    "status"
+  ],
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "UP",
+        "DOWN"
+      ]
+    }
+  }
+}

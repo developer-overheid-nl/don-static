@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/directoraat-generaal-belastingdienst/swagger-petstore-open-api-3-0-pnkal4kdg/user",
+  "x-derived-from": [
+    "https://petstore3.swagger.io/api/v3/openapi.json#/components/schemas/User"
+  ],
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "examples": [
+        "john@email.com"
+      ]
+    },
+    "firstName": {
+      "type": "string",
+      "examples": [
+        "John"
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "format": "int64",
+      "examples": [
+        10
+      ]
+    },
+    "lastName": {
+      "type": "string",
+      "examples": [
+        "James"
+      ]
+    },
+    "password": {
+      "type": "string",
+      "examples": [
+        "12345"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "examples": [
+        "12345"
+      ]
+    },
+    "userStatus": {
+      "type": "integer",
+      "description": "User Status",
+      "format": "int32",
+      "examples": [
+        1
+      ]
+    },
+    "username": {
+      "type": "string",
+      "examples": [
+        "theUser"
+      ]
+    }
+  },
+  "xml": {
+    "name": "user"
+  }
+}

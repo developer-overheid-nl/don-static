@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoekenoverzicht-raadplegen-xkb56_gdg/verzoektypestam5and6",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/VerzoekTypeStam5And6"
+  ],
+  "description": "Het type van het verzoek. Op basis van de gevraagde STAM-versie zal de corresponderende enumeratie worden teruggegeven.",
+  "type": "string",
+  "enum": [
+    "Concept",
+    "Definitief",
+    "Idee",
+    "SDGverzoek"
+  ]
+}

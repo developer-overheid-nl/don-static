@@ -1,0 +1,37 @@
+{
+  "url": "https://schemas.don.projects.digilab.network",
+  "html": false,
+  "contents": {
+    "policy-as-code": {
+      "title": "Policy-as-Code",
+      "description": "Policy-as-Code schemas, including CSP and HSTS policies",
+      "path": "./schemas/policy-as-code",
+      "x-sourcemeta-one:alert": "WARNING: DO NOT USE THESE SCHEMAS IN PRODUCTION! These schemas are work-in-progress and are meant for demo purposes only."
+    },
+    "demo": {
+      "title": "Bier Demo",
+      "description": "Bier Demo schemas, used in the Bier Demo application to demonstrate schema referencing and composition",
+      "path": "./schemas/demo",
+      "x-sourcemeta-one:alert": "WARNING: DO NOT USE THESE SCHEMAS IN PRODUCTION! These schemas are work-in-progress and are meant for demo purposes only."
+    },
+    "api-design-rules": {
+      "title": "API Design Rules",
+      "description": "API Design Rules schemas, including guidelines and best practices",
+      "path": "./schemas/adr",
+      "x-sourcemeta-one:alert": "WARNING: DO NOT USE THESE SCHEMAS IN PRODUCTION! These schemas are work-in-progress and are meant for demo purposes only."
+    },
+    "logboek-dataverwerkingen": {
+      "title": "Logboek Dataverwerkingen",
+      "description": "Schemas from the Logboek Dataverwerkingen standard",
+      "path": "./schemas/ldv",
+      "x-sourcemeta-one:alert": "WARNING: DO NOT USE THESE SCHEMAS IN PRODUCTION! These schemas are work-in-progress and are meant for demo purposes only."
+    },
+    "api-register": {
+      "title": "API Register",
+      "description": "Automatically imported schemas from the APIs in the API Register",
+      "path": "./schemas/api-register",
+      "x-sourcemeta-one:alert": "WARNING: DO NOT USE THESE SCHEMAS IN PRODUCTION! These schemas are work-in-progress and are meant for demo purposes only.",
+      "baseUri": "https://schemas.don.apps.digilab.network"
+    }
+  }
+}

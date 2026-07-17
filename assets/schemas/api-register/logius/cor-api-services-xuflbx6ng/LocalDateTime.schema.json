@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/logius/cor-api-services-xuflbx6ng/localdatetime",
+  "x-derived-from": [
+    "https://oinregister.logius.nl/api/v1/openapi.json#/components/schemas/LocalDateTime"
+  ],
+  "format": "date-time",
+  "type": "string",
+  "examples": [
+    "2022-03-10T12:15:50"
+  ]
+}

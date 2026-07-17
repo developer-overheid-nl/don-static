@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/kamer-van-koophandel/ondernemersplein-overheid-nl-open-data-api-8-be1ueng/author",
+  "x-derived-from": [
+    "https://opendata.ondernemersplein.nl/swagger/v1/swagger.json#/components/schemas/Author"
+  ],
+  "type": "object",
+  "properties": {
+    "logo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Author logo."
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Author name."
+    },
+    "payoff": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Author payoff.",
+      "examples": [
+        "Eén antwoord van de overheid"
+      ]
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Author website."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Represent a content author."
+}

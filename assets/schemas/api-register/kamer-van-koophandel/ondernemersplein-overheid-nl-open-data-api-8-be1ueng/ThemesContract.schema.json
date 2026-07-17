@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/kamer-van-koophandel/ondernemersplein-overheid-nl-open-data-api-8-be1ueng/themescontract",
+  "x-derived-from": [
+    "https://opendata.ondernemersplein.nl/swagger/v1/swagger.json#/components/schemas/ThemesContract"
+  ],
+  "type": "object",
+  "properties": {
+    "themes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "./ThemeSummary.schema.json"
+      },
+      "description": "List of themes."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Represents the datacontract of a list of theme summaries."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/ontbrekendedata",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v2.json#/components/schemas/OntbrekendeData",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v3.json#/components/schemas/OntbrekendeData"
+  ],
+  "type": "string",
+  "enum": [
+    "toepasbareRegels",
+    "regelbeheerobject"
+  ]
+}

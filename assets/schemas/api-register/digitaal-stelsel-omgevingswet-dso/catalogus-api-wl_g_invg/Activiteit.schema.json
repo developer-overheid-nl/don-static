@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/catalogus-api-wl_g_invg/activiteit",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/catalogus/api/opvragen/v3/openapi.json#/components/schemas/Activiteit"
+  ],
+  "required": [
+    "begindatumGeldigheid",
+    "conceptschema",
+    "eigenaar",
+    "einddatumGeldigheid",
+    "isEngerDan",
+    "isGeneralisatieVan",
+    "isSpecialisatieVan",
+    "metadata",
+    "naam",
+    "term",
+    "type",
+    "uri",
+    "zieOok"
+  ],
+  "type": "object",
+  "properties": {
+    "begindatumGeldigheid": {
+      "pattern": "^(\\d{4}-[01]\\d-[0-3]\\d)$",
+      "type": "string",
+      "examples": [
+        "2020-04-17"
+      ]
+    },
+    "conceptschema": {
+      "type": "string",
+      "examples": [
+        "http://stelselcatalogus.omgevingswet.overheid.nl/id/conceptscheme/Stelselcatalogus"
+      ]
+    },
+    "eigenaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "https://standaarden.overheid.nl/owms/terms/Geonovum"
+      ]
+    },
+    "einddatumGeldigheid": {
+      "pattern": "^(\\d{4}-[01]\\d-[0-3]\\d)$",
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "2020-04-27"
+      ]
+    },
+    "isEngerDan": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skos:narrowMatch)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isGeneralisatieVan": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skosthes:narrowerGeneric)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isSpecialisatieVan": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skosthes:broaderGeneric)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "metadata": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "http://stelselcatalogus.omgevingswet.overheid.nl/programming/doc/2018041200000000/concept/API"
+      ]
+    },
+    "naam": {
+      "type": "string",
+      "examples": [
+        "Application programming interface"
+      ]
+    },
+    "term": {
+      "type": "string",
+      "examples": [
+        "Application programming interface"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-dws-expr": "`http://www.w3.org/2004/02/skos/core#Concept`",
+      "examples": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ]
+    },
+    "uri": {
+      "type": "string",
+      "examples": [
+        "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/API"
+      ]
+    },
+    "zieOok": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skos:relatedMatch)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    }
+  }
+}

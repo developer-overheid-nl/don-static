@@ -1,0 +1,840 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/benkagg-lqtl1u6hg/benkaggadresseerbareobjecten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/benkagg/openapi.json#/components/schemas/Benkaggadresseerbareobjecten"
+  ],
+  "type": "object",
+  "description": "adresseerbareobjecten",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `adresseerbareobjecten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BenkaggAdresseerbareobjectenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "adresseerbaarObjectPuntGeometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "adresseerbaarObjectPuntGeometrieWgs84": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "adresseertVerblijfsobjectIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het verblijfsobject (landelijke identificatie) dat door de nummeraanduiding wordt aangeduid."
+    },
+    "bagProces": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Functionele handeling die ten grondslag ligt aan de gebeurtenis."
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De datum waarop de gegevens in dit object actueel zijn geworden."
+    },
+    "brkGemeenteNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van de betreffende gemeente"
+    },
+    "documentdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop het brondocument is vastgesteld."
+    },
+    "documentnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het unieke nummer van het brondocument."
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De datum waarop de gegevens in dit object niet meer actueel zijn."
+    },
+    "gebiedenBouwblokken": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Gebieden bouwblokken"
+      },
+      "description": "Het (/de) bouwblok(-ken) waar het verblijfsobject zich in bevind."
+    },
+    "gebiedenBuurtCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Volledige, samengestelde, code, bestaande uit stadsdeelcode en wijkcode."
+    },
+    "gebiedenBuurtIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het object."
+    },
+    "gebiedenBuurtNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het object."
+    },
+    "gebiedenBuurtVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "gebiedenGgwgebiedCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De code van het object."
+    },
+    "gebiedenGgwgebiedIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het object."
+    },
+    "gebiedenGgwgebiedNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het object."
+    },
+    "gebiedenGgwgebiedVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "gebiedenStadsdeelCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Volledige, samengestelde, code, bestaande uit stadsdeelcode en wijkcode."
+    },
+    "gebiedenStadsdeelIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het object."
+    },
+    "gebiedenStadsdeelNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het object."
+    },
+    "gebiedenStadsdeelVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "gebiedenWijkCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Volledige, samengestelde, code, bestaande uit stadsdeelcode en wijkcode."
+    },
+    "gebiedenWijkIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het object."
+    },
+    "gebiedenWijkNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het object."
+    },
+    "gebiedenWijkVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "gebruiksdoelOmschrijvingen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Gebruiksdoel omschrijvingen"
+      },
+      "description": "Een categorisering van de gebruiksdoelen van het betreffende verblijfsobject, zoals dit door de overheid als zodanig is toegestaan."
+    },
+    "huisletter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken."
+    },
+    "huisnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nummering."
+    },
+    "huisnummertoevoeging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter."
+    },
+    "identificatie": {
+      "type": "string",
+      "description": "Landelijke identificerende sleutel."
+    },
+    "kenmerkenInOnderzoek": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Kenmerken in onderzoek"
+      },
+      "description": "Kenmerken van het adresseerbaar object, nummeraanduiding, openbare ruimte of woonplaats die in onderzoek zijn"
+    },
+    "ligplaatsBagproces": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Functionele handeling die ten grondslag ligt aan de gebeurtenis."
+    },
+    "ligplaatsBeginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De begindatum van een periode waarin een of meer gegevens die worden bijgehouden over een ligplaats een wijziging hebben ondergaan."
+    },
+    "ligplaatsDocumentdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop het brondocument is vastgesteld."
+    },
+    "ligplaatsDocumentnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het unieke nummer van het brondocument."
+    },
+    "ligplaatsEindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De einddatum van een periode waarin een of meer gegevens die worden bijgehouden over een ligplaats een wijziging hebben ondergaan."
+    },
+    "ligplaatsGebruiksdoelOmschrijvingen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Ligplaats gebruiksdoel omschrijvingen"
+      },
+      "description": "Een categorisering van de gebruiksdoelen van de betreffende ligplaats."
+    },
+    "ligplaatsGeconstateerd": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Dit geeft aan dat een LIGPLAATS in de registratie is opgenomen als gevolg van een feitelijke constatering en niet op basis van een regulier brondocument."
+    },
+    "ligplaatsGeometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "ligplaatsIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel."
+    },
+    "ligplaatsStatusOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De fase van de levenscyclus van een ligplaats, waarin de betreffende ligplaats zich bevindt, Plaats aangewezen, plaats ingetrokken. omschrijving"
+    },
+    "ligplaatsVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "openbareruimteBagproces": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Functionele handeling die ten grondslag ligt aan de gebeurtenis."
+    },
+    "openbareruimteIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel."
+    },
+    "openbareruimteNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële naam openbare ruimte (80 tekens)."
+    },
+    "openbareruimteNaamNen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Straatnaam volgens de inkortingsregels van NEN 5825 (24 tekens)."
+    },
+    "openbareruimteTypeOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De aard van de zodanig benoemde openbare ruimte (01 Weg, 02 Water, 03 Spoorbaan, 04 Terrein, 05 Kunstwerk, 06 Landschappelijk gebied, 07 Administratief gebied) omschrijving"
+    },
+    "openbareruimteVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "panden": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "Het (/de) pand(-en) waar het verblijfsobject zich in bevind."
+    },
+    "pandenKenmerkenInOnderzoek": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Panden kenmerken in onderzoek"
+      },
+      "description": "Kenmerken van het pand / de panden die in onderzoek zijn"
+    },
+    "postcode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De door PostNL vastgestelde code bestaande uit 4 cijfers en 2 letters (1234AB)."
+    },
+    "standplaatsBagproces": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Functionele handeling die ten grondslag ligt aan de gebeurtenis."
+    },
+    "standplaatsBeginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De ingangsdatum van de geldigheid van een bepaalde combinatie van gegevens over een STANDPLAATS."
+    },
+    "standplaatsDocumentdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop het brondocument is vastgesteld."
+    },
+    "standplaatsDocumentnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het unieke nummer van het brondocument."
+    },
+    "standplaatsEindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De einddatum van de geldigheid van een bepaalde combinatie van gegevens over een STANDPLAATS."
+    },
+    "standplaatsGebruiksdoelOmschrijvingen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Standplaats gebruiksdoel omschrijvingen"
+      },
+      "description": "Een categorisering van de gebruiksdoelen van de betreffende standplaats."
+    },
+    "standplaatsGeconstateerd": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Dit geeft aan dat een STANDPLAATS in de registratie is opgenomen als gevolg van een feitelijke constatering en niet op basis van een regulier brondocument."
+    },
+    "standplaatsGeometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "standplaatsIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel."
+    },
+    "standplaatsStatusOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De fase van de levenscyclus van een standplaats, waarin de betreffende standplaats zich bevindt, Plaats aangewezen, plaats ingetrokken. omschrijving"
+    },
+    "standplaatsVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "statusOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De fase van de levenscyclus van een nummeraanduiding, waarin de betreffende NUMMERAANDUIDING zich bevindt. omschrijving"
+    },
+    "toegangOmschrijvingen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Toegang omschrijvingen"
+      },
+      "description": "Plaats waar zich de toegang tot het verblijfsobject bevindt."
+    },
+    "typeAdres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Hiermee wordt aangegeven of het een relatie betreft vanuit een hoofdadres. Anders is er sprake van een nevenadres (Hoofdadres, Nevenadres)."
+    },
+    "typeAdresseerbaarObjectOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het type adresseerbaar object waaraan een nummeraanduiding is toegekend. omschrijving"
+    },
+    "verblijfsobjectAantalBouwlagen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aantal bouwlagen van een verblijfsobject."
+    },
+    "verblijfsobjectAantalEenhedenComplex": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aantal eenheden complex per verblijfsobject (alléén bij een speciale  woonfunctie of gezondheidszorgfunctie; zie gebruiksdoel-plus)."
+    },
+    "verblijfsobjectAantalKamers": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Geeft het aantal kamers aan binnen het verblijfsobject."
+    },
+    "verblijfsobjectBagproces": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Functionele handeling die ten grondslag ligt aan de gebeurtenis."
+    },
+    "verblijfsobjectBeginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De datum waarop de gegevens in dit object actueel zijn geworden."
+    },
+    "verblijfsobjectDocumentdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop het brondocument is vastgesteld."
+    },
+    "verblijfsobjectDocumentnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het unieke nummer van het brondocument."
+    },
+    "verblijfsobjectEigendomsverhoudingOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft de eigendomsverhouding aan (huur of eigendom). omschrijving"
+    },
+    "verblijfsobjectEindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De datum waarop de gegevens in dit object niet meer actueel zijn."
+    },
+    "verblijfsobjectFeitelijkGebruikOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Feitelijk gebruik van een verblijfsobject. omschrijving"
+    },
+    "verblijfsobjectGebruiksdoelGezondheidszorgfunctieOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Amsterdamse uitbreiding op Gebruiksdoel verblijfsobject. omschrijving"
+    },
+    "verblijfsobjectGebruiksdoelWoonfunctieOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Amsterdamse uitbreiding op Gebruiksdoel verblijfsobject. omschrijving"
+    },
+    "verblijfsobjectGeconstateerd": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Dit geeft aan dat een VERBLIJFSOBJECT in de registratie is opgenomen als gevolg van een feitelijke constatering en niet op basis van een regulier brondocument (J/N)."
+    },
+    "verblijfsobjectGeometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "verblijfsobjectHoogsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Hoogste bouwlaag van een verblijfsobject."
+    },
+    "verblijfsobjectId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke combinatie van identificatie en volgnummer van de toestand van het object."
+    },
+    "verblijfsobjectIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel."
+    },
+    "verblijfsobjectLaagsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Laagste bouwlaag van een verblijfsobject."
+    },
+    "verblijfsobjectOppervlakte": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "De gebruiksoppervlakte van het verblijfsobject conform hetgeen in NEN 2580 is vastgelegd omtrent gebruiksoppervlakte."
+    },
+    "verblijfsobjectRedenafvoerOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Reden van de afvoer van het verblijfsobject. omschrijving"
+    },
+    "verblijfsobjectRedenopvoerOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Reden van de opvoer van het verblijfsobject. omschrijving"
+    },
+    "verblijfsobjectStatusOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De fase van de levenscyclus van een verblijfsobject, waarin het betreffende VERBLIJFSOBJECT zich bevindt. omschrijving"
+    },
+    "verblijfsobjectVerdiepingToegang": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aanduiding op welke verdieping zich de toegang tot het verblijfsobject bevindt."
+    },
+    "verblijfsobjectVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "volgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "woonplaatsBagproces": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Functionele handeling die ten grondslag ligt aan de gebeurtenis."
+    },
+    "woonplaatsIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende code 3594."
+    },
+    "woonplaatsNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële naam woonplaats."
+    },
+    "woonplaatsVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "wozSoortObjectOmschrijving": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Woz soort object omschrijving"
+      },
+      "description": "Aanduiding van het soort object ten behoeve van een correcte bepaling van de waarde."
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie",
+    "volgnummer"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/hydrografie-inspire-geharmoniseerd-3uvvfhzdg/propertiesgeojsoncrossinglinestring",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/brt-hydrografie/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_crossing_linestring"
+  ],
+  "properties": {
+    "begin_lifespan_version": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "condition": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geographical_name": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "local_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

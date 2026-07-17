@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-indienen-3ajf61gdr/gelabeldkadastraal",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/GelabeldKadastraal"
+  ],
+  "type": "object",
+  "required": [
+    "kadastraal"
+  ],
+  "properties": {
+    "kadastraal": {
+      "$ref": "../_shared/Kadastraal.schema.json"
+    }
+  },
+  "examples": [
+    {
+      "kadastraal": {
+        "gemeente": "GVH11",
+        "sectie": "P",
+        "perceelNummer": "10815"
+      }
+    }
+  ]
+}

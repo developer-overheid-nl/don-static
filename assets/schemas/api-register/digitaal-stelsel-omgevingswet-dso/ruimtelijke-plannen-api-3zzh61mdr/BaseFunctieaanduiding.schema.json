@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/basefunctieaanduiding",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/BaseFunctieaanduiding"
+  ],
+  "required": [
+    "_links",
+    "id",
+    "labelInfo",
+    "naam",
+    "styleId",
+    "verwijzingNaarTekst"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./FunctieaanduidingLinks.schema.json"
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "NL.IMRO.0a76ec81382749dd93bd364a1f36a846"
+      ]
+    },
+    "labelInfo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "(b≤2)"
+      ]
+    },
+    "naam": {
+      "type": "string",
+      "examples": [
+        "bedrijf tot en met categorie 2"
+      ]
+    },
+    "styleId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "dubbelbestemming_waterstaat"
+      ]
+    },
+    "verwijzingNaarTekst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "https://ruimtelijkeplannen.nl/documents/NL.IMRO.0200.ov1015-vas1/b_NL.IMRO.0200.ov1015-vas1.pdf"
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/woz-lira1uenr/wozobjectenbestaatuitwozdeelobjecten_m2m",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/woz/openapi.json#/components/schemas/WozobjectenBestaatUitWozDeelobjecten_M2M"
+  ],
+  "type": "object",
+  "description": "The M2M table for `Objecten.bestaatUitWozDeelobjecten` that links to `Deelobjecten`",
+  "properties": {
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "title": {
+      "type": "string",
+      "readOnly": true
+    },
+    "volgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "wozdeelobjectnummer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "href",
+    "title"
+  ]
+}

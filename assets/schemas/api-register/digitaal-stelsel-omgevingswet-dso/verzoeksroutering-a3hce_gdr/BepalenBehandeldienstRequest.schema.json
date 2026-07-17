@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeksroutering-a3hce_gdr/bepalenbehandeldienstrequest",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171058/toepasbareregels-verzoeksroutering-v2.json#/components/schemas/BepalenBehandeldienstRequest"
+  ],
+  "required": [
+    "bevoegdGezagOin",
+    "activiteiten",
+    "_geo"
+  ],
+  "properties": {
+    "_geo": {
+      "description": "Filter op geografisch punt of vlak. Zie de [DSO API/URI strategie](https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie).",
+      "required": [
+        "intersects"
+      ],
+      "properties": {
+        "intersects": {
+          "description": "Punt of vlak waarmee het resultaat raakvlak moet hebben. Analoog aan ElasticSearch GeoShape Query (https://www.elastic.co/guide/en/elasticsearch/reference/5.0/query-dsl-geo-shape-query.html)",
+          "oneOf": [
+            {
+              "$ref": "./Point.schema.json"
+            },
+            {
+              "$ref": "./Polygon.schema.json"
+            },
+            {
+              "$ref": "../_shared/MultiPolygon.schema.json"
+            },
+            {
+              "description": "GeoJSon geometry collection volgens https://tools.ietf.org/html/rfc7946#section-3.1.8",
+              "type": "object",
+              "required": [
+                "geometries",
+                "type"
+              ],
+              "properties": {
+                "geometries": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "$ref": "./Point.schema.json"
+                      },
+                      {
+                        "$ref": "./Polygon.schema.json"
+                      },
+                      {
+                        "$ref": "../_shared/MultiPolygon.schema.json"
+                      }
+                    ],
+                    "minItems": 0
+                  }
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "GeometryCollection"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "examples": [
+        {
+          "intersects": {
+            "type": "Point",
+            "coordinates": [
+              155000,
+              463000
+            ]
+          }
+        }
+      ]
+    },
+    "activiteiten": {
+      "description": "Activiteiten waarvoor de behandeldienst moet worden bepaald",
+      "type": "array",
+      "items": {
+        "required": [
+          "functioneleStructuurRef",
+          "subFunctioneleStructuurRefs"
+        ],
+        "properties": {
+          "functioneleStructuurRef": {
+            "description": "De verwijzing naar een regelbeheerobject van een geselecteerde activiteit in de functionele structuur in de Registratie Toepasbare Regels.",
+            "type": "string"
+          },
+          "subFunctioneleStructuurRefs": {
+            "deprecated": true,
+            "description": "Verwijzing naar regelbeheerobjecten van geselecteerde subactiviteiten in de functionele structuur in de Registratie Toepasbare Regels. Voor verfijnbare activiteiten dient de lijst minimaal 1 item bevatten. Voor niet-verfijnbare activiteiten dient de lijst leeg te zijn. Deprecated omdat de verfijnbaar functionaliteit deprecated is.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 100
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": 100
+    },
+    "bevoegdGezagOin": {
+      "description": "Het bevoegd gezag dat is geselecteerd bij het verzoek",
+      "type": "string"
+    },
+    "datum": {
+      "description": "Datum in het formaat dd-MM-yyyy.",
+      "type": "string",
+      "pattern": "^\\d{2}-\\d{2}-\\d{4}$",
+      "examples": [
+        "01-01-2023"
+      ]
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/parkeerzones-met-en-zonder-uitzonderingen-tlsqjx6hg/parkeerzonesparkeerzones",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/parkeerzones/openapi.json#/components/schemas/Parkeerzonesparkeerzones"
+  ],
+  "type": "object",
+  "description": "parkeerzones",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `parkeerzones._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./ParkeerzonesparkeerzonesLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Startdatum geldigheid."
+    },
+    "domeincode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Domeincode waarbinnen de parkeerzone valt."
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Einddatum geldigheid."
+    },
+    "gebiedscode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Gebiedscode waarbinnen de parkeerzone valt."
+    },
+    "gebiedskleurcode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Gedefinieerde gebiedskleur in hexidecimale code voor presentatie."
+    },
+    "gebiedsnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van het gebied waarbinnen de parkeerzone valt."
+    },
+    "gebiedsomschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van gebiedscode waarbinnen de parkeerzone valt."
+    },
+    "gebiedsouder": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de overkoepelende parkeerzone waaronder de parkeerzone valt."
+    },
+    "gebruiksdoel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Gebruiksdoel van de parkeerzone."
+    },
+    "geometry": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding voor parkeerzone."
+    },
+    "indicatieZichtbaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Indicatie of parkeerzone gepubliceerd mag worden."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

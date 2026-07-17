@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoekenoverzicht-raadplegen-xkb56_gdg/hallink",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json#/components/schemas/HalLink",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/HalLink",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/HalLink"
+  ],
+  "required": [
+    "href"
+  ],
+  "properties": {
+    "href": {
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "href": "https://api.dso.nl/verzoeken/2017010100001"
+    }
+  ]
+}

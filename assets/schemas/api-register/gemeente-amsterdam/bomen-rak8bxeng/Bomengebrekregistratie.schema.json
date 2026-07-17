@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bomen-rak8bxeng/bomengebrekregistratie",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bomen/openapi.json#/components/schemas/Bomengebrekregistratie"
+  ],
+  "type": "object",
+  "description": "bevat de actuele gebrekregistratie van de bomen in beheer van gemeente Amsterdam.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `gebrekregistratie._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BomengebrekregistratieLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "boomId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Boom ID",
+      "description": "de vreemde sleutel (foreignkey) voor de relatie met de stamgegevens van de bomen"
+    },
+    "boomgebrek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "BVC-gerelateerde afwijkingen die binnen een periode van 3 jaar een potentieel gevaar kunnen opleveren voor de directe omgeving, worden als gebrek benoemd en geregistreerd volgens de afwijkingenlijst BVC | Handboek Bomen 2018gi"
+    },
+    "boomgebrekAfwijking": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanvullende registratie (melding) relevante BVC-afwijkingen (nog) niet zijnde een BVC-gebrek"
+    },
+    "boomgebrekGevolg": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Registratie welk risico (gevolg) aan BVC-gebreken is gerelateerd"
+    },
+    "boomonderdeelPlaats": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding waar in de boom het gebrek zich bevindt"
+    },
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Codenummer van het object"
+    },
+    "guid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Uniek nummer van het IMBOR-object (GUID)"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding van record"
+    },
+    "matching": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Achtergrondinformatie naar aanleiding van conversie"
+    },
+    "mutatieDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop laatste mutatie heeft plaatsgevonden"
+    },
+    "objectbegintijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Tijdstip waarop het object ontstaan is"
+    },
+    "revisie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aantal keren dat de beheergegevens en of geometrie van beheerobject is gewijzigd"
+    },
+    "veiligheidsinspectiesId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Veiligheidsinspecties ID",
+      "description": "de vreemde sleutel (foreignkey) voor de relatie met de veiligeheidsinspecties"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

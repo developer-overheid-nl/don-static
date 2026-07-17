@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/bevoegdgezag",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/BevoegdGezag"
+  ],
+  "title": "BevoegdGezag",
+  "required": [
+    "bestuurslaag",
+    "code",
+    "naam"
+  ],
+  "type": "object",
+  "properties": {
+    "bestuurslaag": {
+      "title": "bestuurslaag",
+      "type": "string",
+      "examples": [
+        "gemeentebestuur"
+      ]
+    },
+    "code": {
+      "title": "Bevoegd gezag TOOI-code",
+      "type": "string",
+      "description": "Code van het bevoegd gezag, uit één van onderstaande waardelijsten:\n  - https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet\n  - https://identifier.overheid.nl/tooi/set/rwc_ministeries_compleet\n  - https://identifier.overheid.nl/tooi/set/rwc_provincies_compleet\n  - https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet\n",
+      "examples": [
+        "gm0000"
+      ]
+    },
+    "naam": {
+      "title": "naam",
+      "type": "string",
+      "examples": [
+        "gemeente Hollands Kroon"
+      ]
+    }
+  }
+}

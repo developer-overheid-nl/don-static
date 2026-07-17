@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/toelichtingenrequest",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v2.json#/components/schemas/ToelichtingenRequest",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v3.json#/components/schemas/ToelichtingenRequest"
+  ],
+  "description": "Request voor ophalen van toelichtingen op basis van toelichtingId's. Niet gevonden id's worden genegeerd.",
+  "required": [
+    "toelichtingIds"
+  ],
+  "properties": {
+    "toelichtingIds": {
+      "description": "De id's van de toelichtingen",
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 1,
+      "maxItems": 1000
+    }
+  }
+}

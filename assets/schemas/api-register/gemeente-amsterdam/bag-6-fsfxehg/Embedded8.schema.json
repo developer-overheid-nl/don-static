@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bag-6-fsfxehg/embedded8",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "standplaatsen": {
+      "type": "array",
+      "items": {
+        "$ref": "./Bagstandplaatsen.schema.json"
+      }
+    }
+  }
+}

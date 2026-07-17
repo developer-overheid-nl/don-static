@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/crud-rtr-gegevens-g85pejgdr/organisatiemetoptioneeloin",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167490/toepasbareregels-crud-rtr-gegevens-v2.json#/components/schemas/OrganisatieMetOptioneelOin"
+  ],
+  "description": "Organisatie",
+  "required": [
+    "bestuurslaag"
+  ],
+  "properties": {
+    "bestuurslaag": {
+      "description": "Bestuurslaag van een Organisatie",
+      "type": "string",
+      "enum": [
+        "rijk",
+        "provincie",
+        "waterschap",
+        "gemeente"
+      ]
+    },
+    "oin": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 20
+    }
+  }
+}

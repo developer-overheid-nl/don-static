@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/huishoudelijkafvalservicegebieden",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/Huishoudelijkafvalservicegebieden"
+  ],
+  "type": "object",
+  "description": "Een afvalservicegebied is een verzameling van panden die dicht bij elkaar liggen op basis van hun loopafstand tot een afvalophaal locatie. De bewoners van deze panden maken gebruik van het dichtstbijzijnde afvalservicepunt.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `servicegebieden._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HuishoudelijkafvalservicegebiedenLink.schema.json"
+        },
+        "servicegebiedenLocatie": {
+          "$ref": "./HuishoudelijkafvalservicegebiedenLocatieLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self",
+        "servicegebiedenLocatie"
+      ]
+    },
+    "bagObjectId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "BAG object identificatie",
+      "description": "Unieke BAG object (pand, ligplaats en standplaats) identificatie"
+    },
+    "bagObjectType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object type",
+      "description": "Type BAG object (pand, ligplaats en standplaats)"
+    },
+    "categorieVerwijderdDp": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Loopafstand categorie einddatum",
+      "description": "De datum waarop de loopafstandcategorie in de datapijplijn is verwijderd."
+    },
+    "categorieWijzigingsdatumDp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Loopafstand categorie wijzigingsdatum",
+      "description": "De datum waarop de loopafstandcategorie in de datapijplijn is gewijzigd"
+    },
+    "fractieCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Afvalfractie code",
+      "description": "Type afvalfractie code waarvoor de container is bedoeld: 1 - Rest, 2 - Glas, 3 - Papier, 4 - Plastic, 5 - Textiel, 6 - GFT, 9 - Brood"
+    },
+    "fractieOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Afvalfractie omschrijving",
+      "description": "Afvalcontainer fractieomschrijving zoals door leverancier is geleverd."
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "title": "Afval servicegebied ID",
+      "description": "Unieke identificatie van een afval servicegebied"
+    },
+    "loopafstandCategorieId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Loopafstand categorie ID",
+      "description": "Unieke identificatie van loopafstanden categoriën"
+    },
+    "loopafstandCategorieOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De loopafstanden zijn volgens een vastgestelde indelijng gecategoriseerd. Bijvoorbeeld: 30 - 90 meter"
+    },
+    "loopafstandCategorieTot": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Loopafstand tot meter",
+      "description": "De loopafstand tot een bepaalde meter volgens de loopafstandcategorisatie."
+    },
+    "loopafstandCategorieVanaf": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Loopafstand vanaf meter",
+      "description": "De loopafstand vanaf een bepaalde meter. Volgens de loopafstand categorisatie."
+    },
+    "servicegebiedenLocatieId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Servicegebied locatie ID",
+      "description": "Identificatie van een servicegebied locatie. De Servicegebieden locaties correspenderen met de afvalcluster",
+      "readOnly": true,
+      "deprecated": true
+    }
+  },
+  "required": [
+    "_links",
+    "id",
+    "servicegebiedenLocatieId"
+  ]
+}

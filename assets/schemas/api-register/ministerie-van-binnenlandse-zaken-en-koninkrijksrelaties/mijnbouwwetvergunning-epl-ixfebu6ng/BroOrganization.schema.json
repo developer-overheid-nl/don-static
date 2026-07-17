@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/mijnbouwwetvergunning-epl-ixfebu6ng/broorganization",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/ep/epl/v1/openapi#/components/schemas/BroOrganization"
+  ],
+  "properties": {
+    "chamberOfCommerceNumber": {
+      "pattern": "\\d{8}",
+      "type": "string"
+    },
+    "europeanCompanyRegistrationNumber": {
+      "pattern": "^[A-Z]{2}.{2,75}$",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

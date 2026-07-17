@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/zeegebieden-inspire-geharmoniseerd-twrof2zdr/propertiesgeojsoncoastline",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/brt-zeegebieden/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_coastline"
+  ],
+  "properties": {
+    "water_level": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

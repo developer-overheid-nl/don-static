@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/3d-basisvoorziening-dicf0b3hr/assetmetadata",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/3d-basisvoorziening/ogc/v1/openapi.json#/components/schemas/AssetMetadata"
+  ],
+  "properties": {
+    "extensions": {},
+    "extras": {},
+    "tilesetVersion": {
+      "description": "Application-specific version of this tileset, e.g., for when an existing tileset is updated.",
+      "type": "string"
+    },
+    "version": {
+      "description": "The 3D Tiles version. The version defines the JSON schema for the tileset JSON and the base set of tile formats.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "version"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/divisiespec",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/DivisieSpec"
+  ],
+  "title": "DivisieSpec",
+  "required": [
+    "identificatie",
+    "wId"
+  ],
+  "type": "object",
+  "properties": {
+    "identificatie": {
+      "type": "string",
+      "examples": [
+        "nl.imow-gm1911.divisie.20240101"
+      ]
+    },
+    "wId": {
+      "type": "string",
+      "examples": [
+        "gm1911_1__div_o_1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/bestuurlijke-gebieden-59afab3ng/propertiesgeojsonlandgebied",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_landgebied"
+  ],
+  "properties": {
+    "code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identificatie": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

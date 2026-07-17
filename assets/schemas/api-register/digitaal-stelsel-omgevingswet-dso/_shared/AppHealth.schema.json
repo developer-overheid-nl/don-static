@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/apphealth",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167767/omgevingsdocumenten-geovalidatie-v1.json",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/204330/omgevingsdocumenten-downloaden-v1.json",
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/AppHealth",
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/verbeelden/v3/openapi.json"
+  ],
+  "title": "AppHealth",
+  "required": [
+    "status"
+  ],
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "UP",
+        "DOWN"
+      ]
+    }
+  }
+}

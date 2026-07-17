@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brk2-oktbfx6hg/brk2kadastralegemeentecodes",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brk2/openapi.json#/components/schemas/Brk2kadastralegemeentecodes"
+  ],
+  "type": "object",
+  "description": "kadastralegemeentecodes",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `kadastralegemeentecodes._links` field. It contains all relationships with objects.",
+      "properties": {
+        "isOnderdeelVanBrkKadastraleGemeente": {
+          "$ref": "./Brk2kadastralegemeentesLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./Brk2kadastralegemeentecodesLink.schema.json"
+        }
+      },
+      "required": [
+        "isOnderdeelVanBrkKadastraleGemeente",
+        "schema",
+        "self"
+      ]
+    },
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Unieke code",
+      "description": "De unieke code van de kadastrale gemeentecode"
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Kadastrale gemeente code",
+      "description": "De unieke aanduiding van een Kadastrale gemeentecode"
+    },
+    "isOnderdeelVanBrkKadastraleGemeenteId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kadastrale gemeente identificatie",
+      "description": "De kadastrale gemeente waar de kadastrale gemeentecode onderdeel van is (bv. Sloten)",
+      "readOnly": true,
+      "deprecated": true
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie",
+    "isOnderdeelVanBrkKadastraleGemeenteId"
+  ]
+}

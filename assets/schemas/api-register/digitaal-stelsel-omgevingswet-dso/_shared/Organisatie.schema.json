@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/organisatie",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/165401/toepasbareregels-samengesteldertrservices-v2.json#/components/schemas/Organisatie",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v2.json#/components/schemas/Organisatie",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v3.json#/components/schemas/Organisatie"
+  ],
+  "description": "Organisatie",
+  "required": [
+    "oin",
+    "bestuurslaag"
+  ],
+  "properties": {
+    "bestuurslaag": {
+      "description": "Bestuurslaag van een Organisatie",
+      "type": "string",
+      "enum": [
+        "rijk",
+        "provincie",
+        "waterschap",
+        "gemeente"
+      ]
+    },
+    "oin": {
+      "description": "OIN van de organisatie",
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 20
+    }
+  }
+}

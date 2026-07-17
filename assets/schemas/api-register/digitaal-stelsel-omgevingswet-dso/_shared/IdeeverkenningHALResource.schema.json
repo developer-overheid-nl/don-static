@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/ideeverkenninghalresource",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/IdeeverkenningHALResource",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/IdeeverkenningHALResource",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/IdeeverkenningHALResource"
+  ],
+  "examples": [
+    {
+      "id": 1,
+      "_links": {
+        "self": {
+          "href": "https://api.dso.nl/ideeverkenningen/1"
+        },
+        "documenten": {
+          "href": "https://api.dso.nl/ideeverkenningen/1/documenten/2"
+        }
+      }
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./Links.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+}

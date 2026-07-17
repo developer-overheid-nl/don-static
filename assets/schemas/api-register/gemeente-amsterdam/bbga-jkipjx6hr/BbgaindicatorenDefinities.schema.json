@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bbga-jkipjx6hr/bbgaindicatorendefinities",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bbga/openapi.json#/components/schemas/Bbgaindicatoren_definities"
+  ],
+  "type": "object",
+  "description": "indicatorenDefinities",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `indicatorenDefinities._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BbgaindicatorenDefinitiesLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "begrotingsProgramma": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "berekendeVariabelen": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bron": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "definitie": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "definition": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "format": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "frequency": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "groep": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kleurenpalet": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "label": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "label1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "labelKort": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legendaCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "peildatum": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "referenceDate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rekeneenheid": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "sdMinimumBevTotaal": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "sdMinimumWvoorBag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "sort": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "symbool": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "thema": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "themaKerncijfertabel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "topicArea": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tussenkopjeKerncijfertabel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "variabele": {
+      "type": "string"
+    },
+    "verschijningsfrequentie": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "_links",
+    "variabele"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/omgevingsvergunninglinks",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/OmgevingsvergunningLinks"
+  ],
+  "title": "OmgevingsvergunningLinks",
+  "required": [
+    "self"
+  ],
+  "type": "object",
+  "properties": {
+    "heeftVergunningsgebied": {
+      "$ref": "./HalLink.schema.json"
+    },
+    "self": {
+      "$ref": "./HalLink.schema.json"
+    }
+  }
+}

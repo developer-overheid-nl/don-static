@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/planobjectreferentie",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/PlanobjectReferentie"
+  ],
+  "required": [
+    "id",
+    "planId"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "examples": [
+        "NL.IMRO.0200.GP2213788321-00"
+      ]
+    },
+    "planId": {
+      "type": "string",
+      "examples": [
+        "NL.IMRO.0200.bp1253-vas1"
+      ]
+    }
+  }
+}

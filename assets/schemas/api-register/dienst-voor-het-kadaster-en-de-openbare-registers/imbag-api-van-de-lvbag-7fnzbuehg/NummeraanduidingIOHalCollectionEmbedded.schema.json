@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/nummeraanduidingiohalcollectionembedded",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/NummeraanduidingIOHalCollection_embedded"
+  ],
+  "type": "object",
+  "properties": {
+    "nummeraanduidingen": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "allOf": [
+              {
+                "$ref": "./NummeraanduidingIO.schema.json"
+              },
+              {
+                "properties": {
+                  "_links": {
+                    "$ref": "./NummeraanduidingLinks.schema.json"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "properties": {
+              "_embedded": {
+                "$ref": "./NummeraanduidingEmbedded.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

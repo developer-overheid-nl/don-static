@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/huishoudelijkafvalclustervulsnelheden",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/Huishoudelijkafvalcluster_vulsnelheden"
+  ],
+  "type": "object",
+  "description": "In deze tabel wordt de vulsnelheid vastgelegd per fractie van een heel cluster afvalcontainers. In een cluster kunnen zich meerdere containers voor een bepaalde fractie bevinden.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `clusterVulsnelheden._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HuishoudelijkafvalclusterVulsnelhedenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "datumLaatsteService": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Datum en tijdstip waarop laatste leging van het cluster heeft plaatsgevonden."
+    },
+    "datumMeting": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Datum en tijdstip van bepalen prognose_vol, vulsnelheid_volume, -minuten en -dagen"
+    },
+    "fractieNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Fractie naam afkomstig uit het bronsysteem."
+    },
+    "huishoudelijkafvalClusterId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Huishoudelijkafval cluster Id",
+      "description": "Verwijzing naar ID in huishoudelijkafval_cluster."
+    },
+    "huishoudeljkafvalFractiesNummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Fractie nummer",
+      "description": "Verwijzing naar nummer in hushoudelijkafval_fracties."
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke aanduiding van het record."
+    },
+    "laatsteMeting": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Voor dit cluster/ site: true = laatst opgehaalde regel, false = eerder opgehaalde regel."
+    },
+    "meetsysteem": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van meetsysteem of leverancier van brondata"
+    },
+    "prognoseVol": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Voorspelde datum waarop alle containers vol zijn."
+    },
+    "siteId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Site Id",
+      "description": "Unieke aanduiding uit het bronsysteem van de site/ cluster van afvalcontainers."
+    },
+    "vulgraadMeting": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De vulgraad bij laatste meting, als percentage van het totale container volume."
+    },
+    "vulsnelheidDagen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Vulsnelheid in dagen",
+      "description": "Geeft aan hoelang het gemiddeld duurt om de containers te vullen van leeg naar vol, uitgedrukt in  dagen. Altijd naar beneden afgerond(floor) op hele dagen."
+    },
+    "vulsnelheidMinuten": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Vulsnelheid in minuten",
+      "description": "Geeft aan hoelang het gemiddeld duurt om de containers te vullen van leeg naar vol, uitgedrukt in minuten."
+    },
+    "vulsnelheidVolume": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Vulsnelheid als volume",
+      "description": "Gemiddelde snelheid waarmee de containers gevuld worden(liter/week)."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

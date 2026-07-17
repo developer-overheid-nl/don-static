@@ -1,0 +1,6 @@
+FROM ghcr.io/sourcemeta/one:v6.7.0
+
+COPY assets/one.json .
+COPY assets/schemas ./schemas
+
+RUN sourcemeta one.json

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/terugmelding-bronhouder-api-k-pybuehr/terugmeldingfeaturepaginationcollection",
+  "x-derived-from": [
+    "https://service10.kadaster.nl/tms/bronhouders/v2/openapi.json#/components/schemas/TerugmeldingFeaturePaginationCollection"
+  ],
+  "type": "object",
+  "properties": {
+    "features": {
+      "type": "array",
+      "description": "De lijst van GeoJSON features",
+      "items": {
+        "$ref": "../_shared/MeldingFeature.schema.json"
+      }
+    },
+    "name": {
+      "type": "string",
+      "description": "De naam van de collectie",
+      "examples": [
+        "Terugmelding Pagination"
+      ]
+    },
+    "page": {
+      "$ref": "./Page.schema.json"
+    },
+    "type": {
+      "type": "string",
+      "description": "Het type van de GeoJSON feature collectie",
+      "examples": [
+        "FeatureCollection"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "features",
+    "page"
+  ]
+}

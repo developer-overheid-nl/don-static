@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/structuurvisiegebiedreferentie",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/StructuurvisiegebiedReferentie"
+  ],
+  "required": [
+    "href"
+  ],
+  "type": "object",
+  "properties": {
+    "href": {
+      "type": "string",
+      "examples": [
+        "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/plannen/NL.IMRO.0200.sv1007-vas1/structuurvisiegebieden/NL.IMRO.GSVgeb10"
+      ]
+    }
+  }
+}

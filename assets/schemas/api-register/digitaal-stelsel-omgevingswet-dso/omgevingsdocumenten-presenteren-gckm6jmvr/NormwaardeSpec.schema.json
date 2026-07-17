@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/normwaardespec",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/NormwaardeSpec"
+  ],
+  "title": "NormwaardeSpec",
+  "required": [
+    "identificatie",
+    "locatieRefs"
+  ],
+  "type": "object",
+  "properties": {
+    "identificatie": {
+      "type": "string",
+      "examples": [
+        "nl.imow-gm1911.normwaarde.20240101"
+      ]
+    },
+    "kwalitatieveWaarde": {
+      "type": "string",
+      "examples": [
+        "laag"
+      ]
+    },
+    "kwantitatieveWaarde": {
+      "type": "number",
+      "examples": [
+        3
+      ]
+    },
+    "locatieRefs": {
+      "title": "LocatieRefs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.gebied.of.gebiedengroep.20240101"
+        ]
+      }
+    },
+    "waardeInRegeltekst": {
+      "type": "string",
+      "examples": [
+        "waarde staat in regeltekst"
+      ]
+    }
+  }
+}

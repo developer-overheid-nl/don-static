@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/applicatieeigenschappen",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/ApplicatieEigenschappen"
+  ],
+  "required": [
+    "app"
+  ],
+  "type": "object",
+  "properties": {
+    "app": {
+      "$ref": "./Info.schema.json"
+    }
+  }
+}

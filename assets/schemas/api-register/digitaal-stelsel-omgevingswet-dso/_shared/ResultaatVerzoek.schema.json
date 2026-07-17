@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/resultaatverzoek",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json#/components/schemas/ResultaatVerzoek",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/ResultaatVerzoek"
+  ],
+  "description": "Resultaat van het ophalen van een verzoek. Bevat basisgegevens van een verzoek en de eventuele gekoppelde documenten.\n",
+  "required": [
+    "verzoeknummer",
+    "volgnummer"
+  ],
+  "properties": {
+    "verzoeknummer": {
+      "type": "string"
+    },
+    "volgnummer": {
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "verzoeknummer": "2017010100001",
+      "volgnummer": "000"
+    }
+  ],
+  "type": "object"
+}

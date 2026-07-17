@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/werken-in-de-openbare-ruimte-lxspjx6hg/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/wior/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "wior": {
+      "type": "array",
+      "items": {
+        "$ref": "./Wiorwior.schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/datakwaliteit-tzzq1x6ng/datakwaliteitbrontabel",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/datakwaliteit/openapi.json#/components/schemas/Datakwaliteitbrontabel"
+  ],
+  "type": "object",
+  "description": "Brontabel",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `brontabel._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./DatakwaliteitbrontabelLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "bronDatasetId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Id van de bijbehorende brondataset."
+    },
+    "dataProfileringFrequentie": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Frequentie data profiling",
+      "description": "Frequentie waarmee de dataprofilingqueries voor betreffende brontabel worden gedraaid (1=dagelijks, 2=wekelijks, 3=maandelijks, 4=kwartaal, 5  = jaarlijks)."
+    },
+    "datum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum van de statuswijziging."
+    },
+    "frequentie": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Frequentie data kwaliteit controle",
+      "description": "Indien type is 'O', frequentie waarmee de datakwaliteitqueries voor betreffende brontabel worden gedraaid (1=dagelijks, 2=wekelijks, 3=maandelijks, 4=kwartaal, 5 =jaarlijks)."
+    },
+    "id": {
+      "type": "string",
+      "description": "Uniek identificerend kenmerk voor de tabel behorende bij de brondataset."
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de betreffende brontabel."
+    },
+    "omschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van / toelichting op de betreffende brontabel."
+    },
+    "status": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Status van de brontabel (-1 = afgevoerd/end of life van de tabel, 0= inactief/queries worden tijdelijk niet uitgevoerd, 1 = actief/queries worden conform frequentie uitgevoerd)."
+    },
+    "type": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Type brontabel: O = tabel met objectgegevens, R = tabel met referentie-/ domeinwaardegegevens."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

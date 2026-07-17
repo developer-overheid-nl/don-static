@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/centraal-bureau-voor-de-statistiek/ccb-o-data-open-api-d5g_wihvr/catalog",
+  "x-derived-from": [
+    "https://datasets.cbs.nl/odata/v1/openapi.json#/components/schemas/Catalog"
+  ],
+  "required": [
+    "identifier",
+    "title"
+  ],
+  "type": "object",
+  "properties": {
+    "authority": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "contactPoint": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "email"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "homepage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identifier": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "index": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "language": {
+      "maxLength": 2,
+      "minLength": 2,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "license": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "publisher": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "title": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

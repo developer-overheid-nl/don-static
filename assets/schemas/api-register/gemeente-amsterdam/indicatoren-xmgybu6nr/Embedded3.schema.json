@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/indicatoren-xmgybu6nr/embedded3",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/indicatoren/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "stadsdeel": {
+      "type": "array",
+      "items": {
+        "$ref": "./Indicatorenstadsdeel.schema.json"
+      }
+    }
+  }
+}

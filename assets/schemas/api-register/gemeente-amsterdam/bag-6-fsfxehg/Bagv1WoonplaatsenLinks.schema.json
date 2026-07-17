@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bag-6-fsfxehg/bagv1woonplaatsenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json#/components/schemas/Bagv1WoonplaatsenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `woonplaatsen._links` field. It contains all relationships with objects.",
+  "properties": {
+    "heeftDossier": {
+      "$ref": "./BagdossiersLink.schema.json"
+    },
+    "heeftOnderzoeken": {
+      "type": "array",
+      "items": {
+        "$ref": "./BagwoonplaatsenHeeftOnderzoeken_M2M.schema.json"
+      }
+    },
+    "ligtInGemeente": {
+      "$ref": "../_shared/Brk2GemeentesLink.schema.json"
+    },
+    "openbareruimtes": {
+      "$ref": "./RelatedSummary.schema.json"
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./BagWoonplaatsenLink.schema.json"
+    }
+  },
+  "required": [
+    "heeftDossier",
+    "heeftOnderzoeken",
+    "ligtInGemeente",
+    "openbareruimtes",
+    "schema",
+    "self"
+  ]
+}

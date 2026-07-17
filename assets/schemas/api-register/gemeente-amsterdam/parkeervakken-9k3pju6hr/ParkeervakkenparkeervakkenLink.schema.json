@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/parkeervakken-9k3pju6hr/parkeervakkenparkeervakkenlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/parkeervakken/openapi.json#/components/schemas/ParkeervakkenparkeervakkenLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to parkeervakken.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "id",
+    "title"
+  ]
+}

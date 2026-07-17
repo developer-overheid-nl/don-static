@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/indicatie",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/Indicatie"
+  ],
+  "title": "Indicatie",
+  "type": "string",
+  "description": "Een aanduiding waarmee kan worden aangegeven of een attribuut van een object of data type een indicatie J (Ja) of N (Nee) heeft in de registratie.",
+  "enum": [
+    "J",
+    "N"
+  ]
+}

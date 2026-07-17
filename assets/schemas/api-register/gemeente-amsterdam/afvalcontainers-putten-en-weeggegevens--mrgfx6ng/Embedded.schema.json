@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "adres_loopafstand_v2": {
+      "type": "array",
+      "items": {
+        "$ref": "./HuishoudelijkafvaladresLoopafstandV2.schema.json"
+      }
+    }
+  }
+}

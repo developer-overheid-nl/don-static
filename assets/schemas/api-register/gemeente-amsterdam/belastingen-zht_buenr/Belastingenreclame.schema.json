@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/belastingen-zht_buenr/belastingenreclame",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/belastingen/openapi.json#/components/schemas/Belastingenreclame"
+  ],
+  "type": "object",
+  "description": "reclame",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `reclame._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BelastingenreclameLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Identificatie van gebiedstarief record."
+    },
+    "tariefgebied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Tariefgebiedstypering bijvoorbeeld A, B, C."
+    },
+    "toelichtingReclamebelasting": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "description": "Verwijzing naar gemeentelijke webpagina voor meer informatie over reclamebelasting voor ondernemers.",
+      "maxLength": 200
+    },
+    "toelichtingTarief": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "description": "Verwijzing naar gemeentelijke webpagina voor meer informatie over het tarief.",
+      "maxLength": 200
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

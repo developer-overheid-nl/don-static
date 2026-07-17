@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/natuurmeting-op-kaart-2014-yqkntbqhr/propertiesgeojsonbegrenzing",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/natuurmeting-op-kaart-2014/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_begrenzing"
+  ],
+  "properties": {
+    "gid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "legenda": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

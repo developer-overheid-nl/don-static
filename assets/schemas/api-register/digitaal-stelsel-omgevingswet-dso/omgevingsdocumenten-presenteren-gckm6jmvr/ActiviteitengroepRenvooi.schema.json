@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/activiteitengroeprenvooi",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/ActiviteitengroepRenvooi"
+  ],
+  "title": "ActiviteitengroepRenvooi",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./Activiteitengroep.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "_delta": {
+          "$ref": "./ActiviteitengroepDelta.schema.json"
+        }
+      }
+    }
+  ]
+}

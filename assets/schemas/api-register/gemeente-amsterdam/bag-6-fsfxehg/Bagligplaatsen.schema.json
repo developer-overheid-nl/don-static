@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bag-6-fsfxehg/bagligplaatsen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json#/components/schemas/Bagligplaatsen"
+  ],
+  "type": "object",
+  "description": "Een LIGPLAATS is een door het bevoegde gemeentelijke orgaan als zodanig aangewezen plaats in het water die bestemd is voor het permanent afmeren van een voor woon-, bedrijfsmatige of recreatieve doeleinden geschikt drijvend object",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `ligplaatsen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "heeftDossier": {
+          "$ref": "./BagdossiersLink.schema.json"
+        },
+        "heeftHoofdadres": {
+          "$ref": "../_shared/BagNummeraanduidingenLink.schema.json"
+        },
+        "heeftNevenadres": {
+          "type": "array",
+          "items": {
+            "$ref": "./BagligplaatsenHeeftNevenadres_M2M.schema.json"
+          }
+        },
+        "heeftOnderzoeken": {
+          "type": "array",
+          "items": {
+            "$ref": "./BagligplaatsenHeeftOnderzoeken_M2M.schema.json"
+          }
+        },
+        "ligtInBuurt": {
+          "$ref": "../_shared/GebiedenBuurtenLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "../_shared/BagLigplaatsenLink.schema.json"
+        }
+      },
+      "required": [
+        "heeftDossier",
+        "heeftHoofdadres",
+        "heeftNevenadres",
+        "heeftOnderzoeken",
+        "ligtInBuurt",
+        "schema",
+        "self"
+      ]
+    },
+    "bagprocesCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "BAG proces code",
+      "description": "Functionele handeling die ten grondslag ligt aan de gebeurtenis. code"
+    },
+    "bagprocesOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "BAG proces omschrijving",
+      "description": "Functionele handeling die ten grondslag ligt aan de gebeurtenis. omschrijving"
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Ligplaats geldigheid begindatum",
+      "description": "De begindatum van een periode waarin een of meer gegevens die worden bijgehouden over een ligplaats een wijziging hebben ondergaan"
+    },
+    "datumActueelTot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Actueel tot datum",
+      "description": "Einddatum van de cyclus, eventueel in combinatie met het kenmerk Status"
+    },
+    "documentdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Document datum",
+      "description": "De datum waarop het brondocument is vastgesteld"
+    },
+    "documentnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Brondocument nummer",
+      "description": "Het unieke nummer van het brondocument"
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Ligplaats geldigheid einddatum",
+      "description": "De einddatum van een periode waarin een of meer gegevens die worden bijgehouden over een ligplaats een wijziging hebben ondergaan"
+    },
+    "gebruiksdoel": {
+      "type": "array",
+      "items": {
+        "$ref": "./BagligplaatsenGebruiksdoel.schema.json"
+      }
+    },
+    "geconstateerd": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Ligplaats geconstateerd indicatie",
+      "description": "Een aanduiding waarmee kan worden aangegeven dat een ligplaats in de registratie is opgenomen als gevolg van een feitelijke constatering, zonder dat er op het moment van opname sprake was van een regulier brondocument voor deze opname"
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "heeftDossierId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Ligplaats heeft dossier",
+      "description": "De brondocument(en) op basis waarvan de ligplaats is toegevoegd aan de registratie. Afgeleid van hetlandelijke BAG-kenmerk 'Documentnummer'",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "heeftHoofdadresId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Ligplaats heeft hoofdadres",
+      "description": "Het HOOFDadres dat de ligplaats heeft",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Ligplaats ID",
+      "description": "Unieke identificatie van een ligplaats"
+    },
+    "ligtInBuurtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Ligplaats ligt in buurt",
+      "description": "De buurt waarin een ligplaats ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "plusvolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object plus volgnummer",
+      "description": "Uniek BAG-plus volgnummer van de toestand van het object"
+    },
+    "registratiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object registratiedatum",
+      "description": "Begin geldigheid van een bepaalde combinatie van BAG- en BAG-plus-gegevens van een BAG-object"
+    },
+    "statusCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Ligplaats status code",
+      "description": "Dit is een vervallen kenmerk en wordt niet geactualiseerd"
+    },
+    "statusOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Ligplaats status omschrijving",
+      "description": "De fase van de levenscyclus van een ligplaats, waarin de betreffende ligplaats zich bevindt, Plaats aangewezen, plaats ingetrokken"
+    },
+    "volgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object volgnummer",
+      "description": "Uniek volgnummer van de toestand van het object"
+    }
+  },
+  "required": [
+    "_links",
+    "gebruiksdoel",
+    "heeftDossierId",
+    "heeftHoofdadresId",
+    "identificatie",
+    "ligtInBuurtId",
+    "volgnummer"
+  ]
+}

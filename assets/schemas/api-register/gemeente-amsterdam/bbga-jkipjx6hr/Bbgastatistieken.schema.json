@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bbga-jkipjx6hr/bbgastatistieken",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bbga/openapi.json#/components/schemas/Bbgastatistieken"
+  ],
+  "type": "object",
+  "description": "Stedelijke gemiddelden en standaardafwijkingen.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `statistieken._links` field. It contains all relationships with objects.",
+      "properties": {
+        "indicatorDefinitie": {
+          "$ref": "./BbgaindicatorenDefinitiesLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BbgastatistiekenLink.schema.json"
+        }
+      },
+      "required": [
+        "indicatorDefinitie",
+        "schema",
+        "self"
+      ]
+    },
+    "bron": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gemiddelde": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "id": {
+      "type": "string"
+    },
+    "indicatorDefinitieId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De variabele in kwestie.",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "jaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "standaardafwijking": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    }
+  },
+  "required": [
+    "_links",
+    "id",
+    "indicatorDefinitieId"
+  ]
+}

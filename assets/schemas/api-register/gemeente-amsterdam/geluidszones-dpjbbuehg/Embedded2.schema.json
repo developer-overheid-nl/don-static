@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/geluidszones-dpjbbuehg/embedded2",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/geluidszones/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "metro": {
+      "type": "array",
+      "items": {
+        "$ref": "./Geluidszonesmetro.schema.json"
+      }
+    }
+  }
+}

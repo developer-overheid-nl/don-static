@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/samengestelde-rtr-services-dgbh6jmvr/bepalenregelbeheerobjectenresponse",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/165401/toepasbareregels-samengesteldertrservices-v2.json#/components/schemas/BepalenRegelbeheerobjectenResponse"
+  ],
+  "properties": {
+    "functioneleStructuurRef": {
+      "description": "De functioneleStructuurRef van de werkzaamheid zoals die is meegegeven in de request.",
+      "type": "string"
+    },
+    "indirecte_regelbeheerobjecten": {
+      "description": "Lijst van typeringen van Regelbegeerobjecten die via een juridische relatie 'naar' gerelateerd zijn aan de activiteiten die onder de werkzaamheid vallen.",
+      "type": "array",
+      "items": {
+        "description": "Type regelbeheerobject",
+        "type": "string",
+        "enum": [
+          "Conclusie",
+          "Indieningsvereisten",
+          "Maatregelen"
+        ]
+      }
+    },
+    "regelbeheerobjecten": {
+      "description": "Lijst van typeringen van Regelbegeerobjecten die direct gerelateerd zijn aan de activiteiten die onder de werkzaamheid vallen.",
+      "type": "array",
+      "items": {
+        "description": "Type regelbeheerobject",
+        "type": "string",
+        "enum": [
+          "Conclusie",
+          "Indieningsvereisten",
+          "Maatregelen"
+        ]
+      }
+    }
+  }
+}

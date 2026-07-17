@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/vng/_shared/validatiefout",
+  "x-derived-from": [
+    "https://autorisaties-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/ValidatieFout",
+    "https://besluiten-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/ValidatieFout",
+    "https://notificaties-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/ValidatieFout"
+  ],
+  "required": [
+    "code",
+    "title",
+    "status",
+    "detail",
+    "instance",
+    "invalidParams"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "title": "Code",
+      "description": "Systeemcode die het type fout aangeeft",
+      "type": "string",
+      "minLength": 1
+    },
+    "detail": {
+      "title": "Detail",
+      "description": "Extra informatie bij de fout, indien beschikbaar",
+      "type": "string",
+      "minLength": 1
+    },
+    "instance": {
+      "title": "Instance",
+      "description": "URI met referentie naar dit specifiek voorkomen van de fout. Deze kan gebruikt worden in combinatie met server logs, bijvoorbeeld.",
+      "type": "string",
+      "minLength": 1
+    },
+    "invalidParams": {
+      "type": "array",
+      "items": {
+        "$ref": "./FieldValidationError.schema.json"
+      }
+    },
+    "status": {
+      "title": "Status",
+      "description": "De HTTP status code",
+      "type": "integer"
+    },
+    "title": {
+      "title": "Title",
+      "description": "Generieke titel voor het type fout",
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "title": "Type",
+      "description": "URI referentie naar het type fout, bedoeld voor developers",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/woz-lira1uenr/wozdefaultdeelobjectenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/woz/openapi.json#/components/schemas/WozdefaultDeelobjectenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `deelobjecten._links` field. It contains all relationships with objects.",
+  "properties": {
+    "heeftBagPand": {
+      "$ref": "../_shared/BagPandenLink.schema.json"
+    },
+    "isVerbondenMetBagLigplaats": {
+      "$ref": "../_shared/BagLigplaatsenLink.schema.json"
+    },
+    "isVerbondenMetBagStandplaats": {
+      "$ref": "../_shared/BagStandplaatsenLink.schema.json"
+    },
+    "isVerbondenMetBagVerblijfsobject": {
+      "$ref": "../_shared/BagVerblijfsobjectenLink.schema.json"
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./WozDeelobjectenLink.schema.json"
+    }
+  },
+  "required": [
+    "heeftBagPand",
+    "isVerbondenMetBagLigplaats",
+    "isVerbondenMetBagStandplaats",
+    "isVerbondenMetBagVerblijfsobject",
+    "schema",
+    "self"
+  ]
+}

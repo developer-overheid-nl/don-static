@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/basebesluitsubvlak",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/BaseBesluitsubvlak"
+  ],
+  "required": [
+    "_links",
+    "cartografieInfo",
+    "id",
+    "illustraties",
+    "naam",
+    "styleId",
+    "thema",
+    "verwijzingNaarTekst"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./BesluitvlakLinks.schema.json"
+    },
+    "cartografieInfo": {
+      "type": "array",
+      "items": {
+        "$ref": "./CartografieInfo.schema.json"
+      }
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "NL.IMRO.00a8ac2b580040b8a44a4ebf7c116a7d"
+      ]
+    },
+    "illustraties": {
+      "type": "array",
+      "items": {
+        "$ref": "./IllustratieReferentie.schema.json"
+      }
+    },
+    "naam": {
+      "type": "string",
+      "examples": [
+        "Archeologische verwachting 2"
+      ]
+    },
+    "styleId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "dubbelbestemming_waterstaat"
+      ]
+    },
+    "thema": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "archeologie"
+        ]
+      }
+    },
+    "verwijzingNaarTekst": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "https://ruimtelijkeplannen.nl/documents/NL.IMRO.0222.R05KE006A-0002/t_NL.IMRO.0222.R05KE006A-0002.html"
+        ]
+      }
+    }
+  }
+}

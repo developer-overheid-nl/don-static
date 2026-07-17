@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/ziekten-plagen-en-exoten-groen-i53pfx6hg/embedded4",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/ziekte_plagen_exoten_groen/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "japanseduizendknoop_meldingen": {
+      "type": "array",
+      "items": {
+        "$ref": "./ZiektePlagenExotenGroenjapanseduizendknoopMeldingen.schema.json"
+      }
+    }
+  }
+}

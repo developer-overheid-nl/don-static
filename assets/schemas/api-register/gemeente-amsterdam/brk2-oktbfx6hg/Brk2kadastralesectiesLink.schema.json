@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brk2-oktbfx6hg/brk2kadastralesectieslink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brk2/openapi.json#/components/schemas/Brk2kadastralesectiesLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to kadastralesecties.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Kadastrale sectie ID",
+      "description": "De unieke aanduiding van een Kadastrale sectie"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "identificatie",
+    "title"
+  ]
+}

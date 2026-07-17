@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/centraal-bureau-voor-de-statistiek/ccb-o-data-open-api-d5g_wihvr/iedmschemaelement",
+  "x-derived-from": [
+    "https://datasets.cbs.nl/odata/v1/openapi.json#/components/schemas/IEdmSchemaElement"
+  ],
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "readOnly": true
+    },
+    "namespace": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "readOnly": true
+    },
+    "schemaElementKind": {
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/embedded7",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json"
+  ],
+  "required": [
+    "teksten"
+  ],
+  "type": "object",
+  "properties": {
+    "teksten": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./BaseTekst.schema.json"
+          },
+          {
+            "properties": {
+              "_embedded": {
+                "$ref": "./Embedded5.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

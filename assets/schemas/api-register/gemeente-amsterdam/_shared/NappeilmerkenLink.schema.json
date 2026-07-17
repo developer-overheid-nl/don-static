@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/_shared/nappeilmerkenlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/meetbouten/openapi.json#/components/schemas/NappeilmerkenLink",
+    "https://api.data.amsterdam.nl/v1/nap/openapi.json#/components/schemas/NappeilmerkenLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to peilmerken.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Peilmerk ID",
+      "description": "Unieke identificatie van het peilmerk"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "identificatie",
+    "title"
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/richtlijn-stedelijk-afvalwater-rsa-qev7tbqnr/propertiesgeojsonrsakwetsbaargebied",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/richtlijn-stedelijk-afvalwater/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_rsa_kwetsbaargebied"
+  ],
+  "properties": {
+    "beginlife": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "desigbegin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "desigend": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "endlife": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legislevel": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legislink": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legisname": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "link": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "localid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nametext": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nametxtint": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nametxtlan": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "predecesid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "predeidsch": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rzoneid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rzoneidsch": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sizeuom": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sizevalue": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "spzonetype": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "st_areashape": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "st_perimetershape": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "succeidsch": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "successoid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "themaidsch": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "thematicid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "versionid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wevolution": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "zonetype": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

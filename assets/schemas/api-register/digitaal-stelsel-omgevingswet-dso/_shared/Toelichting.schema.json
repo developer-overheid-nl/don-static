@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/toelichting",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v2.json#/components/schemas/Toelichting",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v3.json#/components/schemas/Toelichting"
+  ],
+  "description": "de toelichting",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "toelichting": {
+      "description": "De tekst behorende bij de toelichting. De MarkDown syntax wordt gebruikt om eventuele opmaak, links en media te ondersteunen (zie https://daringfireball.net/projects/markdown/). Voor video's is de syntax uitgebreid met !video(/path/to/img.mp4 \"title\"). Dit staat beschreven in de IMTR (voor de Standaard toepasbare regels (STTR) en het bijbehorende Informatiemodel toepasbare regels (IMTR) zie https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/). ",
+      "type": "string"
+    }
+  }
+}

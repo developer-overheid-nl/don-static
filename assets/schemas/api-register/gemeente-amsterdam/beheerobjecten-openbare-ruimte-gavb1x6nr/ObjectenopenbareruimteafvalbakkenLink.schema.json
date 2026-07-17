@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/beheerobjecten-openbare-ruimte-gavb1x6nr/objectenopenbareruimteafvalbakkenlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/objectenopenbareruimte/openapi.json#/components/schemas/ObjectenopenbareruimteafvalbakkenLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to afvalbakken.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke aanduiding van het record, overgenomen uit bron ABSweb"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "id",
+    "title"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/samengestelde-rtr-services-dgbh6jmvr/werkzaamheidmetjuridischgerelateerdewerkzaamheden",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/165401/toepasbareregels-samengesteldertrservices-v2.json#/components/schemas/WerkzaamheidMetJuridischGerelateerdeWerkzaamheden"
+  ],
+  "allOf": [
+    {
+      "required": [
+        "urn",
+        "naam",
+        "functioneleStructuurRef"
+      ],
+      "properties": {
+        "functioneleStructuurRef": {
+          "type": "string",
+          "description": "De unieke functionele structuur referentie van deze werkzaamheid"
+        },
+        "naam": {
+          "type": "string",
+          "description": "De naam van de werkzaamheid"
+        },
+        "urn": {
+          "type": "string",
+          "description": "De unieke identifier van deze werkzaamheid"
+        }
+      }
+    },
+    {
+      "properties": {
+        "juridischeWerkzaamhedenNaar": {
+          "type": "array",
+          "description": "Alle juridisch gerelateerde werkzaamheden van waaruit naar deze werkzaamheid verwezen wordt",
+          "items": {
+            "required": [
+              "urn",
+              "naam",
+              "functioneleStructuurRef"
+            ],
+            "properties": {
+              "functioneleStructuurRef": {
+                "type": "string",
+                "description": "De unieke functionele structuur referentie van deze werkzaamheid"
+              },
+              "naam": {
+                "type": "string",
+                "description": "De naam van de werkzaamheid"
+              },
+              "urn": {
+                "type": "string",
+                "description": "De unieke identifier van deze werkzaamheid"
+              }
+            }
+          }
+        },
+        "juridischeWerkzaamhedenVan": {
+          "type": "array",
+          "description": "Alle juridisch gerelateerde werkzaamheden waarnaar de werkzaamheid wijst",
+          "items": {
+            "required": [
+              "urn",
+              "naam",
+              "functioneleStructuurRef"
+            ],
+            "properties": {
+              "functioneleStructuurRef": {
+                "type": "string",
+                "description": "De unieke functionele structuur referentie van deze werkzaamheid"
+              },
+              "naam": {
+                "type": "string",
+                "description": "De naam van de werkzaamheid"
+              },
+              "urn": {
+                "type": "string",
+                "description": "De unieke identifier van deze werkzaamheid"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

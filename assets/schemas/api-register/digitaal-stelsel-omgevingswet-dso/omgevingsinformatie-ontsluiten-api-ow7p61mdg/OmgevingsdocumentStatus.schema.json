@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/omgevingsdocumentstatus",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/OmgevingsdocumentStatus"
+  ],
+  "type": "string",
+  "description": "De status van een omgevingsdocument waarme aangegeven kan worden dat het document niet meer geldig is.",
+  "enum": [
+    "B"
+  ],
+  "examples": [
+    "B"
+  ]
+}

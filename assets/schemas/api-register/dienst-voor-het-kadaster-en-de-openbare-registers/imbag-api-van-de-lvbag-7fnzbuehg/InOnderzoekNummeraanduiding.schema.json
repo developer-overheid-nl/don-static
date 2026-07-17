@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/inonderzoeknummeraanduiding",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/InOnderzoekNummeraanduiding"
+  ],
+  "title": "InOnderzoekNummeraanduiding",
+  "type": "string",
+  "enum": [
+    "huisnummer",
+    "huisletter",
+    "huisnummertoevoeging",
+    "postcode",
+    "type adresseerbaar object",
+    "status",
+    "ligt in",
+    "ligt aan"
+  ]
+}

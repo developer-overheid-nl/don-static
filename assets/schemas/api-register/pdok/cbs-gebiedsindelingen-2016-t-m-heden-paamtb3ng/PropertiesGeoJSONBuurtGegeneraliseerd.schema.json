@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/cbs-gebiedsindelingen-2016-t-m-heden-paamtb3ng/propertiesgeojsonbuurtgegeneraliseerd",
+  "x-derived-from": [
+    "https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_buurt_gegeneraliseerd"
+  ],
+  "properties": {
+    "einddatum": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gm_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "jaarcode": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "jrstatcode": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rubriek": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "startdatum": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "statcode": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "statnaam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

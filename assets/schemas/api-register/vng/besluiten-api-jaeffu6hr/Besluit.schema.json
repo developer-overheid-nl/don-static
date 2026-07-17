@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/vng/besluiten-api-jaeffu6hr/besluit",
+  "x-derived-from": [
+    "https://besluiten-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/Besluit"
+  ],
+  "required": [
+    "verantwoordelijkeOrganisatie",
+    "besluittype",
+    "datum",
+    "ingangsdatum"
+  ],
+  "type": "object",
+  "properties": {
+    "besluittype": {
+      "title": "Besluittype",
+      "description": "URL-referentie naar het BESLUITTYPE (in de Catalogi API).",
+      "type": "string",
+      "format": "uri",
+      "maxLength": 200,
+      "minLength": 1
+    },
+    "bestuursorgaan": {
+      "title": "Bestuursorgaan",
+      "description": "Een orgaan van een rechtspersoon krachtens publiekrecht ingesteld of een persoon of college, met enig openbaar gezag bekleed onder wiens verantwoordelijkheid het besluit vastgesteld is.",
+      "type": "string",
+      "maxLength": 50
+    },
+    "datum": {
+      "title": "Datum",
+      "description": "De beslisdatum (AWB) van het besluit.",
+      "type": "string",
+      "format": "date"
+    },
+    "identificatie": {
+      "title": "Identificatie",
+      "description": "Identificatie van het besluit binnen de organisatie die het besluit heeft vastgesteld. Indien deze niet opgegeven is, dan wordt die gegenereerd.",
+      "type": "string",
+      "maxLength": 50
+    },
+    "ingangsdatum": {
+      "title": "Ingangsdatum",
+      "description": "Ingangsdatum van de werkingsperiode van het besluit.",
+      "type": "string",
+      "format": "date"
+    },
+    "publicatiedatum": {
+      "title": "Publicatiedatum",
+      "description": "Datum waarop het besluit gepubliceerd wordt.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "toelichting": {
+      "title": "Toelichting",
+      "description": "Toelichting bij het besluit.",
+      "type": "string"
+    },
+    "uiterlijkeReactiedatum": {
+      "title": "Uiterlijke reactiedatum",
+      "description": "De datum tot wanneer verweer tegen het besluit mogelijk is.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "url": {
+      "title": "Url",
+      "description": "URL-referentie naar dit object. Dit is de unieke identificatie en locatie van dit object.",
+      "type": "string",
+      "format": "uri",
+      "readOnly": true,
+      "maxLength": 1000,
+      "minLength": 1
+    },
+    "verantwoordelijkeOrganisatie": {
+      "title": "Verantwoordelijke organisatie",
+      "description": "Het RSIN van de niet-natuurlijk persoon zijnde de organisatie die het besluit heeft vastgesteld.",
+      "type": "string",
+      "maxLength": 9,
+      "minLength": 1
+    },
+    "vervaldatum": {
+      "title": "Vervaldatum",
+      "description": "Datum waarop de werkingsperiode van het besluit eindigt.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "vervalreden": {
+      "title": "Vervalreden",
+      "description": "De omschrijving die aangeeft op grond waarvan het besluit is of komt te vervallen.\n\nUitleg bij mogelijke waarden:\n\n* `tijdelijk` - Besluit met tijdelijke werking\n* `ingetrokken_overheid` - Besluit ingetrokken door overheid\n* `ingetrokken_belanghebbende` - Besluit ingetrokken o.v.v. belanghebbende",
+      "type": "string",
+      "enum": [
+        "tijdelijk",
+        "ingetrokken_overheid",
+        "ingetrokken_belanghebbende"
+      ]
+    },
+    "vervalredenWeergave": {
+      "title": "Vervalreden weergave",
+      "type": "string",
+      "readOnly": true,
+      "minLength": 1
+    },
+    "verzenddatum": {
+      "title": "Verzenddatum",
+      "description": "Datum waarop het besluit verzonden is.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "zaak": {
+      "title": "Zaak",
+      "description": "URL-referentie naar de ZAAK (in de Zaken API) waarvan dit besluit uitkomst is.",
+      "type": "string",
+      "format": "uri",
+      "maxLength": 200
+    }
+  }
+}

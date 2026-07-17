@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brt-50-nxes1ueng/brt50pluslabels",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brt50/openapi.json#/components/schemas/Brt50pluslabels"
+  ],
+  "type": "object",
+  "description": "Amsterdamse plusinformatie: labels. Dit zijn teksten, omgezet naar vlakken zodat de positie en weergave van de originele teksten intact blijft.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `pluslabels._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "../_shared/Brt25pluslabelsLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "geometrieVlak": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "description": "Point in 3D space",
+                    "minItems": 2,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "MultiPolygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Plus Object ID",
+      "description": "De identiteit van het geo-object; in dit geval een 'teller'."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Label type",
+      "description": "Het soort label."
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie"
+  ]
+}

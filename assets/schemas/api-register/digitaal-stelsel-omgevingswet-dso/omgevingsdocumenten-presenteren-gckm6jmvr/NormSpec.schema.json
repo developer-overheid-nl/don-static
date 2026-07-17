@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/normspec",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/NormSpec"
+  ],
+  "title": "NormSpec",
+  "required": [
+    "groep",
+    "identificatie",
+    "naam",
+    "normwaarden",
+    "symboolcodes",
+    "type"
+  ],
+  "type": "object",
+  "properties": {
+    "eenheid": {
+      "$ref": "./Eenheid.schema.json"
+    },
+    "groep": {
+      "$ref": "./Normgroep.schema.json"
+    },
+    "identificatie": {
+      "type": "string",
+      "examples": [
+        "nl.imow-gm1911.omgevingsnorm.20240101"
+      ]
+    },
+    "naam": {
+      "type": "string",
+      "examples": [
+        "Bouwhoogte"
+      ]
+    },
+    "normwaarden": {
+      "type": "array",
+      "items": {
+        "$ref": "./Normwaarde.schema.json"
+      }
+    },
+    "symboolcodes": {
+      "$ref": "./Symboolcodes.schema.json"
+    },
+    "type": {
+      "$ref": "./TypeNorm.schema.json"
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/gemeentelijk-vastgoed-u4hy1xeng/gemeentelijkvastgoedgebouwobjectenuitgebreid",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/gemeentelijk_vastgoed/openapi.json#/components/schemas/GemeentelijkVastgoedgebouwobjecten_uitgebreid"
+  ],
+  "type": "object",
+  "description": "Gegevens over de door de directie Gemeentelijk Vastgoed van de gemeente Amsterdam beheerde gebouwobjecten in volle eigendom of waar de gemeente Amsterdam een appartementsrecht heeft. Een gebouwobject kent veelal een relatie met een BAG-pand. Deze uitgebreide dataset bevat extra gegevens, onder andere contactgegevens van de assetmanager/beheerder van het pand. Hierom is deze set niet openbaar.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `gebouwobjectenUitgebreid._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./GemeentelijkVastgoedgebouwobjectenUitgebreidLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "assetmanager": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Naam assetmanager",
+      "description": "Naam assetmanager."
+    },
+    "bagPandIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Bag pand ids"
+      },
+      "title": "Pand ID",
+      "description": "Landelijke identificerende sleutel van de pandobjecten. Kan één of meerdere waardes bevatten doordat een object meerdere BAG panden kan beslaan."
+    },
+    "bvo": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Bruto vloeroppervlak",
+      "description": "Bruto vloeroppervlak van het object gemeentelijk vastgoed."
+    },
+    "eigendom": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Eigendomssituatie gebouwobject",
+      "description": "Geeft de eigendomssituatie weer: volle eigendom of appartementsrecht."
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "huisletter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken."
+    },
+    "huisnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nummering."
+    },
+    "huisnummeraanduiding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gemeentelijk vastgoed huisnummeraanduiding",
+      "description": "Huisnummeraanduiding van het object uit het vastgoedbeheersysteem."
+    },
+    "huisnummertoevoeging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Huisnummer toevoeging",
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter"
+    },
+    "kostenplaats": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Kostenplaats binnen Amsterdams Financieel en Inkoop Systeem",
+      "description": "Betreft de gerelateerde kostenplaats in AFS/AFIS."
+    },
+    "objectId": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Gemeentelijk vastgoed ID",
+      "description": "Unieke identificatie van het object gemeentelijk vastgoed."
+    },
+    "objectnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gemeentelijk vastgoed objectnaam",
+      "description": "Naam van het gebouwobject uit het vastgoedbeheersysteem."
+    },
+    "straatnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van de straat"
+    },
+    "themaportefeuille": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gemeentelijk vastgoed themaportefeuille",
+      "description": "Geeft aan in welke themaportefeuille het object binnen Gemeentelijk Vastgoed valt."
+    },
+    "vvo": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Verhuurbaar vloeroppervlak",
+      "description": "Verhuurbaar vloeroppervlak van het object gemeentelijk vastgoed."
+    }
+  },
+  "required": [
+    "_links",
+    "objectId"
+  ]
+}

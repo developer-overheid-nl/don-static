@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-afhandelen-rx1ce_rdr/document",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json#/components/schemas/Document",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/Document"
+  ],
+  "type": "object",
+  "required": [
+    "documentId",
+    "metadata"
+  ],
+  "properties": {
+    "_links": {
+      "$ref": "./Links.schema.json"
+    },
+    "documentId": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "metadata": {
+      "$ref": "../_shared/Metadata.schema.json"
+    }
+  },
+  "examples": [
+    {
+      "documentId": "51c4275449f3760f9cabad9e6c1478764e19be6802a900b188248b068403f912",
+      "metadata": {
+        "bestandsnaam": "Tekening_van_de_uitbouw.pdf",
+        "vertrouwelijkAanduiding": "Vertrouwelijk",
+        "documentOmschrijving": "Overig",
+        "formaat": "application/pdf"
+      },
+      "_links": {
+        "self": {
+          "href": "https://api.dso.nl/verzoeken/2017010100001/documenten/1"
+        },
+        "content": {
+          "href": "https://api.dso.nl/verzoeken/2017010100001/documenten/1/content"
+        }
+      }
+    }
+  ]
+}

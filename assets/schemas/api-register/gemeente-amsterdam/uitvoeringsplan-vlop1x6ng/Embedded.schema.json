@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/uitvoeringsplan-vlop1x6ng/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/uitvoeringsplan/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "uitvoeringsplan": {
+      "type": "array",
+      "items": {
+        "$ref": "./Uitvoeringsplanuitvoeringsplan.schema.json"
+      }
+    }
+  }
+}

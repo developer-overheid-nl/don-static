@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/overheidsbesluit-bodemverontreiniging-sld-rnqmfx6hr/sldcriteriaset",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/sq/sld/v1/openapi#/components/schemas/SldCriteriaSet"
+  ],
+  "properties": {
+    "approach": {
+      "type": "string"
+    },
+    "area": {
+      "$ref": "../_shared/Area.schema.json"
+    },
+    "compartment": {
+      "type": "string"
+    },
+    "correctionPeriod": {
+      "$ref": "../_shared/DatePeriod.schema.json"
+    },
+    "deliveryAccountableParty": {
+      "type": "string"
+    },
+    "deliveryContext": {
+      "type": "string"
+    },
+    "dossierIdLocalAuthority": {
+      "type": "string"
+    },
+    "dossierIdSoilInformationSystem": {
+      "type": "string"
+    },
+    "followUp": {
+      "type": "string"
+    },
+    "identificationHandledArea": {
+      "type": "string"
+    },
+    "identificationSoilLocation": {
+      "type": "string"
+    },
+    "qualityRegime": {
+      "enum": [
+        "IMBRO",
+        "IMBRO_A"
+      ],
+      "type": "string"
+    },
+    "registrationPeriod": {
+      "$ref": "../_shared/DatePeriod.schema.json"
+    },
+    "underReview": {
+      "enum": [
+        "JA",
+        "NEE"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "area"
+  ],
+  "type": "object"
+}

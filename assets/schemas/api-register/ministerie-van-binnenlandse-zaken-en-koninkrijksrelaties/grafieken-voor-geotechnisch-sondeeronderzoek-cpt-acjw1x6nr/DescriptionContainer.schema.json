@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/grafieken-voor-geotechnisch-sondeeronderzoek-cpt-acjw1x6nr/descriptioncontainer",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/sr/cpt/v1/result/openapi#/components/schemas/DescriptionContainer"
+  ],
+  "properties": {
+    "supportedGraphs": {
+      "items": {
+        "$ref": "./RoTypeGraphs.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

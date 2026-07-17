@@ -1,0 +1,332 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/benkagg-lqtl1u6hg/benkagggebiedenbuurten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/benkagg/openapi.json#/components/schemas/Benkagggebiedenbuurten"
+  ],
+  "type": "object",
+  "description": "Gebieden-tabel van actuele Buurten met de gebieden waar ze in liggen.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `gebiedenbuurten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BenkagggebiedenbuurtenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "buurtBeginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object geldigheid startdatum",
+      "description": "De begindatum van de geldigheid van een bepaalde combinatie van gegevens over een buurt"
+    },
+    "buurtCbsCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object CBS code",
+      "description": "De CBS-code van het object"
+    },
+    "buurtCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object code",
+      "description": "Volledige, samengestelde, code, bestaande uit stadsdeelcode, wijkcode en buurtcode"
+    },
+    "buurtGeometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "buurtIdentificatie": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "Uniek identificerend kenmerk voor het object dat onveranderlijk is zolang het object bestaat"
+    },
+    "buurtNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object naam",
+      "description": "De naam van het object"
+    },
+    "buurtRegistratiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object registratiedatum",
+      "description": "Datum waarop het gegeven in de bron geregistreerd is"
+    },
+    "buurtVolgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object volgnummer",
+      "description": "Uniek volgnummer van de toestand van het object"
+    },
+    "id": {
+      "type": "string"
+    },
+    "ligtInGemeenteBeginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Buurt ligt in gemeente begin geldigheid",
+      "description": "Begin geldigheid van de gemeente waar de buurt in ligt"
+    },
+    "ligtInGemeenteIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in gemeente identificatie",
+      "description": "Identificatie van de gemeente waar de buurt in ligt"
+    },
+    "ligtInGemeenteNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in gemeente naam",
+      "description": "Naam van de gemeente waar de buurt in ligt"
+    },
+    "ligtInGemeenteVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Buurt ligt in gemeente volgnummer",
+      "description": "Volgnummer van de gemeente waar de buurt in ligt"
+    },
+    "ligtInGgwgebiedBeginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Buurt ligt in GGW gebied begin geldigheid",
+      "description": "Begin geldigheid van het gebiedsgericht werken gebied waar de buurt in ligt"
+    },
+    "ligtInGgwgebiedCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in GGW gebied code",
+      "description": "Code van het gebiedsgericht werken gebied waar de buurt in ligt"
+    },
+    "ligtInGgwgebiedIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in GGW gebied identificatie",
+      "description": "Identificatie van het gebiedsgericht werken gebied waar de buurt in ligt"
+    },
+    "ligtInGgwgebiedNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in GGW gebied naam",
+      "description": "Naam van het gebiedsgericht werken gebied waar de buurt in ligt"
+    },
+    "ligtInGgwgebiedRegistratiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Buurt ligt in GGW gebied registratiedatum",
+      "description": "Registratiedatum van het gebiedsgericht werken gebied waar de buurt in ligt"
+    },
+    "ligtInGgwgebiedVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Buurt ligt in GGW gebied volgnummer",
+      "description": "Volgnummer van het gebiedsgericht werken gebied waar de buurt in ligt"
+    },
+    "ligtInStadsdeelBeginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Buurt ligt in stadsdeel begin geldigheid",
+      "description": "Begin geldigheid van het stadsdeel waar de buurt in ligt"
+    },
+    "ligtInStadsdeelCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in stadsdeel code",
+      "description": "Code van het stadsdeel waar de buurt in ligt"
+    },
+    "ligtInStadsdeelIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in stadsdeel identificatie",
+      "description": "Identificatie van het stadsdeel waar de buurt in ligt"
+    },
+    "ligtInStadsdeelNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in stadsdeel naam",
+      "description": "Naam van het stadsdeel waar de buurt in ligt"
+    },
+    "ligtInStadsdeelRegistratiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Buurt ligt in stadsdeel registratiedatum",
+      "description": "Registratiedatum van het stadsdeel waar de buurt in ligt"
+    },
+    "ligtInStadsdeelVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Buurt ligt in stadsdeel volgnummer",
+      "description": "Volgnummer van het stadsdeel waar de buurt in ligt"
+    },
+    "ligtInWijkBeginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Buurt ligt in wijk begin geldigheid",
+      "description": "Begin geldigheid van de wijk waar de buurt in ligt"
+    },
+    "ligtInWijkCbsCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in wijk CBS-code",
+      "description": "CBS-code van de wijk waar de buurt in ligt"
+    },
+    "ligtInWijkCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in wijk code",
+      "description": "Code van de wijk waar de buurt in ligt"
+    },
+    "ligtInWijkIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in wijk identificatie",
+      "description": "Identificatie van de wijk waar de buurt in ligt"
+    },
+    "ligtInWijkNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in wijk naam",
+      "description": "Naam van de wijk waar de buurt in ligt"
+    },
+    "ligtInWijkRegistratiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Buurt ligt in wijk registratiedatum",
+      "description": "Registratiedatum van de wijk waar de buurt in ligt"
+    },
+    "ligtInWijkVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Buurt ligt in wijk volgnummer",
+      "description": "Volgnummer van de wijk waar de buurt in ligt"
+    }
+  },
+  "required": [
+    "_links",
+    "buurtIdentificatie",
+    "buurtVolgnummer",
+    "id"
+  ]
+}

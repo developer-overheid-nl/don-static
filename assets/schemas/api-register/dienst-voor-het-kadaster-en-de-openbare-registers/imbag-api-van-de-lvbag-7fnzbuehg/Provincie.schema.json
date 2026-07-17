@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/provincie",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/Provincie"
+  ],
+  "title": "Provincie",
+  "required": [
+    "afkorting",
+    "identificatie",
+    "naam"
+  ],
+  "type": "object",
+  "properties": {
+    "afkorting": {
+      "title": "afkorting",
+      "maxLength": 2,
+      "minLength": 1,
+      "type": "string",
+      "examples": [
+        "Ge"
+      ]
+    },
+    "identificatie": {
+      "type": "integer"
+    },
+    "naam": {
+      "title": "naam",
+      "maxLength": 32,
+      "minLength": 1,
+      "type": "string",
+      "examples": [
+        "Gelderland"
+      ]
+    }
+  },
+  "description": "Gegevens van een provincie"
+}

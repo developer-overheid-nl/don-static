@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/grondwatermonitoringnet-gmn-asy9aueng/measuringpoint",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/gm/gmn/v1/openapi#/components/schemas/MeasuringPoint"
+  ],
+  "properties": {
+    "monitoringTubes": {
+      "items": {
+        "$ref": "./MonitoringTube.schema.json"
+      },
+      "type": "array"
+    },
+    "pointCode": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

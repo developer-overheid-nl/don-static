@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/nieuwbouwplannen-lmc_ju6hg/nieuwbouwplannenwoningbouwplannenkwartaaluitgebreidlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/nieuwbouwplannen/openapi.json#/components/schemas/Nieuwbouwplannenwoningbouwplannen_kwartaal_uitgebreidLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to woningbouwplannenKwartaalUitgebreid.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Nieuwbouwplan project ID",
+      "description": "Unieke aanduiding van nieuwbouwproject."
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "id",
+    "title"
+  ]
+}

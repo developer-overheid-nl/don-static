@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/opleidingonderdeel",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/OpleidingOnderdeel"
+  ],
+  "type": "string",
+  "description": "Het onderwijsgebied in het hoger onderwijs waartoe de opleiding behoort.",
+  "enum": [
+    "ECONOMIE",
+    "GEDRAG_EN_MAATSCHAPPIJ",
+    "GEZONDHEIDSZORG",
+    "LANDBOUW_EN_NATUURLIJKE_OMGEVING",
+    "NATUUR",
+    "ONDERWIJS",
+    "RECHT",
+    "SECTOROVERSTIJGEND",
+    "TAAL_EN_CULTUUR",
+    "TECHNIEK"
+  ]
+}

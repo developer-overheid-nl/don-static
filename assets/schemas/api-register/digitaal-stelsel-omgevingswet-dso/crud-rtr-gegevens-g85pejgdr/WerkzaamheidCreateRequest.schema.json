@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/crud-rtr-gegevens-g85pejgdr/werkzaamheidcreaterequest",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167490/toepasbareregels-crud-rtr-gegevens-v2.json#/components/schemas/WerkzaamheidCreateRequest"
+  ],
+  "allOf": [
+    {
+      "required": [
+        "omschrijving",
+        "trefwoorden"
+      ],
+      "properties": {
+        "omschrijving": {
+          "description": "Omschrijving van de werkzaamheid.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 250
+        },
+        "trefwoorden": {
+          "description": "Trefwoorden van de werkzaamheid.",
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 1500,
+          "items": {
+            "description": "Trefwoord van de werkzaamheid.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 250
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "urn"
+      ],
+      "properties": {
+        "urn": {
+          "description": "Urn van de werkzaamheid",
+          "type": "string",
+          "pattern": "^\\w{1,100}$",
+          "examples": [
+            "BoomKappen"
+          ]
+        }
+      }
+    }
+  ]
+}

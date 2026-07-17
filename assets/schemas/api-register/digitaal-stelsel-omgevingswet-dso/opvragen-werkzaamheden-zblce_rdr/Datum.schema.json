@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/opvragen-werkzaamheden-zblce_rdr/datum",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/239140/toepasbareregels-opvragenwerkzaamheden-v1.json#/components/schemas/Datum"
+  ],
+  "description": "Datum in het formaat yyyy-MM-dd",
+  "type": "string",
+  "format": "date",
+  "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+  "examples": [
+    "2023-01-01"
+  ]
+}

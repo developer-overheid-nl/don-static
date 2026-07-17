@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/zoeken-in-activiteiten-voor-indieningsvereisten-en-werkzaamheden-q7gc6lgvr/trefwoord",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/235013/toepasbareregels-zoekinterface-v2.json#/components/schemas/Trefwoord"
+  ],
+  "description": "Trefwoord van de werkzaamheid.",
+  "type": "string"
+}

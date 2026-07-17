@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/civiele-constructies-e0mafxehr/civieleconstructiesdamwand",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/civieleconstructies/openapi.json#/components/schemas/Civieleconstructiesdamwand"
+  ],
+  "type": "object",
+  "description": "Grondkerende of waterkerende constructie bestaande uit nagenoeg verticaal in de grond aangebrachte elementen die door middel van een langsprofiel in elkaar grijpen.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `damwand._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./CivieleconstructiesdamwandLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "beheerafspraak": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Attribuut voor het vermelden van aanvullende afspraken over het beheer van een object of voor het vermelden van specificaties van de beheersituatie van een object."
+    },
+    "beheerder": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Beheerder van het beheerobject, door de organisatie zelf in te delen."
+    },
+    "beheerderGedetailleerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Nadere aanduiding van de beheerder van het beheerobject."
+    },
+    "beheergebied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van het beheergebied waarbinnen het beheerobject ligt. Indeling in beheergebieden is organisatiespecifiek."
+    },
+    "eigenaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Beheerobject eigenaa",
+      "description": "Eigenaar van object, door de organisatie zelf in te delen."
+    },
+    "fundering": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Keuze uit lijst met funderingen van het beheerobject. Van toepassing bij wegobjecten en grassportvelden."
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke aanduiding van record."
+    },
+    "materiaal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Lijst met materialen waaruit het beheerobject opgebouwd is"
+    },
+    "nenTypeBeheerobject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "NEN type beheerobject",
+      "description": "Registratie van de versie van NEN2767 die van toepassing is en gebruikt."
+    },
+    "objectnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Beheerobject naam",
+      "description": "De naam van het beheerobject."
+    },
+    "objectnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Beheerobject ID",
+      "description": "Nummer van het beheerobject, door de organisatie zelf in te delen."
+    },
+    "objecttype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object type",
+      "description": "Aanduiding voor de registratie van concrete klassen waar vaste gegevens in de vorm van attributen beschreven worden"
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Informatieobject",
+      "description": "Omschrijving van de inhoud van het informatieobject"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

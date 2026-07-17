@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/nlqfniveau",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/NLQFniveau"
+  ],
+  "type": "string",
+  "description": "Het Nederlands Kwalificatieraamwerk waardoor opleidingen binnen Nederland ingeschat kunnen worden op hun niveau.",
+  "enum": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "4p",
+    "5",
+    "6",
+    "7",
+    "8"
+  ]
+}

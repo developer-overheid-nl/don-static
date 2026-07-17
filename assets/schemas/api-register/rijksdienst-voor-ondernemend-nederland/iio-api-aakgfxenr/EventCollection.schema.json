@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/rijksdienst-voor-ondernemend-nederland/iio-api-aakgfxenr/eventcollection",
+  "x-derived-from": [
+    "https://internationaal.ondernemen.overheid.nl/api/iio/v1/openapi.yaml#/components/schemas/EventCollection"
+  ],
+  "description": "A collection schema for the Event schema.",
+  "properties": {
+    "evenementen": {
+      "description": "A list of Content items.",
+      "type": "array",
+      "items": {
+        "$ref": "./EventFull.schema.json"
+      }
+    }
+  },
+  "type": "object"
+}

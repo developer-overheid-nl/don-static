@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/gemeentecode",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/GemeenteCode"
+  ],
+  "title": "code",
+  "pattern": "^[0-9]{4}$",
+  "type": "string",
+  "description": "Een officiële code die aan een gemeente is toegekend, ontleend is aan \ntabel 33 en zoals bijgehouden in de LVBAG. \nDit gegeven is geen officieel BAG gegeven en wordt niet als kenmerk van \nhet BAG object Woonplaats object bijgehouden. \nHet wordt als hulpgegeven meegeleverd.\n",
+  "examples": [
+    "0226"
+  ]
+}

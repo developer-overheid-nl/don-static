@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/schiphol-zlib1u6nr/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/schiphol/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "geluidzones": {
+      "type": "array",
+      "items": {
+        "$ref": "./Schipholgeluidzones.schema.json"
+      }
+    }
+  }
+}

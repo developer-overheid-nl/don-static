@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/catalogus-api-wl_g_invg/waardelijst",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/catalogus/api/opvragen/v3/openapi.json#/components/schemas/Waardelijst"
+  ],
+  "required": [
+    "begindatumGeldigheid",
+    "beschrijving",
+    "eigenaar",
+    "einddatumGeldigheid",
+    "metadata",
+    "naam",
+    "set",
+    "titel",
+    "uri",
+    "versie",
+    "versieVan",
+    "versienotities",
+    "websites"
+  ],
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "$ref": "./Embedded3.schema.json"
+    },
+    "begindatumGeldigheid": {
+      "pattern": "^(\\d{4}-[01]\\d-[0-3]\\d)$",
+      "type": "string",
+      "examples": [
+        "2020-04-17"
+      ]
+    },
+    "beschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "Waardelijst welke concepten bevat die betrekking hebben op software engineering"
+      ]
+    },
+    "eigenaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "https://standaarden.overheid.nl/owms/terms/Geonovum"
+      ]
+    },
+    "einddatumGeldigheid": {
+      "pattern": "^(\\d{4}-[01]\\d-[0-3]\\d)$",
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "2020-04-27"
+      ]
+    },
+    "metadata": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "http://stelselcatalogus.omgevingswet.overheid.nl/doc/20200719220320/waardelijst/SoftwareEngineering_1.0.3"
+      ]
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "Software engineering"
+      ]
+    },
+    "set": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "IMOW"
+      ]
+    },
+    "titel": {
+      "type": "string",
+      "examples": [
+        "Software engineering"
+      ]
+    },
+    "uri": {
+      "type": "string",
+      "examples": [
+        "http://stelselcatalogus.omgevingswet.overheid.nl/id/waardelijst/SoftwareEngineering_1.0.3"
+      ]
+    },
+    "versie": {
+      "type": "string",
+      "examples": [
+        "1.0.3"
+      ]
+    },
+    "versieVan": {
+      "type": "string",
+      "examples": [
+        "https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet"
+      ]
+    },
+    "versienotities": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "Dit veld bevat informatie specifiek over deze versie"
+      ]
+    },
+    "websites": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "examples": [
+          "[\"https://martinfowler.com/\"]"
+        ]
+      }
+    }
+  }
+}

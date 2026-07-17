@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/erkenning",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Erkenning"
+  ],
+  "x-class-extra-annotation": "@Relation(collectionRelation = \"Erkenningen\")",
+  "discriminator": {
+    "propertyName": "type"
+  },
+  "type": "object",
+  "required": [
+    "begindatum",
+    "bekostigingscode",
+    "code",
+    "erkenner",
+    "id",
+    "type",
+    "volledigeNaam"
+  ],
+  "properties": {
+    "begindatum": {
+      "type": "string",
+      "format": "date",
+      "description": "De datum waarop de erkenning van een organisatie volgens de geldende regelgeving van kracht wordt."
+    },
+    "bekostigingscode": {
+      "type": "string",
+      "description": "Geeft aan of en zo ja in welke vorm er sprake is van bekostiging van een organisatie met een erkenning.",
+      "enum": [
+        "AANGEWEZEN",
+        "BEKOSTIGD",
+        "DECLARATIE",
+        "ERKEND",
+        "INDIRECT_BEKOSTIGD",
+        "LUMPSUM",
+        "NIET_BEKOSTIGD",
+        "NIET_VAN_TOEPASSING",
+        "RECHTSPERSOON_HO",
+        "RIJKS"
+      ]
+    },
+    "code": {
+      "type": "string",
+      "description": "Is een identificerend kenmerk van een erkenning van een organisatie of een locatie ten behoeve van uitwisseling in de keten. ",
+      "minLength": 1,
+      "maxLength": 22
+    },
+    "einddatum": {
+      "type": "string",
+      "format": "date",
+      "description": "De datum waarop de erkenning van een organisatie volgens de geldende regelgeving is ingetrokken of vervallen."
+    },
+    "erkenner": {
+      "type": "string",
+      "description": "De organisatie die bevoegd is om een organisatie(onderdeel) te erkennen.",
+      "enum": [
+        "BRANCHE",
+        "CEDEO",
+        "CPION",
+        "HANDELSREGISTER",
+        "NKC_EVC",
+        "NLQF",
+        "NRTO",
+        "OCW",
+        "SNRO",
+        "SZW"
+      ]
+    },
+    "grondslag": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "De levensbeschouwing of godsdienst die een organisatie uitdraagt.",
+        "enum": [
+          "ABZ",
+          "ASF",
+          "BAP",
+          "BIJ",
+          "EVA",
+          "EVB",
+          "EVL",
+          "GER",
+          "GEV",
+          "HIN",
+          "HUM",
+          "IC",
+          "ISL",
+          "JOL",
+          "JOO",
+          "JOR",
+          "NH",
+          "OKA",
+          "OPB",
+          "PC",
+          "REF",
+          "REM",
+          "RK",
+          "RST",
+          "RYK"
+        ]
+      }
+    },
+    "id": {
+      "type": "string",
+      "description": "Is een identificerend kenmerk van een erkenning van een organisatie of een locatie ten behoeve van uitwisseling in de keten. ",
+      "minLength": 1,
+      "maxLength": 22
+    },
+    "inBedrijfdatum": {
+      "type": "string",
+      "format": "date",
+      "description": "De datum vanaf wanneer een deelname tot bekostiging van de onderwijsaanbieder kan leiden."
+    },
+    "richtingen": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "De levensbeschouwing of godsdienst die een organisatie uitdraagt.",
+        "enum": [
+          "ABZ",
+          "ASF",
+          "BAP",
+          "BIJ",
+          "EVA",
+          "EVB",
+          "EVL",
+          "GER",
+          "GEV",
+          "HIN",
+          "HUM",
+          "IC",
+          "ISL",
+          "JOL",
+          "JOO",
+          "JOR",
+          "NH",
+          "OKA",
+          "OPB",
+          "PC",
+          "REF",
+          "REM",
+          "RK",
+          "RST",
+          "RYK"
+        ]
+      }
+    },
+    "type": {
+      "type": "string",
+      "description": "Geeft aan wat voor soort erkenning het betreft.",
+      "enum": [
+        "BEVOEGD_GEZAG",
+        "ERKENDE_ONDERWIJSINSTELLING",
+        "ERKENDE_ONDERWIJSONDERSTEUNER",
+        "ERKENDE_SAMENWERKING",
+        "ERKENDE_VESTIGING"
+      ]
+    },
+    "uitBedrijfdatum": {
+      "type": "string",
+      "format": "date",
+      "description": "De datum vanaf wanneer een deelname niet meer tot bekostiging van de onderwijsaanbieder leidt."
+    },
+    "verkorteNaam": {
+      "type": "string",
+      "description": "De aanduiding in het maatschappelijk verkeer.",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "volledigeNaam": {
+      "type": "string",
+      "description": "De formele juridische naam",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "vrijheidVanOnderwijs": {
+      "type": "string",
+      "description": "Het onderscheid dat wordt gemaakt in artikel 23 van de Grondwet met betrekking tot het geven van onderwijs.",
+      "enum": [
+        "BIJZONDER",
+        "OPENBAAR"
+      ]
+    },
+    "wet": {
+      "type": "string",
+      "description": "Wet waarin of waaronder de juridische grondslag bepaald is.",
+      "enum": [
+        "WCTE",
+        "WEB",
+        "WEB_BES",
+        "WEB_WHW",
+        "WEC",
+        "WEO",
+        "WHW",
+        "WNLQF",
+        "WPO",
+        "WPO_BES",
+        "WSF",
+        "WSLOA",
+        "WTOS",
+        "WVO",
+        "WVO_BES"
+      ]
+    }
+  }
+}

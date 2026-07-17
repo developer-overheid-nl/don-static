@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/brt-top10nl-m72f0f3hg/item55",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top10nl/ogc/v1/openapi.json"
+  ],
+  "description": "A tile matrix, usually corresponding to a particular zoom level of a TileMatrixSet.",
+  "properties": {
+    "cellSize": {
+      "description": "Cell size of this tile matrix",
+      "type": "number"
+    },
+    "cornerOfOrigin": {
+      "default": "topLeft",
+      "description": "The corner of the tile matrix (_topLeft_ or _bottomLeft_) used as the origin for numbering tile rows and columns. This corner is also a corner of the (0, 0) tile.",
+      "enum": [
+        "topLeft",
+        "bottomLeft"
+      ],
+      "type": "string"
+    },
+    "description": {
+      "description": "Brief narrative description of this tile matrix set, normally available for display to a human",
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifier selecting one of the scales defined in the TileMatrixSet and representing the scaleDenominator the tile. Implementation of 'identifier'",
+      "type": "string"
+    },
+    "keywords": {
+      "description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this dataset",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "matrixHeight": {
+      "description": "Width of the matrix (number of tiles in width)",
+      "format": "integer",
+      "minimum": 1,
+      "multipleOf": 1,
+      "type": "number"
+    },
+    "matrixWidth": {
+      "description": "Height of the matrix (number of tiles in height)",
+      "format": "integer",
+      "minimum": 1,
+      "multipleOf": 1,
+      "type": "number"
+    },
+    "pointOfOrigin": {
+      "allOf": [
+        {
+          "description": "Precise position in CRS coordinates of the corner of origin (e.g. the top-left corner) for this tile matrix. This position is also a corner of the (0, 0) tile. In previous version, this was 'topLeftCorner' and 'cornerOfOrigin' did not exist."
+        },
+        {
+          "description": "A 2D Point in the CRS indicated elsewhere",
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": "array"
+        }
+      ]
+    },
+    "scaleDenominator": {
+      "description": "Scale denominator of this tile matrix",
+      "type": "number"
+    },
+    "tileHeight": {
+      "description": "Height of each tile of this tile matrix in pixels",
+      "format": "integer",
+      "minimum": 1,
+      "multipleOf": 1,
+      "type": "number"
+    },
+    "tileWidth": {
+      "description": "Width of each tile of this tile matrix in pixels",
+      "format": "integer",
+      "minimum": 1,
+      "multipleOf": 1,
+      "type": "number"
+    },
+    "title": {
+      "description": "Title of this tile matrix, normally used for display to a human",
+      "type": "string"
+    },
+    "variableMatrixWidths": {
+      "description": "Describes the rows that has variable matrix width",
+      "items": {
+        "$ref": "../_shared/Item5.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "scaleDenominator",
+    "cellSize",
+    "pointOfOrigin",
+    "tileWidth",
+    "tileHeight",
+    "matrixWidth",
+    "matrixHeight"
+  ],
+  "type": "object"
+}

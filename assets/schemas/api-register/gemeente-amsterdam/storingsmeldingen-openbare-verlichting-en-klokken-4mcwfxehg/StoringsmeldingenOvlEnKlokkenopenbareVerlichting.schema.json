@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/storingsmeldingen-openbare-verlichting-en-klokken-4mcwfxehg/storingsmeldingenovlenklokkenopenbareverlichting",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/storingsmeldingen_ovl_en_klokken/openapi.json#/components/schemas/StoringsmeldingenOvlEnKlokkenopenbare_verlichting"
+  ],
+  "type": "object",
+  "description": "Gegevens over de storingsmeldingen van de openbare verlichting van de Gemeente van Amsterdam.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `openbareVerlichting._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./StoringsmeldingenOvlEnKlokkenopenbareVerlichtingLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "breedtegraad": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Breedtegraad van een openbare verlichting."
+    },
+    "geometry": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "lengtegraad": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Lengtegraad van een openbare verlichting."
+    },
+    "meldingstatus": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Indicatie of een melding is gemaakt op een openbare verlichting. Waarde 1 is melding, waarde 0 geen melding."
+    },
+    "objectId": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Een unieke aanduiding van een openbare verlichting door bron."
+    },
+    "objectnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een unieke aanduiding van een openbare verlichting door bron."
+    },
+    "objecttype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type aanduiding van een openbare verlichting."
+    },
+    "objecttypeOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van type aanduiding van een openbare verlichting."
+    },
+    "storingstatus": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Indicatie of een storing bekend is van een openbare verlichting. Waarde 1 is storing, waarde 0 geen storing."
+    }
+  },
+  "required": [
+    "_links",
+    "objectId"
+  ]
+}

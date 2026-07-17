@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/gebruiksdoel",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/Gebruiksdoel"
+  ],
+  "title": "Gebruiksdoel",
+  "type": "string",
+  "description": "Een categorisering waarmee het gebruiksdoel van een object kan worden verbijzonderd.",
+  "enum": [
+    "woonfunctie",
+    "bijeenkomstfunctie",
+    "celfunctie",
+    "gezondheidszorgfunctie",
+    "industriefunctie",
+    "kantoorfunctie",
+    "logiesfunctie",
+    "onderwijsfunctie",
+    "sportfunctie",
+    "winkelfunctie",
+    "overige gebruiksfunctie"
+  ]
+}

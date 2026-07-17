@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/brt-top10nl-m72f0f3hg/propertiesgeojsonrelieftaludlagezijdelijn",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top10nl/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_relief_talud_lage_zijde_lijn"
+  ],
+  "properties": {
+    "lokaal_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mutatietype": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectbegintijd": {
+      "description": "",
+      "format": "date",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tijdstipregistratie": {
+      "description": "",
+      "format": "date",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

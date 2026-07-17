@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/milieuzones-t9fs1ueng/embedded3",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/milieuzones/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "taxi": {
+      "type": "array",
+      "items": {
+        "$ref": "./Milieuzonestaxi.schema.json"
+      }
+    }
+  }
+}

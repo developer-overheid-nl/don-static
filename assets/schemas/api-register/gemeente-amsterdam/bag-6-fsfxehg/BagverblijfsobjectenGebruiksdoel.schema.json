@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bag-6-fsfxehg/bagverblijfsobjectengebruiksdoel",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json#/components/schemas/Bagverblijfsobjecten_gebruiksdoel"
+  ],
+  "type": "object",
+  "description": "Auto-generated table for nested field: verblijfsobjecten.gebruiksdoel",
+  "properties": {
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Verblijfsobject gebruiksdoel code",
+      "description": "Dit is een vervallen kenmerk en wordt niet geactualiseerd"
+    },
+    "omschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Verblijfsobject gebruiksdoel omschrijving",
+      "description": "Een categorisering van de gebruiksdoelen van het betreffende verblijfsobject, zoals dit door de overheid als zodanig is toegestaan. omschrijving"
+    }
+  }
+}

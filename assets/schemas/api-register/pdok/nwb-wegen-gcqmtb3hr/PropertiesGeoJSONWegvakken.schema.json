@@ -1,0 +1,423 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/nwb-wegen-gcqmtb3hr/propertiesgeojsonwegvakken",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/nationaal-wegenbestand-wegen/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_wegvakken"
+  ],
+  "properties": {
+    "admrichtng": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "alt_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "alt_nr": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bag_orl": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "begafstand": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "beginkm": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bronjaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bst_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dienstcode": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dienstnaam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "distrcode": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "distrnaam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "e_hnr_lnks": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "e_hnr_rhts": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "eindkm": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "endafstand": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "fow": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "frc": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geobron_id": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "geobron_nm": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gme_id": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gme_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hecto_lttr": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hnrstrlnks": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hnrstrrhts": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jte_id_beg": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "jte_id_end": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "l_hnr_lnks": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "l_hnr_rhts": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "openlr": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pos_tv_wol": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rel_hoogte": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "rijrichtng": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "routeltr": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "routeltr2": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "routeltr3": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "routeltr4": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "routenr": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "routenr2": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "routenr3": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "routenr4": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "rpe_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "st_lengthshape": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "stt_bron": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stt_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wegbehcode": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wegbehnaam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wegbehsrt": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wegdeelltr": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wegnr_aw": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wegnr_hmp": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wegnummer": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wegtype": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wgtype_oms": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wpsnaam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wvk_begdat": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wvk_id": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

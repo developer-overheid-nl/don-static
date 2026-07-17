@@ -1,0 +1,669 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/ziekten-plagen-en-exoten-groen-i53pfx6hg/ziekteplagenexotengroenjapanseduizendknoopinspecties",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/ziekte_plagen_exoten_groen/openapi.json#/components/schemas/ZiektePlagenExotenGroenjapanseduizendknoop_inspecties"
+  ],
+  "type": "object",
+  "description": "Wanneer een inspecteur tijdens een inspectie Aziatische duizendknoop aantreft, valideert de inspecteur de melding en tekent een inspectievlak. De details van deze inspecties zijn opgenomen in de onderstaande tabel.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `japanseduizendknoopInspecties._links` field. It contains all relationships with objects.",
+      "properties": {
+        "gbdBuurt": {
+          "$ref": "../_shared/GebiedenBuurtenRawIdentifier.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./ZiektePlagenExotenGroenjapanseduizendknoopInspectiesLink.schema.json"
+        }
+      },
+      "required": [
+        "gbdBuurt",
+        "schema",
+        "self"
+      ]
+    },
+    "aantalGroeiplaatsenVijftigm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aantal groeiplaatsen binnen 50 meter",
+      "description": "Aantal groeiplaatsen van Aziatische duizendknoop binnen een straal van 50 meter binnen deze groeiplaats"
+    },
+    "aantalM2GroeiplaatsenTweehonderdm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aantal m2 groeiplaatsen binnen 200 meter",
+      "description": "Overzicht van groeiplaatsen van Aziatische duizendknoop binnen een straal van 200 meter binnen deze groeiplaats"
+    },
+    "bufferOppervlakte": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop buffer oppervlakte",
+      "description": "Oppervlakte van de zone van 4 meter rondom een groeiplaats waarin zich potentieel wortels van de Aziatische duizendknoop kunnen bevinden"
+    },
+    "cyclusSegment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Japanse duizendknoop segment cyclus",
+      "description": "Fase van monitoring van de Japanse duizendknoop"
+    },
+    "gbdBuurtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ID",
+      "description": "Unieke identificatie van een buurt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "description": "Point in 3D space",
+                    "minItems": 2,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "MultiPolygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "title": "Record ID",
+      "description": "Unieke identificatie van een record"
+    },
+    "inspectiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Inspectie datum",
+      "description": "Datum waarop de inspectie heeft plaatsgevonden"
+    },
+    "japanseduizendknoopMeldingenId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Japanse duizendknoop melding ID",
+      "description": "De vreemde sleutel (foreign key) voor de relatie met Japanse duizendknoop meldingen"
+    },
+    "jdkOppervlakte": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Japanse duizendknoop oppervlakte",
+      "description": "Oppervlakte van de laatst gemeten omvang van de groeiplaats van de Aziatische duizendknoop"
+    },
+    "lastupdate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Melding laatste update tijdstip",
+      "description": "Datum en tijdstip van de laatste aanpassing van een inspectie"
+    },
+    "lastupdateStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Melding laatste update status",
+      "description": "Laatste status van de melding"
+    },
+    "maxStengelsDoorsnede": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Maximale stengel doorsnede",
+      "description": "Maximale stengeldikte van de plant als indicatie van de ouderdom van de plant, ingedeeld in categorien"
+    },
+    "melding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aziatische duizendknoop melding locatie",
+      "description": "Locatie van de Aziatische duizendknoop volgens de melder, die geïnspecteerd moet worden"
+    },
+    "meldingStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Weergave van de fase of staat waarin de melding zich nu bevindt, of deze nog geïnspecteerd moet worden en/of al bestreden wordt"
+    },
+    "percBerm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop berm percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de berm"
+    },
+    "percBermBrug": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop berm brug percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de berm langs de brug"
+    },
+    "percBosplantsoen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop bosplantsoen percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in een bosplantsoen"
+    },
+    "percBraakliggend": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop braakliggend terrein percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit op het braakliggende deel van een bouwlocatie"
+    },
+    "percBrughoofd": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop brughoofd percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in een brughoofd"
+    },
+    "percDeelsBebouwd": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop deels bebouwd terrein percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit vanuit de bouwlocatie in terrein dat deels bebouwd is"
+    },
+    "percDekzerk": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop dekzerk percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit vanaf de kade in een dekzerk"
+    },
+    "percFietsbaan": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop fietsbaan percentage",
+      "description": "Percentage Aziatische duizendknoop dat vanuit verharding in de fietsbaan groeit"
+    },
+    "percFunderingBrug": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop fundering brug percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de fundering van een brug"
+    },
+    "percGevelOfMuur": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop gevel of muur percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit op de gevel of muur van gebouwen"
+    },
+    "percGeveltuinLosseBakken": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop geveltuin losse bakken percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in geveltuinen bij gebouwen (losse bakken)"
+    },
+    "percGeveltuinVast": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop geveltuin vaste bakken percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in geveltuinen bij gebouwen (vaste bakken)"
+    },
+    "percHeesters": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop heesters percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de heesters"
+    },
+    "percKruipruimte": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop kruipruimte percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de kruipruimte van het gebouw"
+    },
+    "percMetroOfTrambaan": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop metro trambaan percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit door een tram- of metrobaan heen"
+    },
+    "percNatuurlijkeOever": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop natuurlijke oever percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit aan een natuurlijke oever"
+    },
+    "percOverig": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop overige locatie percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in andere delen van de openbare ruimte (niet eerder genoemd)"
+    },
+    "percOverigGroen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop overige groen percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in ander groen"
+    },
+    "percOverigKade": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop overige kade percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de kade (overig)"
+    },
+    "percOverigVerharding": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop overige verharding percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de overige verharding (niet eerder benoemd)"
+    },
+    "percParkeerplaats": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop parkeerplaats percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in een parkeerplaats"
+    },
+    "percRijbaanAsfalt": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop asfalt rijbaan percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in het asfalt van een rijbaan"
+    },
+    "percRijbaanElementenverharding": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop elementenverharding rijbaan percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de elementenverharding van een rijbaan"
+    },
+    "percSchuurSteen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop schuur percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de stenen van de schuur van een gebouw"
+    },
+    "percSpeeltuin": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop speeltuin percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in het verharde deel van een speeltuin"
+    },
+    "percTaludOnverhardBrug": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop onverharde talud brug percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit op het onverharde talud van de brug"
+    },
+    "percTaludOnverhardDivers": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop onverharde taluds percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit op diverse onverharde taluds"
+    },
+    "percTaludVerhard": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop verharde talud percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit op een verharde helling"
+    },
+    "percTaludVerhardBvBasalt": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop basalt talud percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in het verharde talud (basalt) van een kade groeit"
+    },
+    "percTreinspoor": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop treinspoor percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in en om het treinspoor"
+    },
+    "percTrottoir": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop trottoir percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit door het trottoir"
+    },
+    "percTuinBereikbaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop toegankelijke tuin percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de bereikbare tuin vanaf de openbare weg"
+    },
+    "percTuinOnbereikbaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop ontoegankelijke tuin percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de onbereikbare tuin vanaf de openbare weg"
+    },
+    "percVastePlanten": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop vaste planten percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit tussen de vaste planten"
+    },
+    "percVerhardWandelpad": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop verhard wandelpad percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit op een verhard wandelpad"
+    },
+    "percVolkstuin": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop volkstuinen percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in de volkstuinen"
+    },
+    "percWerkInUitvoering": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Aziatische duizendknoop werk in uitvoering percentage",
+      "description": "Percentage Aziatische duizendknoop dat groeit in het deel van de bouwlocatie waar er gewerkt wordt"
+    },
+    "soortnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Duizendknoop soortnaam",
+      "description": "Soort Aziatische duizendknoop waargenomen tijdens de inspectie, zijnde Japanse, Sachalinse, Boheemse, bastaardduizendknoop of Afghaanse"
+    },
+    "statusKaartlaag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Versimpelde statussen, afgeleid van laatste update status, voor de openbare kaartlaag op data.amsterdam.nl"
+    },
+    "stengelsM2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Stengel dichtheid per m2",
+      "description": "Inschatting van de inspecteur van het aantal vierkante meters stengels binnen het inspectievlak, ingedeeld in categorien"
+    },
+    "vrijgegeven": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Groeiplaats vrijgegeven indicatie",
+      "description": "Groeiplaats succesvol verwijderd en geen hergroei"
+    }
+  },
+  "required": [
+    "_links",
+    "gbdBuurtId",
+    "id"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/zoeken-in-activiteiten-voor-indieningsvereisten-en-werkzaamheden-q7gc6lgvr/toestemmingaggregatie",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/235013/toepasbareregels-zoekinterface-v2.json#/components/schemas/ToestemmingAggregatie"
+  ],
+  "description": "Per toestemming het aantal keer dat de toestemming voorkomt in de gevonden activiteiten. Let op dat het toestemming filter hierin NIET wordt meegenomen (andere filters wel). Dit is handig wanneer de aggregaties worden gepresenteerd in een user interface, dan kan de gebruiker namelijk het aantal resultaten uitbreiden door ook een andere toestemming te selecteren.",
+  "required": [
+    "toestemming",
+    "aantal"
+  ],
+  "properties": {
+    "aantal": {
+      "description": "Het aantal resultaten voor de toestemming, waarbij het bestuurslaag filter NIET wordt meegenomen",
+      "type": "number"
+    },
+    "toestemming": {
+      "type": "string",
+      "description": "Code van de toestemming",
+      "enum": [
+        "Vergunning",
+        "Melding",
+        "Informatie",
+        "InformatieOngewoonVoorval",
+        "AanvraagMaatwerkvoorschrift",
+        "MeldingGelijkwaardigeMaatregel",
+        "AanvraagToestemmingGelijkwaardigeMaatregel"
+      ]
+    }
+  }
+}

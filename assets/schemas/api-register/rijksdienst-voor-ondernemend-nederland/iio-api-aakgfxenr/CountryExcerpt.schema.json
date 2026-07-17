@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/rijksdienst-voor-ondernemend-nederland/iio-api-aakgfxenr/countryexcerpt",
+  "x-derived-from": [
+    "https://internationaal.ondernemen.overheid.nl/api/iio/v1/openapi.yaml#/components/schemas/CountryExcerpt"
+  ],
+  "description": "An excerpt of the country.",
+  "required": [
+    "id",
+    "naam",
+    "code",
+    "code_iso_alpha_2",
+    "code_iso_alpha_3",
+    "code_iso_3166_2"
+  ],
+  "properties": {
+    "_embedded": {
+      "$ref": "./Embedded.schema.json"
+    },
+    "_links": {
+      "$ref": "../../_shared/Links.schema.json"
+    },
+    "code": {
+      "description": "The country code.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "528"
+      ]
+    },
+    "code_iso_3166_2": {
+      "description": "The country ISO 3166 2 code.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "NL-NH"
+      ]
+    },
+    "code_iso_alpha_2": {
+      "description": "The country ISO alpha 2 code.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "NL"
+      ]
+    },
+    "code_iso_alpha_3": {
+      "description": "The country ISO alpha 3 code.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "NLD"
+      ]
+    },
+    "handelsBelemmering": {
+      "description": "A string indicating a trade barrier.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "http://madb.europa.eu/madb/barriers_result.htm?isSps=false&countries=NL"
+      ]
+    },
+    "id": {
+      "description": "A unique identifier in UUID format from a sector, country, content-item etc.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "naam": {
+      "description": "The country name.",
+      "type": "string",
+      "examples": [
+        "Netherlands"
+      ]
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/polygon",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/Polygon",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/Polygon",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json#/components/schemas/Polygon",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/Polygon",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/232881/verzoekconfiguratie-opvragen-v1.json#/components/schemas/Polygon",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/Polygon",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/Polygon"
+  ],
+  "title": "Vlak",
+  "description": "GeoJSON Polygon gespecificeerd volgens https://tools.ietf.org/html/rfc7946#section-3.1.6",
+  "type": "object",
+  "required": [
+    "type",
+    "coordinates"
+  ],
+  "properties": {
+    "coordinates": {
+      "description": "De coördinaten van het polygoon volgens https://tools.ietf.org/html/rfc7946#section-3.1.6",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "minItems": 4,
+        "items": {
+          "description": "De coördinaten van het punt waarbij het 1e item de\nx-coördinaat (longitude) is en het 2e item de y-coördinaat (latitude), gespecificeerd\nvolgens https://tools.ietf.org/html/rfc7946#section-3.1.1\n\n```\nRD; [92949.643, 436720.672]\nWGS84; [4.48531, 51.915512]\nETRS89; [4.48531, 51.915512]\n```\n",
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "number"
+          },
+          "examples": [
+            [
+              92949.643,
+              436720.672
+            ]
+          ]
+        }
+      }
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Polygon"
+      ]
+    }
+  },
+  "examples": [
+    {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            92879.88,
+            436405.07
+          ],
+          [
+            93390.88,
+            436893.58
+          ],
+          [
+            92968.36,
+            436872.3
+          ],
+          [
+            92879.88,
+            436405.07
+          ]
+        ],
+        [
+          [
+            92870.88,
+            436400.07
+          ],
+          [
+            93390.88,
+            436893.58
+          ],
+          [
+            92968.36,
+            436872.3
+          ],
+          [
+            92870.88,
+            436400.07
+          ]
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/catalogus-api-wl_g_invg/info",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/catalogus/api/opvragen/v3/openapi.json#/components/schemas/Info"
+  ],
+  "required": [
+    "name",
+    "version"
+  ],
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "examples": [
+        "De Stelselcatalogus Omgevingswet is het online naslagwerk met concepten over de fysieke leefomgeving. In de catalogus vind je alle concepten uit de Omgevingswet en uit omgevingsbesluiten. Daarnaast worden er per domein concepten beschreven. Er wordt uitgelegd wat de begrippen betekenen en hoe ze aan elkaar zijn gerelateerd."
+      ]
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "Stelselcatalogus Omgevingswet"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "examples": [
+        "3.0.0"
+      ]
+    }
+  }
+}

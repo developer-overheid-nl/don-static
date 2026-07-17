@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/nwb-vaarwegen-x9cmtbqng/propertiesgeojsonkmmarkeringen",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/nationaal-wegenbestand-vaarwegen/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_kmmarkeringen"
+  ],
+  "properties": {
+    "afstand": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gtlwaarde": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ltrwaarde": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mst_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "pos_tov_as": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vwk_begdtm": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vwk_id": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

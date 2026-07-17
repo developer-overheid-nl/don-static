@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/crs",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/Crs"
+  ],
+  "type": "string",
+  "description": "Lijst van door de API ondersteunde coördinaatreferentiesystemen (CRS).",
+  "enum": [
+    "http://www.opengis.net/def/crs/EPSG/0/28992"
+  ],
+  "examples": [
+    "http://www.opengis.net/def/crs/EPSG/0/28992"
+  ]
+}

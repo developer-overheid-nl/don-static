@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/vng/autorisaties-api-_rowbuehg/brc",
+  "x-derived-from": [
+    "https://autorisaties-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/brc"
+  ],
+  "type": "object",
+  "allOf": [
+    {
+      "required": [
+        "component",
+        "scopes"
+      ],
+      "type": "object",
+      "properties": {
+        "component": {
+          "title": "Component",
+          "description": "Component waarop autorisatie van toepassing is.\n\nUitleg bij mogelijke waarden:\n\n* `ac` - Autorisatiecomponent\n* `nrc` - Notificatierouteringcomponent\n* `zrc` - Zaakregistratiecomponent\n* `ztc` - Zaaktypecatalogus\n* `drc` - Documentregistratiecomponent\n* `brc` - Besluitregistratiecomponent",
+          "type": "string",
+          "enum": [
+            "ac",
+            "nrc",
+            "zrc",
+            "ztc",
+            "drc",
+            "brc"
+          ]
+        },
+        "componentWeergave": {
+          "title": "Component weergave",
+          "description": "Omschrijving van `component`.",
+          "type": "string",
+          "readOnly": true,
+          "minLength": 1
+        },
+        "scopes": {
+          "description": "Lijst van scope labels. Elke scope geeft toegang tot een set van acties/operaties, zoals gedocumenteerd bij de betreffende component.",
+          "type": "array",
+          "items": {
+            "title": "Scopes",
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1
+          }
+        }
+      },
+      "discriminator": {
+        "propertyName": "component"
+      }
+    },
+    {
+      "type": "object",
+      "properties": {
+        "besluittype": {
+          "title": "Besluittype",
+          "description": "URL naar het besluittype waarop de autorisatie van toepassing is.",
+          "type": "string",
+          "format": "uri",
+          "maxLength": 1000
+        }
+      }
+    }
+  ]
+}

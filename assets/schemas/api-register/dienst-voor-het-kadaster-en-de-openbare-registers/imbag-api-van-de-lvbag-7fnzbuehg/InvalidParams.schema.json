@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/invalidparams",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/InvalidParams"
+  ],
+  "title": "InvalidParams",
+  "required": [
+    "code",
+    "name",
+    "reason"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Een vaste waarde afhankelijk van het soort fout.",
+      "examples": [
+        "date"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "De naam van de parameter waar de fout in zit.",
+      "examples": [
+        "geldigOp"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "description": "Een vaste omschrijving afhankelijk van het soort fout.",
+      "examples": [
+        "Waarde is geen geldige datum."
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "Een url naar een beschrijving van de fout in de parameter. \nDe hier gerefereerde foutbeschrijving is specifieker dan type op het \nhoofdniveau van het bericht.\n",
+      "format": "uri"
+    }
+  },
+  "description": "Wanneer de fout is veroorzaakt door fouten in requestparameters (of request body), \nwordt invalid-params gevuld met details over elke foute parameter.\nWanneer er fouten zitten op meerdere parameters, wordt er per validatiefout een \ninvalid-params instantie opgenomen in het antwoord. \nAlle fouten worden dus teruggegeven.\nEen gedetailleerde beschrijving hoe de onderstaande attributen ingevuld moeten \nworden staat op:\nhttps://github.com/VNG-Realisatie/Haal-Centraal-BRP-bevragen/blob/master/features/foutafhandeling.feature\"\n"
+}

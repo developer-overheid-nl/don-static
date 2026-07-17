@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/ontwerpregelingzoekobject",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/OntwerpregelingZoekobject"
+  ],
+  "title": "OntwerpregelingZoekobject",
+  "type": "object",
+  "properties": {
+    "bevoegdGezag": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "title": "Bevoegd gezag TOOI-code",
+        "type": "string",
+        "description": "Code van het bevoegd gezag, uit één van onderstaande waardelijsten:\n  - https://identifier.overheid.nl/tooi/set/rwc_gemeenten_compleet\n  - https://identifier.overheid.nl/tooi/set/rwc_ministeries_compleet\n  - https://identifier.overheid.nl/tooi/set/rwc_provincies_compleet\n  - https://identifier.overheid.nl/tooi/set/rwc_waterschappen_compleet\n",
+        "examples": [
+          "gm0000"
+        ]
+      }
+    },
+    "geometrie": {
+      "title": "Geometry",
+      "description": "Geometrie in GeoJSON formaat (RFC 7946).",
+      "externalDocs": {
+        "description": "RFC 7946 - The GeoJSON Format",
+        "url": "https://tools.ietf.org/html/rfc7946"
+      },
+      "oneOf": [
+        {
+          "$ref": "./GeometryCollection.schema.json"
+        },
+        {
+          "$ref": "./Point.schema.json"
+        },
+        {
+          "$ref": "./LineString.schema.json"
+        },
+        {
+          "$ref": "./Polygon.schema.json"
+        },
+        {
+          "$ref": "./MultiPoint.schema.json"
+        },
+        {
+          "$ref": "./MultiLineString.schema.json"
+        },
+        {
+          "$ref": "./MultiPolygon.schema.json"
+        }
+      ]
+    },
+    "typeBevoegdGezag": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "title": "Bevoegd gezag TOOI-code",
+        "type": "string",
+        "description": "Type van het bevoegd gezag, gelimiteerd\n",
+        "enum": [
+          "waterschap",
+          "provincie",
+          "gemeente",
+          "ministerie"
+        ]
+      }
+    },
+    "typeRegeling": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "title": "RegelingType",
+        "type": "string",
+        "description": "Type regeling uit de limitatieve waardelijst https://gitlab.com/koop/STOP/standaard/-/blob/1.3.0/waardelijsten/soortregeling.xml",
+        "examples": [
+          "/join/id/stop/regelingtype_001"
+        ]
+      }
+    }
+  },
+  "description": "Zoekobject voor specifieke ontwerpregelingen-bevragingen.",
+  "examples": [
+    {
+      "typeBevoegdGezag": [
+        "gemeente",
+        "provincie"
+      ],
+      "bevoegdGezag": [
+        "gm0000",
+        "pv0000"
+      ],
+      "geometrie": {
+        "type": "Point",
+        "coordinates": [
+          139784,
+          442870
+        ]
+      },
+      "typeRegeling": [
+        "/join/id/stop/regelingtype_001",
+        "/join/id/stop/regelingtype_002"
+      ]
+    }
+  ]
+}

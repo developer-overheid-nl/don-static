@@ -1,0 +1,332 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/kaderrichtlijn-mariene-strategie-nederland-jp9mtx3nr/propertiesgeojsonbevrorenmonitoringsdata",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/kaderrichtlijn-mariene-strategie/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_bevroren_monitoringsdata"
+  ],
+  "properties": {
+    "alfanumeriekewaarde": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "begindatum": {
+      "description": "",
+      "format": "date",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "begindiepte_m": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "begintijd": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bemonsteringsapparaat_omschrijving": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bemonsteringsmethode_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bemonsteringsmethode_codespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "biotaxon_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "eenheid_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "einddatum": {
+      "description": "",
+      "format": "date",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "einddiepte_m": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "eindtijd": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fid_old": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geom_old": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geometriepunt_x": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "geometriepunt_y": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "geslacht_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "grootheid_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hoedanigheid_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "krmcriterium": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kwaliteitsoordeel_code": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lengteklasse_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "levensstadium_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "levensvorm_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "limietsymbool": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "meetobject_lokaalid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "meetobject_namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "meetwaarde_lokaalid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "monprog_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "monster_lokaalid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "monstercompartiment_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "numeriekewaarde": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "orgaan_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "organisme_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parameter_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parameter_omschrijving": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "referentiehorizontaal_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "referentievlak_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tijd_utcoffset": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "typering_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unique_key": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "verschijningsvorm_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "waardebepalingsmethode_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "waardebepalingstechniek_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "waardebewerkingsmethode_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/stedelijk-water-riolering-nndnox3nr/propertiesgeojsonaansluitingleiding",
+  "x-derived-from": [
+    "https://api.pdok.nl/rioned/beheer-stedelijk-watersystemen-gwsw/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_aansluitingleiding"
+  ],
+  "properties": {
+    "begindatum": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bob_beginpunt_leiding": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bob_eindpunt_leiding": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "breedte_leiding": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "dataset": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "datum_inwinning_bob_begin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "datum_inwinning_bob_eind": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hoogte_leiding": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lengte_leiding": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "materiaal_leiding": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sluit_aan_op": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stelsel": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stelseltype": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vorm_leiding": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wijze_inwinning_bob_begin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wijze_inwinning_bob_eind": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

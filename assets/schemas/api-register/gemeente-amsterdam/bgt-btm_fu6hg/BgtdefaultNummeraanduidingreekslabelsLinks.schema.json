@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bgt-btm_fu6hg/bgtdefaultnummeraanduidingreekslabelslinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bgt/openapi.json#/components/schemas/BgtdefaultNummeraanduidingreekslabelsLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `nummeraanduidingreekslabels._links` field. It contains all relationships with objects.",
+  "properties": {
+    "hoogsteHuisnummerBagVerblijfsobject": {
+      "$ref": "../_shared/BagVerblijfsobjectenLink.schema.json"
+    },
+    "hoortBijBagPand": {
+      "$ref": "../_shared/BagPandenLink.schema.json"
+    },
+    "hoortBijBgtPand": {
+      "$ref": "./BgtPandenLink.schema.json"
+    },
+    "laagsteHuisnummerBagVerblijfsobject": {
+      "$ref": "../_shared/BagVerblijfsobjectenLink.schema.json"
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./BgtNummeraanduidingreekslabelsLink.schema.json"
+    }
+  },
+  "required": [
+    "hoogsteHuisnummerBagVerblijfsobject",
+    "hoortBijBagPand",
+    "hoortBijBgtPand",
+    "laagsteHuisnummerBagVerblijfsobject",
+    "schema",
+    "self"
+  ]
+}

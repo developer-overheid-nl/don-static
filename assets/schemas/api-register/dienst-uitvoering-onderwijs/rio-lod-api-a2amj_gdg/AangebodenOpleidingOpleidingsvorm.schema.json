@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/aangebodenopleidingopleidingsvorm",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/AangebodenOpleidingOpleidingsvorm"
+  ],
+  "type": "string",
+  "description": "Mogelijke vormen waarin een aangeboden opleiding wordt verzorgd.",
+  "enum": [
+    "COACHING",
+    "KLASSIKAAL",
+    "KLASSIKAAL_EN_ONLINE",
+    "LEZING",
+    "ONLINE",
+    "ZELFSTUDIE"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/studiekeuzecheck",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Studiekeuzecheck"
+  ],
+  "type": "string",
+  "description": "Specificeert of er en zo ja hoe een controle op geschiktheid van een aankomend student voor deelname aan gekozen studie plaatsvindt.",
+  "enum": [
+    "GEEN_STUDIEKEUZE_CHECK",
+    "STUDIEKEUZE_CHECK_VAN_TOEPASSING",
+    "STUDIEKEUZE_CHECK_VERPLICHT"
+  ]
+}

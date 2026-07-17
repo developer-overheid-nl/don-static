@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/toepasbare-regels-uitvoeren-services-w8vc6lgvg/projectmachtiging",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v2.json#/components/schemas/ProjectMachtiging"
+  ],
+  "description": "Een projectmachtiging. Als deze aanwezig is, dan is het verplicht ook initiatiefnemer in te vullen.",
+  "required": [
+    "projectId"
+  ],
+  "properties": {
+    "gemachtigde": {
+      "description": "Dit element wordt genegeerd en zal in de toekomst verdwijnen.",
+      "type": "string"
+    },
+    "projectId": {
+      "description": "Het project id.",
+      "type": "string"
+    }
+  }
+}

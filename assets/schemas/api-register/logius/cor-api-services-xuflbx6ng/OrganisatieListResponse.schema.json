@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/logius/cor-api-services-xuflbx6ng/organisatielistresponse",
+  "x-derived-from": [
+    "https://oinregister.logius.nl/api/v1/openapi.json#/components/schemas/OrganisatieListResponse"
+  ],
+  "description": "Lijst met organisatiegegevens",
+  "type": "object",
+  "properties": {
+    "_links": {
+      "description": "De HAL paginering referentie",
+      "type": "object",
+      "properties": {
+        "first": {
+          "description": "Een HAL-referentie",
+          "type": "object",
+          "properties": {
+            "href": {
+              "description": "De link naar de bron",
+              "type": "string"
+            },
+            "type": {
+              "description": "Het mime-type van de bron",
+              "type": "string"
+            }
+          }
+        },
+        "last": {
+          "description": "Een HAL-referentie",
+          "type": "object",
+          "properties": {
+            "href": {
+              "description": "De link naar de bron",
+              "type": "string"
+            },
+            "type": {
+              "description": "Het mime-type van de bron",
+              "type": "string"
+            }
+          }
+        },
+        "next": {
+          "description": "Een HAL-referentie",
+          "type": "object",
+          "properties": {
+            "href": {
+              "description": "De link naar de bron",
+              "type": "string"
+            },
+            "type": {
+              "description": "Het mime-type van de bron",
+              "type": "string"
+            }
+          }
+        },
+        "prev": {
+          "description": "Een HAL-referentie",
+          "type": "object",
+          "properties": {
+            "href": {
+              "description": "De link naar de bron",
+              "type": "string"
+            },
+            "type": {
+              "description": "Het mime-type van de bron",
+              "type": "string"
+            }
+          }
+        },
+        "self": {
+          "description": "Een HAL-referentie",
+          "type": "object",
+          "properties": {
+            "href": {
+              "description": "De link naar de bron",
+              "type": "string"
+            },
+            "type": {
+              "description": "Het mime-type van de bron",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "organisaties": {
+      "description": "De lijst met organisaties",
+      "type": "array",
+      "items": {}
+    }
+  }
+}

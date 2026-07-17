@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/onderwijsbegeleidingsaanbiedersexpertise",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Onderwijsbegeleidingsaanbiedersexpertise"
+  ],
+  "type": "string",
+  "description": "Mogelijke vormen van hulp die door een deskundige wordt geboden aan leerkrachten en leerlingen in het primair en voortgezet onderwijs.",
+  "enum": [
+    "AUTISMESPECTRUMSTOORNISSEN",
+    "COGNITIEVE_BEPERKINGEN",
+    "DOOF_MEERVOUDIG_BEPERKT",
+    "DOOFBLINDHEID",
+    "DOOFHEID",
+    "EPILEPSIE",
+    "GEDRAGSPROBLEMEN",
+    "LANGDURIGE_ZIEKTE",
+    "LICHAMELIJKE_BEPERKINGEN",
+    "MEERVOUDIGE_BEPERKINGEN",
+    "SLECHTHOREND_MEERVOUDIG_BEPERKT",
+    "SLECHTHORENDHEID",
+    "SOCIAALPSYCHOLOGISCHE_PROBLEMEN",
+    "TAALONTWIKKELINGSSTOORNISSEN",
+    "VISUEEL_MEERVOUDIG_BEPERKT",
+    "VISUELE_BEPERKINGEN"
+  ]
+}

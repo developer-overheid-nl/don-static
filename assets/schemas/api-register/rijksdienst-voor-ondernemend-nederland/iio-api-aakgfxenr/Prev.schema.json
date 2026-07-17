@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/rijksdienst-voor-ondernemend-nederland/iio-api-aakgfxenr/prev",
+  "x-derived-from": [
+    "https://internationaal.ondernemen.overheid.nl/api/iio/v1/openapi.yaml"
+  ],
+  "properties": {
+    "href": {
+      "description": "URL of the link",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "examples": [
+        "https://internationaal.ondernemen.overheid.nl/api/iio/v1/endpoint&page=1"
+      ]
+    }
+  },
+  "type": "object"
+}

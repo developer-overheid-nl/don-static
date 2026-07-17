@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/catalogus-api-wl_g_invg/omgevingsaspect",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/catalogus/api/opvragen/v3/openapi.json#/components/schemas/Omgevingsaspect"
+  ],
+  "required": [
+    "naam",
+    "uri",
+    "waardelijstUri"
+  ],
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "uri": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "waardelijstUri": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

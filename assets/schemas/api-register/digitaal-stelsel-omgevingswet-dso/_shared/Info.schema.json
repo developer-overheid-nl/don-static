@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/info",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167767/omgevingsdocumenten-geovalidatie-v1.json#/components/schemas/Info",
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/verbeelden/v3/openapi.json#/components/schemas/Info"
+  ],
+  "required": [
+    "app-info"
+  ],
+  "type": "object",
+  "properties": {
+    "app-info": {
+      "$ref": "../geo-validatieservice-serz61gvg/AppInfo.schema.json"
+    }
+  },
+  "description": "Informatie over deze API, bijvoorbeeld de versie van de API en de versie van de gebruikte standaarden"
+}

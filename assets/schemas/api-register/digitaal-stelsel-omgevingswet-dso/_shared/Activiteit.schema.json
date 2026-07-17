@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/activiteit",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json#/components/schemas/Activiteit",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/Activiteit",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/Activiteit"
+  ],
+  "type": "object",
+  "required": [
+    "id",
+    "urn",
+    "naam"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "De 'functioneleStructuurReferentie' van de activiteit."
+    },
+    "naam": {
+      "type": "string",
+      "description": "De 'naam' van de activiteit."
+    },
+    "subactiviteit": {
+      "description": "een sub-activiteit. Gevuld indien er sprake is van een sub-activiteit.",
+      "type": "array",
+      "items": {
+        "$ref": "./SubActiviteit.schema.json"
+      }
+    },
+    "urn": {
+      "type": "string",
+      "description": "De 'urn' van de activiteit. Ook wel imow-id genoemd."
+    }
+  }
+}

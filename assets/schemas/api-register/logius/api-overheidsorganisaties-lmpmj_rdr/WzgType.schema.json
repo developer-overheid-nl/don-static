@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/logius/api-overheidsorganisaties-lmpmj_rdr/wzgtype",
+  "x-derived-from": [
+    "https://api-organisaties.overheid.nl/v1/openapi.json#/components/schemas/wzgType"
+  ],
+  "format": "uri",
+  "oneOf": [
+    {
+      "description": "`https://identifier.overheid.nl/tooi/def/ont/Afsplitsing`",
+      "title": "Afsplitsing"
+    },
+    {
+      "description": "`https://identifier.overheid.nl/tooi/def/ont/Herschikking`",
+      "title": "Herschikking"
+    },
+    {
+      "description": "`https://identifier.overheid.nl/tooi/def/ont/Opheffing`",
+      "title": "Opheffing"
+    },
+    {
+      "description": "`https://identifier.overheid.nl/tooi/def/ont/Oprichting`",
+      "title": "Oprichting"
+    },
+    {
+      "description": "`https://identifier.overheid.nl/tooi/def/ont/Opsplitsing`",
+      "title": "Opsplitsing"
+    },
+    {
+      "description": "`https://identifier.overheid.nl/tooi/def/ont/Samenvoeging`",
+      "title": "Samenvoeging"
+    },
+    {
+      "description": "`https://identifier.overheid.nl/tooi/def/ont/Toestandswijziging`",
+      "title": "Toestandswijziging"
+    },
+    {
+      "description": "`https://identifier.overheid.nl/tooi/def/ont/Uitbreiding`",
+      "title": "Uitbreiding"
+    }
+  ]
+}

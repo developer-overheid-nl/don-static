@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/cmsa-crowd-monitoring-systeem-amsterdam-ec3sfxehg/cmsalocatie",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/cmsa/openapi.json#/components/schemas/Cmsalocatie"
+  ],
+  "type": "object",
+  "description": "locatie",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `locatie._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./CmsalocatieLink.schema.json"
+        },
+        "sensor": {
+          "$ref": "./CmsasensorLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self",
+        "sensor"
+      ]
+    },
+    "geometry": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding voor locatie van de crowd monitoring sensor."
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van locatie van de van de crowd monitoring sensor."
+    },
+    "referentiecode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke code van de locatie van de crowd monitoring sensor."
+    },
+    "sensorId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Verwijzing naar de crowd monitoring sensor.",
+      "readOnly": true,
+      "deprecated": true
+    }
+  },
+  "required": [
+    "_links",
+    "id",
+    "sensorId"
+  ]
+}

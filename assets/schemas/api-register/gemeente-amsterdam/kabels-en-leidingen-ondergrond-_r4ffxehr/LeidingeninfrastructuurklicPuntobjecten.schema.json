@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/kabels-en-leidingen-ondergrond-_r4ffxehr/leidingeninfrastructuurklicpuntobjecten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/leidingeninfrastructuur/openapi.json#/components/schemas/Leidingeninfrastructuurklic_puntobjecten"
+  ],
+  "type": "object",
+  "description": "Overzicht punten infrastructuur op basis van klic meldingen",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `klicPuntobjecten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./LeidingeninfrastructuurklicPuntobjectenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "beheerder": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Netbeheerder naam",
+      "description": "Degene die als natuurlijk persoon handelende in de uitoefening van een beroep of bedrijf dan wel als rechtspersoon een net beheert."
+    },
+    "broncode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klic beheerder broncode",
+      "description": "Broncode van de beheerder."
+    },
+    "class": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klic objectklasse",
+      "description": "Objectklasse of categorie van het leidingelement."
+    },
+    "contactaanvraagAanvraagsoortcontactEmail": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klic email contactpersoon",
+      "description": "E-mailadres van de contactpersoon in het belang bij de desbetreffende netwerkbeheerder. Het belang is het interessegebied van een netwerkbeheerder. Dit is een gebied waar de netbeheerder actief is."
+    },
+    "contactaanvraagAanvraagsoortcontactNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klic naam contactpersoon",
+      "description": "Naam van de contactpersoon in het belang bij de desbetreffende netwerkbeheerder. Het belang is het interessegebied van een netwerkbeheerder. Dit is een gebied waar de netbeheerder actief is."
+    },
+    "contactaanvraagAanvraagsoortcontactTelefoon": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klic telefoonnummer contactpersoon",
+      "description": "Telefoonnummer van de contactpersoon in het belang bij de desbetreffende netwerkbeheerder. Het belang is het interessegebied van een netwerkbeheerder. Dit is een gebied waar de netbeheerder actief is."
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke identificatie van het object."
+    },
+    "laagnaam1": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klic status en discipline NLCS code",
+      "description": "Omschrijving van de Nederlandse CAD Standaard code voor de Klic status en discipline."
+    },
+    "laagnaam2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klic thema NLCS code",
+      "description": "Omschrijving van de Nederlandse CAD Standaard code voor de Klic thema."
+    },
+    "laagnaam3": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Beheerder NLCS code",
+      "description": "Omschrijving van de Nederlandse CAD Standaard code voor de beheerder van de kabel of leiding."
+    },
+    "laagnaam4": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Geometrie symbool vlak NLCS code",
+      "description": "Omschrijving van de Nederlandse CAD Standaard code voor de geometrie, symbool of vlak."
+    },
+    "laagnaam5": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "NLCS code hoofdgroep status",
+      "description": "NLCS codering voor status. Wordt alleen gevuld wanneer status niet gelijk is aan functional. Aanvulling van STATUS attribuut."
+    },
+    "nlcsCodering": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "NLCS codering totaal",
+      "description": "Samenvoeging van de NLCS code van Klic status en discipline, Klic thema, de beheerder van de kabel of leiding, de geometrie, symbool of vlak en de NLCS status"
+    },
+    "opvraagdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Klic orientatieverzoek opvraagdatum",
+      "description": "De datum waarop het Klic orientatieverzoek is uitgevoerd waarmee de gegevens zijn opgevraagd."
+    },
+    "rgbHexNlcs": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "NLCS hex kleurcode",
+      "description": "Hex kleurcode volgens NLCS standaard."
+    },
+    "rgbHexPmkl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "PMKL hex kleurcode",
+      "description": "Hex kleurcode volgens PMKL standaard."
+    },
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klic object status",
+      "description": "De status van het object."
+    },
+    "thema": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klic thema",
+      "description": "Thema of discipline waar een leiding of leidingelement toe behoort."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klic objecttype",
+      "description": "Omschrijving van het objecttype."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

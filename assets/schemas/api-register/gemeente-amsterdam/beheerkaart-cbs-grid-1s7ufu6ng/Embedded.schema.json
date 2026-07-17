@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/beheerkaart-cbs-grid-1s7ufu6ng/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/beheerkaart/cbs_grid/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "raster_100": {
+      "type": "array",
+      "items": {
+        "$ref": "./BeheerkaartCbsGridraster_100.schema.json"
+      }
+    }
+  }
+}

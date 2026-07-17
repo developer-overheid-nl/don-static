@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/regeltekstannotatiesontwerprenvooi",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/RegeltekstannotatiesOntwerpRenvooi"
+  ],
+  "title": "Annotaties en renvooi bij artikelstructuur",
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./AnnotatieOntwerpRenvooiLinks.schema.json"
+    }
+  },
+  "description": "Gestructureerde OW-objecten en beoogde wijzigingen bij een ontwerpregeling met artikelstructuur.\n\nOW-objecten worden uitgeleverd op basis van de vraagstelling, bijv. alle objecten die horen\nbij de vastgestelde regeling waar deze ontwerpregeling op gebaseerd is,\nof alle objecten die horen bij een artikel of lid uit die vastgestelde regeling.\nAlle objecten die direct of indirect horen bij de gevraagde regeling\nof het gevraagde artikel/lid, worden uitgeleverd.\n\nObjecten zijn geordend in lijsten (arrays) per objecttype.\n\nRelaties tussen de objecten worden aangegeven door '*Refs'-attributen, bijvoorbeeld \neen Tekstdeel heeft een relatie met een of meerdere locaties;\ndeze locaties zitten dan apart in deze resource, en er wordt vanuit het Tekstdeel \nnaar verwezen vanuit het 'locatieRefs' attribuut.\n\nDaarnaast is per objecttype aangegeven welke wijzigingen er beoogd zijn in de ontwerpregeling.\nDit wordt gedaan in het attribuut '_delta'. Hierin wordt per object aangegeven welke toevoegingen,\nwijzigingen, of verwijderingen de ontwerpregeling beoogt te doen.\n",
+  "$ref": "./RegeltekstannotatiesRenvooi.schema.json"
+}

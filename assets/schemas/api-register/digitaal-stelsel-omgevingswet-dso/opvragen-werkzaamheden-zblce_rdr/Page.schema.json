@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/opvragen-werkzaamheden-zblce_rdr/page",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/239140/toepasbareregels-opvragenwerkzaamheden-v1.json#/components/schemas/Page"
+  ],
+  "description": "Info voor paginering.",
+  "type": "object",
+  "required": [
+    "size",
+    "totalElements",
+    "totalPages",
+    "number"
+  ],
+  "properties": {
+    "number": {
+      "description": "het huidige paginanummer",
+      "type": "integer",
+      "minimum": 1
+    },
+    "size": {
+      "description": "het aantal items op de huidige pagina",
+      "type": "integer",
+      "minimum": 0
+    },
+    "totalElements": {
+      "description": "het totaal aantal items in deze collectie",
+      "type": "integer",
+      "minimum": 0
+    },
+    "totalPages": {
+      "description": "het totaal aantal pagina's in deze collectie",
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

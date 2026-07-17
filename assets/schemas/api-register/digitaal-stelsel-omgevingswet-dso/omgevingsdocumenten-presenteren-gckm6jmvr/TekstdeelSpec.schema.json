@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/tekstdeelspec",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/TekstdeelSpec"
+  ],
+  "title": "TekstdeelSpec",
+  "required": [
+    "identificatie"
+  ],
+  "type": "object",
+  "properties": {
+    "divisieRef": {
+      "type": "string",
+      "examples": [
+        "nl.imow-gm1911.divisie.20220001"
+      ]
+    },
+    "divisietekstRef": {
+      "type": "string",
+      "examples": [
+        "nl.imow-gm1911.divisietekst.20220003"
+      ]
+    },
+    "gebiedsaanwijzingRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.gebiedsaanwijzing"
+        ]
+      }
+    },
+    "hoofdlijnRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.hoofdlijn"
+        ]
+      }
+    },
+    "idealisatie": {
+      "$ref": "./Idealisatie.schema.json"
+    },
+    "identificatie": {
+      "type": "string",
+      "examples": [
+        "nl.imow-gm1911.tekstdeel.20220001"
+      ]
+    },
+    "kaartRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.kaart.Herleven"
+        ]
+      }
+    },
+    "locatieRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.gebiedengroep.BuitengebiedWieringerwaard"
+        ]
+      }
+    },
+    "themas": {
+      "type": "array",
+      "items": {
+        "$ref": "./Thema.schema.json"
+      }
+    }
+  }
+}

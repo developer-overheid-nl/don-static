@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bag-6-fsfxehg/bagligplaatsengebruiksdoel",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json#/components/schemas/Bagligplaatsen_gebruiksdoel"
+  ],
+  "type": "object",
+  "description": "Auto-generated table for nested field: ligplaatsen.gebruiksdoel",
+  "properties": {
+    "omschrijving": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

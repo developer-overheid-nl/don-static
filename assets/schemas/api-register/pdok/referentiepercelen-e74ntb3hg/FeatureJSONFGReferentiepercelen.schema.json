@@ -1,0 +1,431 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/referentiepercelen-e74ntb3hg/featurejsonfgreferentiepercelen",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/referentiepercelen/ogc/v1/openapi.json#/components/schemas/featureJSONFG_referentiepercelen"
+  ],
+  "properties": {
+    "conformsTo": {
+      "items": {
+        "format": "uri",
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "coordRefSys": {
+      "format": "uri",
+      "type": "string"
+    },
+    "geometry": {
+      "nullable": true,
+      "oneOf": [
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "Point"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "MultiPoint"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "type": "array"
+              },
+              "minItems": 2,
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "LineString"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "items": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "type": "array"
+                },
+                "minItems": 2,
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "MultiLineString"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "items": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "type": "array"
+                },
+                "minItems": 4,
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "Polygon"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "items": {
+                  "items": {
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 2,
+                    "type": "array"
+                  },
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "MultiPolygon"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "geometries": {
+              "items": {},
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "GeometryCollection"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "geometries",
+            "type"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "id": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "links": {
+      "items": {
+        "$ref": "../_shared/Link.schema.json"
+      },
+      "type": "array"
+    },
+    "place": {
+      "nullable": true,
+      "oneOf": [
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "Point"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "MultiPoint"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "type": "array"
+              },
+              "minItems": 2,
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "LineString"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "items": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "type": "array"
+                },
+                "minItems": 2,
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "MultiLineString"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "items": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "type": "array"
+                },
+                "minItems": 4,
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "Polygon"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "items": {
+                "items": {
+                  "items": {
+                    "items": {
+                      "type": "number"
+                    },
+                    "minItems": 2,
+                    "type": "array"
+                  },
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "MultiPolygon"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "coordinates",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "properties": {
+            "geometries": {
+              "items": {},
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "GeometryCollection"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "geometries",
+            "type"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "properties": {
+      "$ref": "./PropertiesGeoJSONReferentiepercelen.schema.json"
+    },
+    "time": {
+      "nullable": true
+    },
+    "type": {
+      "enum": [
+        "Feature"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "time",
+    "place",
+    "geometry",
+    "properties",
+    "type"
+  ],
+  "type": "object"
+}

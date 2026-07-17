@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/samengestelde-rtr-services-dgbh6jmvr/logischgerelateerdewerkzaamhedenrequest",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/165401/toepasbareregels-samengesteldertrservices-v2.json#/components/schemas/LogischGerelateerdeWerkzaamhedenRequest"
+  ],
+  "required": [
+    "functioneleStructuurRefs"
+  ],
+  "properties": {
+    "functioneleStructuurRefs": {
+      "description": "Lijst van geselecteerde werkzaamheid functioneleStructuurRefs",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

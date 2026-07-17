@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bomen-rak8bxeng/multilinestring",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/aardgasverbruik/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/aardgasvrijezones/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/bedrijveninvesteringszones/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/benkagg/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/bgt/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/bodem/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/bomen/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/brk2/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/brt10/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/brt25/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/brt50/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/civieleconstructies/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/cmsa/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bagadresinformatie/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bagadresinformatiem/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bagpanden/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bagpandenm/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bagzoek/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bagzoekm/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/dataverkenner/kadastraleobject/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/dataverkenner/kadastraleobjectm/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/ecologie/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/evenementen/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/explosieven/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/fietspaaltjes/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/functionele_gebieden/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/geluidszones/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/gemeentelijk_vastgoed/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/historische_bodeminformatie/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/milieuzones/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/monumenten/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/nap/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/objectenopenbareruimte/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/parkeerzones/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/standvastgoed/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/storingsmeldingen_ovl_en_klokken/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/touringcars/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/uitvoeringsplan/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/varen/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/veiligeafstanden/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/vergunningen/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/verkeersinformatiesystemen/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/winkelgebieden/openapi.json#/components/schemas/MultiLineString",
+    "https://api.data.amsterdam.nl/v1/wior/openapi.json#/components/schemas/MultiLineString"
+  ],
+  "type": "object",
+  "description": "GeoJSON geometry",
+  "allOf": [
+    {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    {
+      "properties": {
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "MultiLineString"
+          ]
+        }
+      }
+    }
+  ]
+}

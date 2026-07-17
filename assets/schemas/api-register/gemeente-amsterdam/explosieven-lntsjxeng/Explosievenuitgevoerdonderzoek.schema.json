@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/explosieven-lntsjxeng/explosievenuitgevoerdonderzoek",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/explosieven/openapi.json#/components/schemas/Explosievenuitgevoerdonderzoek"
+  ],
+  "type": "object",
+  "description": "uitgevoerdonderzoek",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `uitgevoerdonderzoek._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./ExplosievenuitgevoerdonderzoekLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "datum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Uitgevoerd onderzoek datum",
+      "description": "Datum van het uitgevoerde onderzoek"
+    },
+    "detailType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Uitgevoerd onderzoek detail type",
+      "description": "Specifiek type rapport van het uitgevoerde onderzoek"
+    },
+    "geometry": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Uitgevoerd onderzoek ID",
+      "description": "Unieke identificatie van een uitgevoerd onderzoek"
+    },
+    "kenmerk": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Uitgevoerd onderzoek kenmerk omschrijving",
+      "description": "Omschrijving van het kenmerk van het uitgevoerde onderzoek"
+    },
+    "onderzoeksgebied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Gebied waarop het onderzoek is uitgevoerd"
+    },
+    "opdrachtgever": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Uitgevoerd onderzoek opdrachtgever",
+      "description": "Persoon of organisatie die opdracht heeft gegeven voor het onderzoek"
+    },
+    "opdrachtnemer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Uitgevoerd onderzoek opdrachtnemer",
+      "description": "Verantwoordelijke persoon of organisatie die het onderzoek heeft uitgevoerd"
+    },
+    "verdachtgebied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Uitgevoerd onderzoek verdacht gebied",
+      "description": "Het verdachte gebied dat is onderzocht"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

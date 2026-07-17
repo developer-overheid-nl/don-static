@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/error",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/Error"
+  ],
+  "required": [
+    "detail",
+    "status",
+    "title"
+  ],
+  "type": "object",
+  "properties": {
+    "detail": {
+      "type": "string",
+      "examples": [
+        "HTTP 404 Not Found"
+      ]
+    },
+    "instance": {
+      "type": "string",
+      "examples": [
+        "self"
+      ]
+    },
+    "status": {
+      "type": "integer",
+      "format": "int32",
+      "examples": [
+        404
+      ]
+    },
+    "title": {
+      "type": "string",
+      "examples": [
+        "Not Found"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "URI naar een pagina met meer informatie over deze foutmelding voor de ontwikkelaar.",
+      "examples": [
+        "about:blank"
+      ]
+    }
+  },
+  "description": "Object gespecificeerd volgens https://tools.ietf.org/html/rfc7807."
+}

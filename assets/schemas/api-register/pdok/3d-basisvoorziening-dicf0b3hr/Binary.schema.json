@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/3d-basisvoorziening-dicf0b3hr/binary",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/3d-basisvoorziening/ogc/v1/openapi.json#/components/schemas/binary"
+  ],
+  "type": "string",
+  "contentMediaType": "application/octet-stream"
+}

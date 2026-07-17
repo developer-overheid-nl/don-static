@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/hoopleidingsinrichting",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/HoOpleidingsinrichting"
+  ],
+  "x-class-extra-annotation": "@Relation(collectionRelation = \"HoOpleidingsinrichtingen\")",
+  "type": "object",
+  "required": [
+    "beginInstroomperiode",
+    "begindatum",
+    "opleidingseenheidcode",
+    "propedeutischeFase",
+    "vestigingscode",
+    "vorm"
+  ],
+  "properties": {
+    "beginInstroomperiode": {
+      "type": "string",
+      "format": "date",
+      "description": "De eerste dag dat een student in een cohort van een aangeboden opleiding met een flexibele instroom kan beginnen. "
+    },
+    "begindatum": {
+      "type": "string",
+      "format": "date",
+      "description": "De datum die het begin van de periode aangeeft (inclusief)."
+    },
+    "deelnemersplaatsenDeeltijd": {
+      "type": "integer",
+      "format": "int32",
+      "description": "Het aantal studenten dat per jaar kan deelnemen aan een opleiding.",
+      "minimum": 1,
+      "maximum": 32000
+    },
+    "deelnemersplaatsenDuaal": {
+      "type": "integer",
+      "format": "int32",
+      "description": "Het aantal studenten dat per jaar kan deelnemen aan een opleiding.",
+      "minimum": 1,
+      "maximum": 32000
+    },
+    "deelnemersplaatsenVoltijd": {
+      "type": "integer",
+      "format": "int32",
+      "description": "Het aantal studenten dat per jaar kan deelnemen aan een opleiding.",
+      "minimum": 1,
+      "maximum": 32000
+    },
+    "deficientie": {
+      "type": "string",
+      "description": "Geeft aan of inschrijving met onvoldoende vooropleiding mogelijk is.",
+      "enum": [
+        "DEFICIENTIES",
+        "GEEN_DEFICIENTIES"
+      ]
+    },
+    "einddatum": {
+      "type": "string",
+      "format": "date",
+      "description": "De datum die het einde van de periode aangeeft (exclusief)."
+    },
+    "eindeInstroomperiode": {
+      "type": "string",
+      "format": "date",
+      "description": "De laatste dag dat een student kan beginnen in een cohort van een aangeboden opleiding met een flexibele instroom. "
+    },
+    "eisenWerkzaamheden": {
+      "type": "string",
+      "description": "Geeft aan of er eisen zijn gesteld aan het type werkzaamheden die verricht worden in het kader van de opleiding.",
+      "enum": [
+        "EISEN",
+        "GEEN_EISEN"
+      ]
+    },
+    "opleidingseenheidcode": {
+      "type": "string",
+      "description": "Een identificatie van een opleidingseenheid in het register Instellingen en Opleidingen.",
+      "minLength": 1,
+      "maxLength": 9
+    },
+    "propedeutischeFase": {
+      "type": "string",
+      "description": "Geeft aan of de aangeboden opleiding een propedeutische fase kent en of deze wordt afgesloten met een propedeutisch examen.",
+      "enum": [
+        "GEEN_PROPEDEUTISCHE_FASE",
+        "PROPEDEUTISCHE_FASE_EXAMEN",
+        "PROPEDEUTISCHE_FASE_ZONDER_EXAMEN"
+      ]
+    },
+    "versneldTraject": {
+      "type": "string",
+      "description": "Geeft aan of een student een versneld programma volgt zodat het opleiding in minder tijd dan normaal doorlopen kan worden.",
+      "enum": [
+        "VERSNELD_TRAJECT",
+        "GEEN_VERSNELD_TRAJECT"
+      ]
+    },
+    "vestigingscode": {
+      "type": "string",
+      "description": "Een unieke identificatie voor een vestigingserkenning in de Registratie Instellingen en Opleidingen.",
+      "minLength": 6,
+      "maxLength": 6,
+      "pattern": "([0-9]{2}[A-Z]{2}[0-9]{2})"
+    },
+    "vorm": {
+      "type": "string",
+      "description": "De mogelijke manieren waarop de kennisoverdracht is ingericht in het hoger onderwijs wat betreft aanwezigheid  en de duur van de aanwezigheid.",
+      "enum": [
+        "DEELTIJD",
+        "DUAAL",
+        "VOLTIJD"
+      ]
+    }
+  }
+}

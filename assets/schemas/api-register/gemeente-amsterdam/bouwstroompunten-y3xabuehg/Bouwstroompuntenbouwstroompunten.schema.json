@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bouwstroompunten-y3xabuehg/bouwstroompuntenbouwstroompunten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bouwstroompunten/openapi.json#/components/schemas/Bouwstroompuntenbouwstroompunten"
+  ],
+  "type": "object",
+  "description": "bouwstroompunten",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `bouwstroompunten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BouwstroompuntenbouwstroompuntenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aanmeldformulierAanvraagGebruik": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanmeldformulier voor gebruik van het stroompunt."
+    },
+    "afbeelding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "title": "Bouwstroompunt afbeelding",
+      "description": "Afbeelding van bouwstroompunt.",
+      "maxLength": 200
+    },
+    "beschikbareAansluitingen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Beschikbare aansluitingen"
+      },
+      "description": "Type connectoren beschikbaar"
+    },
+    "bouwstroompuntId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bouwstroompunt ID",
+      "description": "Bouwstroompuntnummer."
+    },
+    "capaciteit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Capaciteit in Ampere."
+    },
+    "contactPersoon": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam contactpersoon."
+    },
+    "contactnummerBijMeldenStoring": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Referentienummer voor het melden van een storing."
+    },
+    "datumtijdAangemaakt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Datum en tijdstip van creatie record."
+    },
+    "email": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Emailadres voor contact t.a.v. bijvoorbeeld het gebruik."
+    },
+    "gemeente": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gemeente naam",
+      "description": "De officiële vastgestelde gemeentenaam"
+    },
+    "geometry": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "huisnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nummering"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke identificatie bouwstroompunt record."
+    },
+    "locatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bouwstroompunt locatie",
+      "description": "Locatie van bouwstroompunt (boven- of ondergronds)."
+    },
+    "minimaleGebruikscapaciteit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De categorie-aanduiding van minimale stroomcapaciteit voor gebruik."
+    },
+    "nietBeschikbaarOp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bouwstroompunt niet beschikbaar op",
+      "description": "Momenten waarop het stroompunt niet te gebruiken is."
+    },
+    "organisatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Beheerobject eigenaar",
+      "description": "Eigenaarschap en beheer van bouwstroompunt."
+    },
+    "plaats": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Woonplaats naam",
+      "description": "Een woonplaatsnaam is de naam van een door het bevoegde gemeentelijke orgaan als zodanig aangewezen gedeelte van het gemeentelijk grondgebied"
+    },
+    "postcode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De door PostNL vastgestelde aanduiding bestaande uit 4 cijfers en 2 letters"
+    },
+    "primaireFunctie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De hoofdfunctie van het bouwstroompunt (t.b.v. bepaalde doelgroep zoals evenementen of markt)."
+    },
+    "provincie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Provincie naam",
+      "description": "De naam van een provincie."
+    },
+    "straat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Straat naam",
+      "description": "Een naam om openbare ruimten als straten, lanen, wegen en stegen mee aan te duiden"
+    },
+    "teGebruikenApplicatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de applicatie om stroompunt te kunnen reserveren/gebruiken."
+    },
+    "toegangswijze": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bouwstroompunt toegangswijze",
+      "description": "Wijze voor verkrijgen toegang bouwstroompunt."
+    },
+    "vergunningsplichtig": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicatie vergunningplichting voor gebruik"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brk2-oktbfx6hg/brk2defaulterfpachtcanonslinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brk2/openapi.json#/components/schemas/Brk2defaultErfpachtcanonsLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `erfpachtcanons._links` field. It contains all relationships with objects.",
+  "properties": {
+    "betreftBrkZakelijkrecht": {
+      "$ref": "./Brk2ZakelijkerechtenLink.schema.json"
+    },
+    "isGebaseerdOpBrkStukdeel": {
+      "$ref": "./Brk2stukdelenLink.schema.json"
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./Brk2ErfpachtcanonsLink.schema.json"
+    }
+  },
+  "required": [
+    "betreftBrkZakelijkrecht",
+    "isGebaseerdOpBrkStukdeel",
+    "schema",
+    "self"
+  ]
+}

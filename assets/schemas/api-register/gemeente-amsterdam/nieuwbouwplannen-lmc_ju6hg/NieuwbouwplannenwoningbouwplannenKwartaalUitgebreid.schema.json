@@ -1,0 +1,419 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/nieuwbouwplannen-lmc_ju6hg/nieuwbouwplannenwoningbouwplannenkwartaaluitgebreid",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/nieuwbouwplannen/openapi.json#/components/schemas/Nieuwbouwplannenwoningbouwplannen_kwartaal_uitgebreid"
+  ],
+  "type": "object",
+  "description": "woningbouwplannenKwartaalUitgebreid",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `woningbouwplannenKwartaalUitgebreid._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./NieuwbouwplannenwoningbouwplannenKwartaalUitgebreidLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "buurtCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nieuwbouwplan buurtcode",
+      "description": "Code van de buurt waar het nieuwbouwproject in ligt. Een buurt is aaneengesloten gedeelte binnen een wijk, waarvan de grenzen zo veel mogelijk gebaseerd zijn op topografische elementen."
+    },
+    "buurtNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nieuwbouwplan buurtnaam",
+      "description": "Naam van de buurt waar het nieuwbouwproject in ligt. Een buurt is aaneengesloten gedeelte binnen een wijk, waarvan de grenzen zo veel mogelijk gebaseerd zijn op topografische elementen."
+    },
+    "gebiedCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nieuwbouwplan gebiedscode",
+      "description": "Code van het gebied waar het nieuwbouwproject in ligt."
+    },
+    "gebiedNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nieuwbouwplan gebiedsnaam",
+      "description": "Naam van het gebied waar het nieuwbouwproject in ligt."
+    },
+    "gebiedsindelingPrimavera": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gebiedsindeling Primavera",
+      "description": "Gebiedsindeling uit Primavera. Dit is de gebiedsindeling zoals gehanteerd door het projectmanagementbureau."
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "description": "Point in 3D space",
+                    "minItems": 2,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "MultiPolygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "grex": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Grondexplotatie nummer",
+      "description": "Nummer grondexploitatie. Afkomstig uit Primavera."
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Nieuwbouwplan project ID",
+      "description": "Unieke aanduiding van nieuwbouwproject."
+    },
+    "idPrimavera": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Project Primavera ID",
+      "description": "Identificatie van het project vanuit Primavera. Dit is de project identificatie zoals gehanteerd wordt door het projectmanagementbureau."
+    },
+    "jongeren": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Jongerenwoningen aantal",
+      "description": "Het aantal jongerenwoningen binnen het project."
+    },
+    "middeldureHuur": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Middeldure huurwoningen aantal",
+      "description": "Het aantal middeldure huurwoningen binnen het project."
+    },
+    "onbekend": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Onbekende segmentering woningen aantal",
+      "description": "Het aantal woningen binnen het project waarvan de segmentering onbekend is."
+    },
+    "onzelfstandig": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Onzelfstandig woningen aantal",
+      "description": "Het aantal onzelfstandig woningen binnen het project."
+    },
+    "opleveringGepland": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Geplande opleveringsdatum",
+      "description": "Datum waarop de oplevering van het project gepland staat."
+    },
+    "peildatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Bestand peildatum",
+      "description": "De peildatum van het bestand. Dit kan 01-01-yy, 01-04-yy, 01-07-yy of 01-10-yy zijn."
+    },
+    "plaberumPublicatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Fase plaberum",
+      "description": "Geeft aan in welke fase het project zich bevindt. De 5 stappen zijn vastgesteld in het plaberum. Dit staat voor plan- en besluitvormingsproces ruimtelijke maatregelen."
+    },
+    "projectnaamAfkorting": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nieuwbouwplan projectnaam",
+      "description": "Naam van het project. Vaak gebaseerd op de benaming in Primavera, voorzover bekend aangevuld met benamingen van andere partijen zoals makelaars."
+    },
+    "shOnzelfstEnOfTijdelijk": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Onzelfstandig en/of tijdelijke sociale huurwoningen aantal",
+      "description": "Het aantal onzelfstandig en/of tijdelijke sociale huurwoningen binnen het project."
+    },
+    "socialeHuurCorporatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Woningcorporatie sociale huur indicatie",
+      "description": "Indicatie of er een woningcorporatie betrokken is bij de ontwikkeling van de sociale huurwoningen."
+    },
+    "socialeHuurZelfstPerm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Zelfstandige permanente sociale huurwoningen aantal",
+      "description": "Het aantal zelfstandige permanente sociale huurwoningen binnen het project."
+    },
+    "socialeKoop": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Sociale koopwoningen aantal",
+      "description": "Het aantal sociale koopwoningen binnen het project."
+    },
+    "stadsdeelCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nieuwbouwplan stadsdeel code",
+      "description": "Code van het stadsdeel. Een stadsdeel is een door de Amsterdamse gemeenteraad vastgestelde begrenzing dat valt onder een stadsgebied- of stadsdeelbestuur."
+    },
+    "stadsdeelNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nieuwbouwplan stadsdeel naam",
+      "description": "Naam van het stadsdeel. Een stadsdeel is een door de Amsterdamse gemeenteraad vastgestelde begrenzing dat valt onder een stadsgebied- of stadsdeelbestuur."
+    },
+    "startBouwGepland": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Geplande startdatum bouw",
+      "description": "Datum waarop start bouw van het project gepland staat."
+    },
+    "startBouwGerealiseerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Gerealiseerde startdatum bouw",
+      "description": "Datum waarop start van het project is gerealiseerd."
+    },
+    "studenten": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Studentenwoningen aantal",
+      "description": "Het aantal studentenwoningen binnen het project."
+    },
+    "tijdelijk": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Tijdelijke woningen aantal",
+      "description": "Het aantal tijdelijke woningen binnen het project."
+    },
+    "totaal": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Totaal aantal woningen inclusief onzelfstandig en/of tijdelijk",
+      "description": "Het totaal aantal woningen incl. onzelfstandige en/of tijdelijke woningen binnen het project."
+    },
+    "totaalZelfstPerm": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Totaal aantal zelfstandige en permanente woningen",
+      "description": "Het totaal aantal zelfstandige en permanente woningen binnen het project."
+    },
+    "vrijeSectorHuur": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Vrije sector huurwoningen aantal",
+      "description": "Het aantal vrije sector huurwoningen binnen het project."
+    },
+    "vrijeSectorKoop": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Vrije sector koopwoningen aantal",
+      "description": "Het aantal vrije sector koopwoningen binnen het project."
+    },
+    "vrijeSectorNb": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Vrije sector woningen onbekend huur/koop aantal",
+      "description": "Het aantal vrije sector woningen dat binnen het project waarvan later nog wordt bepaald of dit koop of huur wordt."
+    },
+    "wijkCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nieuwbouwplan wijkcode",
+      "description": "Code van de wijk waar het nieuwbouwproject in ligt. Een wijk is een aaneengesloten gedeelte van het grondgebied van een gemeente, waarvan de grenzen zo veel mogelijk zijn gebaseerd op sociaal-geografische kenmerken."
+    },
+    "wijkNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nieuwbouwplan wijknaam",
+      "description": "Naam van de wijk waar het nieuwbouwproject in ligt. Een wijk is een aaneengesloten gedeelte van het grondgebied van een gemeente, waarvan de grenzen zo veel mogelijk zijn gebaseerd op sociaal-geografische kenmerken."
+    },
+    "zelfbouw": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Zelfbouw indicatie",
+      "description": "Van toepassing wanneer het object door de toekomstige bewoners wordt ontwikkeld. Dit kan betrekking hebben op vormen zoals MO (Medeopdrachtgeverschap), PO (Particulier Opdrachtgeverschap), CPO (Collectief Particulier Opdrachtgeverschap) of SIHK (Samen In Het Klein)."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

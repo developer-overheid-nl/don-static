@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/rijksdienst-voor-ondernemend-nederland/iio-api-aakgfxenr/links3",
+  "x-derived-from": [
+    "https://internationaal.ondernemen.overheid.nl/api/iio/v1/openapi.yaml"
+  ],
+  "properties": {
+    "contentItems": {
+      "$ref": "./ContentItems.schema.json"
+    },
+    "dosAndDonts": {
+      "$ref": "./DosAndDonts.schema.json"
+    },
+    "instanties": {
+      "$ref": "./Instanties.schema.json"
+    },
+    "observaties": {
+      "$ref": "./Observaties.schema.json"
+    },
+    "self": {
+      "$ref": "./Self3.schema.json"
+    }
+  },
+  "type": "object"
+}

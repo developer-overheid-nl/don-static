@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/appinfo",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json"
+  ],
+  "required": [
+    "description",
+    "name",
+    "version"
+  ],
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "examples": [
+        "Beschrijving van de API"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "Omgevingsinformatie ontsluiten API"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "examples": [
+        "2.0.0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/bestuurlijke-gebieden-59afab3ng/tilematrixset",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/openapi.json#/components/schemas/tileMatrixSet"
+  ],
+  "description": "A definition of a tile matrix set following the Tile Matrix Set standard. For tileset metadata, such a description (in `tileMatrixSet` property) is only required for offline use, as an alternative to a link with a `http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme` relation type.",
+  "properties": {
+    "boundingBox": {
+      "allOf": [
+        {
+          "description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS"
+        },
+        {
+          "description": "Minimum bounding rectangle surrounding a 2D resource in the CRS indicated elsewhere",
+          "properties": {
+            "crs": {
+              "default": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+              "description": "Coordinate reference system of the coordinates in the spatial extent\n(property `bbox`). The default reference system is WGS 84 longitude/latitude.",
+              "oneOf": [
+                {
+                  "description": "Simplification of the object into a url if the other properties are not present",
+                  "type": "string"
+                },
+                {
+                  "oneOf": [
+                    {
+                      "properties": {
+                        "uri": {
+                          "description": "Reference to one coordinate reference system (CRS)",
+                          "format": "uri",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "uri"
+                      ]
+                    },
+                    {
+                      "properties": {
+                        "wkt": {
+                          "allOf": [
+                            {
+                              "description": "An object defining the CRS using the JSON encoding for Well-known text representation of coordinate reference systems 2.0"
+                            },
+                            {
+                              "type": "object"
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "wkt"
+                      ]
+                    },
+                    {
+                      "properties": {
+                        "referenceSystem": {
+                          "description": "A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115",
+                          "type": "object"
+                        }
+                      },
+                      "required": [
+                        "referenceSystem"
+                      ]
+                    }
+                  ],
+                  "type": "object"
+                }
+              ],
+              "type": "string"
+            },
+            "lowerLeft": {
+              "description": "A 2D Point in the CRS indicated elsewhere",
+              "items": {
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "orderedAxes": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "upperRight": {
+              "description": "A 2D Point in the CRS indicated elsewhere",
+              "items": {
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            }
+          },
+          "required": [
+            "lowerLeft",
+            "upperRight"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "crs": {
+      "allOf": [
+        {
+          "description": "Coordinate Reference System (CRS)"
+        },
+        {
+          "default": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+          "description": "Coordinate reference system of the coordinates in the spatial extent\n(property `bbox`). The default reference system is WGS 84 longitude/latitude.",
+          "oneOf": [
+            {
+              "description": "Simplification of the object into a url if the other properties are not present",
+              "type": "string"
+            },
+            {
+              "oneOf": [
+                {
+                  "properties": {
+                    "uri": {
+                      "description": "Reference to one coordinate reference system (CRS)",
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "uri"
+                  ]
+                },
+                {
+                  "properties": {
+                    "wkt": {
+                      "allOf": [
+                        {
+                          "description": "An object defining the CRS using the JSON encoding for Well-known text representation of coordinate reference systems 2.0"
+                        },
+                        {
+                          "type": "object"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "wkt"
+                  ]
+                },
+                {
+                  "properties": {
+                    "referenceSystem": {
+                      "description": "A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115",
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "referenceSystem"
+                  ]
+                }
+              ],
+              "type": "object"
+            }
+          ],
+          "type": "string"
+        }
+      ]
+    },
+    "description": {
+      "description": "Brief narrative description of this tile matrix set, normally available for display to a human",
+      "type": "string"
+    },
+    "id": {
+      "description": "Tile matrix set identifier. Implementation of 'identifier'",
+      "type": "string"
+    },
+    "keywords": {
+      "description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix set",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "orderedAxes": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "tileMatrices": {
+      "description": "Describes scale levels and its tile matrices",
+      "items": {
+        "$ref": "./Item16.schema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "description": "Title of this tile matrix set, normally used for display to a human",
+      "type": "string"
+    },
+    "uri": {
+      "description": "Reference to an official source for this tileMatrixSet",
+      "format": "uri",
+      "type": "string"
+    },
+    "wellKnownScaleSet": {
+      "description": "Reference to a well-known scale set",
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "crs",
+    "tileMatrices"
+  ],
+  "type": "object"
+}

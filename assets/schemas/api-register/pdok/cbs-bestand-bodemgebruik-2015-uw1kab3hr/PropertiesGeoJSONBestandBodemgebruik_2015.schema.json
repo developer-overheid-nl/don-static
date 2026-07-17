@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/cbs-bestand-bodemgebruik-2015-uw1kab3hr/propertiesgeojsonbestandbodemgebruik_2015",
+  "x-derived-from": [
+    "https://api.pdok.nl/cbs/bestand-bodemgebruik-2015/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_bestand_bodemgebruik_2015"
+  ],
+  "properties": {
+    "bg2015": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bodemgebruik": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "categorie": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

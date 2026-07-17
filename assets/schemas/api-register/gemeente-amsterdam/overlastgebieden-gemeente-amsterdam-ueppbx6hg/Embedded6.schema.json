@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/overlastgebieden-gemeente-amsterdam-ueppbx6hg/embedded6",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/overlastgebieden/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "blowverbodsgebied": {
+      "type": "array",
+      "items": {
+        "$ref": "./Overlastgebiedenblowverbodsgebied.schema.json"
+      }
+    }
+  }
+}

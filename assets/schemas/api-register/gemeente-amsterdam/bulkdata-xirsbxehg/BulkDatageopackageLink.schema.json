@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bulkdata-xirsbxehg/bulkdatageopackagelink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bulk_data/openapi.json#/components/schemas/BulkDatageopackageLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to geopackage.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "id": {
+      "type": "string",
+      "description": "identifier"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "id",
+    "title"
+  ]
+}

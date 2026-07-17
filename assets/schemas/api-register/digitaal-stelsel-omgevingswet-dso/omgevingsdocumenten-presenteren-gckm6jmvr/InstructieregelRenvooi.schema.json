@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/instructieregelrenvooi",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/InstructieregelRenvooi"
+  ],
+  "title": "InstructieregelRenvooi",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./InstructieregelSpec.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "_delta": {
+          "$ref": "./InstructieregelDelta.schema.json"
+        },
+        "idealisatie": {
+          "title": "IdealisatieRenvooi",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "./Idealisatie.schema.json"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "_delta": {
+                  "$ref": "./IdealisatieDelta.schema.json"
+                }
+              }
+            }
+          ]
+        },
+        "instructieregelInstrumenten": {
+          "type": "array",
+          "items": {
+            "title": "InstrumentRenvooi",
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "./Instrument.schema.json"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "_delta": {
+                    "$ref": "./InstrumentDelta.schema.json"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "instructieregelTaakuitoefeningen": {
+          "type": "array",
+          "items": {
+            "title": "AdressaatRenvooi",
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "./Adressaat.schema.json"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "_delta": {
+                    "$ref": "./AdressaatDelta.schema.json"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "themas": {
+          "type": "array",
+          "items": {
+            "title": "ThemaRenvooi",
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "./Thema.schema.json"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "_delta": {
+                    "$ref": "./ThemaDelta.schema.json"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

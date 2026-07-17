@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/gemeentelijk-vastgoed-u4hy1xeng/gemeentelijkvastgoedv1verhuurbareeenhedenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/gemeentelijk_vastgoed/openapi.json#/components/schemas/GemeentelijkVastgoedv1VerhuurbareEenhedenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `verhuurbareEenheden._links` field. It contains all relationships with objects.",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./GemeentelijkVastgoedverhuurbareEenhedenLink.schema.json"
+    }
+  },
+  "required": [
+    "schema",
+    "self"
+  ]
+}

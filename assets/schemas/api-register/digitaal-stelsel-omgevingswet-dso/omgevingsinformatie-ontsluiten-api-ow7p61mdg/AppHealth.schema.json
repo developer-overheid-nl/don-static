@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/apphealth",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json"
+  ],
+  "required": [
+    "status"
+  ],
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "description": "`UP` betekent dat de applicatie bereikbaar is dat alle systemen beschikbaar zijn die nodig zijn om\nverzoeken van een antwoord te voorzien.\n\n`DOWN` wil zeggen dat er een probleem is en de applicatie wellicht niet het antwoord kan geven dat\nverwacht wordt.",
+      "enum": [
+        "UP",
+        "DOWN",
+        "OUT_OF_SERVICE"
+      ],
+      "examples": [
+        "UP"
+      ]
+    }
+  }
+}

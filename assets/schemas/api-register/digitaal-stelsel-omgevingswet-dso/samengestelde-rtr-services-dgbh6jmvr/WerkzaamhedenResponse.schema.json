@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/samengestelde-rtr-services-dgbh6jmvr/werkzaamhedenresponse",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/165401/toepasbareregels-samengesteldertrservices-v2.json#/components/schemas/WerkzaamhedenResponse"
+  ],
+  "type": "array",
+  "items": {
+    "required": [
+      "urn",
+      "naam",
+      "functioneleStructuurRef"
+    ],
+    "properties": {
+      "functioneleStructuurRef": {
+        "type": "string",
+        "description": "De unieke functionele structuur referentie van deze werkzaamheid"
+      },
+      "naam": {
+        "type": "string",
+        "description": "De naam van de werkzaamheid"
+      },
+      "urn": {
+        "type": "string",
+        "description": "De unieke identifier van deze werkzaamheid"
+      }
+    }
+  }
+}

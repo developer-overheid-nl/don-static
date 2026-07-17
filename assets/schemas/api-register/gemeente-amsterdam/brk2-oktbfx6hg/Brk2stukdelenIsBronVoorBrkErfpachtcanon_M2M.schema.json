@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brk2-oktbfx6hg/brk2stukdelenisbronvoorbrkerfpachtcanon_m2m",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brk2/openapi.json#/components/schemas/Brk2stukdelenIsBronVoorBrkErfpachtcanon_M2M"
+  ],
+  "type": "object",
+  "description": "The M2M table for `Stukdelen.isBronVoorBrkErfpachtcanon` that links to `Erfpachtcanons`",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "identificatie": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "readOnly": true
+    },
+    "volgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    }
+  },
+  "required": [
+    "href",
+    "title"
+  ]
+}

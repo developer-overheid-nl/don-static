@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/bevragingsoortnuffic",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/BevragingsoortNuffic"
+  ],
+  "type": "string",
+  "description": "Onderscheid in het soort waarderingsverzoeken voor een buitenlandse opleiding aan het Nuffic voor opslag.",
+  "enum": [
+    "EX_ANTE",
+    "EX_POST"
+  ]
+}

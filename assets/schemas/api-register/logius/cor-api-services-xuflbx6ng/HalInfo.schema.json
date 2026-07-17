@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/logius/cor-api-services-xuflbx6ng/halinfo",
+  "x-derived-from": [
+    "https://oinregister.logius.nl/api/v1/openapi.json#/components/schemas/HalInfo"
+  ],
+  "description": "Een HAL-referentie",
+  "type": "object",
+  "properties": {
+    "href": {
+      "description": "De link naar de bron",
+      "type": "string"
+    },
+    "type": {
+      "description": "Het mime-type van de bron",
+      "type": "string"
+    }
+  }
+}

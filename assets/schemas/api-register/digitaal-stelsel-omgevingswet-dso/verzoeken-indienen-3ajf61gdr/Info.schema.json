@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-indienen-3ajf61gdr/info",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/Info",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/Info"
+  ],
+  "description": "Info",
+  "required": [
+    "name",
+    "version",
+    "stamVersion"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "stamVersion": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "name": "Verzoek indienen",
+      "version": "5.0.1",
+      "stamVersion": [
+        "5",
+        "6"
+      ]
+    }
+  ]
+}

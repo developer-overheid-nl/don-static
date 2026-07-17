@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/nummeraanduiding",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/Nummeraanduiding"
+  ],
+  "title": "Nummeraanduiding",
+  "required": [
+    "documentdatum",
+    "documentnummer",
+    "domein",
+    "geconstateerd",
+    "huisnummer",
+    "identificatie",
+    "ligtAan",
+    "status",
+    "typeAdresseerbaarObject",
+    "voorkomen"
+  ],
+  "type": "object",
+  "properties": {
+    "documentdatum": {
+      "title": "documentdatum",
+      "type": "string",
+      "description": "De datum waarop het brondocument is vastgesteld, op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een object heeft plaatsgevonden.",
+      "format": "date",
+      "examples": [
+        "2019-11-25"
+      ]
+    },
+    "documentnummer": {
+      "title": "Documentnummer",
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "De unieke aanduiding van het brondocument op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een woonplaats heeft plaatsgevonden binnen een gemeente. Alle karakters uit de MES-1 karakterset zijn toegestaan.",
+      "examples": [
+        "Duiven 25112019"
+      ]
+    },
+    "domein": {
+      "title": "domein",
+      "minLength": 1,
+      "type": "string",
+      "description": "NL.IMBAG.Nummeraanduiding",
+      "examples": [
+        "NL.IMBAG.Nummeraanduiding"
+      ]
+    },
+    "geconstateerd": {
+      "title": "Indicatie",
+      "type": "string",
+      "description": "Een aanduiding waarmee kan worden aangegeven of een attribuut van een object of data type een indicatie J (Ja) of N (Nee) heeft in de registratie.",
+      "enum": [
+        "J",
+        "N"
+      ]
+    },
+    "huisletter": {
+      "title": "huisletter",
+      "pattern": "^[a-zA-Z]{1}$",
+      "type": "string",
+      "description": "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken.",
+      "examples": [
+        "A"
+      ]
+    },
+    "huisnummer": {
+      "title": "huisnummer",
+      "maximum": 99999,
+      "minimum": 1,
+      "type": "integer",
+      "description": "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nummering.",
+      "examples": [
+        1
+      ]
+    },
+    "huisnummertoevoeging": {
+      "title": "huisnummer toevoeging",
+      "pattern": "^[0-9a-zA-Z]{1,4}$",
+      "type": "string",
+      "description": "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.",
+      "examples": [
+        "bis"
+      ]
+    },
+    "identificatie": {
+      "title": "NummeraanduidingIdentificatie",
+      "pattern": "^[0-9]{4}20[0-9]{10}$",
+      "type": "string",
+      "description": "De unieke aanduiding van een nummeraanduiding.",
+      "examples": [
+        "0226200000038923"
+      ]
+    },
+    "ligtAan": {
+      "title": "OpenbareRuimteIdentificatie",
+      "pattern": "^[0-9]{4}30[0-9]{10}$",
+      "type": "string",
+      "description": "De unieke aanduiding van een openbare ruimte.",
+      "examples": [
+        "0226300000136124"
+      ]
+    },
+    "ligtIn": {
+      "title": "WoonplaatsIdentificatie",
+      "pattern": "^[0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]|[0-9][1-9][0-9]{2}|[1-9][0-9]{3}$",
+      "type": "string",
+      "description": "De unieke aanduiding van een woonplaats, zoals opgenomen in de landelijke \nwoonplaatsentabel.\nEen natuurlijk getal tussen 0001 en 9999. \n",
+      "examples": [
+        "2096"
+      ]
+    },
+    "postcode": {
+      "title": "postcode",
+      "pattern": "^[1-9]{1}[0-9]{3}[A-Z]{2}$",
+      "type": "string",
+      "description": "De door PostNL vastgestelde code behorende bij een bepaalde combinatie van een straatnaam en een huisnummer.",
+      "examples": [
+        "6922KZ"
+      ]
+    },
+    "status": {
+      "title": "StatusNaamgeving",
+      "type": "string",
+      "description": "Een aanduiding van alle waarden die de status van een openbare ruimte of \neen nummeraanduiding kan aannemen.\n",
+      "enum": [
+        "Naamgeving uitgegeven",
+        "Naamgeving ingetrokken"
+      ]
+    },
+    "typeAdresseerbaarObject": {
+      "title": "TypeAdresseerbaarObject",
+      "type": "string",
+      "description": "De aard van het object waaraan een nummeraanduiding is toegekend.",
+      "enum": [
+        "Verblijfsobject",
+        "Standplaats",
+        "Ligplaats"
+      ]
+    },
+    "voorkomen": {
+      "$ref": "./VoorkomenLV.schema.json"
+    }
+  },
+  "description": "Een Nummeraanduiding is een door het bevoegde gemeentelijke orgaan als \nzodanig toegekende aanduiding van een verblijfsobject, een standplaats of \neen ligplaats.\n\n**status**: De fase van de levenscyclus van een nummeraanduiding, waarin de \nbetreffende nummeraanduiding zich bevindt.\n\n**geconstateerd**: Een aanduiding waarmee kan worden aangegeven dat een \nobject in de registratie is opgenomen als gevolg van een feitelijke \nconstatering, zonder dat er op het moment van opname sprake was van een \nregulier brondocument voor deze opname.\n\n**voorkomen**: De toestand van een object in de administratieve \nwerkelijkheid, zoals beschreven met de eigenschappen van dit object waarover \ngegevens geregistreerd worden, waarbij de gegevens gedurende een bepaalde \nperiode gelijk zijn in de (basis) registratie.\n\n**ligtIn**: Een nummeraanduiding ligt in een woonplaats.\nAls een object in een andere woonplaats ligt dan de openbare ruimte waaraan \nde nummeraanduiding ligt, dan wordt hier de identificatie van de woonplaats \ningevuld waar de nummeraanduiding in ligt. In alle andere gevallen wordt de \nidentificatie van de woonplaats ingevuld waar de openbare ruimte in ligt.\n\n**ligtAan**: Een nummeraanduiding ligt aan een openbare ruimte.\nDeze property bevat de identificatie van de openbare ruimte waar de \nnummeraanduiding aan ligt.\n"
+}

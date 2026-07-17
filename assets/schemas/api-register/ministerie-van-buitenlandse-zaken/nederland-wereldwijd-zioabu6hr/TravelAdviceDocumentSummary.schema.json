@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-buitenlandse-zaken/nederland-wereldwijd-zioabu6hr/traveladvicedocumentsummary",
+  "x-derived-from": [
+    "https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/openapi.yaml#/components/schemas/travel-advice-document-summary"
+  ],
+  "type": "object",
+  "properties": {
+    "canonical": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string"
+    },
+    "dataurl": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "introduction": {
+      "type": "string"
+    },
+    "isocode": {
+      "type": "string"
+    },
+    "lastmodified": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "location": {
+      "type": "string"
+    },
+    "locationkey": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "xml": {
+    "name": "document"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/_shared/styleset",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top10nl/ogc/v1/openapi.json#/components/schemas/style-set",
+    "https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/openapi.json#/components/schemas/style-set",
+    "https://api.pdok.nl/kadaster/brk-kadastrale-kaart/ogc/v1/openapi.json#/components/schemas/style-set",
+    "https://api.pdok.nl/kadaster/brt-achtergrondkaart/ogc/v1/openapi.json#/components/schemas/style-set",
+    "https://api.pdok.nl/lv/bag/ogc/v1-demo/openapi.json#/components/schemas/style-set",
+    "https://api.pdok.nl/lv/bag/ogc/v1/openapi.json#/components/schemas/style-set",
+    "https://api.pdok.nl/lv/bgt/ogc/v1/openapi.json#/components/schemas/style-set"
+  ],
+  "properties": {
+    "styles": {
+      "items": {
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "links": {
+            "items": {
+              "$ref": "./Link.schema.json"
+            },
+            "minItems": 1,
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "links"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "type": [
+        "array",
+        "null"
+      ],
+      "examples": [
+        [
+          {
+            "id": "night",
+            "links": [
+              {
+                "href": "https://example.com/api/1.0/styles/night?f=mapbox",
+                "rel": "stylesheet",
+                "type": "application/vnd.mapbox.style+json"
+              },
+              {
+                "href": "https://example.com/api/1.0/styles/night?f=sld10",
+                "rel": "stylesheet",
+                "type": "application/vnd.ogc.sld+xml;version=1.0"
+              },
+              {
+                "href": "https://example.com/api/1.0/styles/night/metadata?f=json",
+                "rel": "describedBy",
+                "type": "application/json"
+              }
+            ],
+            "title": "Topographic night style"
+          },
+          {
+            "id": "topographic",
+            "links": [
+              {
+                "href": "https://example.com/api/1.0/styles/topographic?f=mapbox",
+                "rel": "stylesheet",
+                "type": "application/vnd.mapbox.style+json"
+              },
+              {
+                "href": "https://example.com/api/1.0/styles/topographic?f=sld10",
+                "rel": "stylesheet",
+                "type": "application/vnd.ogc.sld+xml;version=1.0"
+              },
+              {
+                "href": "https://example.com/api/1.0/styles/topographic/metadata?f=json",
+                "rel": "describedBy",
+                "type": "application/json"
+              }
+            ],
+            "title": "Regular topographic style"
+          }
+        ]
+      ]
+    }
+  },
+  "required": [
+    "styles"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,388 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/vergunningen-m40sfxehg/vergunningenwerkenvervoeropstraat",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/vergunningen/openapi.json#/components/schemas/Vergunningenwerk_en_vervoer_op_straat"
+  ],
+  "type": "object",
+  "description": "Gegevens over verleende vergunningen en ontheffingen (en meldingen) die te maken hebben met werk en vervoer op straat. Bijvoorbeeld een TVM, RVV, objecten plaatsen, nachtwerkontheffing, e-RVV, e-TVM of filmmelding (De focus ligt nu alleen op Tijdelijke VerkeersMaatregelen en objectvergunningen en objectmeldingen. Andere type werk en vervoer op straat zullen volgen).",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `werkEnVervoerOpStraat._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./VergunningenwerkEnVervoerOpStraatLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aantalObjecten": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aantal objecten betrokken bij de vergunning"
+    },
+    "aantalParkeervakken": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aantal parkeervakken betrokken bij TVM"
+    },
+    "bagOpenbareruimteId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van de openbareruimte van de hoofdlocatie waarop de TVM betrekking heeft"
+    },
+    "buurt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Buurt van de hoofdlocatie waarin de TVM plaatsvindt"
+    },
+    "datumAanvraag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop aanvraag is ingediend"
+    },
+    "datumIntrekking": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop een intrekking van de aanvraag heeft plaatsgevonden (indien van toepassing)"
+    },
+    "datumObjectTm": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum welke het einde van de periode aangeeft waarop het object plaatsen van toepassing is"
+    },
+    "datumObjectVan": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum welke het begin van de periode aangeeft waarop het object plaatsen van toepassing is"
+    },
+    "datumTm": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum welke het einde van de periode aangeeft waarop de aanvraag van toepassing is"
+    },
+    "datumTvmParkeervakkenTm": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum welke het einde van de periode aangeeft waarop de parkeervak reservering van toepassing is"
+    },
+    "datumTvmParkeervakkenVan": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum welke het begin van de periode aangeeft waarop de parkeervak reservering van toepassing is"
+    },
+    "datumTvmStremmenTm": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum welke het einde van de periode aangeeft waarop het tijdelijk afsluiten of afzetten van een straat van toepassing is"
+    },
+    "datumTvmStremmenVan": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum welke het begin van de periode aangeeft waarop het tijdelijk afsluiten of afzetten van een straat van toepassing is"
+    },
+    "datumVan": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum welke het begin van de periode aangeeft waarop de aanvraag van toepassing is"
+    },
+    "datumVerlening": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop aanvraag is verleend"
+    },
+    "eTvmParkeervakken": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicatie of de aanvraag een tijdelijke verkeersmaatregel voor het reserveren van parkeervakken t.b.v. een elektrisch voertuig betreft"
+    },
+    "gebiedenBuurtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van de buurt van de hoofdlocatie waarop de TVM betrekking heeft"
+    },
+    "gebiedenStadsdeelId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het stadsdeel van de hoofdlocatie waarop de TVM betrekking heeft"
+    },
+    "gemeente": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Gemeente waarin de TVM plaatsvindt"
+    },
+    "geometrieLocatie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "geometrieParkeervakken": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "huisnummerTotLocatieParkeervakken": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Huisnummer het dichtst bij het laatste parkeervak van de hoofdlocatie ligt waarop de aanvraag van toepassing is"
+    },
+    "huisnummerTotSublocatieParkeervakken": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Huisnummer het dichtst bij het laatste parkeervak van de sublocatie ligt waarop de aanvraag ook van toepassing is"
+    },
+    "huisnummerVanLocatieParkeervakken": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Huisnummer het dichtst bij het eerste parkeervak van de hoofdlocatie ligt waarop de aanvraag van toepassing is"
+    },
+    "huisnummerVanSublocatieParkeervakken": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Huisnummer het dichtst bij het eerste parkeervak van de sublocatie ligt waarop de aanvraag ook van toepassing is"
+    },
+    "id": {
+      "type": "string",
+      "description": "Uniek id van de aanvraag"
+    },
+    "jaarAanvraag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Jaar waarin de aanvraag is ingediend"
+    },
+    "jaarVerlening": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Jaar waarin de vergunning is verleend"
+    },
+    "kenmerk": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Uniek identificerend kenmerk van de aanvraag"
+    },
+    "laatstGewijzigd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Timestamp welke het moment aangeeft waarop het de registratie in deze dataset het laastst is gewijzigd"
+    },
+    "locatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Locatie welke bij benadering de hoofdlocatie aangeeft waarop de aanvraag van toepassing is"
+    },
+    "objecten": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Opsomming van de bij de vergunning betrokken objecten"
+    },
+    "objectmelding": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicatie of de aanvraag het neerzetten van 1 of meerdere object(en) betreft waarvoor geen vergunning aangevraagd hoeft te worden"
+    },
+    "objectvergunning": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicatie of de aanvraag het neerzetten van 1 of meerdere object(en) betreft waarvoor een vergunning aangevraagd dient te worden"
+    },
+    "opdrachtLocatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Opdracht aan verkeersvoorzieningen betreffende de locatie(s)"
+    },
+    "parkeervakken": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Opsomming van identificatienummers van de in de aanvraag geselecteerde parkeervakken. LET OP: Het aantal nummers kan soms afwijken van het totaal aantal parkeervakken, omdat dit veld niet meer wijzigt na de initiële aanvraag"
+    },
+    "resultaat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Resultaat (uitkomst) van de TVM aanvraag"
+    },
+    "specialeParkeervakken": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicatie of de reservering van parkeervakken speciale parkeervakken betreft, zoals bijvoorbeeld gehandicapten parkeerplaats etc."
+    },
+    "stadsdeel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Stadsdeel waarin de TVM plaatsvindt"
+    },
+    "straatLocatieParkeervakken": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Straat welke de hoofdlocatie aangeeft waarop de aanvraag van toepassing is"
+    },
+    "straatSublocatieParkeervakken": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Straat welke de sublocatie aangeeft waarop de aanvraag ook van toepassing is"
+    },
+    "tijdTvmParkeervakkenTot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "time",
+      "description": "Tijdstip welke het einde van de periode aangeeft waarop de parkeervak reservering van toepassing is"
+    },
+    "tijdTvmParkeervakkenVan": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "time",
+      "description": "Tijdstip welke het begin van de periode aangeeft waarop de parkeervak reservering van toepassing is"
+    },
+    "tijdTvmStremmenTot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "time",
+      "description": "Tijdstip welke het einde van de periode aangeeft waarop het tijdelijk afsluiten of afzetten van een straat van toepassing is"
+    },
+    "tijdTvmStremmenVan": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "time",
+      "description": "Tijdstip welke het begin van de periode aangeeft waarop het tijdelijk afsluiten of afzetten van een straat van toepassing is"
+    },
+    "tvm": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicatie of de aanvraag een tijdelijke verkeersmaatregel betreft"
+    },
+    "tvmParkeervakken": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicatie of de aanvraag een tijdelijke verkeersmaatregel voor het reserveren van parkeervakken betreft"
+    },
+    "tvmStremmen": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicatie of de aanvraag een tijdelijke verkeersmaatregel voor het tijdelijk afsluiten of afzetten van een straat betreft"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

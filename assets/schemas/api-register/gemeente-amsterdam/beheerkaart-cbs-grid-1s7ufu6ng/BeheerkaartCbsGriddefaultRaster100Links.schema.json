@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/beheerkaart-cbs-grid-1s7ufu6ng/beheerkaartcbsgriddefaultraster100links",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/beheerkaart/cbs_grid/openapi.json#/components/schemas/BeheerkaartCbsGriddefaultRaster100Links"
+  ],
+  "type": "object",
+  "description": "The contents of the `raster_100._links` field. It contains all relationships with objects.",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./BeheerkaartCbsGridraster_100Link.schema.json"
+    }
+  },
+  "required": [
+    "schema",
+    "self"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/grondwatergebruik-gu-domein-b9yxju6hg/registrationobjectreference",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/gu/v1/openapi#/components/schemas/RegistrationObjectReference"
+  ],
+  "properties": {
+    "accountableParty": {
+      "type": "string"
+    },
+    "broId": {
+      "type": "string"
+    },
+    "characteristics": {
+      "$ref": "../_shared/RelationsDto.schema.json"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

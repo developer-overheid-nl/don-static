@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/huishoudelijkafvalcluster",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/Huishoudelijkafvalcluster"
+  ],
+  "type": "object",
+  "description": "cluster",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `cluster._links` field. It contains all relationships with objects.",
+      "properties": {
+        "bagHoofdadresVerblijfsobject": {
+          "$ref": "./BagVerblijfsobjectenRawIdentifier.schema.json"
+        },
+        "bagNummeraanduiding": {
+          "$ref": "./BagNummeraanduidingenRawIdentifier.schema.json"
+        },
+        "bagOpenbareruimte": {
+          "$ref": "./BagOpenbareruimtesRawIdentifier.schema.json"
+        },
+        "gbdBuurt": {
+          "$ref": "../_shared/GebiedenBuurtenRawIdentifier.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HuishoudelijkafvalclusterLink.schema.json"
+        }
+      },
+      "required": [
+        "bagHoofdadresVerblijfsobject",
+        "bagNummeraanduiding",
+        "bagOpenbareruimte",
+        "gbdBuurt",
+        "schema",
+        "self"
+      ]
+    },
+    "bagHoofdadresVerblijfsobjectId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "BAG  hoofdadres verblijfsobject",
+      "description": "Een identificatiecode van een verblijfsobject is een authentiek gegeven en een unieke aanduiding van het verblijfsobject.",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "bagNummeraanduidingId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nummeraanduiding ID",
+      "description": "Identificatie nummeraanduiding",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "bagOpenbareruimteId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Openbare ruimte ID",
+      "description": "Openbare ruimte identificatie",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "bronadres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Adres",
+      "description": "Adres van het cluster zoals die in bron geregistreerd is."
+    },
+    "datumEinde": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Cluster einddatum",
+      "description": "Datum wanneer het cluster geen relaties meer heeft met containers met status=1."
+    },
+    "datumOntstaan": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Cluster startdatum",
+      "description": "Datum ontstaan van het cluster. Dit is afgeleid van de plaatsingsdatum van de oudste container ,wanneer het gegeven bij het systeem bekend is of peildatum 01-01-2016"
+    },
+    "datumOpvoer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Geldigheid startdatumtijd",
+      "description": "Datum opvoer van het cluster. Dit is afgeleid van wanneer het gegeven bij het systeem bekend is of peildatum 01-01-2016"
+    },
+    "gbdBuurtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gebied buurt",
+      "description": "Unieke identificatie van het object",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "title": "Cluster ID",
+      "description": "Uniek identificerend kenmerk van cluster"
+    },
+    "opmerking": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Extra aanwijzing van de locatie voor de bestuurder."
+    },
+    "status": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Cluster status code",
+      "description": "Status van het cluster (0 - inactief , 1 - actief)"
+    },
+    "subclusterIndicatie": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Subcluster ID",
+      "description": "Indicatie of het een cluster betreft dat is gesplitst door een weg"
+    },
+    "verwijderdDp": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Geldigheid einddatumtijd",
+      "description": "Indicatie of het object verwijderd is bij de bronhouder"
+    },
+    "wijzigingsdatumDp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Datumtijd aanmaak wijziging",
+      "description": "Datum waarop het object is gewijzigd"
+    }
+  },
+  "required": [
+    "_links",
+    "bagHoofdadresVerblijfsobjectId",
+    "bagNummeraanduidingId",
+    "bagOpenbareruimteId",
+    "gbdBuurtId",
+    "id"
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bag-6-fsfxehg/bagnummeraanduidingen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json#/components/schemas/Bagnummeraanduidingen"
+  ],
+  "type": "object",
+  "description": "Een NUMMERAANDUIDING, in de volksmond ook wel adres genoemd, is een door het bevoegde gemeentelijke orgaan als zodanig toegekende aanduiding van een verblijfsobject, standplaats of ligplaats",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `nummeraanduidingen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "adresseertLigplaats": {
+          "$ref": "../_shared/BagLigplaatsenLink.schema.json"
+        },
+        "adresseertStandplaats": {
+          "$ref": "../_shared/BagStandplaatsenLink.schema.json"
+        },
+        "adresseertVerblijfsobject": {
+          "$ref": "../_shared/BagVerblijfsobjectenLink.schema.json"
+        },
+        "heeftDossier": {
+          "$ref": "./BagdossiersLink.schema.json"
+        },
+        "heeftOnderzoeken": {
+          "type": "array",
+          "items": {
+            "$ref": "./BagnummeraanduidingenHeeftOnderzoeken_M2M.schema.json"
+          }
+        },
+        "ligtAanOpenbareruimte": {
+          "$ref": "../_shared/BagOpenbareruimtesLink.schema.json"
+        },
+        "ligtInWoonplaats": {
+          "$ref": "./BagWoonplaatsenLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "../_shared/BagNummeraanduidingenLink.schema.json"
+        }
+      },
+      "required": [
+        "adresseertLigplaats",
+        "adresseertStandplaats",
+        "adresseertVerblijfsobject",
+        "heeftDossier",
+        "heeftOnderzoeken",
+        "ligtAanOpenbareruimte",
+        "ligtInWoonplaats",
+        "schema",
+        "self"
+      ]
+    },
+    "adresseertLigplaatsId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nummeraanduiding adresseert ligplaats",
+      "description": "De ligplaats (landelijke identificatie) die door de nummeraanduiding wordt aangeduid",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "adresseertStandplaatsId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nummeraanduiding adresseert standplaats",
+      "description": "De standplaats (landelijke identificatie) die door de nummeraanduiding wordt aangeduid",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "adresseertVerblijfsobjectId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nummeraanduiding adresseert verblijfsobject",
+      "description": "Het verblijfsobject (landelijke identificatie) dat door de nummeraanduiding wordt aangeduid",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "bagprocesCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "BAG proces code",
+      "description": "Functionele handeling die ten grondslag ligt aan de gebeurtenis. code"
+    },
+    "bagprocesOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "BAG proces omschrijving",
+      "description": "Functionele handeling die ten grondslag ligt aan de gebeurtenis. omschrijving"
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Nummeraanduiding geldigheid begindatum",
+      "description": "De ingangsdatum van de geldigheid van een bepaalde combinatie van gegevens over een NUMMERAANDUIDING"
+    },
+    "datumActueelTot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Actueel tot datum",
+      "description": "Einddatum van de cyclus, eventueel in combinatie met het kenmerk Status"
+    },
+    "documentdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Brondocument datum",
+      "description": "De datum waarop het brondocument is vastgesteld"
+    },
+    "documentnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Brondocument nummer",
+      "description": "Het unieke nummer van het brondocument"
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Nummeraanduiding geldigheid einddatum",
+      "description": "De einddatum van de geldigheid van een bepaalde combinatie van gegevens over een NUMMERAANDUIDING"
+    },
+    "geconstateerd": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Nummeraanduiding geconstateerd indicatie",
+      "description": "Een aanduiding waarmee kan worden aangegeven dat een nummeraanduiding in de registratie is opgenomen als gevolg van een feitelijke constatering, zonder dat er op het moment van opname sprake was van een regulier brondocument voor deze opname"
+    },
+    "heeftDossierId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nummeraanduiding heeft dossier",
+      "description": "De brondocument(en) op basis waarvan de nummeraanduiding is toegevoegd aan de registratie. Afgeleid van hetlandelijke BAG-kenmerk 'Documentnummer'",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "huisletter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken"
+    },
+    "huisnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nummering"
+    },
+    "huisnummertoevoeging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Huisnummer toevoeging",
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter"
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Nummeraanduiding ID",
+      "description": "De unieke aanduiding van een nummeraanduiding"
+    },
+    "ligtAanOpenbareruimteId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Adresseerbaar object ligt aan openbare ruimte",
+      "description": "De openbare ruimte (landelijke identificatie) waaraan het betreffende adresseerbare object ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "ligtInWoonplaatsId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Adresseerbaar object ligt in woonplaats",
+      "description": "De woonplaats (landelijke identificatie) waarin de nummeraanduiding ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "plusvolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object plus volgnummer",
+      "description": "Uniek BAG-plus volgnummer van de toestand van het object"
+    },
+    "postcode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De door PostNL vastgestelde code bestaande uit 4 cijfers en 2 letters (1234AB)"
+    },
+    "registratiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object registratie datum",
+      "description": "De datum waarop de toestand van het object is geregistreerd"
+    },
+    "statusCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Nummeraanduiding status code",
+      "description": "De levenscyclus van een NUMMERAANDUIDING waarin de betreffende ligplaats zich bevindt. Code"
+    },
+    "statusOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nummeraanduiding status omschrijving",
+      "description": "De levenscyclus van een NUMMERAANDUIDING waarin de betreffende ligplaats zich bevindt. Omschrijving)"
+    },
+    "typeAdres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Adres type",
+      "description": "Hiermee wordt aangegeven of het een relatie betreft vanuit een hoofdadres. Anders is er sprake van een nevenadres (Hoofdadres, Nevenadres)"
+    },
+    "typeAdresseerbaarObjectCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Nummeraanduiding adresseerbaar object type code",
+      "description": "Het type adresseerbaar object waaraan een nummeraanduiding is toegekend. code"
+    },
+    "typeAdresseerbaarObjectOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nummeraanduiding adresseerbaar object type omschrijving",
+      "description": "Het type adresseerbaar object waaraan een nummeraanduiding is toegekend. Omschrijving"
+    },
+    "volgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object volgnummer",
+      "description": "Uniek volgnummer van de toestand van het object"
+    }
+  },
+  "required": [
+    "_links",
+    "adresseertLigplaatsId",
+    "adresseertStandplaatsId",
+    "adresseertVerblijfsobjectId",
+    "heeftDossierId",
+    "identificatie",
+    "ligtAanOpenbareruimteId",
+    "ligtInWoonplaatsId",
+    "volgnummer"
+  ]
+}

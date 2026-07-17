@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoekenoverzicht-raadplegen-xkb56_gdg/page",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json#/components/schemas/Page",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/Page",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/Page"
+  ],
+  "description": "Informatie voor paginering.",
+  "required": [
+    "number",
+    "size",
+    "totalElements",
+    "totalPages"
+  ],
+  "type": "object",
+  "properties": {
+    "number": {
+      "type": "integer",
+      "format": "int32",
+      "examples": [
+        0
+      ]
+    },
+    "size": {
+      "type": "integer",
+      "format": "int32",
+      "examples": [
+        20
+      ]
+    },
+    "totalElements": {
+      "type": "integer",
+      "format": "int32",
+      "examples": [
+        1
+      ]
+    },
+    "totalPages": {
+      "type": "integer",
+      "format": "int32",
+      "examples": [
+        1
+      ]
+    }
+  }
+}

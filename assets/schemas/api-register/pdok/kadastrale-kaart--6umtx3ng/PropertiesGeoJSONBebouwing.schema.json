@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/kadastrale-kaart--6umtx3ng/propertiesgeojsonbebouwing",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/brk-kadastrale-kaart/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_bebouwing"
+  ],
+  "properties": {
+    "bgt_status": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bronhouder": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identificatie_bag_pnd": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identificatie_lokaal_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identificatie_namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "in_onderzoek": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lv_publicatiedatum": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "object_begin_tijd": {
+      "description": "",
+      "format": "date",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "plus_status": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "relatieve_hoogteligging": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tijdstip_registratie": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

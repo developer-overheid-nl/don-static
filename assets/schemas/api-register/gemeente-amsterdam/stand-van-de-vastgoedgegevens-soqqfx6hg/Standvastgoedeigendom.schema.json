@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/stand-van-de-vastgoedgegevens-soqqfx6hg/standvastgoedeigendom",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/standvastgoed/openapi.json#/components/schemas/Standvastgoedeigendom"
+  ],
+  "type": "object",
+  "description": "Alleen verblijfsobjecten met status 'Verblijfsobject in gebruik','Verblijfsobject in gebruik (niet ingemeten)' of 'Verbouwing verblijfsobject'. Afgeleide gegevens uit een combinatie van bronnen: BRK, BAG, BRP, BWV, WOZ, HR en AFWC. Inclusief historie, met data vanaf 2021. Publicatie van nieuwe 1 januari stand met eigendomsverhouding gebeurt omstreeks juli.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `eigendom._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./StandvastgoedeigendomLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "adresseerbaarobjectIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel van adresseerbaar object (verblijfsobject, ligplaats, standplaats)"
+    },
+    "aotId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "AdresseerbaarobjectIdentificatie",
+      "description": "Landelijke identificerende sleutel van adresseerbaar object (verblijfsobject, ligplaats, standplaats)",
+      "deprecated": true
+    },
+    "categorieEigenaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type eigenaar in 11 categorieen"
+    },
+    "eigenaarBronLeidend": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Leidende bron voor bepalen van de eigenaar"
+    },
+    "eigenaarTotaalVotBezit": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Totaal aantal verblijfsobjecten in bezit van eigenaar"
+    },
+    "eigenaarWoningvoorraadVotBezit": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aantal verblijfsobjecten in de woningvoorraad in bezit van eigenaar"
+    },
+    "eigendomsverhouding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Eigendomsverhouding van adresseerbaar object"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke identificatie voor dit object op basis van adresseerbaar object identificatie en peildatum"
+    },
+    "peildatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Peildatum van eigendomsverhouding"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

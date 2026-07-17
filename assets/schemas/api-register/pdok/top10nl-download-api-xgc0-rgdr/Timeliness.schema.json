@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/top10nl-download-api-xgc0-rgdr/timeliness",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top10nl/download/v1_0/openapi.json#/components/schemas/timeliness"
+  ],
+  "properties": {
+    "datetimeTo": {
+      "readOnly": true,
+      "type": "string"
+    },
+    "featuretype": {
+      "enum": [
+        "functioneelgebied",
+        "gebouw",
+        "geografischgebied",
+        "hoogte",
+        "inrichtingselement",
+        "plaats",
+        "plantopografie",
+        "registratiefgebied",
+        "relief",
+        "spoorbaandeel",
+        "terrein",
+        "waterdeel",
+        "wegdeel"
+      ],
+      "readOnly": true,
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

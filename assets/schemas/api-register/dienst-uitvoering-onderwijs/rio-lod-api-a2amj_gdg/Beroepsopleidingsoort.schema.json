@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/beroepsopleidingsoort",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Beroepsopleidingsoort"
+  ],
+  "type": "string",
+  "description": "Opsomming van de mogelijke soorten beroepsopleidingen zoals die in de Wet Educatie en Beroepsonderwijs worden onderkend.",
+  "enum": [
+    "ANDERE_OPLEIDING",
+    "ENTREEOPLEIDING",
+    "BASISBEROEPSOPLEIDING",
+    "MIDDENKADEROPLEIDING",
+    "SPECIALISTENOPLEIDING",
+    "VAKOPLEIDING"
+  ]
+}

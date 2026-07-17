@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/drone-no-fly-zones-zbbmobqnr/propertiesgeojsonlandingsite",
+  "x-derived-from": [
+    "https://api.pdok.nl/lvnl/drone-no-flyzones/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_landingsite"
+  ],
+  "properties": {
+    "gid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "specifiek": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "txtname": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

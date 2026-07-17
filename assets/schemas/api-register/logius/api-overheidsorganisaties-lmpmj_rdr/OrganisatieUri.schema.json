@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/logius/api-overheidsorganisaties-lmpmj_rdr/organisatieuri",
+  "x-derived-from": [
+    "https://api-organisaties.overheid.nl/v1/openapi.json#/components/schemas/organisatieUri"
+  ],
+  "format": "uri",
+  "pattern": "^https://identifier\\.overheid\\.nl/tooi/id/(col/col[0-9]{2}|gemeente/gm[0-9]{4}|ministerie/mnre[0-9]{4}|oorg/oorg[0-9]{5}|provincie/pv[0-9]{2}|so/so[0-9]{4}|waterschap/ws[0-9]{4}|zbo/zb[0-9]{6})$"
+}

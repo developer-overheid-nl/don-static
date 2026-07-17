@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/directoraat-generaal-belastingdienst/swagger-petstore-open-api-3-0-pnkal4kdg/pet",
+  "x-derived-from": [
+    "https://petstore3.swagger.io/api/v3/openapi.json#/components/schemas/Pet"
+  ],
+  "required": [
+    "name",
+    "photoUrls"
+  ],
+  "type": "object",
+  "properties": {
+    "category": {
+      "$ref": "./Category.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "format": "int64",
+      "examples": [
+        10
+      ]
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "doggie"
+      ]
+    },
+    "photoUrls": {
+      "type": "array",
+      "xml": {
+        "nodeType": "element"
+      },
+      "items": {
+        "type": "string",
+        "xml": {
+          "name": "photoUrl"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "description": "pet status in the store",
+      "enum": [
+        "available",
+        "pending",
+        "sold"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "xml": {
+        "nodeType": "element"
+      },
+      "items": {
+        "$ref": "./Tag.schema.json"
+      }
+    }
+  },
+  "xml": {
+    "name": "pet"
+  }
+}

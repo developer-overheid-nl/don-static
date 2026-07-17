@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/istoekomstig",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/IsToekomstig"
+  ],
+  "type": "boolean",
+  "description": "Geeft aan of het document in de toekomst geldig wordt. (Omgevingsdocument)",
+  "examples": [
+    true
+  ]
+}

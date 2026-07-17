@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/externereferentie",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/ExterneReferentie"
+  ],
+  "required": [
+    "href",
+    "label"
+  ],
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "href": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "https://www.ruimtelijkeplannen.nl/documents/NL.IMRO.0200.bp1253-vas1/b_NL.IMRO.0200.bp1253-vas1_rb1.pdf"
+      ]
+    },
+    "label": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "Bijlage 1 Lijst van toegelaten bedrijfstypen"
+      ]
+    }
+  },
+  "description": "Verwijzing naar niet-html brondata."
+}

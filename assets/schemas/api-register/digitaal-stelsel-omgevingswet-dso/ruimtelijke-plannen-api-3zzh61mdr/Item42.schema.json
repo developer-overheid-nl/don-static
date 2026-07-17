@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/item42",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json"
+  ],
+  "required": [
+    "_links",
+    "externeReferentie",
+    "id",
+    "inhoud",
+    "kruimelpad",
+    "titel",
+    "volgnummer"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./ArtikelLinks.schema.json"
+        },
+        {
+          "required": [
+            "structuurvisiecomplexen",
+            "structuurvisiegebieden",
+            "structuurvisieverklaringen"
+          ],
+          "type": "object",
+          "properties": {
+            "structuurvisiecomplexen": {
+              "type": "array",
+              "items": {
+                "$ref": "./StructuurvisiecomplexReferentie.schema.json"
+              }
+            },
+            "structuurvisiegebieden": {
+              "type": "array",
+              "items": {
+                "$ref": "./StructuurvisiegebiedReferentie.schema.json"
+              }
+            },
+            "structuurvisieverklaringen": {
+              "type": "array",
+              "items": {
+                "$ref": "./StructuurvisieverklaringReferentie.schema.json"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "externeReferentie": {
+      "required": [
+        "href",
+        "label"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "href": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "examples": [
+            "https://www.ruimtelijkeplannen.nl/documents/NL.IMRO.0200.bp1253-vas1/b_NL.IMRO.0200.bp1253-vas1_rb1.pdf"
+          ]
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "examples": [
+            "Bijlage 1 Lijst van toegelaten bedrijfstypen"
+          ]
+        }
+      },
+      "description": "Verwijzing naar niet-html brondata."
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "NL.IMRO.PT.regels._5.1_Bestemmingsomschrijving"
+      ]
+    },
+    "inhoud": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Inhoud van van het tekstblok. Voor de Ruimtelijke Plannen is dit XHTML, voor LVBB wellicht XML en voor andere informatiehuizen wellicht plain text. Hoe een client dit moet behandelen wordt in de verbeelding afgehandeld.",
+      "examples": [
+        "<p xmlns=\\\"http://www.w3.org/1999/xhtml\\\" xmlns:xl=\\\"http://www.w3.org/1999/xlink\\\" xmlns:imropt=\\\"http://www.geonovum.nl/imro/pt/2012/1.0\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\">De voor '<span class=\\\"interneVerwijzing\\\" data-imro-plan-id=\\\"NL.IMRO.0200.bp1253-vas1\\\" data-imro-tekst-id=\\\"NL.IMRO.PT.regels._5_Verkeer-Verblijfsgebied\\\">Verkeer - Verblijfsgebied</span>' aangewezen gronden zijn bestemd voor: </p><ol xmlns=\\\"http://www.w3.org/1999/xhtml\\\" xmlns:xl=\\\"http://www.w3.org/1999/xlink\\\" xmlns:imropt=\\\"http://www.geonovum.nl/imro/pt/2012/1.0\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\" type=\\\"a\\\">\\n<li>\\n<span class=\\\"lijstnummer\\\">a. </span>\\n<span class=\\\"interneVerwijzing\\\" data-imro-plan-id=\\\"NL.IMRO.0200.bp1253-vas1\\\" data-imro-tekst-id=\\\"NL.IMRO.PT.regels._1.46_verblijfsgebied\\\">verblijfsgebied</span>, waarbij ter plaatse van de aanduiding 'minimum aantal rijstroken' een weg met ten minste 2 rijstroken aangelegd dient te worden, waarbij tevens een groene middenberm gerealiseerd dient te worden;</li>\\n<li>\\n<span class=\\\"lijstnummer\\\">b. </span>watergangen en overige voorzieningen voor de waterhuishouding;</li>\\n<li>\\n<span class=\\\"lijstnummer\\\">c. </span>nutsvoorzieningen;</li>\\n<li>\\n<span class=\\\"lijstnummer\\\">d. </span>tuin;</li>\\n</ol><p xmlns=\\\"http://www.w3.org/1999/xhtml\\\" xmlns:xl=\\\"http://www.w3.org/1999/xlink\\\" xmlns:imropt=\\\"http://www.geonovum.nl/imro/pt/2012/1.0\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\">met de daarbij behorende bouwwerken, geen gebouwen zijnde.</p>"
+      ]
+    },
+    "kruimelpad": {
+      "type": "array",
+      "items": {
+        "$ref": "./Kruimel.schema.json"
+      }
+    },
+    "titel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "5.1 Bestemmingsomschrijving"
+      ]
+    },
+    "volgnummer": {
+      "type": "integer",
+      "format": "int32",
+      "examples": [
+        90
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/3d-basisvoorziening-dicf0b3hr/tile_implicit",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/3d-basisvoorziening/ogc/v1/openapi.json#/components/schemas/Tile_Implicit"
+  ],
+  "properties": {
+    "boundingVolume": {
+      "$ref": "./BoundingVolume.schema.json"
+    },
+    "children": {
+      "items": {},
+      "minItems": 1,
+      "type": "array"
+    },
+    "content": {
+      "$ref": "./Content.schema.json"
+    },
+    "geometricError": {
+      "type": "number"
+    },
+    "implicitTiling": {
+      "$ref": "./ImplicitTiling.schema.json"
+    },
+    "refine": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "boundingVolume",
+    "geometricError",
+    "implicitTiling",
+    "refine"
+  ],
+  "type": "object"
+}

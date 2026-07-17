@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/rolaanduiding",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/Rolaanduiding",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/Rolaanduiding"
+  ],
+  "description": "Geeft aan wat de rol is van degene die het verzoek indient.",
+  "type": "object",
+  "required": [
+    "rol"
+  ],
+  "properties": {
+    "initiatiefnemer": {
+      "required": [
+        "dsoId"
+      ],
+      "description": "De initiatiefnemer namens wie wordt ingediend of leeg voor een papierenmachtiging, indien de rol niet initiatiefnemer is. Indien de rol intiatiefnemer is, wordt dit veld genegeerd.",
+      "properties": {
+        "dsoId": {
+          "type": "string",
+          "description": "DSO id (UUID)",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "minLength": 36,
+          "maxLength": 36,
+          "examples": [
+            "ff4cd97f-1d24-4f42-86c4-61a8a1e9f066"
+          ]
+        },
+        "vestigingsnummer": {
+          "type": "string",
+          "description": "Het nummer van de vestiging in het geval van een NNP",
+          "pattern": "^[0-9]{12}$",
+          "minLength": 12,
+          "maxLength": 12,
+          "examples": [
+            "000012345678"
+          ]
+        }
+      }
+    },
+    "rol": {
+      "description": "Rol van de gebruiker.",
+      "type": "string",
+      "enum": [
+        "INITIATIEFNEMER",
+        "GEMACHTIGDE",
+        "OVERIG"
+      ]
+    },
+    "vestigingsnummer": {
+      "type": "string",
+      "description": "Het nummer van de vestiging in het geval van een NNP",
+      "pattern": "^[0-9]{12}$",
+      "minLength": 12,
+      "maxLength": 12,
+      "examples": [
+        "000012345678"
+      ]
+    }
+  },
+  "examples": [
+    {
+      "rol": "GEMACHTIGDE",
+      "vestigingsnummer": "000012345678",
+      "initiatiefnemer": {
+        "dsoId": "8e37be08-bc34-11ea-b3de-0242ac130004",
+        "vestigingsnummer": "000012345678"
+      }
+    }
+  ]
+}

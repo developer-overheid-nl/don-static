@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/zoekresultaathalcollection",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/ZoekResultaatHalCollection"
+  ],
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "$ref": "./ZoekResultaatHalCollectionEmbedded.schema.json"
+    },
+    "_links": {
+      "title": "HalPaginationLinks",
+      "allOf": [
+        {
+          "$ref": "./HalCollectionLinks.schema.json"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "first": {
+              "$ref": "./HalLink.schema.json"
+            },
+            "last": {
+              "$ref": "./HalLink.schema.json"
+            },
+            "next": {
+              "$ref": "./HalLink.schema.json"
+            },
+            "previous": {
+              "$ref": "./HalLink.schema.json"
+            }
+          }
+        }
+      ],
+      "examples": [
+        {
+          "first": {
+            "href": "/resourcenaam?page=1",
+            "title": "Eerste pagina"
+          },
+          "previous": {
+            "href": "/resourcenaam?page=3",
+            "title": "Vorige pagina"
+          },
+          "next": {
+            "href": "/resourcenaam?page=5",
+            "title": "Volgende pagina"
+          },
+          "last": {
+            "href": "/resourcenaam?page=15",
+            "title": "Laatste pagina"
+          }
+        }
+      ]
+    }
+  },
+  "description": "Resultaten als lijst",
+  "deprecated": true
+}

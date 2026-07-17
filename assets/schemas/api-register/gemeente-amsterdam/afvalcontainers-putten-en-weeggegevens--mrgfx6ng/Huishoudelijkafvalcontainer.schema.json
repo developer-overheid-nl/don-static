@@ -1,0 +1,430 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/huishoudelijkafvalcontainer",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/Huishoudelijkafvalcontainer"
+  ],
+  "type": "object",
+  "description": "Bevat een overzicht van alle onder- en bovengronds afvalcontainers in Gemeente Amsterdam",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `container._links` field. It contains all relationships with objects.",
+      "properties": {
+        "bagHoofdadresVerblijfsobject": {
+          "$ref": "./BagVerblijfsobjectenRawIdentifier.schema.json"
+        },
+        "bagNummeraanduiding": {
+          "$ref": "./BagNummeraanduidingenRawIdentifier.schema.json"
+        },
+        "bagOpenbareruimte": {
+          "$ref": "./BagOpenbareruimtesRawIdentifier.schema.json"
+        },
+        "cluster": {
+          "$ref": "./HuishoudelijkafvalclusterLink.schema.json"
+        },
+        "gbdBuurt": {
+          "$ref": "../_shared/GebiedenBuurtenRawIdentifier.schema.json"
+        },
+        "locatie": {
+          "$ref": "./HuishoudelijkafvalcontainerlocatieLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HuishoudelijkafvalcontainerLink.schema.json"
+        },
+        "type": {
+          "$ref": "./HuishoudelijkafvalcontainertypeLink.schema.json"
+        }
+      },
+      "required": [
+        "bagHoofdadresVerblijfsobject",
+        "bagNummeraanduiding",
+        "bagOpenbareruimte",
+        "cluster",
+        "gbdBuurt",
+        "locatie",
+        "schema",
+        "self",
+        "type"
+      ]
+    },
+    "bagHoofdadresVerblijfsobjectId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "Een identificatiecode van een verblijfsobject is een authentiek gegeven en een unieke aanduiding van het verblijfsobject.",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "bagNummeraanduidingId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nummeraanduiding ID",
+      "description": "Identificatie nummeraanduiding",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "bagOpenbareruimteId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Openbare ruimte ID",
+      "description": "Openbare ruimte identificatie",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "clusterId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Cluster ID",
+      "description": "Uniek identificerend kenmerk van cluster waaraan de container is gerelateerd",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "containerChipNummber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Container chip nummer",
+      "description": "Het identificatienummer van de chip die registreert wanneer de container wordt geleegd."
+    },
+    "containerDatumVervanging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop de container wordt vervangen."
+    },
+    "containerDatumWijziging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Datum waarop de container is gewijzigd."
+    },
+    "containerEigenaarschap": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Container eigenaarschap type",
+      "description": "De soort eigenaarschap van het object."
+    },
+    "containerEigenaarschapOpmerking": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Beschrijving van  het type eigenaarschap."
+    },
+    "containerEndOfLife": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Container levenscyclus einddatum",
+      "description": "Datum waarop het object het einde van zijn levenscyclus heeft bereikt."
+    },
+    "containerKleur": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van de kleur"
+    },
+    "containerMark": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Definitie volgt nog"
+    },
+    "containerOpmerking": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Opmerking",
+      "description": "Opmerking over het object door de betrokken medewerker."
+    },
+    "containerRalKleurCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Container RAL kleur code",
+      "description": "De internationale ralkleurcode."
+    },
+    "containerRalKleurHexcode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Container RAL hex kleur code",
+      "description": "De hexcode van de ralkleur."
+    },
+    "containerRalKleurNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Container RAL kleur naam",
+      "description": "De naam van de ralkleur"
+    },
+    "containerUnitCardLezerId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het identificatienummer van de kaartlezer."
+    },
+    "datumAflopenGarantie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Einde garantieperiode",
+      "description": "Datum waarop de garantie verloopt"
+    },
+    "datumCreatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Datum registratie startdatum",
+      "description": "Datum waarop het object is gecreëerd in container management systeem"
+    },
+    "datumOperationeel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum dat de container operationeel is voor het aanbieden van afval"
+    },
+    "datumOplevering": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop het object is geleverd"
+    },
+    "datumPlaatsing": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop het object op de locatie is geplaatst"
+    },
+    "eigenaarId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Eigenaar ID",
+      "description": "Identificerend kenmerk eigenaar"
+    },
+    "eigenaarNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam eigenaar"
+    },
+    "fractieCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Afvalfractie soort code",
+      "description": "Type afvalfractie code waarvoor de container is bedoeld: 1 - Rest, 2 - Glas, 3 - Papier, 4 - Plastic, 5 - Textiel, 6 - GFT, 9 - Brood"
+    },
+    "fractieOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Afvalfractie soort naam",
+      "description": "Container fractieomschrijving zoals door leverancier is geleverd."
+    },
+    "gbdBuurtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gebied buurt",
+      "description": "Unieke identificatie van het object",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "geadopteerdInd": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Object geadopteerd indicatie",
+      "description": "indicatie of het object door een bewoner geadopteerd is"
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "Unieke aanduiding objecttype"
+    },
+    "idNummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object externe ID",
+      "description": "Identificatie dat door de fabrikant aan het object is gegeven"
+    },
+    "locatieId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Container locatie",
+      "description": "Identificerend kenmerk van de put waarin de container is geplaatst",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "serienummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "serienummer uitgegeven door de fabrikant"
+    },
+    "status": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Container status code",
+      "description": "Status van de container,0 - inactief, 1 - actief, 2 - gepland"
+    },
+    "typeId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Container type code",
+      "description": "Identificerend kenmerk van het containertype",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "verwijderdDp": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Geldigheid einddatumtijd",
+      "description": "Indicatie of het object verwijderd is bij de bronhouder"
+    },
+    "wijzigingsdatumDp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Datumtijd aanmaak wijziging",
+      "description": "Datum waarop het object is gewijzigd"
+    }
+  },
+  "required": [
+    "_links",
+    "bagHoofdadresVerblijfsobjectId",
+    "bagNummeraanduidingId",
+    "bagOpenbareruimteId",
+    "clusterId",
+    "gbdBuurtId",
+    "id",
+    "locatieId",
+    "typeId"
+  ]
+}

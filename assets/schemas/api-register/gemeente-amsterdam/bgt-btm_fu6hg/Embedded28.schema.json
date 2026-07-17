@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bgt-btm_fu6hg/embedded28",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bgt/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "tunneldelen": {
+      "type": "array",
+      "items": {
+        "$ref": "./Bgttunneldelen.schema.json"
+      }
+    }
+  }
+}

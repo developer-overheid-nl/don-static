@@ -1,0 +1,413 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/catalogus-api-wl_g_invg/concept",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/catalogus/api/opvragen/v3/openapi.json#/components/schemas/Concept"
+  ],
+  "required": [
+    "begindatumGeldigheid",
+    "bestaatUit",
+    "bronnen",
+    "codes",
+    "conceptschema",
+    "definitie",
+    "eigenaar",
+    "einddatumGeldigheid",
+    "heeftBetrekkingOp",
+    "isBrederDan",
+    "isEngerDan",
+    "isGeneralisatieVan",
+    "isGerelateerd",
+    "isHarmonisatie",
+    "isHetzelfdeAls",
+    "isLidVan",
+    "isOnderdeelVan",
+    "isOngeveerHetzelfdeAls",
+    "isSpecialisatieVan",
+    "metadata",
+    "naam",
+    "rationales",
+    "synoniemen",
+    "term",
+    "toelichtingen",
+    "trefwoorden",
+    "type",
+    "uitleg",
+    "uri",
+    "verbeeldingen",
+    "verborgenZoektermen",
+    "zieOok"
+  ],
+  "type": "object",
+  "properties": {
+    "begindatumGeldigheid": {
+      "pattern": "^(\\d{4}-[01]\\d-[0-3]\\d)$",
+      "type": "string",
+      "examples": [
+        "2020-04-17"
+      ]
+    },
+    "bestaatUit": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skosthes:narrowerPartitive)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "bronnen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Array met verwijzingen middels url's naar de bronnen",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/id/bibliograficresouce/restfull-programming"
+        ]
+      }
+    },
+    "codes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Codes met betrekking tot het concept.",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        [
+          303.4833
+        ]
+      ]
+    },
+    "conceptschema": {
+      "type": "string",
+      "examples": [
+        "http://stelselcatalogus.omgevingswet.overheid.nl/id/conceptscheme/Stelselcatalogus"
+      ]
+    },
+    "definitie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "Een API (Application Programming Interface) is een software-interface die het mogelijk maakt dat twee applicaties met elkaar kunnen communiceren."
+      ]
+    },
+    "deprecated": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "eigenaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "https://standaarden.overheid.nl/owms/terms/Geonovum"
+      ]
+    },
+    "einddatumGeldigheid": {
+      "pattern": "^(\\d{4}-[01]\\d-[0-3]\\d)$",
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "2020-04-27"
+      ]
+    },
+    "heeftBetrekkingOp": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skos:semanticRelation)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isBrederDan": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skos:broadMatch)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isEngerDan": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skos:narrowMatch)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isGeneralisatieVan": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skosthes:narrowerGeneric)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isGerelateerd": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skos:related)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isHarmonisatie": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skos:mappingRelation)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isHetzelfdeAls": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skos:exactMatch)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isOnderdeelVan": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skosthes:broaderPartitive)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isOngeveerHetzelfdeAls": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skos:closeMatch)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "isSpecialisatieVan": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skosthes:broaderGeneric)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    },
+    "metadata": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "http://stelselcatalogus.omgevingswet.overheid.nl/programming/doc/2018041200000000/concept/API"
+      ]
+    },
+    "naam": {
+      "type": "string",
+      "examples": [
+        "Application programming interface"
+      ]
+    },
+    "rationales": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Waarom is er voor deze definitie gekozen?",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        [
+          "Definitie is in samenspraak met een grote groep mensen tot stand gekomen."
+        ]
+      ]
+    },
+    "synoniemen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Array met woorden die synoniem zijn aan het concept",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        [
+          "Application Programming Interface",
+          "Digitaal informatie uitwisselingskanaal"
+        ]
+      ]
+    },
+    "term": {
+      "type": "string",
+      "examples": [
+        "Application programming interface"
+      ]
+    },
+    "toelichtingen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Array met aanvullende toelichtingen op de definitie indien gewenst.",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        [
+          "API's kunnen zowel in REST als in SOAP vorm voorkomen."
+        ]
+      ]
+    },
+    "trefwoorden": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Trefwoorden",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        [
+          "uitbouwen",
+          "aanbouwen",
+          "garage"
+        ]
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-dws-expr": "`http://www.w3.org/2004/02/skos/core#Concept`",
+      "examples": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ]
+    },
+    "uitleg": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Uitleg over de definitie in 'begrijpelijke' taal.",
+      "examples": [
+        "Je zou kunnen zeggen dat een API de boodschapper is die een verzoek indient bij een provider en vervolgens het antwoord terugkoppelt naar jou."
+      ]
+    },
+    "uri": {
+      "type": "string",
+      "examples": [
+        "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/API"
+      ]
+    },
+    "verbeeldingen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Verwijzing middels een url naar een afbeelding.",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        [
+          "https://d1.awsstatic.com/serverless/New-API-GW-Diagram.c9fc9835d2a9aa00ef90d0ddc4c6402a2536de0d.png"
+        ]
+      ]
+    },
+    "verborgenZoektermen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        [
+          "API",
+          "REST",
+          "SOAP"
+        ]
+      ]
+    },
+    "zieOok": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Relatie naar andere concepten (skos:relatedMatch)",
+      "items": {
+        "type": "string",
+        "examples": [
+          "http://stelselcatalogus.omgevingswet.overheid.nl/programming/id/concept/SOAP"
+        ]
+      }
+    }
+  }
+}

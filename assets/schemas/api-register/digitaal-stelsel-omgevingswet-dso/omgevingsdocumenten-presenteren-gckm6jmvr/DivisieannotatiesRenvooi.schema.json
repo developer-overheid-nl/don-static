@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/divisieannotatiesrenvooi",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/DivisieannotatiesRenvooi"
+  ],
+  "title": "Annotaties en renvooi bij vrije-tekststructuur",
+  "type": "object",
+  "properties": {
+    "divisies": {
+      "type": "array",
+      "items": {
+        "title": "DivisieRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./DivisieSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./DivisieDelta.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "divisieteksten": {
+      "type": "array",
+      "items": {
+        "title": "DivisietekstRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./DivisietekstSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./DivisietekstDelta.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "gebiedsaanwijzingen": {
+      "type": "array",
+      "items": {
+        "title": "GebiedsaanwijzingRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./GebiedsaanwijzingSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./GebiedsaanwijzingDelta.schema.json"
+              },
+              "groep": {
+                "title": "GebiedsaanwijzinggroepRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Gebiedsaanwijzinggroep.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./GebiedsaanwijzinggroepDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "symboolcodes": {
+                "title": "SymboolcodesRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Symboolcodes.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./SymboolcodesDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": {
+                "title": "TypeGebiedsaanwijzingRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./TypeGebiedsaanwijzing.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./TypeGebiedsaanwijzingDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "hoofdlijnen": {
+      "type": "array",
+      "items": {
+        "title": "HoofdlijnRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./HoofdlijnSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./HoofdlijnDelta.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "kaarten": {
+      "type": "array",
+      "items": {
+        "$ref": "./KaartDivisieRenvooi.schema.json"
+      }
+    },
+    "locaties": {
+      "type": "array",
+      "items": {
+        "title": "LocatieRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./LocatieSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./LocatieDelta.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "tekstdelen": {
+      "type": "array",
+      "items": {
+        "title": "TekstdeelRenvooi",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./TekstdeelSpec.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./TekstdeelDelta.schema.json"
+              },
+              "idealisatie": {
+                "title": "IdealisatieRenvooi",
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "./Idealisatie.schema.json"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "_delta": {
+                        "$ref": "./IdealisatieDelta.schema.json"
+                      }
+                    }
+                  }
+                ]
+              },
+              "themas": {
+                "type": "array",
+                "items": {
+                  "title": "ThemaRenvooi",
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "$ref": "./Thema.schema.json"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "_delta": {
+                          "$ref": "./ThemaDelta.schema.json"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

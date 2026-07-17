@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocument-downloaden-szbze1mdg/bestandsnaamuitwisselpakket",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/204330/omgevingsdocumenten-downloaden-v1.json#/components/schemas/BestandsnaamUitwisselpakket"
+  ],
+  "type": "string",
+  "description": "Gegenereerde naam van het uitwisselpakket. Dit bestaat uit de verzoekIdentificatie en een datum/tijd stempel.\n",
+  "examples": [
+    "123e4567-e89b-12d3-a456-426614174000_20251209-0926182.zip"
+  ]
+}

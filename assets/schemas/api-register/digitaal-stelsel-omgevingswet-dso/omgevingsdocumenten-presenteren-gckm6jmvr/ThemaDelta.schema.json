@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/themadelta",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/ThemaDelta"
+  ],
+  "title": "ThemaDelta",
+  "required": [
+    "bewerking"
+  ],
+  "type": "object",
+  "properties": {
+    "bewerking": {
+      "title": "DeltaBewerkingToevoegenVerwijderen",
+      "type": "string",
+      "enum": [
+        "toevoegen",
+        "verwijderen"
+      ],
+      "examples": [
+        "toevoegen"
+      ]
+    }
+  }
+}

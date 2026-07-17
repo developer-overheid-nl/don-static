@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/ideeverkenningmetadata",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/IdeeverkenningMetadata",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/IdeeverkenningMetadata"
+  ],
+  "type": "object",
+  "required": [
+    "verzoekType",
+    "doelVerzoek"
+  ],
+  "properties": {
+    "doelVerzoek": {
+      "type": "string",
+      "enum": [
+        "Indienen",
+        "Aanvullen"
+      ]
+    },
+    "initieelVerzoeknummer": {
+      "description": "Het verzoeknummer waarop een 'Aanvulling' plaats vindt.",
+      "type": "string"
+    },
+    "projectId": {
+      "description": "Geeft een mogelijkheid (voor een Bevoegd Gezag) tot het relateren van verschillende aanvragen onder eenzelfde project id.",
+      "type": "string"
+    },
+    "projectnaam": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 197
+    },
+    "verzoekType": {
+      "type": "string",
+      "enum": [
+        "Idee"
+      ]
+    }
+  },
+  "examples": [
+    {
+      "verzoekType": "Idee",
+      "doelVerzoek": "Indienen",
+      "projectId": "202",
+      "projectnaam": "Woongroep"
+    }
+  ]
+}

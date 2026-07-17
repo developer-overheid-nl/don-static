@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/centraal-bureau-voor-de-statistiek/o-data-service-for-namespace-cbs-website-o-data-api-models-uane-umvr/cbs.website.odataapi.models.odataerrors.mainerror",
+  "x-derived-from": [
+    "https://www.cbs.nl/odata/v1/openapi.json#/components/schemas/CBS.Website.ODataApi.Models.ODataErrors.MainError"
+  ],
+  "required": [
+    "code",
+    "message"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "details": {
+      "type": "array",
+      "items": {
+        "$ref": "./CBS.Website.ODataApi.Models.ODataErrors.ErrorDetails.schema.json"
+      }
+    },
+    "innerError": {
+      "type": "object",
+      "description": "The structure of this object is service-specific"
+    },
+    "message": {
+      "type": "string",
+      "x-ms-primary-error-message": true
+    },
+    "target": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

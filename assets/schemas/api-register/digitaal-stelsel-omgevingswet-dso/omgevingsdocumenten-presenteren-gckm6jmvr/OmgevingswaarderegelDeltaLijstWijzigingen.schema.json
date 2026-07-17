@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/omgevingswaarderegeldeltalijstwijzigingen",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/OmgevingswaarderegelDeltaLijstWijzigingen"
+  ],
+  "title": "OmgevingswaarderegelDeltaLijstWijzigingen",
+  "type": "object",
+  "properties": {
+    "gebiedsaanwijzingRefs": {
+      "$ref": "./LijstWijzigingenGebiedsaanwijzingRefs.schema.json"
+    },
+    "kaartRefs": {
+      "$ref": "./LijstWijzigingenKaartRefs.schema.json"
+    },
+    "locatieRefs": {
+      "$ref": "./LijstWijzigingenLocatieRefs.schema.json"
+    },
+    "omgevingswaardeRefs": {
+      "$ref": "./LijstWijzigingenOmgevingswaardeRefs.schema.json"
+    }
+  }
+}

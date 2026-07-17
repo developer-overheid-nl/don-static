@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/schelpdierpercelen-inspire-geharmoniseerd-pbi7tbqhg/propertiesgeojsonaquacultureholding",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/schelpdierpercelen-geharmoniseerd/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_aquacultureholding"
+  ],
+  "properties": {
+    "farmanimalspecies_aquaculture_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "farmanimalspecies_aquaculture_xlink_title": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "function_description_country": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "function_description_country_codelist": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "function_description_country_codelistvalue": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "function_description_country_codespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_description": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_description_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_description_xlink_title": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_parent_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspireid_identifier_localid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspireid_identifier_namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

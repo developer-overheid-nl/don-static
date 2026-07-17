@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/wet",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Wet"
+  ],
+  "type": "string",
+  "description": "Wet waarin of waaronder de juridische grondslag bepaald is.",
+  "enum": [
+    "WCTE",
+    "WEB",
+    "WEB_BES",
+    "WEB_WHW",
+    "WEC",
+    "WEO",
+    "WHW",
+    "WNLQF",
+    "WPO",
+    "WPO_BES",
+    "WSF",
+    "WSLOA",
+    "WTOS",
+    "WVO",
+    "WVO_BES"
+  ]
+}

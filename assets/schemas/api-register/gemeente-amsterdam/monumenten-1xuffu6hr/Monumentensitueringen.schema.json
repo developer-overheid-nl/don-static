@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/monumenten-1xuffu6hr/monumentensitueringen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/monumenten/openapi.json#/components/schemas/Monumentensitueringen"
+  ],
+  "type": "object",
+  "description": "Situering is een kenmerk dat is meegegeven aan de koppeling tussen monument en adres, het geeft aan hoe een monument zich verhoudt tot een of meer adressen",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `situeringen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "betreftBagNummeraanduiding": {
+          "$ref": "../_shared/BagNummeraanduidingenLink.schema.json"
+        },
+        "hoortBijMonumentenMonument": {
+          "$ref": "./MonumentenmonumentenLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./MonumentensitueringenLink.schema.json"
+        }
+      },
+      "required": [
+        "betreftBagNummeraanduiding",
+        "hoortBijMonumentenMonument",
+        "schema",
+        "self"
+      ]
+    },
+    "betreftBagNummeraanduidingId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Situering adres omschrijving",
+      "description": "Het adres dat de situering heeft",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "datumActueelTot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Actueel tot datum",
+      "description": "Einddatum van de cyclus, eventueel in combinatie met het kenmerk Status"
+    },
+    "eersteSituering": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Monument belangrijkste situering indicatie",
+      "description": "J/N; een monument kan meerdere situeringen hebben, waarvan er altijd één de belangrijkste/naamgevende is. Dit kenmerk geeft aan of dat deze situering betreft"
+    },
+    "hoortBijMonumentenMonumentId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Monument bij situering omschrijving",
+      "description": "Een situering hoort bij één monument",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Situering ID",
+      "description": "Unieke identificatie van de gegevensgroep"
+    },
+    "situeringNummeraanduiding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Monument adres verhouding omschrijving",
+      "description": "Wijze waarop het adres zich tot het monument verhoudt"
+    }
+  },
+  "required": [
+    "_links",
+    "betreftBagNummeraanduidingId",
+    "hoortBijMonumentenMonumentId",
+    "identificatie"
+  ]
+}

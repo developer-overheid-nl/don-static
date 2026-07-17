@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/meldingen-over-de-openbare-ruimte-in-amsterdam-voor-de-acceptatieomgeving-rakyjuehg/meldingenaccdefaultmeldingenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/meldingen/acc/openapi.json#/components/schemas/MeldingenAccdefaultMeldingenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `meldingen._links` field. It contains all relationships with objects.",
+  "properties": {
+    "bagWoonplaats": {
+      "$ref": "../_shared/BagWoonplaatsenRawIdentifier.schema.json"
+    },
+    "gbdBuurt": {
+      "$ref": "../_shared/GebiedenBuurtenRawIdentifier.schema.json"
+    },
+    "gbdGgwgebied": {
+      "$ref": "../_shared/GebiedenGgwgebiedenRawIdentifier.schema.json"
+    },
+    "gbdStadsdeel": {
+      "$ref": "../_shared/GebiedenStadsdelenRawIdentifier.schema.json"
+    },
+    "gbdWijk": {
+      "$ref": "../_shared/GebiedenWijkenRawIdentifier.schema.json"
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "../_shared/MeldingenmeldingenLink.schema.json"
+    }
+  },
+  "required": [
+    "bagWoonplaats",
+    "gbdBuurt",
+    "gbdGgwgebied",
+    "gbdStadsdeel",
+    "gbdWijk",
+    "schema",
+    "self"
+  ]
+}

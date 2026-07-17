@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/geo-validatieservice-serz61gvg/appinfo",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167767/omgevingsdocumenten-geovalidatie-v1.json"
+  ],
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "Mens-leesbare beschrijving van deze API"
+    },
+    "gmlVersion": {
+      "type": "string",
+      "description": "De versie van GML (http://www.opengeospatial.org/standards/gml) waarmee deze service valideert."
+    },
+    "name": {
+      "type": "string",
+      "description": "Mens-leesbare naam van deze API."
+    },
+    "version": {
+      "type": "string",
+      "description": "De versie van deze API zoals te lezen in de API spec en overeenkomende met de API-Version response header"
+    }
+  }
+}

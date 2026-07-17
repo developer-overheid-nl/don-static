@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/multipolygon",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/MultiPolygon"
+  ],
+  "title": "MultiPolygon",
+  "required": [
+    "coordinates",
+    "type"
+  ],
+  "type": "object",
+  "properties": {
+    "bbox": {
+      "minItems": 4,
+      "type": "array",
+      "items": {
+        "multipleOf": 0.001,
+        "type": "number"
+      }
+    },
+    "coordinates": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "minItems": 4,
+          "type": "array",
+          "items": {
+            "minItems": 2,
+            "type": "array",
+            "items": {
+              "multipleOf": 0.001,
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "MultiPolygon"
+      ]
+    }
+  }
+}

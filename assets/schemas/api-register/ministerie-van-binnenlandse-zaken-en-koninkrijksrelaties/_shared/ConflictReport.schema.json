@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/_shared/conflictreport",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/gm/gmw/v1/material-history/openapi#/components/schemas/ConflictReport",
+    "https://publiek.broservices.nl/gm/gmw/v1/material-history/openapi.json#/components/schemas/ConflictReport"
+  ],
+  "properties": {
+    "attributeConflicts": {
+      "items": {
+        "$ref": "./Conflict.schema.json"
+      },
+      "type": "array"
+    },
+    "conflicts": {
+      "items": {
+        "$ref": "./Conflict.schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

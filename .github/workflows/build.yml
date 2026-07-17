@@ -26,3 +26,12 @@ jobs:
           tags: |
             ghcr.io/developer-overheid-nl/don-static:latest
             ghcr.io/developer-overheid-nl/don-static:${{ github.sha }}
+      - name: Build & push source-meta schemas Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile.schemas
+          push: true
+          tags: |
+            ghcr.io/developer-overheid-nl/source-meta-schemas:latest
+            ghcr.io/developer-overheid-nl/source-meta-schemas:${{ github.sha }}

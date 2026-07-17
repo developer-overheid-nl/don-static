@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/locatieserver-dh0nob3hr/spellcheck",
+  "x-derived-from": [
+    "https://api.pdok.nl/bzk/locatieserver/search/v3_1/openapi.json#/components/schemas/spellcheck"
+  ],
+  "properties": {
+    "collations": {
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "properties": {
+              "collationQuery": {
+                "type": "string"
+              },
+              "hits": {
+                "type": "integer"
+              },
+              "misspellingsAndCorrections": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    },
+    "suggestions": {
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "properties": {
+              "endOffset": {
+                "type": "integer"
+              },
+              "numFound": {
+                "type": "integer"
+              },
+              "startOffset": {
+                "type": "integer"
+              },
+              "suggestion": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "type": "object"
+          }
+        ]
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

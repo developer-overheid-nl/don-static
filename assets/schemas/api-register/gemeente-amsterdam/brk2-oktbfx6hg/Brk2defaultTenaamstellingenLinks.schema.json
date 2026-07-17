@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brk2-oktbfx6hg/brk2defaulttenaamstellingenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brk2/openapi.json#/components/schemas/Brk2defaultTenaamstellingenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `tenaamstellingen._links` field. It contains all relationships with objects.",
+  "properties": {
+    "betrokkenGorzenEnAanwassenBrkSubject": {
+      "$ref": "./Brk2kadastralesubjectenLink.schema.json"
+    },
+    "betrokkenPartnerBrkSubject": {
+      "$ref": "./Brk2kadastralesubjectenLink.schema.json"
+    },
+    "betrokkenSamenwerkingsverbandBrkSubject": {
+      "$ref": "./Brk2kadastralesubjectenLink.schema.json"
+    },
+    "isGebaseerdOpBrkStukdelen": {
+      "type": "array",
+      "items": {
+        "$ref": "./Brk2tenaamstellingenIsGebaseerdOpBrkStukdelen_M2M.schema.json"
+      }
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./Brk2TenaamstellingenLink.schema.json"
+    },
+    "vanBrkKadastraalsubject": {
+      "$ref": "./Brk2kadastralesubjectenLink.schema.json"
+    },
+    "vanBrkZakelijkRecht": {
+      "$ref": "./Brk2ZakelijkerechtenLink.schema.json"
+    }
+  },
+  "required": [
+    "betrokkenGorzenEnAanwassenBrkSubject",
+    "betrokkenPartnerBrkSubject",
+    "betrokkenSamenwerkingsverbandBrkSubject",
+    "isGebaseerdOpBrkStukdelen",
+    "schema",
+    "self",
+    "vanBrkKadastraalsubject",
+    "vanBrkZakelijkRecht"
+  ]
+}

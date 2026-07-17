@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/nationale-parken-inspire-geharmoniseerd-_l6gtx3hg/propertiesgeojsonprotectedsite",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/nationale-parken-geharmoniseerd/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_protectedsite"
+  ],
+  "properties": {
+    "gml_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legalfoundationdate": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legalfoundationdocument": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "localid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "namestatus": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nativeness": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pronunciation": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "script": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "siteprotectionclassification": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceofname": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "text": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

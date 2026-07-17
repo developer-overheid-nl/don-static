@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/leertrajectmbo",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/LeertrajectMBO"
+  ],
+  "type": "string",
+  "description": "De manier waarop het onderwijsprogramma van de student aan een MBO-instelling (Middelbaar beroepsonderwijs) is ingericht.",
+  "enum": [
+    "BBL",
+    "BOL",
+    "BOL_DT",
+    "CBL",
+    "CBL_DT",
+    "COL",
+    "COL_DT",
+    "EX",
+    "LBD",
+    "LBV",
+    "ODT",
+    "OVO"
+  ]
+}

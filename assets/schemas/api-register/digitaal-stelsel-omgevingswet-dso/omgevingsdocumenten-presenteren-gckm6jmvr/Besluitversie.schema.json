@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/besluitversie",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/Besluitversie"
+  ],
+  "title": "Besluitversie",
+  "required": [
+    "bekendOp",
+    "eindverantwoordelijke",
+    "expressionId",
+    "identificatie",
+    "instrumentversie",
+    "ontvangenOp",
+    "opschrift",
+    "technischId",
+    "type"
+  ],
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "$ref": "./Besluitversie_Embedded.schema.json"
+    },
+    "_links": {
+      "$ref": "./BesluitversieLinks.schema.json"
+    },
+    "aangeleverdDoorEen": {
+      "$ref": "./BevoegdGezag.schema.json"
+    },
+    "bekendOp": {
+      "title": "bekendOp",
+      "type": "string",
+      "format": "date",
+      "examples": [
+        "2020-07-05"
+      ]
+    },
+    "citeerTitel": {
+      "title": "citeerTitel",
+      "type": "string",
+      "description": "De citeertitel van het besluit"
+    },
+    "eindverantwoordelijke": {
+      "title": "eindverantwoordelijke",
+      "type": "string"
+    },
+    "expressionId": {
+      "title": "StopIdentificatie",
+      "type": "string",
+      "description": "STOP-Identificatie: De IRI van een document volgens de STOP standaard (https://koop.gitlab.io/STOP/standaard/1.3.0/identificatie_doc_pub.html).",
+      "format": "uri"
+    },
+    "geregistreerdMet": {
+      "$ref": "./Registratiegegevens.schema.json"
+    },
+    "heeftBijlagen": {
+      "title": "heeftBijlagen",
+      "type": "boolean",
+      "default": false
+    },
+    "heeftToelichtingen": {
+      "title": "heeftToelichtingen",
+      "type": "boolean",
+      "default": false
+    },
+    "identificatie": {
+      "title": "StopIdentificatie",
+      "type": "string",
+      "description": "STOP-Identificatie: De IRI van een document volgens de STOP standaard (https://koop.gitlab.io/STOP/standaard/1.3.0/identificatie_doc_pub.html).",
+      "format": "uri"
+    },
+    "instrumentversie": {
+      "title": "instrumentversie",
+      "type": "string"
+    },
+    "isVervangRegeling": {
+      "title": "isVervangRegeling",
+      "type": "boolean"
+    },
+    "officieleTitel": {
+      "title": "officieleTitel",
+      "type": "string"
+    },
+    "ontvangenOp": {
+      "title": "ontvangenOp",
+      "type": "string",
+      "format": "date",
+      "examples": [
+        "2020-07-05"
+      ]
+    },
+    "opschrift": {
+      "title": "opschrift",
+      "type": "string"
+    },
+    "procedureverloop": {
+      "$ref": "./BesluitversieProcedureverloop.schema.json"
+    },
+    "publicatieID": {
+      "type": "string"
+    },
+    "technischId": {
+      "title": "TechnischId",
+      "type": "string",
+      "description": "Een technische identificatie voor ontwerpobjecten, samengesteld uit de IMOW-identificatie en de ontwerpbesluitIdentificatie, die gebruikt kan worden als pad parameter en in zoekopdrachten. De escaping gebeurt met de volgende regex: [^\\w]+ wordt vervangen door _"
+    },
+    "type": {
+      "$ref": "./SoortRegeling.schema.json"
+    }
+  }
+}

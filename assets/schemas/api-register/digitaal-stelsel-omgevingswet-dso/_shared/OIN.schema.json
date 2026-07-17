@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/oin",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/232881/verzoekconfiguratie-opvragen-v1.json#/components/schemas/OIN",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/OIN"
+  ],
+  "type": "string",
+  "pattern": "^\\d{20}$",
+  "description": "het OIN van het bevoegd gezag"
+}

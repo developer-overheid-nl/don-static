@@ -1,0 +1,296 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/logius/api-overheidsorganisaties-lmpmj_rdr/woo",
+  "x-derived-from": [
+    "https://api-organisaties.overheid.nl/v1/openapi.json#/components/schemas/Woo"
+  ],
+  "description": "WOO informatie",
+  "properties": {
+    "label": {
+      "examples": [
+        "Staatstoezicht op de Mijnen"
+      ]
+    },
+    "uri": {
+      "pattern": "^https://identifier\\.overheid\\.nl/tooi/id/(col/col[0-9]{2}|gemeente/gm[0-9]{4}|ministerie/mnre[0-9]{4}|oorg/oorg[0-9]{5}|provincie/pv[0-9]{2}|so/so[0-9]{4}|waterschap/ws[0-9]{4}|zbo/zb[0-9]{6})$",
+      "examples": [
+        "https://identifier.overheid.nl/tooi/id/so/so1082"
+      ]
+    },
+    "wooContactpersonen": {
+      "description": "Lijst van WOO contact personen",
+      "items": {
+        "description": "WOO contact persoon",
+        "properties": {
+          "adressen": {
+            "description": "List van adressen voor WOO informatie",
+            "items": {
+              "properties": {
+                "adresType": {
+                  "maxLength": 250,
+                  "examples": [
+                    "Bezoekadres"
+                  ]
+                },
+                "antwoordnummer": {
+                  "maxLength": 50,
+                  "examples": [
+                    "12345"
+                  ]
+                },
+                "huisnummer": {
+                  "maxLength": 50,
+                  "examples": [
+                    "11"
+                  ]
+                },
+                "land": {
+                  "maxLength": 250,
+                  "examples": [
+                    "Nederland"
+                  ]
+                },
+                "openbareRuimte": {
+                  "maxLength": 50,
+                  "minLength": 1,
+                  "examples": [
+                    "Torenstraat"
+                  ]
+                },
+                "postbus": {
+                  "maxLength": 50,
+                  "examples": [
+                    "20008"
+                  ]
+                },
+                "postcode": {
+                  "maxLength": 50,
+                  "examples": [
+                    "3438TT"
+                  ]
+                },
+                "provincie": {
+                  "pattern": "^https://identifier\\.overheid\\.nl/tooi/id/[^/]+/[^/]+$",
+                  "examples": [
+                    "https://identifier.overheid.nl/tooi/id/provincie/pv26"
+                  ]
+                },
+                "terAttentieVan": {
+                  "maxLength": 255,
+                  "examples": [
+                    "Burgerzaken"
+                  ]
+                },
+                "toelichting": {
+                  "maxLength": 2048,
+                  "examples": [
+                    "Lorem ipsum dolor sit amet, consectetur adipi..."
+                  ]
+                },
+                "toevoeging": {
+                  "maxLength": 250,
+                  "examples": [
+                    "Eerste etage"
+                  ]
+                },
+                "woonplaats": {
+                  "maxLength": 2147483647,
+                  "minLength": 1,
+                  "examples": [
+                    "Utrecht"
+                  ]
+                }
+              }
+            }
+          },
+          "contact": {
+            "properties": {
+              "contactformulieren": {
+                "items": {
+                  "properties": {
+                    "label": {
+                      "examples": [
+                        "Algemeen"
+                      ]
+                    },
+                    "taalcode": {
+                      "examples": [
+                        "nl-NL"
+                      ]
+                    },
+                    "url": {
+                      "maxLength": 5000,
+                      "examples": [
+                        "https://www.vallei-veluwe.nl/over-ons/contact"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "taalcode"
+                  ]
+                }
+              },
+              "emailadressen": {
+                "items": {
+                  "properties": {
+                    "email": {
+                      "maxLength": 250,
+                      "examples": [
+                        "info@vallei-veluwe.nl"
+                      ]
+                    },
+                    "label": {
+                      "maxLength": 25,
+                      "examples": [
+                        "algemeen"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "email"
+                  ]
+                }
+              },
+              "fax": {
+                "maxLength": 50,
+                "examples": [
+                  "(055) 527 26 00"
+                ]
+              },
+              "internetadressen": {
+                "items": {
+                  "properties": {
+                    "label": {
+                      "maxLength": 25,
+                      "examples": [
+                        "algemeen"
+                      ]
+                    },
+                    "url": {
+                      "maxLength": 5000,
+                      "examples": [
+                        "https://www.vallei-veluwe.nl"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "url"
+                  ]
+                }
+              },
+              "socialmedia": {
+                "items": {
+                  "properties": {
+                    "gebruikersnaam": {
+                      "maxLength": 255,
+                      "examples": [
+                        "valleienveluwe"
+                      ]
+                    },
+                    "platform": {
+                      "maxLength": 255,
+                      "examples": [
+                        "Facebook"
+                      ]
+                    },
+                    "url": {
+                      "maxLength": 5000,
+                      "examples": [
+                        "https://nl-nl.facebook.com/valleienveluwe"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "gebruikersnaam",
+                    "platform",
+                    "url"
+                  ]
+                }
+              },
+              "telefoonnummers": {
+                "items": {
+                  "properties": {
+                    "label": {
+                      "maxLength": 25,
+                      "examples": [
+                        "algemeen"
+                      ]
+                    },
+                    "nummer": {
+                      "maxLength": 50,
+                      "examples": [
+                        "(055) 527 26 00"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "nummer"
+                  ]
+                }
+              }
+            }
+          },
+          "naam": {
+            "examples": [
+              "dhr. W. Verzoek"
+            ]
+          }
+        }
+      }
+    },
+    "wooIndex": {
+      "description": "Lijst van WOO indexen",
+      "items": {
+        "description": "WOO index",
+        "properties": {
+          "informatiecategorie": {
+            "examples": [
+              "Jaarplannen en jaarverslagen"
+            ]
+          },
+          "toelichting": {
+            "examples": [
+              "Jaarplannen"
+            ]
+          },
+          "url": {
+            "examples": [
+              "https://www.sodm.nl/documenten?trefwoord=&startdatum=&einddatum=&onderwerp=Alle+onderwerpen&onderdeel=Alle+onderdelen&type=Jaarplan"
+            ]
+          }
+        }
+      }
+    },
+    "wooInformatie": {
+      "description": "WOO informatie urls",
+      "properties": {
+        "overzichtUrl": {
+          "examples": [
+            "https://organisaties.overheid.nl/woo/28963273/Staatstoezicht_op_de_Mijnen"
+          ]
+        },
+        "url": {
+          "examples": [
+            "https://www.sodm.nl/contact"
+          ]
+        }
+      }
+    },
+    "wooVerzoek": {
+      "description": "WOO verzoek informatie",
+      "properties": {
+        "email": {
+          "examples": [
+            true
+          ]
+        },
+        "url": {
+          "examples": [
+            "https://www.sodm.nl/contact"
+          ]
+        }
+      }
+    }
+  }
+}

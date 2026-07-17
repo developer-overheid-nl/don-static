@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/basebouwaanduiding",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/BaseBouwaanduiding"
+  ],
+  "required": [
+    "_links",
+    "id",
+    "labelInfo",
+    "naam",
+    "styleId",
+    "verwijzingNaarTekst"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./FunctieaanduidingLinks.schema.json"
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "NL.IMRO.c16e4c5b356b4b958c3e52b899e8dea6"
+      ]
+    },
+    "labelInfo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "pd"
+      ]
+    },
+    "naam": {
+      "type": "string",
+      "examples": [
+        "plat dak"
+      ]
+    },
+    "styleId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "dubbelbestemming_waterstaat"
+      ]
+    },
+    "verwijzingNaarTekst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "https://ruimtelijkeplannen.nl/documents/NL.IMRO.0200.bp1253-vas1/r_NL.IMRO.0200.bp1253-vas1.html#_3_Bos"
+      ]
+    }
+  }
+}

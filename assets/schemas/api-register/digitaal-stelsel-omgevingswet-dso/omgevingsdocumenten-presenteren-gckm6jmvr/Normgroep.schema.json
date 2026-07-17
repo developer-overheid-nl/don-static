@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/normgroep",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/Normgroep"
+  ],
+  "title": "Normgroep",
+  "required": [
+    "code",
+    "waarde"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "examples": [
+        "http://standaarden.omgevingswet.overheid.nl/omgevingswaarde/id/concept/Energie"
+      ]
+    },
+    "waarde": {
+      "type": "string",
+      "examples": [
+        "energie"
+      ]
+    }
+  },
+  "description": "Omgevingsnormgroep of Omgevingswaardegroep, afhankelijk van het soort Norm. \nEen categorie, of groep, waaronder een omgevingsnorm resp. omgevingswaarde valt.\nOmgevingsnormgroep is één van de waarden op de limitatieve waardelijst https://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep.\nOmgevingswaardegroep is één van de waarden op de limitatieve waardelijst https://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingswaardegroep.\n"
+}

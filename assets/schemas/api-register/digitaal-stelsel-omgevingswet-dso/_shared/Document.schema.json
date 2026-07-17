@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/document",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/Document",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/Document",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/Document"
+  ],
+  "description": "De beschrijving van een document (meta data). De bijbehorende inhoud van het document (content) wordt aan het verzoek toegevoegd middels /verzoeken/{verzoekId}/documenten/{documentId} of /ideeverkenningen/{verzoekId}/documenten/{documentId}.",
+  "type": "object",
+  "required": [
+    "id",
+    "bestandsnaam",
+    "vertrouwelijk"
+  ],
+  "properties": {
+    "bestandsnaam": {
+      "type": "string",
+      "maxLength": 256
+    },
+    "id": {
+      "description": "Een willekeurig nummer waarmee een document uniek wordt geidentificeerd binnen de context van het verzoek. Kan bijvoorbeeld een volgnummer zijn.",
+      "type": "integer"
+    },
+    "vertrouwelijk": {
+      "description": "Geeft aan of de bijlage als vertrouwelijk moet worden behandeld.",
+      "type": "boolean"
+    }
+  },
+  "examples": [
+    {
+      "id": 2,
+      "bestandsnaam": "situatieschets-1.0.pdf",
+      "vertrouwelijk": true
+    }
+  ]
+}

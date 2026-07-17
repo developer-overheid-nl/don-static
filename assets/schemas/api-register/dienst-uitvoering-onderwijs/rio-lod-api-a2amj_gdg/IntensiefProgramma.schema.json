@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/intensiefprogramma",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/IntensiefProgramma"
+  ],
+  "type": "string",
+  "description": "Geeft aan of er sprake is van een intensief programma voor een opleiding of een programma binnen een opleiding waar mogelijk extra selectie-eisen en/of collegegeld voor wordt gevraagd.",
+  "enum": [
+    "KLEINSCHALIG_EN_INTENSIEF_ONDERWIJS",
+    "KLEINSCHALIG_EN_INTENSIEF_ONDERWIJS_MET_SPECIFIEKE_SELECTIECRITERIA",
+    "KLEINSCHALIG_EN_INTENSIEF_ONDERWIJS_MET_HOGER_COLLEGEGELD",
+    "KLEINSCHALIG_EN_INTENSIEF_ONDERWIJS_MET_SELECTIE_EN_HOGER_COLLEGELD"
+  ]
+}

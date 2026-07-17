@@ -1,0 +1,277 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/risicozones-ruvsbueng/risicozoneslpgtankstations",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/risicozones/openapi.json#/components/schemas/Risicozoneslpgtankstations"
+  ],
+  "type": "object",
+  "description": "lpgtankstations",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `lpgtankstations._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./RisicozoneslpgtankstationsLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "adresBedrijf": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Adres van bedrijf."
+    },
+    "dossiernummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieknummer dossier die hoort bij LPG tankstation."
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "geometriePunt": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke identificatie record."
+    },
+    "ligging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Soort ligging waar bedrijf is geplaatst."
+    },
+    "naamBedrijf": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Bedrijfsnaam."
+    },
+    "oliemaatschappij": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam oliemaatschappij waar bedrijf bij hoort."
+    },
+    "omzet": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omzet in m3 per jaar."
+    },
+    "opmerkingen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Opmerkingen."
+    },
+    "plaatsBedrijf": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Woonplaats van bedrijf."
+    },
+    "postcodeBedrijf": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Postcode van bedrijf."
+    },
+    "stadsdeel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Stadsdeel waarin bedrijf valt."
+    },
+    "stationnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke business identificatie record."
+    },
+    "tankaanwezigIndicatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Indicatie aanwezigheid van een tank."
+    },
+    "tankinhoud": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Inhoud tank in m3."
+    },
+    "tankpositie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Positie van tank."
+    },
+    "vulpuntVulfrequentie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Momenten van vullen van vulpunt."
+    },
+    "vulpuntaanwezigIndicatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Indicatie aanwezigheid van een vulpunt."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

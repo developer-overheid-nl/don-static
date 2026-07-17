@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/ideeverkenningcontactgegevens",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/IdeeverkenningContactgegevens",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/IdeeverkenningContactgegevens",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/IdeeverkenningContactgegevens"
+  ],
+  "type": "object",
+  "properties": {
+    "bedrijfsnaam": {
+      "type": "string"
+    },
+    "emailadres": {
+      "type": "string"
+    },
+    "kvkNummer": {
+      "type": "string"
+    },
+    "naam": {
+      "type": "string"
+    },
+    "telefoonnummer": {
+      "type": "string"
+    },
+    "tussenvoegsel": {
+      "type": "string"
+    },
+    "voorletters": {
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "voorletters": "J.A.",
+      "naam": "Jansen",
+      "emailadres": "j.jansen@gmail.com",
+      "telefoonnummer": "0612345678"
+    }
+  ]
+}

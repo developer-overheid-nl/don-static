@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/dataverkenner-kadastraleobjectm-nptsfu6hg/dataverkennerkadastraleobjectmkadastraleobject",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/dataverkenner/kadastraleobjectm/openapi.json#/components/schemas/DataverkennerKadastraleobjectmkadastraleobject"
+  ],
+  "type": "object",
+  "description": "kadastraleobject",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `kadastraleobject._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "../_shared/DataverkennerKadastraleobjectKadastraleobjectLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aangeduidDoorBrkGemeente": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De officiële vastgestelde gemeentenaam."
+    },
+    "aangeduidDoorBrkGemeenteId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De officiële vastgestelde gemeentecode."
+    },
+    "aangeduidDoorBrkKadastralegemeenteId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De kadastrale gemeente, het eerste gedeelte van de aanduiding van een kadastraal object."
+    },
+    "aangeduidDoorBrkKadastralegemeentecodeId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De kadastrale gemeentecode. Het eerste deel van de kadastrale aanduiding. Bijvoorbeeld: ASD01, STN02"
+    },
+    "aangeduidDoorBrkKadastralesectieId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De kadastrale sectie, het tweede gedeelte van de aanduiding van een kadastraal object."
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "grootte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "De grootte van een kadastraal object is de oppervlakte van het kadastrale perceel. Dit kan bij een deelperceel een geschatte grootte zijn."
+    },
+    "heeftEenRelatieMetBagVerblijfsobjectIdentificaties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Heeft een relatie met bag verblijfsobject identificaties"
+      },
+      "description": "Relatie naar verblijfsobject(en)"
+    },
+    "identificatie": {
+      "type": "string",
+      "description": "De unieke aanduiding van een Kadastraal object."
+    },
+    "inOnderzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Als dit veld is gevuld geeft dit de omschrijving waarom dit gegeven in onderzoek staat (art. 7n en 7r Kadasterwet)."
+    },
+    "indexletter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Letter Kadastraal object, dit geeft een indicatie voor het type object. G Grond perceel. A Appartementsrecht"
+    },
+    "indexnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Volgnummer van het Appartementsrecht"
+    },
+    "indicatieMeerObjecten": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Indicatie dat de koopsom betrekking heeft op meer dan 1 kadastraal object"
+    },
+    "indicatieVoorlopigeKadastraleGrens": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Indicatie of de geometrie (kadastrale grens) voorlopig is of niet."
+    },
+    "kadastraleAanduiding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De unieke aanduiding van een Kadastraal Object samengesteld uit gemeentecode, kadastrale sectie, perceelnummer, indexletter en indexnummer."
+    },
+    "koopjaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Transactiejaar van de aankoop"
+    },
+    "koopsom": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het in een ter inschrijving aangeboden stuk vermelde bedrag, waarvoor 1 of meer onroerende zaken zijn verkregen."
+    },
+    "neuronId": {
+      "type": "string",
+      "description": "Neuron ID"
+    },
+    "perceelnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Een numerieke aanduiding van het kadastrale perceel per sectie, deel van de kadastrale aanduiding van de onroerende zaak."
+    },
+    "soortCultuurBebouwdOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De soort cultuur bebouwd van een bebouwd kadastraal object, weergegeven als ‘omschrijving kadastraal object’ in Mijn.kadaster.nl (Kadaster-on-line; KOL). Dit kenmerk is afgeleid van wat degene die een notariële akte laat inschrijven, heeft verklaard (artikel 87, eerste lid, onder a, van de Kadasterregeling 1994). Dit kan afwijken van:soort objectcode in de WOZ;gebruiksdoel in de BAG;SBI-code in het HR"
+    },
+    "soortCultuurOnbebouwdOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De soort cultuur onbebouwd is een aanduiding voor de aard van de meest significante cultuur van het onbebouwde deel van het kadastraal object, weergegeven als ‘omschrijving kadastraal object’ in Mijn.kadaster.nl Dit kenmerk is in beginsel afgeleid van de notariële akte, maar kan worden bijgesteld op grond van een verzoek van de eigenaar (of een schriftelijk gevolmachtigde namens de eigenaar)per brief, fax of e-mailbericht. Dit kan afwijken van: het feitelijk gebruik in de WOZ; gebruiksdoel in de BAG; SBI-code in het HR. code"
+    },
+    "soortGrootteOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van soort grootte"
+    },
+    "toestandsdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop de geleverde toestand van het kadatraal object is ontstaan in de Basisregistratie Kadaster. (normaal gesproken maximaal 2 weken later t.o.v. tijdstip inschrijving)"
+    },
+    "volgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie",
+    "neuronId",
+    "volgnummer"
+  ]
+}

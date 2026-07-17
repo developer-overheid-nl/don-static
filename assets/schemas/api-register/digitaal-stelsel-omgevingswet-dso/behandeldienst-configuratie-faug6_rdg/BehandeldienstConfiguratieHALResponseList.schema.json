@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/behandeldienst-configuratie-faug6_rdg/behandeldienstconfiguratiehalresponselist",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/165392/toepasbareregels-behandeldienstconfiguraties-v1.json#/components/schemas/BehandeldienstConfiguratieHALResponseList"
+  ],
+  "properties": {
+    "_embedded": {
+      "properties": {
+        "behandeldienstConfiguratieEntryList": {
+          "type": "array",
+          "items": {
+            "required": [
+              "oin",
+              "activiteit",
+              "behandeldienstOin",
+              "_links"
+            ],
+            "properties": {
+              "_links": {
+                "required": [
+                  "self"
+                ],
+                "properties": {
+                  "self": {
+                    "description": "HAL link",
+                    "required": [
+                      "href"
+                    ],
+                    "properties": {
+                      "href": {
+                        "description": "URI",
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "activiteit": {
+                "required": [
+                  "naam"
+                ],
+                "properties": {
+                  "naam": {
+                    "description": "Naam (urn) van de activiteit",
+                    "type": "string"
+                  },
+                  "oin": {
+                    "description": "Wordt niet meer gebruikt. Bevat altijd de waarde 00000000000000000000.",
+                    "type": "string",
+                    "deprecated": true
+                  }
+                }
+              },
+              "behandeldienstOin": {
+                "description": "De oin van de behandeldienst",
+                "type": "string"
+              },
+              "locatieOins": {
+                "type": "array",
+                "description": "De locaties waar deze configuratie van toepassing is. De locaties zijn de rijks-, gemeente-, provincie- of waterschapgrenzen geidentificeerd met de oin.",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "oin": {
+                "description": "De oin van het bevoegd gezag",
+                "type": "string"
+              },
+              "toestemming": {
+                "required": [
+                  "code",
+                  "waarde"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "description": "Code van de toestemming",
+                    "enum": [
+                      "Vergunning",
+                      "Melding",
+                      "Informatie",
+                      "InformatieOngewoonVoorval",
+                      "AanvraagMaatwerkvoorschrift",
+                      "MeldingGelijkwaardigeMaatregel",
+                      "AanvraagToestemmingGelijkwaardigeMaatregel"
+                    ]
+                  },
+                  "waarde": {
+                    "type": "string",
+                    "description": "Waarde van het toestemmingstype."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

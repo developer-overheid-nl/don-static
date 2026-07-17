@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/natura2000-0dzntx3hr/propertiesgeojsonnatura2000",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/natura2000/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_natura2000"
+  ],
+  "properties": {
+    "beschermin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kadaster": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "naam_n2k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nr": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "shape_area": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "shape_len": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "sitecode_h": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sitecode_v": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "staatscour": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vhn_new": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

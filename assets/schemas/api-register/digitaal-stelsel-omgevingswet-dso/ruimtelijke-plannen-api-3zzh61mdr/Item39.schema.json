@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/item39",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json"
+  ],
+  "required": [
+    "belang",
+    "instrument",
+    "rol"
+  ],
+  "type": "object",
+  "properties": {
+    "belang": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "blijvend te beschermen tegen overstromingen vanuit de (grote) rivieren en de Veluwerandmeren."
+      ]
+    },
+    "instrument": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "verordening"
+      ]
+    },
+    "rol": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "other: normerend"
+      ]
+    }
+  }
+}

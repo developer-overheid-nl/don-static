@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/_shared/geometry",
+  "x-derived-from": [
+    "https://api.kadaster.nl/tms/v2/openapi.json#/components/schemas/Geometry",
+    "https://service10.kadaster.nl/tms/bronhouders/v2/openapi.json#/components/schemas/Geometry"
+  ],
+  "title": "Geometry",
+  "type": "object",
+  "properties": {
+    "coordinates": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "format": "double"
+      }
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "coordinates",
+    "type"
+  ]
+}

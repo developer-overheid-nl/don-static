@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/milieuhygienisch-bodemonderzoek-sad-u3lmfu6hg/sadcriteriaset",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/sq/sad/v1/openapi#/components/schemas/SadCriteriaSet"
+  ],
+  "properties": {
+    "area": {
+      "$ref": "../_shared/Area.schema.json"
+    },
+    "correctionPeriod": {
+      "$ref": "../_shared/DatePeriod.schema.json"
+    },
+    "deliveryAccountableParty": {
+      "type": "string"
+    },
+    "identification": {
+      "type": "string"
+    },
+    "qualityRegime": {
+      "enum": [
+        "IMBRO",
+        "IMBRO_A"
+      ],
+      "type": "string"
+    },
+    "registrationPeriod": {
+      "$ref": "../_shared/DatePeriod.schema.json"
+    },
+    "reportNumber": {
+      "type": "string"
+    },
+    "reportPeriod": {
+      "$ref": "../_shared/DatePeriod.schema.json"
+    },
+    "underReview": {
+      "enum": [
+        "JA",
+        "NEE"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "area"
+  ],
+  "type": "object"
+}

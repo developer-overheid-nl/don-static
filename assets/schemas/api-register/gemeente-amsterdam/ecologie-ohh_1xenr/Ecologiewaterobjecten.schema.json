@@ -1,0 +1,844 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/ecologie-ohh_1xenr/ecologiewaterobjecten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/ecologie/openapi.json#/components/schemas/Ecologiewaterobjecten"
+  ],
+  "type": "object",
+  "description": "The serializer for the *main* object.\n\nThis subclass of the dynamic serializer only exposes the non-relational fields.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `waterobjecten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "../_shared/ObjectenopenbareruimtewaterobjectenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "actueelKwaliteitsniveau": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van het actuele kwaliteitsniveau (na schouwen of inspecteren) conform de CROW Kwaliteitscatalogus (A+, A, B, C, D)."
+    },
+    "baggerplichtige": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Organisatie welke voor het baggeren verantwoordelijk is namens de eigenaar en beheerder."
+    },
+    "beheerafspraak": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Afspraak over het beheer van de asset gedurende de levenscyclus."
+    },
+    "beheerder": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een publiekrechtelijke instantie of (rechts)persoon die toeziet op de instandhouding van o.a. een object, kunstwerk of waterstaatswerk. De typen beheerder zijn conform de indeling in bronhouders (BGT)."
+    },
+    "beheerderGedetailleerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Nadere aanduiding van de beheerder van het beheerobject."
+    },
+    "beheergebied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van het beheergebied waarbinnen het beheerobject ligt. Indeling in beheergebieden is organisatiespecifiek."
+    },
+    "bemonsteringsjaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Jaar waarin de kwaliteit van de waterbodem en van het oppervlaktewater van het waterobject bemonsterd is."
+    },
+    "bereikbaarheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding voor de bereikbaarheid van het object die beheerd moet worden."
+    },
+    "bereikbaarheidGedetailleerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Mogelijkheid om één of meerdere opties voor het detailleren van de bereikbaarheid toe te voegen bij een objecttype."
+    },
+    "bergendVermogen": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "De hoeveelheid afvalwater die in de voorziening kan worden geborgen."
+    },
+    "beschermdeFloraEnFauna": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Aanduiding voor de aanwezigheid van beschermde plantensoorten en beschermde diersoorten."
+    },
+    "bevaarbaarheidsklasse": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Klasse-indeling welke de bevaarbaarheid aangeeft."
+    },
+    "breedte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Breedte van het beheerobject."
+    },
+    "breedteBodem": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Breedte van de waterbodem van het waterobject.."
+    },
+    "breedteInsteek": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Breedte van de insteek van het waterobject."
+    },
+    "breedteklasseWatergang": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Klasse-indeling welke de breedte aangeeft."
+    },
+    "buurt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van de buurt waarbinnen het beheerobject ligt (conform CBS-indeling)."
+    },
+    "conditiescore": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Maat voor het vastleggen van de conditie van een object op basis van 6 scores."
+    },
+    "controlefrequentie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van de frequentie van de controle van het beheerobject."
+    },
+    "datumInwinning": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop het punt is ingewonnen."
+    },
+    "doelsoort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding voor het voorkomen van verschillende soorten amfibieën in een amfibieënpoel."
+    },
+    "ecologischBeheer": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Aanduiding of ecologisch beheer van toepassing is."
+    },
+    "eigenaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "(Rechts)persoon die het meest  omvattend recht op een zaak heeft . De typen eigenaren zijn conform de indeling in bronhouders (BGT)."
+    },
+    "eigenaarGedetailleerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Nadere aanduiding van de eigenaar van het beheerobject."
+    },
+    "floraEnFaunaUitzondering": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Reden voor eventuele uitzondering van de flora- en faunawet."
+    },
+    "floraEnFaunawetAfwijking": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Reden voor eventuele afwijking van de flora- en faunawet."
+    },
+    "folie": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Aanduiding voor de aanwezigheid van folie."
+    },
+    "frequentieBaggeren": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aantal keren dat een waterobject gebaggerd wordt per jaar."
+    },
+    "frequentieKroosvissen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aantal keren dat het kroos in een waterobject verwijderd wordt per jaar."
+    },
+    "frequentieVeegboot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aantal keren dat een veegboot  in een waterobject gebruikt wordt per jaar."
+    },
+    "gebiedstype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van het gebiedstype waarbinnen het beheerobject ligt. Conform de indeling zoals toegepast bij de CROW Benchmark Beheerprestaties."
+    },
+    "gebruiksfunctie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van één of meer gebruiksfuncties van het beheerobject."
+    },
+    "gedeeldBeheer": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Aanduiding voor het registreren van gedeeld beheer van het object."
+    },
+    "gedeeldEigenaarschap": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Aanduiding voor het registreren van gedeeld eigenaarschap van een object."
+    },
+    "gemeente": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de gemeente waarbinnen het beheerobject ligt."
+    },
+    "gemetenBodempeil": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Gemeten bodempeil van het waterobject in het peiljaar."
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "gewenstKwaliteitsniveau": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van het gewenste kwaliteitsniveau conform de CROW Kwaliteitscatalogus (A+, A, B, C, D)."
+    },
+    "guid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatiecode van het object."
+    },
+    "hoeveelheid": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aanduiding voor de hoeveelheid van het beheerareaal, m2 voor een vlakobject, m voor een lijnobject en aantal voor een puntobject."
+    },
+    "hoogte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Hoogte van het beheerobject in meters."
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Identificatienummer van het object."
+    },
+    "idUitOudeBeheerindeling": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "ID uit oude beheerindeling",
+      "description": "Uniek kenmerk van een beheerobject uit een oude beheerindeling."
+    },
+    "identificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Uniek identificatienummer voor het object dat onveranderlijk is zolang het object bestaat."
+    },
+    "infiltrerendOppervlak": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aanduiding voor het oppervlak (binnen het object) waarbinnen water kan infiltreren."
+    },
+    "infiltrerendVermogen": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aanduiding voor de snelheid (in millimeters per uur) waarin regenwater kan infiltreren."
+    },
+    "ingrijpdiepte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Diepte van het waterobject waarop ingegrepen moet worden om te baggeren."
+    },
+    "insteekbreedte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Breedte van hwt waterobject tussen de beide slootkanten."
+    },
+    "inwinningsbedrijf": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van het bedrijf of instantie die het object heeft ingewonnen en ingemeten"
+    },
+    "jaarVanAanleg": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Jaar waarin het beheerobject is aangelegd of aangeplant (kan ook voor de plaatsingsdatum gebruikt worden)."
+    },
+    "kerngebiedId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kerngebied",
+      "description": "Naam van het geografisch of functioneel kerngebied waarbinnen het object ligt."
+    },
+    "lengteDroogTalud": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Maat voor de lengte van het droog talud (input voor bestek)."
+    },
+    "lengteGis": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Lengte GIS",
+      "description": "Op geometrie automatisch berekende lengte (lijn) of omtrek (vlak) in meters"
+    },
+    "ligging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van de ligging van het beheerobject binnen of buiten de bebouwde kom."
+    },
+    "maaifrequentie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aantal keren dat een groenobject gemaaid wordt per jaar."
+    },
+    "matching": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft aan welke gegevens afkomstig zijn uit conversie geovisia"
+    },
+    "maximaalBodempeil": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aanduiding voor het maximale bodempeil van het waterobject na slibaanwas voordat er gebaggerd moet worden."
+    },
+    "maximaleDiepgang": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Maximale diepgang voor vaartuigen in het waterobject."
+    },
+    "maximumStreefpeil": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "minimumStreefpeil": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Maximum streefpeil",
+      "description": "Maximum streefpeil van het waterobject."
+    },
+    "mutatieDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "nautischeDiepte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Diepte gemeten vanaf het wateroppervlak tot aan de boom."
+    },
+    "nietGeheelSloten": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Aanduiding of het waterobject wel of niet in zijn geheel onderhouden moet worden."
+    },
+    "objectnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van het beheerobject."
+    },
+    "oeververdediging": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Aanduiding of er oeververdediging aanwezig is."
+    },
+    "onderhoudsplichtige": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Organisatie die verantwoordelijk is voor het onderhoud van het beheerobject."
+    },
+    "ontwerpBodempeil": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Ontwerphoogte van de waterbodem van het waterobject.."
+    },
+    "openbareRuimte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van de openbare ruimte, zoals gedefinieerd in IMGeo of in de BAG, waarbinnen het beheerobject ligt. Overname uit IMGeo-bestand met grenzen openbare ruimtes of uit de Basisregistratie Adressen en Gebouwen (zonder begrenzig)."
+    },
+    "oppervlakteGis": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Oppervlakte GIS",
+      "description": "Oppervlakte van het beheerobject, overname van BGT/IMGeo."
+    },
+    "oppervlakteInsteek": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Oppervlakte van de insteek van het waterobject."
+    },
+    "perceelEcologischeMonitoring": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Nummer van het gebied waarbinnen de ecologische metingen of observaties worden uitgevoerd."
+    },
+    "porositeit": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "De mate van doorlaatbaarheid."
+    },
+    "relatieveHoogteligging": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aanduiding voor de relatieve hoogte van het beheerobject."
+    },
+    "revisie": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Identificatie van de meest recente bewerking of aanpassing van het object of de gegevens ervan."
+    },
+    "schouwen": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Aanduiding of het object geschouwd moet worden."
+    },
+    "schouwwijze": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding voor het uitvoeren van de schouw van een waterobject, eenzijdig of tweezijdig schouwen."
+    },
+    "slagwaterpeil": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Waterpeil van het waterobject waarop er gemaald moet worden."
+    },
+    "slibaanwas": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Mate van de verwachte slibaanwas op de waterbodem van het waterobject."
+    },
+    "stadsdeelOfKern": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Stadsdeel, niet te verwarren met Stadsdeel BGT-IMGeo: zie hiervoor Woonplaats. Voor de meeste gemeenten gelijk aan Woonplaats, maar kan ook functioneren als hiërarchische laag tussen de niveaus wijk en woonplaats."
+    },
+    "streefdiepte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Streefdiepte van het vaarwater."
+    },
+    "streefpeil": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Gemiddeld waterpeil."
+    },
+    "taludsteilte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van de steilte van het talud."
+    },
+    "teSlotenBreedte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "De breedte van het waterobject welke onderhouden moet worden."
+    },
+    "teSlotenLengte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "De lengte van het waterobject welke onderhouden moet worden."
+    },
+    "teSlotenOppervlakte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het oppervlakte van het waterobject welke onderhouden moet worden."
+    },
+    "tweedeBeheerder": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een publiekrechtelijke instantie of (rechts)persoon die toeziet op de instandhouding van o.a. een object, kunstwerk of waterstaatswerk. De typen beheerder zijn conform de indeling in bronhouders (BGT)."
+    },
+    "tweedeEigenaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "(Rechts)persoon die het meest  omvattend recht op een zaak heeft . De typen eigenaren zijn conform de indeling in bronhouders (BGT)."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Typering van het beheerobject."
+    },
+    "typeBewerking": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Wijze waarop een beheerobject verwerkt wordt (handmatig of machinaal)."
+    },
+    "typeExtraGedetailleerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Extra typering van het beheerobject, nadere typering van type gedetailleerd."
+    },
+    "typeGedetailleerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Nadere typering van het type beheerobject."
+    },
+    "typeWaterbodem": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding voor het type beheer van de waterbodem."
+    },
+    "typeWatergang": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding voor het type beheer van de watergang en het belang van de watergang."
+    },
+    "typeWaterplanten": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding voor het type waterplanten binnen het waterobject."
+    },
+    "uitstroomniveau": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Hoogte waarop het water uitstroomt."
+    },
+    "vaarwater": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Belang van het vaarwater waarover de brug ligt."
+    },
+    "vaarwegtraject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van het vaarwegtraject."
+    },
+    "verbindingszoneId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Verbindingszone",
+      "description": "Naam van de geografische if functionele verbindingszone waarbinnen het object ligt."
+    },
+    "vorm": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Vorm van een beheerobject."
+    },
+    "waterbeheergebied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van het waterbeheergebied waarbinnen het beheerobject ligt."
+    },
+    "watergangDiepte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Maat voor de diepte van de watergang."
+    },
+    "waternaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van het water."
+    },
+    "waterpeilWinter": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Gemiddeld waterpeil in de winter."
+    },
+    "waterpeilZomer": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Gemiddeld waterpeil in de zomer."
+    },
+    "waterplanten": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Aanduiding voor de aanwezigheid van waterplanten binnen het waterobject."
+    },
+    "waterschap": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van het waterschap, waarbinnen het beheerobject ligt. Overname uit IMGeo-bestand met waterschapsgrenzen."
+    },
+    "werkbreedte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Maat voor de werkbreedte van het waterobject."
+    },
+    "wijk": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van de wijk waarbinnen het beheerobject ligt. Overname uit IMGeo-bestand met wijkgrenzen."
+    },
+    "woonplaats": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Woonplaats, overeenkomstig met Stadsdeel of Woonplaats conform BGT-IMGeo. Lijst met domeinwaarden."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

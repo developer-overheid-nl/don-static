@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/ligplaatslinks",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/AdresseerbaarObject_links",
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/Ligplaats_links"
+  ],
+  "required": [
+    "heeftAlsHoofdAdres",
+    "maaktDeelUitVan",
+    "self"
+  ],
+  "type": "object",
+  "properties": {
+    "heeftAlsHoofdAdres": {
+      "$ref": "./HalLink.schema.json"
+    },
+    "heeftAlsNevenAdres": {
+      "minItems": 1,
+      "type": "array",
+      "description": "De nummeraanduidingen die dit adresseerbare object als nevenadressen heeft. Van deze gerelateerd nummeraanduiding: hiervan het voorkomen van nummeraanduiding die gevonden wordt op basis van dezelfde tijdreisparameters als waarmee het adresseerbare object voorkomen gevonden is.",
+      "items": {
+        "$ref": "./HalLink.schema.json"
+      }
+    },
+    "self": {
+      "$ref": "./HalLink.schema.json"
+    }
+  }
+}

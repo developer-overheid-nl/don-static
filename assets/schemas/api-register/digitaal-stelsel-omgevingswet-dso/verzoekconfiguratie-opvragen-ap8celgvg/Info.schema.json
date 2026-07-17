@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoekconfiguratie-opvragen-ap8celgvg/info",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/232881/verzoekconfiguratie-opvragen-v1.json#/components/schemas/Info"
+  ],
+  "description": "Info",
+  "required": [
+    "name",
+    "version"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "name": "Verzoekconfiguratie-Opvragen",
+      "version": "1.0.0"
+    }
+  ]
+}

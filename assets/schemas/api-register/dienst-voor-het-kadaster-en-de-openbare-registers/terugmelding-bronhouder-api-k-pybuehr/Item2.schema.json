@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/terugmelding-bronhouder-api-k-pybuehr/item2",
+  "x-derived-from": [
+    "https://service10.kadaster.nl/tms/bronhouders/v2/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "reden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

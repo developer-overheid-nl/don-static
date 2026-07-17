@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/benkagg-lqtl1u6hg/benkaggbagpandligtin",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/benkagg/openapi.json#/components/schemas/Benkaggbagpandligtin"
+  ],
+  "type": "object",
+  "description": "Specifiek voor Data Verkenner gemaakte BAG-tabel van Panden met de gebieden waar ze in liggen.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `bagpandligtin._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BenkaggBagpandligtinLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "gebiedenBouwblokCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële code van het object."
+    },
+    "gebiedenBouwblokIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het object."
+    },
+    "gebiedenBouwblokVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "gebiedenBuurtCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Volledige, samengestelde, code, bestaande uit stadsdeelcode en wijkcode."
+    },
+    "gebiedenBuurtIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het object."
+    },
+    "gebiedenBuurtNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het object."
+    },
+    "gebiedenBuurtVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "gebiedenGgwgebiedCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De code van het object."
+    },
+    "gebiedenGgwgebiedIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het object."
+    },
+    "gebiedenGgwgebiedNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het object."
+    },
+    "gebiedenGgwgebiedVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "gebiedenStadsdeelCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Volledige, samengestelde, code, bestaande uit stadsdeelcode en wijkcode."
+    },
+    "gebiedenStadsdeelIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het object."
+    },
+    "gebiedenStadsdeelNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het object."
+    },
+    "gebiedenStadsdeelVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "gebiedenWijkCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Volledige, samengestelde, code, bestaande uit stadsdeelcode en wijkcode."
+    },
+    "gebiedenWijkIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het object."
+    },
+    "gebiedenWijkNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het object."
+    },
+    "gebiedenWijkVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "identificatie": {
+      "type": "string",
+      "description": "Landelijke identificerende sleutel."
+    },
+    "pandBeginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Begindatum van de geldigheid van de gegevens van het pand."
+    },
+    "pandEindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Einddatum van de geldigheid van de gegevens van het pand."
+    },
+    "volgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie",
+    "volgnummer"
+  ]
+}

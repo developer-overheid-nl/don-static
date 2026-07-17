@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/statistieken-mmyqjuenr/statistiekentoepassingen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/statistieken/openapi.json#/components/schemas/Statistiekentoepassingen"
+  ],
+  "type": "object",
+  "description": "Alle cijfers, gerelateerd aan de bijhorende indicatoren en dimensies",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `toepassingen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./StatistiekentoepassingenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke identificatie"
+    },
+    "indicator": {
+      "type": "string",
+      "description": "Naam van de indicator"
+    },
+    "naam": {
+      "type": "string",
+      "description": "Naam van de toepassing"
+    },
+    "ruimtelijkeDimensie": {
+      "type": "string",
+      "description": "Ruimtelijke indeling"
+    },
+    "temporeleDimensie": {
+      "type": "string",
+      "description": "Type van de tijddimensie. Dit kan een vaste peildatum zijn of een periode"
+    },
+    "versie": {
+      "type": "string",
+      "description": "Versie van de toepassing"
+    }
+  },
+  "required": [
+    "_links",
+    "id",
+    "indicator",
+    "naam",
+    "ruimtelijkeDimensie",
+    "temporeleDimensie",
+    "versie"
+  ]
+}

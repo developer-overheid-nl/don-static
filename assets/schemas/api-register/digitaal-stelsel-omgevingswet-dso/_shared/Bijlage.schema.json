@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/bijlage",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/Bijlage",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/Bijlage",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/Bijlage"
+  ],
+  "description": "Een beantwoordde bijlage vraag met een koppeling naar het te uploaden document.",
+  "type": "object",
+  "required": [
+    "id",
+    "documentId"
+  ],
+  "properties": {
+    "documentId": {
+      "description": "het id van het document dat deze bijlage ondersteunt",
+      "type": "number"
+    },
+    "id": {
+      "description": "het id van de vraag dat deze bijlage ondersteunt",
+      "type": "string",
+      "maxLength": 256
+    }
+  },
+  "examples": [
+    {
+      "id": "1",
+      "documentId": 2
+    }
+  ]
+}

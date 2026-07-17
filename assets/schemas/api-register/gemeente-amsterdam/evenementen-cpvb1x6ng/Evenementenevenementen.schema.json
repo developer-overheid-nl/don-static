@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/evenementen-cpvb1x6ng/evenementenevenementen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/evenementen/openapi.json#/components/schemas/Evenementenevenementen"
+  ],
+  "type": "object",
+  "description": "evenementen",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `evenementen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./EvenementenevenementenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "einddatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Einddatum van het evenement."
+    },
+    "eindtijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "time",
+      "description": "Eindtijd van het evenement."
+    },
+    "geometry": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding voor het evenement."
+    },
+    "omschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van het evenement."
+    },
+    "startdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Startdatum van het evenement."
+    },
+    "starttijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "time",
+      "description": "Starttijd van het evenement."
+    },
+    "titel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van het evenement"
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "description": "URL naar een webpagina voor meer informatie.",
+      "maxLength": 200
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/divisietekst",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/Divisietekst"
+  ],
+  "title": "Divisietekst",
+  "type": "object",
+  "properties": {
+    "geregistreerdMet": {
+      "$ref": "./Registratiegegevens.schema.json"
+    }
+  },
+  "$ref": "./DivisietekstSpec.schema.json"
+}

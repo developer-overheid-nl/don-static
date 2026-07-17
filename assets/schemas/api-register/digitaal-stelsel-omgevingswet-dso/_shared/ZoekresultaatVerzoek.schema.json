@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/zoekresultaatverzoek",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json#/components/schemas/ZoekresultaatVerzoek",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/ZoekresultaatVerzoek",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/ZoekresultaatVerzoek"
+  ],
+  "description": "Een verzoek item uit het zoekresultaat. Bevat basisgegevens van een verzoek.\n",
+  "required": [
+    "verzoeknummer",
+    "volgnummer"
+  ],
+  "properties": {
+    "verzoeknummer": {
+      "type": "string"
+    },
+    "volgnummer": {
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "examples": [
+    {
+      "verzoeknummer": "2017010100001",
+      "volgnummer": "000"
+    }
+  ]
+}

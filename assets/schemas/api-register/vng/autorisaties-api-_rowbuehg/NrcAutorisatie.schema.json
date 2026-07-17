@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/vng/autorisaties-api-_rowbuehg/nrcautorisatie",
+  "x-derived-from": [
+    "https://autorisaties-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/nrcAutorisatie"
+  ],
+  "type": "object",
+  "properties": {}
+}

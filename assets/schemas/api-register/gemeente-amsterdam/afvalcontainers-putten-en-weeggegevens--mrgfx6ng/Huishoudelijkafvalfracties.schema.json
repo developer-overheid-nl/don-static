@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/huishoudelijkafvalfracties",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/Huishoudelijkafvalfracties"
+  ],
+  "type": "object",
+  "description": "In deze tabel staan de namen en codes van de verschillende afvalfracties die gehanteerd worden bij Afval en Grondstoffen.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `fracties._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HuishoudelijkafvalfractiesLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "active": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Actief",
+      "description": "Geeft aan of een fractie in gebruik is."
+    },
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Fractie code",
+      "description": "Fractie code of verkorte weergave van de naam."
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke aanduiding van het record. Overgenomen uit bron systeem."
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Fractie naam",
+      "description": "Fractie naam of omschrijving. Deze wordt ook getoond in de afvalwijzer app."
+    },
+    "nummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke aanduiding van de fractie met een nummer."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Fractie type"
+    },
+    "volgordeAfvalwijzer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Weergave Volgorde van fracties in de afvalwijzer app."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/opleidingsrelatie",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Opleidingsrelatie"
+  ],
+  "x-class-extra-annotation": "@Relation(collectionRelation = \"Opleidingsrelaties\")",
+  "required": [
+    "vanOpleidingseenheidId",
+    "naarOpleidingseenheidId",
+    "vanOpleidingseenheidType",
+    "naarOpleidingseenheidType",
+    "soort",
+    "begindatum"
+  ],
+  "type": "object",
+  "properties": {
+    "begindatum": {
+      "type": "string",
+      "description": "De datum die het begin van de periode aangeeft (inclusief).",
+      "format": "date"
+    },
+    "einddatum": {
+      "type": "string",
+      "description": "De datum die het einde van de periode aangeeft (exclusief).",
+      "format": "date"
+    },
+    "naarOpleidingseenheidId": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "Algemeen gegevenstype voor het vastleggen van een naam."
+    },
+    "naarOpleidingseenheidType": {
+      "type": "string",
+      "description": "Geeft aan wat voor soort opleidingseenheid het betreft. ",
+      "enum": [
+        "BOGROEP",
+        "BOOPLEIDING",
+        "BOOPLEIDINGSFASE",
+        "BUITENLANDSE_OPLEIDING",
+        "EDUCATIEOPLEIDING",
+        "EDUCATIEOPLEIDINGSONDERDEEL",
+        "EVCSTANDAARD",
+        "HOONDERWIJSEENHEDENCLUSTER",
+        "HOONDERWIJSEENHEID",
+        "HOOPLEIDING",
+        "MBOCERTIFICEERBAREEENHEID",
+        "MBOCROSS_OVERKWALIFICATIE",
+        "MBODEELKWALIFICATIE",
+        "MBODOMEIN",
+        "MBOGENERIEKEXAMENONDERDEEL",
+        "MBOKEUZEDEEL",
+        "MBOKWALIFICATIE",
+        "MBOKWALIFICATIEDOSSIER",
+        "MBOREGIONAALKEUZEDEEL",
+        "MBOREGIONALEKWALIFICATIE",
+        "PARTICULIEREOPLEIDING",
+        "SOGROEP",
+        "SOOPLEIDING",
+        "VAVOGROEP",
+        "VAVOOPLEIDING",
+        "VAVOOPLEIDINGSFASE",
+        "VOGROEP",
+        "VOOPLEIDING",
+        "VOOPLEIDINGSFASE",
+        "VOSTAGE",
+        "VOVAK",
+        "VSOGROEP",
+        "VSOOPLEIDING",
+        "VSOOPLEIDINGSFASE"
+      ]
+    },
+    "soort": {
+      "type": "string",
+      "description": "De wijze waarop verschillende opleidingseenheden met elkaar in verband staan.",
+      "enum": [
+        "AFGELEID_VAN",
+        "HIERARCHISCH",
+        "ONTWIKKELD_VOOR",
+        "OVERGANG",
+        "VARIANT_VAN"
+      ]
+    },
+    "vanOpleidingseenheidId": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "Algemeen gegevenstype voor het vastleggen van een naam."
+    },
+    "vanOpleidingseenheidType": {
+      "type": "string",
+      "description": "Geeft aan wat voor soort opleidingseenheid het betreft. ",
+      "enum": [
+        "BOGROEP",
+        "BOOPLEIDING",
+        "BOOPLEIDINGSFASE",
+        "BUITENLANDSE_OPLEIDING",
+        "EDUCATIEOPLEIDING",
+        "EDUCATIEOPLEIDINGSONDERDEEL",
+        "EVCSTANDAARD",
+        "HOONDERWIJSEENHEDENCLUSTER",
+        "HOONDERWIJSEENHEID",
+        "HOOPLEIDING",
+        "MBOCERTIFICEERBAREEENHEID",
+        "MBOCROSS_OVERKWALIFICATIE",
+        "MBODEELKWALIFICATIE",
+        "MBODOMEIN",
+        "MBOGENERIEKEXAMENONDERDEEL",
+        "MBOKEUZEDEEL",
+        "MBOKWALIFICATIE",
+        "MBOKWALIFICATIEDOSSIER",
+        "MBOREGIONAALKEUZEDEEL",
+        "MBOREGIONALEKWALIFICATIE",
+        "PARTICULIEREOPLEIDING",
+        "SOGROEP",
+        "SOOPLEIDING",
+        "VAVOGROEP",
+        "VAVOOPLEIDING",
+        "VAVOOPLEIDINGSFASE",
+        "VOGROEP",
+        "VOOPLEIDING",
+        "VOOPLEIDINGSFASE",
+        "VOSTAGE",
+        "VOVAK",
+        "VSOGROEP",
+        "VSOOPLEIDING",
+        "VSOOPLEIDINGSFASE"
+      ]
+    }
+  }
+}

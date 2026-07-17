@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/geometrieen-omgevingswet-api-f1umox3ng/collection",
+  "x-derived-from": [
+    "https://api.pdok.nl/omgevingswet/omgevingsdocumenten/ogc/v2/openapi.json#/components/schemas/collection"
+  ],
+  "properties": {
+    "crs": {
+      "default": [
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      ],
+      "description": "The list of coordinate reference systems supported by the service. The first item is the default coordinate reference system.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "examples": [
+        [
+          "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+          "http://www.opengis.net/def/crs/EPSG/0/4326"
+        ]
+      ]
+    },
+    "description": {
+      "description": "a description of the collection",
+      "type": "string",
+      "examples": [
+        "This collection contains buildings"
+      ]
+    },
+    "extent": {
+      "$ref": "../_shared/Extent.schema.json"
+    },
+    "id": {
+      "description": "identifier of the collection used, for example, in URIs",
+      "type": "string",
+      "examples": [
+        "buildings"
+      ]
+    },
+    "itemType": {
+      "default": "feature",
+      "description": "indicator about the type of the items in a collection. Example values: 'feature', 'record', 'attribute'. The default value is 'feature'",
+      "type": "string"
+    },
+    "keywords": {
+      "description": "keywords about the elements in the collection",
+      "items": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "examples": [
+              "4612"
+            ]
+          },
+          "codeSpace": {
+            "type": "string",
+            "examples": [
+              "https://www.eionet.europa.eu/gemet/en/concept/"
+            ]
+          },
+          "keyword": {
+            "type": "string",
+            "examples": [
+              "land cover"
+            ]
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "../_shared/Link.schema.json"
+      },
+      "type": "array",
+      "examples": [
+        [
+          {
+            "href": "http://example.com/collections/buildings?f=json",
+            "rel": "item",
+            "title": "this document",
+            "type": "application/json"
+          },
+          {
+            "href": "http://example.com/concepts/buildings?f=html",
+            "rel": "it",
+            "title": "this document as HTML",
+            "type": "text/html"
+          }
+        ]
+      ]
+    },
+    "title": {
+      "description": "human readable title of the collection",
+      "type": "string",
+      "examples": [
+        "Buildings in the city of Bonn"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "links"
+  ],
+  "type": "object"
+}

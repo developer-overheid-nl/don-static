@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/monumenten-1xuffu6hr/monumentensitueringenlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/monumenten/openapi.json#/components/schemas/MonumentensitueringenLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to situeringen.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Situering ID",
+      "description": "Unieke identificatie van de gegevensgroep"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "identificatie",
+    "title"
+  ]
+}

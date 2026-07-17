@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/vestigingskenmerkcode",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Vestigingskenmerkcode"
+  ],
+  "type": "string",
+  "description": "Een onderscheidende eigenschap van een vestigingserkenning.",
+  "enum": [
+    "BASISONDERWIJS_BUITENLAND_NIET_NOB",
+    "BASISONDERWIJS_BUITENLAND_NOB",
+    "OVERIG_NEDERLANDS_BASISONDERWIJS_BUITENLAND",
+    "RESIDENTIELE_PLAATSEN"
+  ]
+}

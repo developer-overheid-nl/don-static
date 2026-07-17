@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/touringcars-lkbffxehr/embedded6",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/touringcars/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "wegwerkzaamheden": {
+      "type": "array",
+      "items": {
+        "$ref": "./Touringcarswegwerkzaamheden.schema.json"
+      }
+    }
+  }
+}

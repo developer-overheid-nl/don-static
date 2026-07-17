@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/dataverkenner-bagzoekm-f72w1xenr/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bagzoekm/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "bagzoek": {
+      "type": "array",
+      "items": {
+        "$ref": "./DataverkennerBagzoekmbagzoek.schema.json"
+      }
+    }
+  }
+}

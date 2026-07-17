@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/document",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/Document"
+  ],
+  "required": [
+    "_links",
+    "aangeleverdDoorEen",
+    "beschikbaarVanaf",
+    "geometrieIdentificaties",
+    "heeftVectorTiles",
+    "identificatie",
+    "titel",
+    "type",
+    "uriIdentificatie",
+    "versie"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./HalLinks.schema.json"
+    },
+    "aangeleverdDoorEen": {
+      "$ref": "./BevoegdGezag.schema.json"
+    },
+    "beschikbaarTot": {
+      "type": "string",
+      "description": "Tijdstip dat aangeeft tot wanneer een document is geregistreerd. (Omgevingsdocument)",
+      "format": "date-time"
+    },
+    "beschikbaarVanaf": {
+      "type": "string",
+      "description": "Tijdstip dat aangeeft vanaf wanneer een document is geregistreerd. (Omgevingsdocument)",
+      "format": "date-time"
+    },
+    "geldigTot": {
+      "type": "string",
+      "description": "Datum die aangeeft tot wanneer een document geldig is. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2015-03-25"
+      ]
+    },
+    "geldigVanaf": {
+      "type": "string",
+      "description": "Datum die aangeeft vanaf wanneer een document geldig is. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2015-03-25"
+      ]
+    },
+    "geometrieIdentificaties": {
+      "uniqueItems": true,
+      "type": "array",
+      "description": "Identificaties van geometrieën behorende bij het document.",
+      "items": {
+        "type": "string",
+        "examples": [
+          "f3d5eee5-007b-42bd-be73-83ea1451c0f3"
+        ]
+      }
+    },
+    "heeftVectorTiles": {
+      "type": "boolean",
+      "description": "Er zijn vector tiles aanwezig voor dit document.",
+      "examples": [
+        true
+      ]
+    },
+    "identificatie": {
+      "type": "string",
+      "description": "Identificatie van het document (AKN bij omgevingsdocument, planId bij IMRO-document).",
+      "examples": [
+        "/akn/nl/act/gm0301/2020/omgevingsplan"
+      ]
+    },
+    "imroDocumentMetadata": {
+      "$ref": "./ImroDocumentMetadata.schema.json"
+    },
+    "inwerkingTot": {
+      "type": "string",
+      "description": "Datum die aangeeft tot wanneer een document juridisch geldend is. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2015-03-25"
+      ]
+    },
+    "inwerkingVanaf": {
+      "type": "string",
+      "description": "Datum die aangeeft vanaf wanneer een document juridisch geldend is. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2015-03-25"
+      ]
+    },
+    "omgevingsdocumentMetadata": {
+      "$ref": "./OmgevingsdocumentMetadata.schema.json"
+    },
+    "titel": {
+      "type": "string",
+      "description": "Titel van het document. Voor omgevingsdocumenten is dit de `citeertitel`, als die niet bekend is wordt de\n`officieleTitel` gebruikt. Voor IMRO-documenten is dit `naam`.",
+      "examples": [
+        "Bestemmingplan Lemmer Centrum"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "Type van het document, bijvoorbeeld wijzigingsplan of omgevingsplan.",
+      "enum": [
+        "aanwijzingsbesluit",
+        "Aanwijzingsbesluit N2000",
+        "amvb",
+        "AMvB",
+        "beheersverordening",
+        "bestemmingsplan",
+        "exploitatieplan",
+        "gemeentelijk besluit; overig",
+        "gemeentelijk plan; bestemmingsplan artikel 10",
+        "gemeentelijk plan; uitwerkingsplan artikel 11",
+        "gemeentelijk plan; voorbereidingsbesluit",
+        "gemeentelijk plan; wijzigingsplan artikel 11",
+        "gemeentelijke visie; overig",
+        "gerechtelijke uitspraak",
+        "inpassingsplan",
+        "Instructie",
+        "Ministeriële Regeling",
+        "Omgevingsplan",
+        "Omgevingsplanregels Projectbesluit",
+        "omgevingsvergunning",
+        "Omgevingsvergunning",
+        "Omgevingsverordening",
+        "Omgevingsvisie",
+        "Programma",
+        "projectbesluit",
+        "Projectbesluit",
+        "provinciale verordening",
+        "reactieve aanwijzing",
+        "Reactieve interventie",
+        "regeling",
+        "structuurvisie",
+        "tijdelijke ontheffing buitenplans",
+        "Toegangsbeperkingsbesluit",
+        "uitwerkingsplan",
+        "voorbereidingsbesluit",
+        "Voorbeschermingsregels",
+        "Voorbeschermingsregels Omgevingsplan",
+        "Voorbeschermingsregels Omgevingsverordening",
+        "Waterschapsverordening",
+        "wijzigingsplan"
+      ],
+      "examples": [
+        "Omgevingsplan"
+      ]
+    },
+    "uriIdentificatie": {
+      "type": "string",
+      "description": "URI-veilige identificatie, waarbij `/` is vervangen door `_`.",
+      "examples": [
+        "_akn_nl_act_gm0301_2020_omgevingsplan"
+      ]
+    },
+    "versie": {
+      "type": "integer",
+      "description": "Versienummer van het document.",
+      "format": "int32",
+      "examples": [
+        2
+      ]
+    }
+  },
+  "description": "Document metadata van een omgevingsdocument of IMR0-document."
+}

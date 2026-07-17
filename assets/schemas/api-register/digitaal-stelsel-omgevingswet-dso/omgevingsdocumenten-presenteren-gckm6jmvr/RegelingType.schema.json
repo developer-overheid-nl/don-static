@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/regelingtype",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/RegelingType"
+  ],
+  "title": "RegelingType",
+  "type": "string",
+  "description": "Type regeling uit de limitatieve waardelijst https://gitlab.com/koop/STOP/standaard/-/blob/1.3.0/waardelijsten/soortregeling.xml",
+  "examples": [
+    "/join/id/stop/regelingtype_001"
+  ]
+}

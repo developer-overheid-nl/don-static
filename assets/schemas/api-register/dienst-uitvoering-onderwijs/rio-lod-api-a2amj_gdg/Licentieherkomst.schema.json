@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/licentieherkomst",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Licentieherkomst"
+  ],
+  "type": "string",
+  "description": "Geeft aan wat de bron van de licentie is.",
+  "enum": [
+    "BRANCHE",
+    "NKC_EVC",
+    "NLQF",
+    "NVAO",
+    "OCW",
+    "SNRO",
+    "SZW",
+    "VZP",
+    "VZP_MTGO"
+  ]
+}

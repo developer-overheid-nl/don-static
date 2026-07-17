@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/activiteitspec",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/ActiviteitSpec"
+  ],
+  "title": "ActiviteitSpec",
+  "required": [
+    "groep",
+    "identificatie",
+    "naam",
+    "symboolcodes"
+  ],
+  "type": "object",
+  "properties": {
+    "bovenliggendeActiviteitRef": {
+      "type": "string",
+      "examples": [
+        "nl.imow-mnre1034.activiteit.ActiviteitInAmvb"
+      ]
+    },
+    "gerelateerdeActiviteitRefs": {
+      "title": "ActiviteitRefs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.activiteit.20240101"
+        ]
+      }
+    },
+    "groep": {
+      "$ref": "./Activiteitengroep.schema.json"
+    },
+    "identificatie": {
+      "type": "string",
+      "examples": [
+        "nl.imow-mnre1034.activiteit.ActiviteitenWerelderfgoed"
+      ]
+    },
+    "naam": {
+      "type": "string",
+      "examples": [
+        "Activiteit die werelderfgoed betreft"
+      ]
+    },
+    "symboolcodes": {
+      "$ref": "./Symboolcodes.schema.json"
+    }
+  }
+}

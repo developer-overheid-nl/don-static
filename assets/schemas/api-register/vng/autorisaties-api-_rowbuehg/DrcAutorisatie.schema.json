@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/vng/autorisaties-api-_rowbuehg/drcautorisatie",
+  "x-derived-from": [
+    "https://autorisaties-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/drcAutorisatie"
+  ],
+  "type": "object",
+  "properties": {
+    "informatieobjecttype": {
+      "title": "Informatieobjecttype",
+      "description": "URL naar het informatieobjecttype waarop de autorisatie van toepassing is.",
+      "type": "string",
+      "format": "uri",
+      "maxLength": 1000
+    },
+    "maxVertrouwelijkheidaanduiding": {
+      "title": "Max vertrouwelijkheidaanduiding",
+      "description": "Maximaal toegelaten vertrouwelijkheidaanduiding (inclusief).",
+      "type": "string",
+      "enum": [
+        "openbaar",
+        "beperkt_openbaar",
+        "intern",
+        "zaakvertrouwelijk",
+        "vertrouwelijk",
+        "confidentieel",
+        "geheim",
+        "zeer_geheim"
+      ]
+    }
+  }
+}

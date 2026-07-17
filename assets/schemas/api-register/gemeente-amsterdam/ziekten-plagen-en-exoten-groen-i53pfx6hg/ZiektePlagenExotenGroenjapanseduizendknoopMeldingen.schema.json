@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/ziekten-plagen-en-exoten-groen-i53pfx6hg/ziekteplagenexotengroenjapanseduizendknoopmeldingen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/ziekte_plagen_exoten_groen/openapi.json#/components/schemas/ZiektePlagenExotenGroenjapanseduizendknoop_meldingen"
+  ],
+  "type": "object",
+  "description": "Punt-locatie waar de Aziatische duizendknoop is waargenomen door een inwoner, inspecteur gemeente Amsterdam of overige personen. Een melding kan binnenkomen via meldingen.amsterdam.nl of via een zaaksysteem van gemeente Amsterdam. Om vast te stellen of daadwerkelijk sprake is van de Aziatische duizendknoop valideert een inspecteur van de gemeente de melding.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `japanseduizendknoopMeldingen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "gbdBuurt": {
+          "$ref": "../_shared/GebiedenBuurtenRawIdentifier.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./ZiektePlagenExotenGroenjapanseduizendknoopMeldingenLink.schema.json"
+        }
+      },
+      "required": [
+        "gbdBuurt",
+        "schema",
+        "self"
+      ]
+    },
+    "conversieId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Geovisia conversie ID",
+      "description": "ConversieId overgenomen uit Geovisia"
+    },
+    "datumMelding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop een melding is geregisteerd"
+    },
+    "ecologischeHoofdstructuur": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aziatische duizendknoop ecologische hoofdstructuur",
+      "description": "De ecologische hoofdstructuur van een Aziatische duizendknoop"
+    },
+    "gbdBuurtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ID",
+      "description": "Unieke identificatie van een buurt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke aanduiding van het record"
+    },
+    "lastupdate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Laatste aanpassing inspectie datumtijd",
+      "description": "Datum en tijdstip van de laatste aanpassing van een inspectie"
+    },
+    "lastupdateStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Melding laatste update status",
+      "description": "De laatste status van een melding"
+    },
+    "sigNummerMelding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meldingsnummer",
+      "description": "meldingsnr van een melding binnengekomen via meldingen.amsterdam.nl"
+    },
+    "statusKaartlaag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kaartlaag status",
+      "description": "Versimpelde statussen, afgeleid van lastupdatestatus, voor de openbare kaartlaag op data.amsterdam.nl"
+    },
+    "statusMelding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Melding status",
+      "description": "In hoeverre een melding in behandeling is genomen en/of is afgehandeld"
+    }
+  },
+  "required": [
+    "_links",
+    "gbdBuurtId",
+    "id"
+  ]
+}

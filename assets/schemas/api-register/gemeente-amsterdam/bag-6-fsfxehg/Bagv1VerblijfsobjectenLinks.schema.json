@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bag-6-fsfxehg/bagv1verblijfsobjectenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json#/components/schemas/Bagv1VerblijfsobjectenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `verblijfsobjecten._links` field. It contains all relationships with objects.",
+  "properties": {
+    "heeftDossier": {
+      "$ref": "./BagdossiersLink.schema.json"
+    },
+    "heeftHoofdadres": {
+      "$ref": "../_shared/BagNummeraanduidingenLink.schema.json"
+    },
+    "heeftNevenadres": {
+      "type": "array",
+      "items": {
+        "$ref": "./BagverblijfsobjectenHeeftNevenadres_M2M.schema.json"
+      }
+    },
+    "heeftOnderzoeken": {
+      "type": "array",
+      "items": {
+        "$ref": "./BagverblijfsobjectenHeeftOnderzoeken_M2M.schema.json"
+      }
+    },
+    "ligtInBuurt": {
+      "$ref": "../_shared/GebiedenBuurtenLink.schema.json"
+    },
+    "ligtInPanden": {
+      "type": "array",
+      "items": {
+        "$ref": "./BagverblijfsobjectenLigtInPanden_M2M.schema.json"
+      }
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "../_shared/BagVerblijfsobjectenLink.schema.json"
+    }
+  },
+  "required": [
+    "heeftDossier",
+    "heeftHoofdadres",
+    "heeftNevenadres",
+    "heeftOnderzoeken",
+    "ligtInBuurt",
+    "ligtInPanden",
+    "schema",
+    "self"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/extendedproblemdetails",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/ExtendedProblemDetails"
+  ],
+  "allOf": [
+    {
+      "$ref": "./ProblemDetails.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "code": {
+          "minLength": 1,
+          "type": "string",
+          "description": "Systeem code die het type fout aangeeft."
+        }
+      }
+    }
+  ]
+}

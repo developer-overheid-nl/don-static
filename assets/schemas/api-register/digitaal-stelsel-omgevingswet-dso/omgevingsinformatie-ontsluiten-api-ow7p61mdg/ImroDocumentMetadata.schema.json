@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/imrodocumentmetadata",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/ImroDocumentMetadata"
+  ],
+  "required": [
+    "bekendmakingen",
+    "beroepEnBezwaar",
+    "heeftPlankaart",
+    "imroVersie",
+    "isHistorisch",
+    "isTamPlan",
+    "onderdelen",
+    "ondergronden",
+    "planstatusInfo",
+    "regelStatus"
+  ],
+  "type": "object",
+  "properties": {
+    "bekendmakingen": {
+      "type": "array",
+      "description": "Officiële overheidspublicaties zoals gepubliceerd in de Staatscourant.",
+      "items": {
+        "$ref": "./Bekendmaking.schema.json"
+      },
+      "examples": [
+        {
+          "documentType": "Staatscourant",
+          "titel": "Bestemmingsplan Hoek Prins Bernhardlaan - Kruisparkweg",
+          "href": "https://zoek.officielebekendmakingen.nl/stcrt-2021-15786.html"
+        }
+      ]
+    },
+    "beroepEnBezwaar": {
+      "type": "string",
+      "description": "Beroep en bezwaar actief.",
+      "examples": [
+        "ja, nee, niet van toepassing."
+      ]
+    },
+    "besluitnummer": {
+      "type": "string",
+      "description": "Besluitnummer van het plan.",
+      "examples": [
+        "3"
+      ]
+    },
+    "eindeRechtsgeldigheid": {
+      "type": "string",
+      "description": "Geeft datum van einde rechtsgeldigheid.",
+      "format": "date",
+      "examples": [
+        "2022-02-22"
+      ]
+    },
+    "gerelateerdeVersies": {
+      "uniqueItems": true,
+      "type": "array",
+      "description": "Andere versies van dit plan.",
+      "items": {
+        "$ref": "./DocumentVersie.schema.json"
+      }
+    },
+    "heeftPlankaart": {
+      "type": "boolean",
+      "description": "Document heeft een plankaart.",
+      "examples": [
+        true
+      ]
+    },
+    "imroVersie": {
+      "type": "string",
+      "description": "IMRO-versie van het plan.",
+      "examples": [
+        "IMRO2012"
+      ]
+    },
+    "isHistorisch": {
+      "type": "boolean",
+      "description": "Geeft aan of het plan historisch is.",
+      "examples": [
+        true
+      ]
+    },
+    "isTamPlan": {
+      "type": "boolean",
+      "description": "Geeft aan of het plan een tijdelijk alternatieve maatregel (TAM) is.",
+      "examples": [
+        true
+      ]
+    },
+    "onderdelen": {
+      "type": "array",
+      "description": "Onderdelen van het plan.",
+      "items": {
+        "$ref": "./Onderdeel.schema.json"
+      }
+    },
+    "ondergronden": {
+      "type": "array",
+      "description": "De ondergronden van het plan.",
+      "items": {
+        "$ref": "./PlanOndergrond.schema.json"
+      },
+      "examples": [
+        {
+          "type": "grootschalige basiskaart (GBK)",
+          "datum": "2024-2-22"
+        }
+      ]
+    },
+    "planstatusInfo": {
+      "$ref": "./PlanstatusInfo.schema.json"
+    },
+    "regelStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "in ontwikkeling",
+        "geldend"
+      ],
+      "examples": [
+        null
+      ]
+    },
+    "statusDossier": {
+      "type": "string",
+      "description": "Status van een dossier.",
+      "examples": [
+        "geheel onherroepelijk in werking."
+      ]
+    },
+    "verwijderdOp": {
+      "type": "string",
+      "description": "Plan is verwijderd op deze datum.",
+      "format": "date-time"
+    }
+  },
+  "description": "Metadata specifiek voor IMRO-documenten. Deze wordt alleen gevuld als het Document een IMRO-document betreft."
+}

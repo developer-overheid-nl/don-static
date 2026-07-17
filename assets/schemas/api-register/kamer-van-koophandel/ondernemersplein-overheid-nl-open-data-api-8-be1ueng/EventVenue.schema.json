@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/kamer-van-koophandel/ondernemersplein-overheid-nl-open-data-api-8-be1ueng/eventvenue",
+  "x-derived-from": [
+    "https://opendata.ondernemersplein.nl/swagger/v1/swagger.json#/components/schemas/EventVenue"
+  ],
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Venue address."
+    },
+    "endDate": {
+      "type": "string",
+      "description": "Event end date and time.",
+      "format": "date-time"
+    },
+    "location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Venue location (city)."
+    },
+    "map": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Venue location on Google Maps."
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Venue name."
+    },
+    "postalCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Venue postal code."
+    },
+    "registrationUrl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Registration URL."
+    },
+    "startDate": {
+      "type": "string",
+      "description": "Event start date and time.",
+      "format": "date-time"
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Venue website."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Represents the location where an event takes place."
+}

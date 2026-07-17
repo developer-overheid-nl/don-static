@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/cmsa-crowd-monitoring-systeem-amsterdam-ec3sfxehg/links",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/aardgasverbruik/openapi.json",
+    "https://api.data.amsterdam.nl/v1/aardgasvrijezones/openapi.json",
+    "https://api.data.amsterdam.nl/v1/afvalwijzer/openapi.json",
+    "https://api.data.amsterdam.nl/v1/beheerkaart/cbs_grid/openapi.json",
+    "https://api.data.amsterdam.nl/v1/cmsa/openapi.json",
+    "https://api.data.amsterdam.nl/v1/energieverbruik_mra/openapi.json",
+    "https://api.data.amsterdam.nl/v1/loopfietsnetwerk/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "next": {
+      "$ref": "../_shared/Next.schema.json"
+    },
+    "previous": {
+      "$ref": "../_shared/Previous.schema.json"
+    },
+    "self": {
+      "$ref": "../_shared/Self2.schema.json"
+    }
+  }
+}

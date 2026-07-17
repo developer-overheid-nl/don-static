@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/datakwaliteit-tzzq1x6ng/datakwaliteitraamwerk",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/datakwaliteit/openapi.json#/components/schemas/Datakwaliteitraamwerk"
+  ],
+  "type": "object",
+  "description": "Kwaliteitskenmerken behorende bij de kwaliteitsdimensies",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `raamwerk._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./DatakwaliteitraamwerkLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "dimensie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de kwaliteitsdimensie uit NORA."
+    },
+    "id": {
+      "type": "string",
+      "description": "Uniek identificerend kenmerk voor de kwaliteitskenmerken behorende bij de kwaliteitsdimensies ."
+    },
+    "kenmerk": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van het kwaliteitskenmerk dat behoort bij betreffende kwaliteitsdimensie."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

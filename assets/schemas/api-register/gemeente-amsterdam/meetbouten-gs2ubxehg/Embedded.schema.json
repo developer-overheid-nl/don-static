@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/meetbouten-gs2ubxehg/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/meetbouten/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "meetbouten": {
+      "type": "array",
+      "items": {
+        "$ref": "./Meetboutenmeetbouten.schema.json"
+      }
+    }
+  }
+}

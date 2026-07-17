@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-verbeelden-ibyvejgdg/paint",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/verbeelden/v3/openapi.json#/components/schemas/Paint"
+  ],
+  "type": "object",
+  "properties": {
+    "circle-color": {
+      "type": "string"
+    },
+    "circle-opacity": {
+      "type": "number",
+      "format": "double"
+    },
+    "circle-radius": {
+      "type": "number",
+      "format": "double"
+    },
+    "fill-color": {
+      "type": "string"
+    },
+    "fill-opacity": {
+      "type": "number",
+      "format": "double"
+    },
+    "fill-pattern": {
+      "type": "string"
+    },
+    "icon-color": {
+      "type": "string"
+    },
+    "icon-halo-color": {
+      "type": "string"
+    },
+    "icon-halo-width": {
+      "type": "number",
+      "format": "double"
+    },
+    "line-color": {
+      "type": "string"
+    },
+    "line-dasharray": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "line-opacity": {
+      "type": "number",
+      "format": "double"
+    },
+    "line-width": {
+      "type": "number",
+      "format": "double"
+    }
+  }
+}

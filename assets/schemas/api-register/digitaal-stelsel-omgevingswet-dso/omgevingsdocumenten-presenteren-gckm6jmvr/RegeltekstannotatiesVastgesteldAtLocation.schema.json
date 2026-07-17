@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/regeltekstannotatiesvastgesteldatlocation",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/RegeltekstannotatiesVastgesteldAtLocation"
+  ],
+  "title": "Annotaties bij artikelstructuur op locatie",
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./AnnotatieZoekLinks.schema.json"
+    },
+    "activiteiten": {
+      "type": "array",
+      "items": {
+        "$ref": "./Activiteit.schema.json"
+      }
+    },
+    "gebiedsaanwijzingen": {
+      "type": "array",
+      "items": {
+        "$ref": "./Gebiedsaanwijzing.schema.json"
+      }
+    },
+    "geselecteerdeLocatieRefs": {
+      "title": "LocatieRefs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.gebied.of.gebiedengroep.20240101"
+        ]
+      }
+    },
+    "instructieregels": {
+      "type": "array",
+      "items": {
+        "$ref": "./Instructieregel.schema.json"
+      }
+    },
+    "kaarten": {
+      "type": "array",
+      "items": {
+        "$ref": "./KaartRegeltekst.schema.json"
+      }
+    },
+    "locaties": {
+      "type": "array",
+      "items": {
+        "$ref": "./Locatie.schema.json"
+      }
+    },
+    "omgevingsnormen": {
+      "type": "array",
+      "items": {
+        "$ref": "./Norm.schema.json"
+      }
+    },
+    "omgevingswaarden": {
+      "type": "array",
+      "items": {
+        "$ref": "./Norm.schema.json"
+      }
+    },
+    "omgevingswaarderegels": {
+      "type": "array",
+      "items": {
+        "$ref": "./Omgevingswaarderegel.schema.json"
+      }
+    },
+    "regelsVoorIedereen": {
+      "type": "array",
+      "items": {
+        "$ref": "./RegelVoorIedereen.schema.json"
+      }
+    },
+    "regelteksten": {
+      "type": "array",
+      "items": {
+        "$ref": "./Regeltekst.schema.json"
+      }
+    }
+  },
+  "description": "Gestructureerde OW-objecten bij een regeling met artikelstructuur en een geo-zoekvraag.\n\nOW-objecten worden uitgeleverd op basis van de vraagstelling, bijv. alle objecten die horen\nbij een regeling én een geo-zoekvraag, of alle objecten die horen bij een artikel of lid én een geo-zoekvraag.\nAlle objecten die direct of indirect horen bij de gevraagde regeling\nof het gevraagde artikel/lid, worden uitgeleverd.\n\nObjecten zijn geordend in lijsten (arrays) per objecttype.\n\nRelaties tussen de objecten worden aangegeven door '*Refs'-attributen, bijvoorbeeld \neen RegelVoorIedereen heeft een relatie met een of meerdere locaties (het werkingsgebied);\ndeze locaties zitten dan apart in deze resource, en er wordt vanuit de RegelVoorIedereen \nnaar verwezen vanuit het 'locatieRefs' attribuut.\n"
+}

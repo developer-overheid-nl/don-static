@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/energieverbruik-mra-r3gnbu6ng/energieverbruikmragasenelektriciteitkwartaal",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/energieverbruik_mra/openapi.json#/components/schemas/EnergieverbruikMragas_en_elektriciteit_kwartaal"
+  ],
+  "type": "object",
+  "description": "Verbruiksdata gas en elektriciteit per kwartaal van de Metropoolregio Amsterdam. Samengevoegde tabel met verbruiksdata van Liander en Stedin.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `gasEnElektriciteitKwartaal._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./EnergieverbruikMragasEnElektriciteitKwartaalLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aantalAansluitingen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Energieverbruik Aantal aansluitingen",
+      "description": "Het aantal afleverpunten."
+    },
+    "buurtCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aansluiting buurtcode",
+      "description": "Code van de buurt waar binnen de aansluitingen zich bevinden.."
+    },
+    "buurtNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aansluiting buurtnaam",
+      "description": "Naam van de buurt waar binnen de aansluitingen zich bevinden."
+    },
+    "gemeente": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aansluiting gemeente",
+      "description": "De gemeente waar binnen de aansluitingen zich bevinden."
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Energieverbruik ID",
+      "description": "Unieke aanduiding record."
+    },
+    "jaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Energieverbruik jaar",
+      "description": "Het jaar waarop het verbruik betrekking heeft."
+    },
+    "jaarKwartaal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Energieverbruik kwartaal van jaar",
+      "description": "Het jaar en kwartaal waarop het verbruik betrekking heeft."
+    },
+    "klantsegment": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Klanttypering",
+      "description": "Typering van de grootte van de aansluiting: KVB = kleinverbruik, GVB = grootverbruik."
+    },
+    "netbeheerder": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Energieverbruik netbeheerder",
+      "description": "Netbeheerder van de verbruiksdata."
+    },
+    "peildatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Energieverbruik peildatum",
+      "description": "Peildatum waarop het verbruik betrekking heeft."
+    },
+    "product": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Energieverbruik producttype",
+      "description": "Het producttype: ELK = elektriciteit, GAS = gas."
+    },
+    "standaardjaarLevering": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Schatting levering per jaar",
+      "description": "Schatting op basis van historische gegevens van het jaarverbruik in kWh (elektriciteit) of nm3 (gas)."
+    },
+    "standaardjaarTeruglevering": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Schatting teruglevering per jaar",
+      "description": "Schatting op basis van historische gegevens van de jaarlijkse teruglevering in kWh (elektriciteit) of nm3 (gas)."
+    },
+    "wijkCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aansluiting wijkcode",
+      "description": "Code van de wijk waar binnen de aansluitingen zich bevinden."
+    },
+    "wijkNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aansluiting wijknaam",
+      "description": "Naam van de wijk waar binnen de aansluitingen zich bevinden."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

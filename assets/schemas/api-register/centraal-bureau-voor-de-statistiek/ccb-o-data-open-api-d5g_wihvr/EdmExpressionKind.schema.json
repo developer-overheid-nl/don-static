@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/centraal-bureau-voor-de-statistiek/ccb-o-data-open-api-d5g_wihvr/edmexpressionkind",
+  "x-derived-from": [
+    "https://datasets.cbs.nl/odata/v1/openapi.json#/components/schemas/EdmExpressionKind"
+  ],
+  "enum": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "type": "integer",
+  "format": "int32"
+}

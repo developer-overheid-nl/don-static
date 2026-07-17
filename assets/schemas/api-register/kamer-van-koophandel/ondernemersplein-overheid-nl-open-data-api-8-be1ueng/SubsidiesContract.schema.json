@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/kamer-van-koophandel/ondernemersplein-overheid-nl-open-data-api-8-be1ueng/subsidiescontract",
+  "x-derived-from": [
+    "https://opendata.ondernemersplein.nl/swagger/v1/swagger.json#/components/schemas/SubsidiesContract"
+  ],
+  "type": "object",
+  "properties": {
+    "pagination": {
+      "$ref": "./PagingInfo.schema.json"
+    },
+    "subsidies": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "./SubsidieSummary.schema.json"
+      },
+      "description": "List of subsidy summaries."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Represents the datacontract of a list of subsidy summaries."
+}

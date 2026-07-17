@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/besluitversiesoortstap",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/BesluitversieSoortStap"
+  ],
+  "title": "soortStap",
+  "required": [
+    "code",
+    "waarde"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "title": "code",
+      "type": "string"
+    },
+    "waarde": {
+      "title": "waarde",
+      "type": "string"
+    }
+  },
+  "description": "De verschillende soorten stappen zijn te vinden in [deze waardelijst](https://gitlab.com/koop/STOP/standaard/-/blob/1.3.0/waardelijsten/procedurestap_definitief.xml).'\n"
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/mosselzaadinvanginstallaties-e5jmoxqhg/propertiesgeojsonmosselzaadinvanginstallaties",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/mosselzaad-invanginstallaties/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_mosselzaadinvanginstallaties"
+  ],
+  "properties": {
+    "geom_valid": {
+      "description": "",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "gid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "legenda": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "locatienaam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "shape_area": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "shape_length": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

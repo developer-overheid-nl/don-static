@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brk2-oktbfx6hg/brk2zakelijkerechten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brk2/openapi.json#/components/schemas/Brk2zakelijkerechten"
+  ],
+  "type": "object",
+  "description": "zakelijkerechten",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `zakelijkerechten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "belastBrkZakelijkeRechten": {
+          "type": "array",
+          "items": {
+            "$ref": "./Brk2zakelijkerechtenBelastBrkZakelijkeRechten_M2M.schema.json"
+          }
+        },
+        "belastMetBrkZakelijkeRechten": {
+          "type": "array",
+          "items": {
+            "$ref": "./Brk2zakelijkerechtenBelastMetBrkZakelijkeRechten_M2M.schema.json"
+          }
+        },
+        "betrokkenBijBrkZakelijkeRechten": {
+          "type": "array",
+          "items": {
+            "$ref": "./Brk2zakelijkerechtenBetrokkenBijBrkZakelijkeRechten_M2M.schema.json"
+          }
+        },
+        "isBeperktTotBrkTenaamstellingen": {
+          "type": "array",
+          "items": {
+            "$ref": "./Brk2zakelijkerechtenIsBeperktTotBrkTenaamstellingen_M2M.schema.json"
+          }
+        },
+        "ontstaanUitBrkZakelijkeRechten": {
+          "type": "array",
+          "items": {
+            "$ref": "./Brk2zakelijkerechtenOntstaanUitBrkZakelijkeRechten_M2M.schema.json"
+          }
+        },
+        "rustOpBrkKadastraalObject": {
+          "$ref": "./Brk2KadastraleobjectenLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./Brk2ZakelijkerechtenLink.schema.json"
+        },
+        "vveIdentificatieBetrokkenBij": {
+          "$ref": "./Brk2kadastralesubjectenLink.schema.json"
+        },
+        "vveIdentificatieOntstaanUit": {
+          "$ref": "./Brk2kadastralesubjectenLink.schema.json"
+        }
+      },
+      "required": [
+        "belastBrkZakelijkeRechten",
+        "belastMetBrkZakelijkeRechten",
+        "betrokkenBijBrkZakelijkeRechten",
+        "isBeperktTotBrkTenaamstellingen",
+        "ontstaanUitBrkZakelijkeRechten",
+        "rustOpBrkKadastraalObject",
+        "schema",
+        "self",
+        "vveIdentificatieBetrokkenBij",
+        "vveIdentificatieOntstaanUit"
+      ]
+    },
+    "aardZakelijkRechtCode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "aardZakelijkRechtOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "akrAardZakelijkRecht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Zakelijk recht AKR-code",
+      "description": "De AKR code van de aard van het zakelijk recht"
+    },
+    "appartementsrechtsplitsingTypeCode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "appartementsrechtsplitsingTypeOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object geldigheid datumtijd",
+      "description": "Begindatum geldigheid"
+    },
+    "betrokkenBijAppartementsrechtsplitsingVve": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Betrokken bij appartementsrechtsplitsing",
+      "description": "Als deze waarde is gevuld, dan is dit recht betrokken bij een appartementssplitsing, die hier met zijn identificerende kenmerk aangegeven wordt"
+    },
+    "datumActueelTot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Einddatum van de cyclus, eventueel in combinatie met het kenmerk Status"
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object eindgeldigheid datumtijd",
+      "description": "Einddatum geldigheid"
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "De Kadaster identificatie is een door het Kadaster toegekende landelijk unieke aanduiding aan dit zakelijk recht binnen de kadastrale registratie"
+    },
+    "inOnderzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Reden waarvoor in onderzoek",
+      "description": "Als dit veld is gevuld geeft dit de omschrijving waarom dit gegeven in onderzoek staat (art. 7n en 7r Kadasterwet)"
+    },
+    "isBestemdTotIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bestemd tot mandeligheid",
+      "description": "De relatie naar het nieuwe objecttype Mandeligheid"
+    },
+    "ontstaanUitAppartementsrechtsplitsingVve": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Ontstaan uit appartementsrechtsplitsing",
+      "description": "Als deze waarde is gevuld, dan is dit recht betrokken bij een appartementssplitsing, die hier met zijn identificerende kenmerk aangegeven wordt"
+    },
+    "rustOpBrkKadastraalObjectId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kadastraal object identificatie",
+      "description": "Het kadastraal object en volgnummer waarop het zakelijk recht rust",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "toelichtingBewaarder": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Toelichting van bewaarder",
+      "description": "Toelichtende tekst van de bewaarder bij het zakelijk recht. Een Toelichting Bewaarder wordt opgevoerd wanneer een toelichting bij gegevens in de registratie noodzakelijk is"
+    },
+    "toestandsdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Kadastrale registratie toestand datum",
+      "description": "De datum waarop de geleverde toestand van het onderliggende kadatraal object is ontstaan in de Basisregistratie Kadaster. (normaal gesproken maximaal 2 weken later t.o.v. tijdstip inschrijving)"
+    },
+    "volgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object volgnummer",
+      "description": "Uniek volgnummer van de toestand van het object"
+    },
+    "vveIdentificatieBetrokkenBijId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Betrokken bij VVE appartementsrechtsplitsing",
+      "description": "De identificatie van de vereniging van eigenaren van de appartementsrechtssplitsing waarbij het zakelijk recht betrokken is",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "vveIdentificatieOntstaanUitId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Ontstaan uit VVE appartementsrechtsplitsing",
+      "description": "De identificatie van de vereniging van eigenaren van de appartementsrechtssplitsing waaruit het zakelijk recht ontstaan is",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "wasIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "ID in BRK1.0",
+      "description": "De (oude) identificatie die dit object in BRK 1.0 had"
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie",
+    "rustOpBrkKadastraalObjectId",
+    "volgnummer",
+    "vveIdentificatieBetrokkenBijId",
+    "vveIdentificatieOntstaanUitId"
+  ]
+}

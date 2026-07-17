@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/waterschappen-waterketen-gwsw-gwt7txqng/propertiesgeojsonwaterschapconstructieonderdeel",
+  "x-derived-from": [
+    "https://api.pdok.nl/rioned/waterschappen-waterketen-gwsw/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_waterschap_constructieonderdeel"
+  ],
+  "properties": {
+    "begindatum": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "einddatum": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "uri_leiding": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

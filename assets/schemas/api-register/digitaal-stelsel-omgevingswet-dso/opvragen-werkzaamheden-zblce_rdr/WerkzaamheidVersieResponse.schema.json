@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/opvragen-werkzaamheden-zblce_rdr/werkzaamheidversieresponse",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/239140/toepasbareregels-opvragenwerkzaamheden-v1.json#/components/schemas/WerkzaamheidVersieResponse"
+  ],
+  "description": "Werkzaamheid versie gegevens",
+  "required": [
+    "urn",
+    "omschrijving",
+    "beginDatum"
+  ],
+  "properties": {
+    "beginDatum": {
+      "description": "Datum in het formaat yyyy-MM-dd",
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "examples": [
+        "2023-01-01"
+      ]
+    },
+    "eindDatum": {
+      "description": "Datum in het formaat yyyy-MM-dd",
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "examples": [
+        "2023-01-01"
+      ]
+    },
+    "omschrijving": {
+      "description": "Omschrijving van de werkzaamheid versie",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250,
+      "examples": [
+        "Vellen van een houtopstand"
+      ]
+    },
+    "urn": {
+      "description": "Urn van de werkzaamheid",
+      "type": "string",
+      "pattern": "^\\w{1,100}$",
+      "examples": [
+        "BoomKappen"
+      ]
+    }
+  }
+}

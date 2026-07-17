@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/bestuurslaag",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167490/toepasbareregels-crud-rtr-gegevens-v2.json#/components/schemas/Bestuurslaag",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171058/toepasbareregels-verzoeksroutering-v2.json#/components/schemas/Bestuurslaag",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/183874/toepasbareregels-uitvoerengegevens-v1.json#/components/schemas/Bestuurslaag",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/235013/toepasbareregels-zoekinterface-v2.json#/components/schemas/Bestuurslaag"
+  ],
+  "description": "Bestuurslaag van een Organisatie",
+  "type": "string",
+  "enum": [
+    "rijk",
+    "provincie",
+    "waterschap",
+    "gemeente"
+  ]
+}

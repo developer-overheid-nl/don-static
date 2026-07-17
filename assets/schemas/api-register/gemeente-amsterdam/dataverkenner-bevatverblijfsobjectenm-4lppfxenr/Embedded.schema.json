@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/dataverkenner-bevatverblijfsobjectenm-4lppfxenr/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bevatverblijfsobjectenm/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "bevatverblijfsobjecten": {
+      "type": "array",
+      "items": {
+        "$ref": "./DataverkennerBevatverblijfsobjectenmbevatverblijfsobjecten.schema.json"
+      }
+    }
+  }
+}

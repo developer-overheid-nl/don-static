@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/koninklijk-nederlands-meteorologisch-instituut/knmi-data-platform-open-data-api-jpwlbxenr/filesummary",
+  "x-derived-from": [
+    "https://tyk-cdn.dataplatform.knmi.nl/open-data/openapi.json#/components/schemas/FileSummary"
+  ],
+  "type": "object",
+  "title": "FileSummary",
+  "properties": {
+    "created": {
+      "type": "string"
+    },
+    "filename": {
+      "type": "string"
+    },
+    "lastModified": {
+      "type": "string"
+    },
+    "size": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "filename",
+    "lastModified",
+    "size",
+    "created"
+  ]
+}
