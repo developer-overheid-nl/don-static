@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/vng/autorisaties-api-_rowbuehg/applicatie",
+  "x-derived-from": [
+    "https://autorisaties-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/Applicatie"
+  ],
+  "required": [
+    "clientIds",
+    "label"
+  ],
+  "type": "object",
+  "properties": {
+    "autorisaties": {
+      "type": "array",
+      "items": {
+        "$ref": "./AutorisatieBase.schema.json"
+      }
+    },
+    "clientIds": {
+      "description": "Lijst van consumer identifiers (hun 'client_id'). Een `client_id` mag slechts bij één applicatie-object voorkomen.",
+      "type": "array",
+      "items": {
+        "title": "Client ids",
+        "type": "string",
+        "maxLength": 50,
+        "minLength": 1
+      }
+    },
+    "heeftAlleAutorisaties": {
+      "title": "Heeft alle autorisaties",
+      "description": "Indien alle autorisaties gegeven zijn, dan hoeven deze niet individueel opgegeven te worden. Gebruik dit alleen als je de consumer helemaal vertrouwt.",
+      "type": "boolean"
+    },
+    "label": {
+      "title": "Label",
+      "description": "Een leesbare representatie van de applicatie, voor eindgebruikers.",
+      "type": "string",
+      "maxLength": 100,
+      "minLength": 1
+    },
+    "url": {
+      "title": "Url",
+      "description": "URL-referentie naar dit object. Dit is de unieke identificatie en locatie van dit object.",
+      "type": "string",
+      "format": "uri",
+      "readOnly": true,
+      "maxLength": 1000,
+      "minLength": 1
+    }
+  }
+}

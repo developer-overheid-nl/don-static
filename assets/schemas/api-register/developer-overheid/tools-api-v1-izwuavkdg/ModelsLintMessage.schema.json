@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/developer-overheid/tools-api-v1-izwuavkdg/modelslintmessage",
+  "x-derived-from": [
+    "http://localhost:1338/v1/openapi.json#/components/schemas/ModelsLintMessage"
+  ],
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "infos": {
+      "items": {
+        "$ref": "./ModelsLintMessageInfo.schema.json"
+      },
+      "type": "array"
+    },
+    "severity": {
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "examples": [
+    {
+      "severity": "severity",
+      "createdAt": "2000-01-23T04:56:07.000Z",
+      "code": "code",
+      "id": "id",
+      "infos": [
+        {
+          "path": "path",
+          "lintMessageId": "lintMessageId",
+          "id": "id",
+          "message": "message"
+        },
+        {
+          "path": "path",
+          "lintMessageId": "lintMessageId",
+          "id": "id",
+          "message": "message"
+        }
+      ]
+    }
+  ]
+}

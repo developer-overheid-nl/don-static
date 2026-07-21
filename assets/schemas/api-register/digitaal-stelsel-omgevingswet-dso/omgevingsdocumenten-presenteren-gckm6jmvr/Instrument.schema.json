@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/instrument",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/Instrument"
+  ],
+  "title": "Instrument",
+  "required": [
+    "code",
+    "waarde"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "examples": [
+        "http://standaarden.omgevingswet.overheid.nl/instrument/id/concept/BesluitGeldelijkeRegelingen"
+      ]
+    },
+    "waarde": {
+      "type": "string",
+      "examples": [
+        "besluit geldelijke regelingen"
+      ]
+    }
+  },
+  "description": "De naam van het instrument waartoe de instructieregel zich richt.\nInstrument is één van de waarden op de limitatieve waardelijst https://standaarden.omgevingswet.overheid.nl/id/waardelijst/Instrument.\n"
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bedrijveninvesteringszones-biz-tfau1x6ng/bedrijveninvesteringszonesgebieden",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bedrijveninvesteringszones/openapi.json#/components/schemas/Bedrijveninvesteringszonesgebieden"
+  ],
+  "type": "object",
+  "description": "Dataset met de bedrijveninvesteringszones (BIZ) binnen de Gemeente Amsterdam.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `gebieden._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BedrijveninvesteringszonesgebiedenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aantalBijdrageplichtigen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Bedrijveninvesteringszone aantal bijdrageplichtigen",
+      "description": "Het aantal bijdrageplichtigen dat verplicht is een heffingstarief te betalen."
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "heffingsgrondslag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bedrijveninvesteringszone heffingsgrondslag",
+      "description": "Grondslag van de heffing op de bedrijfsinvesteringszone die van toepassing is."
+    },
+    "heffingstarief": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Bedrijveninvesteringszone heffingstarief",
+      "description": "Heffingstarief per jaar van de bedrijfsinvesteringszone, uitgedrukt in euro’s, dat betaald dient te worden door de bijdrageplichtigen."
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Regelnummer id bedrijfsinvesteringszone",
+      "description": "Regelnummer id bedrijfsinvesteringszone."
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bedrijveninvesteringszone naam",
+      "description": "Naam van de bedrijfsinvesteringszone."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bedrijveninvesteringszone type",
+      "description": "Type bedrijfsinvesteringszone. Dit kan zijn: 'gebruikers', 'eigenaren' of 'gebruikers en eigenaren'. Dit laat zien wie de bijdrageplichtigen zijn van de bedrijfsinvesteringszone."
+    },
+    "urlVerordening": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bedrijveninvesteringszone verordening url",
+      "description": "URL van de gepubliceerde verordering van de bedrijfsinvesteringszone."
+    },
+    "verordening": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bedrijveninvesteringszone verordening",
+      "description": "Naam van de gepubliceerde verordering van de bedrijfsinvesteringszone."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

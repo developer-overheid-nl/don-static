@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/monumenten-1xuffu6hr/embedded3",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/monumenten/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "situeringen": {
+      "type": "array",
+      "items": {
+        "$ref": "./Monumentensitueringen.schema.json"
+      }
+    }
+  }
+}

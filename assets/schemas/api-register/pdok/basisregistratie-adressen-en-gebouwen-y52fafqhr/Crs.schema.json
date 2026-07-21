@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/basisregistratie-adressen-en-gebouwen-y52fafqhr/crs",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/brt-achtergrondkaart/ogc/v1/openapi.json#/components/schemas/crs",
+    "https://api.pdok.nl/lv/bag/ogc/v1/openapi.json#/components/schemas/crs"
+  ],
+  "oneOf": [
+    {
+      "description": "Simplification of the object into a url if the other properties are not present",
+      "type": "string"
+    },
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "uri": {
+              "description": "Reference to one coordinate reference system (CRS)",
+              "format": "uri",
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri"
+          ]
+        },
+        {
+          "properties": {
+            "wkt": {
+              "allOf": [
+                {
+                  "description": "An object defining the CRS using the JSON encoding for Well-known text representation of coordinate reference systems 2.0"
+                },
+                {
+                  "type": "object"
+                }
+              ]
+            }
+          },
+          "required": [
+            "wkt"
+          ]
+        },
+        {
+          "properties": {
+            "referenceSystem": {
+              "description": "A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115",
+              "type": "object"
+            }
+          },
+          "required": [
+            "referenceSystem"
+          ]
+        }
+      ],
+      "type": "object"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/potentiekaart-restwarmte-f47ntbqhr/featurejsonliggingindustrieco2",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/potentiekaart-restwarmte/ogc/v1/openapi.json#/components/schemas/featureJSON_liggingindustrieco2"
+  ],
+  "properties": {
+    "id": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "links": {
+      "items": {
+        "$ref": "../_shared/Link.schema.json"
+      },
+      "type": "array"
+    },
+    "properties": {
+      "$ref": "./PropertiesGeoJSONLiggingindustrieco2.schema.json"
+    },
+    "type": {
+      "enum": [
+        "Feature"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "properties",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/_shared/bagnummeraanduidingenlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json#/components/schemas/BagNummeraanduidingenLink",
+    "https://api.data.amsterdam.nl/v1/monumenten/openapi.json#/components/schemas/BagNummeraanduidingenLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to nummeraanduidingen.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Nummeraanduiding ID",
+      "description": "De unieke aanduiding van een nummeraanduiding"
+    },
+    "title": {
+      "type": "string"
+    },
+    "volgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object volgnummer",
+      "description": "Uniek volgnummer van de toestand van het object"
+    }
+  },
+  "required": [
+    "href",
+    "identificatie",
+    "title",
+    "volgnummer"
+  ]
+}

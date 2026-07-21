@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brt-10-_uamfx6hg/brt10geografischegebiedenlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brt10/openapi.json#/components/schemas/Brt10geografischegebiedenLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to geografischegebieden.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "De unieke identiteit van het geo-object"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "identificatie",
+    "title"
+  ]
+}

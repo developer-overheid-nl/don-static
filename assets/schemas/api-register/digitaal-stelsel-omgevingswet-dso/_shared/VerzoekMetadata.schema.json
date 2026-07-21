@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/verzoekmetadata",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/VerzoekMetadata",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/VerzoekMetadata"
+  ],
+  "type": "object",
+  "required": [
+    "verzoekType",
+    "doelVerzoek",
+    "ambtshalve"
+  ],
+  "properties": {
+    "ambtshalve": {
+      "description": "Geeft aan of het verzoek ambtshalve is ingediend door het Bevoegd Gezag.",
+      "type": "boolean"
+    },
+    "doelVerzoek": {
+      "type": "string",
+      "enum": [
+        "Conceptverzoek",
+        "Initieren",
+        "Aanvullen"
+      ]
+    },
+    "initieelVerzoeknummer": {
+      "description": "Het verzoeknummer waarop een 'Aanvulling' plaats vindt.",
+      "type": "string"
+    },
+    "projectId": {
+      "description": "Geeft een mogelijkheid (voor een Bevoegd Gezag) tot het relateren van verschillende aanvragen onder eenzelfde project id.",
+      "type": "string"
+    },
+    "verzoekType": {
+      "type": "string",
+      "enum": [
+        "Aanvraag vergunning",
+        "Melding",
+        "Informatie",
+        "Informatie ongewoon voorval",
+        "Aanvraag maatwerkvoorschrift",
+        "Melding gelijkwaardige maatregel",
+        "Aanvraag toestemming gelijkwaardige maatregel"
+      ]
+    }
+  },
+  "examples": [
+    {
+      "verzoekType": "Melding",
+      "doelVerzoek": "Initieren",
+      "ambtshalve": false,
+      "projectId": "202"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/directoraat-generaal-belastingdienst/swagger-petstore-open-api-3-0-pnkal4kdg/order",
+  "x-derived-from": [
+    "https://petstore3.swagger.io/api/v3/openapi.json#/components/schemas/Order"
+  ],
+  "type": "object",
+  "properties": {
+    "complete": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "integer",
+      "format": "int64",
+      "examples": [
+        10
+      ]
+    },
+    "petId": {
+      "type": "integer",
+      "format": "int64",
+      "examples": [
+        198772
+      ]
+    },
+    "quantity": {
+      "type": "integer",
+      "format": "int32",
+      "examples": [
+        7
+      ]
+    },
+    "shipDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "description": "Order Status",
+      "enum": [
+        "placed",
+        "approved",
+        "delivered"
+      ],
+      "examples": [
+        "approved"
+      ]
+    }
+  },
+  "xml": {
+    "name": "order"
+  }
+}

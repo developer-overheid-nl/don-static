@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/gelabeldecoordinaat",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/GelabeldeCoordinaat",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/GelabeldeCoordinaat"
+  ],
+  "type": "object",
+  "required": [
+    "coordinaten"
+  ],
+  "properties": {
+    "coordinaten": {
+      "$ref": "./Coordinaat.schema.json"
+    }
+  },
+  "examples": [
+    {
+      "coordinaten": {
+        "stelsel": "ETRS89",
+        "geometrie": {
+          "type": "Point,",
+          "coordinates": [
+            52.08811,
+            4.315099
+          ]
+        }
+      }
+    }
+  ]
+}

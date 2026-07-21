@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bomen-rak8bxeng/bomenvergunningsplichtigesnoei",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bomen/openapi.json#/components/schemas/Bomenvergunningsplichtigesnoei"
+  ],
+  "type": "object",
+  "description": "deze tabel bevat data over vergunningsplichtige snoei.Voor het kappen, rooien, verplanten of vormsnoei van een vergunningplichtige boom of andersoortige houtopstand dient door de eigenaar een vergunningsaanvraagte worden ingediend bij Burgemeester en Wethouders",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `vergunningsplichtigesnoei._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BomenvergunningsplichtigesnoeiLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "bezwaarOpVergunning": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft aan of er bezwaar is gemaakt op de kap van deze boom"
+    },
+    "boomId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "ID van de boom",
+      "description": "de vreemde sleutel (foreignkey) voor de relatie met de stamgegevens van de bomen"
+    },
+    "boommaatregelregistratieOpdrachtverlening": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Id nummer van de boommaatregelregistratie van waaruit opdracht verleend is. Wordt gebruikt om na afhandeling de werkzaamheden in de boommaatregelregistratie als voltooid te registreren."
+    },
+    "datumOpdrachtverlening": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Datum waarop V&OR opdracht heeft verleend voor uitvoeren boommaatregel"
+    },
+    "datumVergunningDefinitief": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Datum waarop de kapvergunning definitief is: zes weken na verlening vergunning"
+    },
+    "datumVergunningVerleend": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Datum waarop de kapvergunning is verleend"
+    },
+    "datumVergunningsaanvraag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Datum waarop de kapvergunning is verleend"
+    },
+    "floraEnFaunaAspecten": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft aan of er flora of fauna aspecten aanwezig zijn"
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding van record"
+    },
+    "lijstVergunningsplichtigeSnoei": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de lijst waarop de uit te voeren snoeiactie voorkomt"
+    },
+    "mutatieDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Datum mutatie",
+      "description": "Datum waarop laatste mutatie heeft plaatsgevonden"
+    },
+    "risicotoeslag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft toeslagpercentage voor beheerinspanning aan op basis van locatie gebieden met intensieve gebruiksdruk (bijvoorbeeld parken)"
+    },
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Status van het beheerobject in het inwinningsproces"
+    },
+    "termijnurgentie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Urgentie die is opgegeven tijdens de veiligheidsinspectie van de boom"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

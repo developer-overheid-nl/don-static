@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/kamer-van-koophandel/ondernemersplein-overheid-nl-open-data-api-8-be1ueng/eventcontract",
+  "x-derived-from": [
+    "https://opendata.ondernemersplein.nl/swagger/v1/swagger.json#/components/schemas/EventContract"
+  ],
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Event content body (HTML)."
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Event short description."
+    },
+    "duration": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Event duration."
+    },
+    "identifier": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Event ID."
+    },
+    "inLanguage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Locale.",
+      "readOnly": true
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Event name."
+    },
+    "organizer": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "Event organizers. Note: field naming of 'organizer' is singular, but organizer field contains an array of arganizers."
+    },
+    "rate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Admission fee statement."
+    },
+    "subjects": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "Event subjects."
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Event URL."
+    },
+    "venues": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "./EventVenue.schema.json"
+      },
+      "description": "List of event venues."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Represents the datacontract of an event."
+}

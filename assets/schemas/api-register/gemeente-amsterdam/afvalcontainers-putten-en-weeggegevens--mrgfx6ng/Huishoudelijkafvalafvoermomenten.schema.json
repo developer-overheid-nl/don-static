@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/huishoudelijkafvalafvoermomenten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/Huishoudelijkafvalafvoermomenten"
+  ],
+  "type": "object",
+  "description": "Bevat gegevens over wat en hoeveel is aangeboden bij verschillende afvalwerkers",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `afvoermomenten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HuishoudelijkafvalafvoermomentenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aanbieder": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de afvalaanbieder (klant, bedrijf of gemeente)."
+    },
+    "aanbiederAdres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Adres aanbieder",
+      "description": "Adres van de afvalaanbieder."
+    },
+    "aanbiederPlaatsnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Plaatsnaam aanbieder",
+      "description": "Plaatsnaam van de afvalaanbieder."
+    },
+    "aanbiederPostcode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Postcode aanbieder",
+      "description": "Postcode van de afvalaanbieder."
+    },
+    "aanbiederStandplaats": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Standplaats aanbieder",
+      "description": "Locatie waar het afval is opgehaald."
+    },
+    "aanbiederStandplaatsOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Omschrijving locatie aanbieder",
+      "description": "Beschrijving van de ophaallocatie."
+    },
+    "afvalSoort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Beschrijving van het afval of de activiteit."
+    },
+    "afvalstofCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Code die het type afvalstof identificeert."
+    },
+    "afvalstofOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Kenteken van het voertuig dat het afval vervoert."
+    },
+    "afvalstroomNummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Afval stroomnummer",
+      "description": "Afvalstroomnummer, een unieke code voor de afvalstroom."
+    },
+    "bonNummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie voor de afvalverwerking van de afvalverwerker."
+    },
+    "datum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum van de afvalverwerking of registratie."
+    },
+    "geaccepteerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Status of het afval is geaccepteerd bij de ontvangstlocatie."
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke aanduiding van het record. Combinatie verwerker en bon nummer"
+    },
+    "inweging": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Gewicht van het voertuig inclusief lading bij binnenkomst."
+    },
+    "kenteken": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": " Kenteken van het voertuig dat het afval vervoert."
+    },
+    "kentekenKort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Verkort kenteken",
+      "description": "Kenteken zonder '-'. Ten behove van koppeling met wagenpark_voertuig"
+    },
+    "nettoGewicht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Verschil tussen vol en leeg gewicht, oftewel het gewicht van het afval."
+    },
+    "ontvangstLocatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Locatie waar het afval wordt ontvangen."
+    },
+    "opmerking": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanvullende informatie over de afvalverwerking."
+    },
+    "tijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "time",
+      "description": "Tijdstip van de verwerking of registratie."
+    },
+    "uitweging": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Gewicht van het voertuig zonder lading bij vertrek."
+    },
+    "verwerker": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de verwerker"
+    },
+    "weegBon": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Nummer van de weegbon van de aanbieder voor het geregistreerde gewicht."
+    },
+    "weegDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop het afval is gewogen."
+    },
+    "weegTijdstip": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "time",
+      "description": "Tijdstip waarop het afval is gewogen."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

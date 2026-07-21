@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/loopfietsnetwerk-tnewbx6ng/loopfietsnetwerkpoiadressenlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/loopfietsnetwerk/openapi.json#/components/schemas/Loopfietsnetwerkpoi_adressenLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to poiAdressen.",
+  "properties": {
+    "adresseerbaarobjectIdentificatie": {
+      "type": "string",
+      "description": "unieke identificatie van de BAG verblijfsobject, ligplaats of standplaats"
+    },
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "adresseerbaarobjectIdentificatie",
+    "href",
+    "title"
+  ]
+}

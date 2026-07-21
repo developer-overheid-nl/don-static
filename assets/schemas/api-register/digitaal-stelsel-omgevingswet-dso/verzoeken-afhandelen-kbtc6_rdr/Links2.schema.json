@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-afhandelen-kbtc6_rdr/links2",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json"
+  ],
+  "type": "object",
+  "properties": {
+    "self": {
+      "required": [
+        "href"
+      ],
+      "properties": {
+        "href": {
+          "type": "string"
+        }
+      },
+      "examples": [
+        {
+          "href": "https://api.dso.nl/verzoeken/2017010100001"
+        }
+      ]
+    },
+    "verzoekPdf": {
+      "required": [
+        "href"
+      ],
+      "properties": {
+        "href": {
+          "type": "string"
+        }
+      },
+      "examples": [
+        {
+          "href": "https://api.dso.nl/verzoeken/2017010100001"
+        }
+      ]
+    },
+    "verzoekXml": {
+      "required": [
+        "href"
+      ],
+      "properties": {
+        "href": {
+          "type": "string"
+        }
+      },
+      "examples": [
+        {
+          "href": "https://api.dso.nl/verzoeken/2017010100001"
+        }
+      ]
+    }
+  }
+}

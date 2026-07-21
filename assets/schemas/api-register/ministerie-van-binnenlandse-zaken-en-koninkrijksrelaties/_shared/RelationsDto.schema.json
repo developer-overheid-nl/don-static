@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/_shared/relationsdto",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/gm/v1/openapi#/components/schemas/RelationsDto",
+    "https://publiek.broservices.nl/gu/v1/openapi#/components/schemas/RelationsDto"
+  ],
+  "properties": {
+    "broId": {
+      "type": "string"
+    },
+    "deliveryAccountableParty": {
+      "type": "string"
+    },
+    "deregistered": {
+      "type": "string"
+    },
+    "latestCorrectionTime": {
+      "type": "string"
+    },
+    "objectRegistrationTime": {
+      "type": "string"
+    },
+    "qualityRegime": {
+      "type": "string"
+    },
+    "underReview": {
+      "type": "string"
+    },
+    "underReviewTime": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

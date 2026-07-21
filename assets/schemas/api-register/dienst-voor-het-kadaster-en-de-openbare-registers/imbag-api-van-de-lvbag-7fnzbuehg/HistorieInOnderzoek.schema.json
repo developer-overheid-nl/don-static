@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/historieinonderzoek",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/HistorieInOnderzoek"
+  ],
+  "title": "HistorieInOnderzoek",
+  "required": [
+    "beginGeldigheid",
+    "tijdstipRegistratie",
+    "tijdstipRegistratieLV"
+  ],
+  "type": "object",
+  "properties": {
+    "beginGeldigheid": {
+      "title": "beginGeldigheid",
+      "type": "string",
+      "description": "De datum waarop een versie van een onderzoek naar een attribuut van een BAG-object geldig is in de werkelijkheid conform de ingangsdatum in het brondocument. Als er geen expliciete ingangsdatum van geldigheid is opgenomen, wordt de datum van het brondocument overgenomen.",
+      "format": "date",
+      "examples": [
+        "2019-06-01"
+      ]
+    },
+    "eindGeldigheid": {
+      "title": "eindGeldigheid",
+      "type": "string",
+      "description": "De datum waarop de periode van geldigheid van een versie van een onderzoek naar een attribuut van een BAG-object eindigt. Bijvoorbeeld als gevolg van de vaststelling van een nieuw brondocument. Wanneer er geen tijdstip is ingevuld, dan is de versie nog geldig.",
+      "format": "date",
+      "examples": [
+        "2019-06-01"
+      ]
+    },
+    "eindRegistratie": {
+      "title": "eindRegistratie",
+      "type": "string",
+      "description": "Het tijdstip waarop een versie van een onderzoek naar een attribuut van een BAG-object is beëindigd in de registratie van een bronhouder.",
+      "format": "date-time"
+    },
+    "tijdstipEindRegistratieLV": {
+      "title": "tijdstipEindRegistratieLV",
+      "type": "string",
+      "description": "Dit is het tijdstip waarop een versie van een onderzoek naar een attribuut van een BAG-object is beëindigd in de registratie van de landelijke voorziening.",
+      "format": "date-time"
+    },
+    "tijdstipRegistratie": {
+      "title": "tijdstipRegistratie",
+      "type": "string",
+      "description": "Het tijdstip waarop een versie van een onderzoek naar een attribuut van en BAG-object is geregistreerd in de registratie van een bronhouder en daarmee authentiek wordt gemaakt.",
+      "format": "date-time"
+    },
+    "tijdstipRegistratieLV": {
+      "title": "tijdstipRegistratieLV",
+      "type": "string",
+      "description": "Dit is het tijdstip waarop een versie van een onderzoek naar een attribuut van een BAG-object is opgenomen in de registratie van de landelijke voorziening. De gegevens komen daarmee beschikbaar voor afnemers.",
+      "format": "date-time"
+    }
+  },
+  "description": "Alle tijdslijn metagegevens die wordt bijgehouden bij een voorkomen van een kenmerk in onderzoek object en die te maken hebben met het historiemodel van de BAG en LVBAG conform de BAG Catalogus 2018 hoofdstuk 9.\n"
+}

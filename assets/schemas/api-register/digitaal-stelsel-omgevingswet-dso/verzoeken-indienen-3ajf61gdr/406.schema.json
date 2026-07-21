@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-indienen-3ajf61gdr/406",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/406",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/406",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/406"
+  ],
+  "properties": {
+    "instance": {
+      "type": "string"
+    },
+    "status": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "type": "https://content.omgevingswet.overheid.nl/fout/id/concept/knooppunt/contentscanning/virus-gedetecteerd",
+      "title": "Geinfecteerd",
+      "status": 406,
+      "detail": "In het bestand 'test.xlsx' zit een virus. Voeg een bestand zonder virus toe.",
+      "instance": "539f14d69f2fba81"
+    }
+  ],
+  "required": [
+    "type",
+    "title",
+    "status"
+  ]
+}

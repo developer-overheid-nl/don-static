@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/_shared/dates",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top10nl/ogc/v1/openapi.json#/components/schemas/dates",
+    "https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/openapi.json#/components/schemas/dates",
+    "https://api.pdok.nl/kadaster/brk-kadastrale-kaart/ogc/v1/openapi.json#/components/schemas/dates",
+    "https://api.pdok.nl/kadaster/brt-achtergrondkaart/ogc/v1/openapi.json#/components/schemas/dates",
+    "https://api.pdok.nl/lv/bag/ogc/v1-demo/openapi.json#/components/schemas/dates",
+    "https://api.pdok.nl/lv/bag/ogc/v1/openapi.json#/components/schemas/dates",
+    "https://api.pdok.nl/lv/bgt/ogc/v1/openapi.json#/components/schemas/dates"
+  ],
+  "properties": {
+    "creation": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publication": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "receivedOn": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "revision": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "validTill": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": [
+    "object",
+    "null"
+  ],
+  "examples": [
+    {
+      "creation": "2019-01-01T10:05:00Z",
+      "publication": "2019-01-01T11:05:00Z",
+      "receivedOn": "2019-02-01T11:05:00Z",
+      "revision": "2019-02-01T11:05:00Z",
+      "validTill": "2019-02-01T11:05:00Z"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/kruimel",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/Kruimel"
+  ],
+  "required": [
+    "id",
+    "titel",
+    "volgnummer"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "examples": [
+        "NL.IMRO.PT.regels._1_Begrippen"
+      ]
+    },
+    "titel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "Artikel 1 Begrippen"
+      ]
+    },
+    "volgnummer": {
+      "type": "integer",
+      "format": "int32",
+      "examples": [
+        4
+      ]
+    }
+  }
+}

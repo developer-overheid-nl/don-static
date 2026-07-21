@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brt-50-nxes1ueng/brt50waterdelen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brt50/openapi.json#/components/schemas/Brt50waterdelen"
+  ],
+  "type": "object",
+  "description": "Kleinste functioneel onafhankelijk stukje water met gelijkblijvende homogene eigenschappen en relaties dat er binnen een water wordt onderscheiden.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `waterdelen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./Brt50waterdelenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "breedteklasse": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Water breedte klasse code",
+      "description": "De breedte van het water ingedeeld in klassen."
+    },
+    "bronactualiteit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Bron actualiteit datum",
+      "description": "De actualiteit van de gebruikte bron."
+    },
+    "bronbeschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bron beschrijving",
+      "description": "De beschrijving van de gebruikte bron."
+    },
+    "brontype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bron type",
+      "description": "Het type van de gebruikte bron."
+    },
+    "fysiekVoorkomen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object relatieve positie",
+      "description": "De plaats waar het object zich bevindt t.o.v. andere constructies."
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "geometrieLijn": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "description": "Point in 3D space",
+                "minItems": 2,
+                "maxItems": 3,
+                "items": {
+                  "type": "number"
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "LineString"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "geometrieVlak": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "hoogteniveau": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object hoogteniveau",
+      "description": "Het hoogteniveau van het object"
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "De unieke identiteit van het geo-object."
+    },
+    "naamFries": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Water Friese naam",
+      "description": "De Friese naam van het water."
+    },
+    "naamNl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Water Nederlandse naam",
+      "description": "De Nederlandse naam van het water."
+    },
+    "objectBeginTijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Object geldigheid begintijd",
+      "description": "Tijdstip waarop het object ontstaan is."
+    },
+    "tdnCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object TOP10vector code",
+      "description": "Code die het object in TOP10vector had."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Water type",
+      "description": "Het type water."
+    },
+    "visualisatieCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object visualisatie code",
+      "description": "Code voor het visualiseren van het object."
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie"
+  ]
+}

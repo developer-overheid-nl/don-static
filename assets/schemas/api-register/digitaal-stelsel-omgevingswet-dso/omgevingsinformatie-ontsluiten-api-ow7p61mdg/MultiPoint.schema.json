@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/multipoint",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/MultiPoint"
+  ],
+  "title": "GeoJSON MultiPoint",
+  "required": [
+    "coordinates",
+    "type"
+  ],
+  "type": "object",
+  "properties": {
+    "coordinates": {
+      "type": "array",
+      "items": {
+        "minItems": 2,
+        "type": "array",
+        "items": {
+          "multipleOf": 0.001,
+          "type": "number"
+        }
+      },
+      "examples": [
+        [
+          [
+            155000,
+            463000
+          ],
+          [
+            156000,
+            464000
+          ]
+        ]
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "MultiPoint"
+      ],
+      "examples": [
+        "MultiPoint"
+      ]
+    }
+  }
+}

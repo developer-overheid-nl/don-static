@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/hallink",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/HalLink"
+  ],
+  "required": [
+    "href"
+  ],
+  "type": "object",
+  "properties": {
+    "href": {
+      "title": "Href",
+      "type": "string",
+      "examples": [
+        "https://{base-uri}/{dienst}/{apinaam}/{major-versie}/resourcenaam/{resource-identificatie}"
+      ]
+    },
+    "templated": {
+      "type": "boolean"
+    },
+    "title": {
+      "type": "string",
+      "description": "Voor mens leesbaar label bij de link"
+    }
+  },
+  "description": "Het Link Object zoals gespecificeerd in \nhttps://tools.ietf.org/html/draft-kelly-json-hal-08#section-5'\n"
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/grondwater-monitoring-gm-domein-gw4pbuehg/monitoringtubereferences",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/gm/v1/openapi#/components/schemas/MonitoringTubeReferences"
+  ],
+  "properties": {
+    "garReferences": {
+      "items": {
+        "$ref": "./RegistrationObjectReference.schema.json"
+      },
+      "type": "array"
+    },
+    "gldReferences": {
+      "items": {
+        "$ref": "./RegistrationObjectReference.schema.json"
+      },
+      "type": "array"
+    },
+    "gmnReferences": {
+      "items": {
+        "$ref": "./RegistrationObjectReference.schema.json"
+      },
+      "type": "array"
+    },
+    "screenTopPosition": {
+      "type": "number"
+    },
+    "tubeNumber": {
+      "format": "int32",
+      "type": "integer"
+    }
+  },
+  "type": "object"
+}

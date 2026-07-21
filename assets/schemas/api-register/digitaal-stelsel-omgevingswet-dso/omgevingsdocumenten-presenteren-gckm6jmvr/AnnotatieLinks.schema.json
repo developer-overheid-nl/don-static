@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/annotatielinks",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/AnnotatieLinks"
+  ],
+  "required": [
+    "documentstructuur",
+    "regeling",
+    "self"
+  ],
+  "type": "object",
+  "properties": {
+    "documentstructuur": {
+      "$ref": "./HalLink.schema.json"
+    },
+    "regeling": {
+      "$ref": "./HalLink.schema.json"
+    },
+    "self": {
+      "$ref": "./HalLink.schema.json"
+    }
+  }
+}

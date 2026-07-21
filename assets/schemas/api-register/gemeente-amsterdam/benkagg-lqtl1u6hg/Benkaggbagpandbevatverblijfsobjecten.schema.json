@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/benkagg-lqtl1u6hg/benkaggbagpandbevatverblijfsobjecten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/benkagg/openapi.json#/components/schemas/Benkaggbagpandbevatverblijfsobjecten"
+  ],
+  "type": "object",
+  "description": "Specifiek voor Data Verkenner gemaakte BAG-tabel van Panden met de verblijfsobjecten die ze bevatten.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `bagpandbevatverblijfsobjecten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BenkaggBagpandbevatverblijfsobjectenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De datum waarop de nummeraanduiding geldig is geworden."
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De datum waarop de nummeraanduiding niet meer geldig is."
+    },
+    "ligtInPandenId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel."
+    },
+    "ligtInPandenIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel."
+    },
+    "ligtInPandenVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Volgnummer van de nummeraanduiding in de administratie van de bronhouder."
+    },
+    "verblijfsobjectenId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel."
+    },
+    "verblijfsobjectenIdentificatie": {
+      "type": "string",
+      "description": "Landelijke identificerende sleutel."
+    },
+    "verblijfsobjectenVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Volgnummer van de nummeraanduiding in de administratie van de bronhouder."
+    }
+  },
+  "required": [
+    "_links",
+    "verblijfsobjectenIdentificatie"
+  ]
+}

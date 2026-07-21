@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/geografische-namen-inspire-geharmoniseerd-hy4dbhzdr/featurejsonnamedplacelinestring",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/brt-geografische-namen/ogc/v1/openapi.json#/components/schemas/featureJSON_namedplace_linestring"
+  ],
+  "properties": {
+    "id": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "links": {
+      "items": {
+        "$ref": "../_shared/Link.schema.json"
+      },
+      "type": "array"
+    },
+    "properties": {
+      "$ref": "./PropertiesGeoJSONNamedplaceLinestring.schema.json"
+    },
+    "type": {
+      "enum": [
+        "Feature"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "properties",
+    "type"
+  ],
+  "type": "object"
+}

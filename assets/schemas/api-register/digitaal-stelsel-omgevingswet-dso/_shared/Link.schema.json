@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/link",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/Link",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/Link",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/Link"
+  ],
+  "required": [
+    "href"
+  ],
+  "properties": {
+    "href": {
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "href": "https://api.dso.nl/verzoeken/1"
+    }
+  ]
+}

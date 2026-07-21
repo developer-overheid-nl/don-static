@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/500",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/500",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/500",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json#/components/schemas/500",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/500",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/232859/verzoekconfiguratie-beheren-v1.json#/components/schemas/500",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/232881/verzoekconfiguratie-opvragen-v1.json#/components/schemas/500",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/500",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/500"
+  ],
+  "properties": {
+    "instance": {
+      "type": "string"
+    },
+    "status": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "type": "https://content.omgevingswet.overheid.nl/id/concept/ServerFout",
+      "title": "Interne serverfout",
+      "status": 500,
+      "detail": "Er is iets mis gegaan.",
+      "instance": "539f14d69f2fba81"
+    }
+  ],
+  "required": [
+    "type",
+    "title",
+    "status"
+  ]
+}

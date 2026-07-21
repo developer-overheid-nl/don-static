@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/drone-no-fly-zones-zbbmobqnr/propertiesgeojsonluchtvaartgebieden",
+  "x-derived-from": [
+    "https://api.pdok.nl/lvnl/drone-no-flyzones/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_luchtvaartgebieden"
+  ],
+  "properties": {
+    "gid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "localtype": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "shape_area": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "shape_leng": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "source_txt": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

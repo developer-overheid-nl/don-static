@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/gesloten-gebieden-voor-visserij-7rqgoxqng/propertiesgeojsongeslotenvisserij",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/gesloten-gebieden-visserij/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_geslotenvisserij"
+  ],
+  "properties": {
+    "area_km2": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "beschrijving": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "contactpunt": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "crs_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "databron": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "datum_dm": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "epsg_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "reden_gesloten": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "shape_area": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "shape_length": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "status": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status_dm": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type_visserij": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "update_frequentie": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

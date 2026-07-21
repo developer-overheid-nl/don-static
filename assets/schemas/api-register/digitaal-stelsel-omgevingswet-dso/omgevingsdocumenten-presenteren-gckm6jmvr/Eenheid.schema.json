@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/eenheid",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/Eenheid"
+  ],
+  "title": "Eenheid",
+  "required": [
+    "code",
+    "waarde"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "examples": [
+        "http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/Aantal"
+      ]
+    },
+    "waarde": {
+      "type": "string",
+      "examples": [
+        "aantal"
+      ]
+    }
+  },
+  "description": "De eenheid van de waarde, voluit geschreven. \nEenheid is één van de waarden op de limitatieve waardelijst https://standaarden.omgevingswet.overheid.nl/id/waardelijst/Eenheid.\n"
+}

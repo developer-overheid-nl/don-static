@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/civiele-constructies-e0mafxehr/civieleconstructiesinspectiesdimsubinspectiekenmerken",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/civieleconstructies/openapi.json#/components/schemas/Civieleconstructiesinspecties_dim_subinspectiekenmerken"
+  ],
+  "type": "object",
+  "description": "In Amsterdam worden civiele constructies (zoals o.a. bruggen, sluizen en steigers) onderhouden door de gemeente. Uit deze dimensietabel kun je de naam van het type uitgevoerde subinspectie halen zoals storing rapport, aansprakelijkheidsschouw, smeerwerk, schouw, opdrachten, losse bon of onderhoud.  Iedere subinspectie valt onder een ‘algemene inspectie’. Deze algemene inspectie heeft zijn eigen id en een type zoals bijv. elektrotechnisch- of werktuigbouwkundig werk. Met de algemene inspectie id kun je verschillende subinspecties die bij elkaar horen, bij elkaar zoeken. Zoals bijv. schouwen op elektrotechnische zaken waarop elektrotechnisch onderhoud volgt. Één regel komt overeen met één uitgevoerde subinspectie en dus één regel uit de feitentabel. Deze zijn te joinen op de subinspectie_id. Let op: niet alle beheeractiviteiten in de stad worden in deze specifieke beheerapplicatie vastgelegd, dit is dus niet alomvattend.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `inspectiesDimSubinspectiekenmerken._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./CivieleconstructiesinspectiesDimSubinspectiekenmerkenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "algemeneInspectieId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Algemene inspectie ID",
+      "description": "Uniek identificerend kenmerk van een inspectie (zoals W-werk) waarbinnen de subinspectie is uitgevoerd (bijv. W-onderhoud of schoouw)."
+    },
+    "algemeneInspectieNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Overkoepelende type onderhoud waar de schouw of onderhoud onder valt. Bijvoorbeeld 'W-werk'."
+    },
+    "subinspectieId": {
+      "type": "string",
+      "title": "Subinspectie ID",
+      "description": "Uniek identificerend kenmerk van de uitgevoerde schouw of onderhoud (vallen samen onder 'subinspecties')."
+    },
+    "subinspectieNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van de uitgevoerde schouw of onderhoud. Bijvoorbeeld 'W-Onderhoud'."
+    }
+  },
+  "required": [
+    "_links",
+    "subinspectieId"
+  ]
+}

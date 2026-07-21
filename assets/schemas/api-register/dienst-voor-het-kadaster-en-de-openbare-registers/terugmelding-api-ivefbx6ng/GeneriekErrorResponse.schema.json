@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/terugmelding-api-ivefbx6ng/generiekerrorresponse",
+  "x-derived-from": [
+    "https://api.kadaster.nl/tms/v2/openapi.json#/components/schemas/GeneriekErrorResponse"
+  ],
+  "title": "GeneriekErrorResponse",
+  "type": "object",
+  "properties": {
+    "reden": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "meldingsNummerVolledig",
+    "reden"
+  ]
+}

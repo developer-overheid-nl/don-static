@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/kamer-van-koophandel/ondernemersplein-overheid-nl-open-data-api-8-be1ueng/contact",
+  "x-derived-from": [
+    "https://opendata.ondernemersplein.nl/swagger/v1/swagger.json#/components/schemas/Contact"
+  ],
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Contact e-mail."
+    },
+    "forums": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "./ContactLink.schema.json"
+      },
+      "description": "Contact forum."
+    },
+    "links": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "./ContactLink.schema.json"
+      },
+      "description": "Contact links."
+    },
+    "phones": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "./ContactPhone.schema.json"
+      },
+      "description": "Contact phones information."
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Contact name."
+    },
+    "twitter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Contact twitter handle."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Represents contact information."
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeksroutering-a3hce_gdr/activiteitmetsubactiviteiten",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171058/toepasbareregels-verzoeksroutering-v2.json#/components/schemas/ActiviteitMetSubactiviteiten"
+  ],
+  "required": [
+    "functioneleStructuurRef",
+    "subFunctioneleStructuurRefs"
+  ],
+  "properties": {
+    "functioneleStructuurRef": {
+      "description": "De verwijzing naar een regelbeheerobject van een geselecteerde activiteit in de functionele structuur in de Registratie Toepasbare Regels.",
+      "type": "string"
+    },
+    "subFunctioneleStructuurRefs": {
+      "deprecated": true,
+      "description": "Verwijzing naar regelbeheerobjecten van geselecteerde subactiviteiten in de functionele structuur in de Registratie Toepasbare Regels. Voor verfijnbare activiteiten dient de lijst minimaal 1 item bevatten. Voor niet-verfijnbare activiteiten dient de lijst leeg te zijn. Deprecated omdat de verfijnbaar functionaliteit deprecated is.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 100
+    }
+  }
+}

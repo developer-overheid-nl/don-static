@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/verkeersinformatiesystemen-jlo_fuenr/verkeersinformatiesystemenverkeersinformatiesystemen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/verkeersinformatiesystemen/openapi.json#/components/schemas/Verkeersinformatiesystemenverkeersinformatiesystemen"
+  ],
+  "type": "object",
+  "description": "Tabel met objecten die informatie inwinnen óver het verkeer, of die informatie verstrekken áán het verkeer. Ook zijn objecten opgenomen die het verkeer reguleren.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `verkeersinformatiesystemen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./VerkeersinformatiesystemenverkeersinformatiesystemenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "beheerderGedetailleerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Nadere aanduiding van de beheerder van het beheerobject"
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke aanduiding van record. Guid van beheerobject"
+    },
+    "jaarVanAanleg": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Jaar waarin een object geplaatst is."
+    },
+    "memo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Dit is een vrij tekstveld met daarin bijvoorbeeld venstertijden van pollers."
+    },
+    "model": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van het model modelnummer van een beheerobject."
+    },
+    "objectSoort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Soort object"
+    },
+    "objectnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object nummer",
+      "description": "Nummer van een beheerobject."
+    },
+    "objectnummerLeverancier": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Objectnummer Leverancier",
+      "description": "Het nummer van het ojbect zoals het bekend is bij de leverancier."
+    },
+    "objecttypeVisKaart": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object soort op de kaart",
+      "description": "Soort object weergave kaartlaag verkeersinformatiesystemen"
+    },
+    "standplaats": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Openbareruimtenaam van de locatie waar een object zich bevindt."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Beheerobject type",
+      "description": "Type beheerobject."
+    },
+    "typeGedetailleerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Beheerobjecttype gedetailleerd",
+      "description": "Nadere omschrijving van het type beheerobject."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

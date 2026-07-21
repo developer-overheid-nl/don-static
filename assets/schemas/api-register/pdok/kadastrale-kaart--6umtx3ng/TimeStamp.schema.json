@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/kadastrale-kaart--6umtx3ng/timestamp",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top10nl/ogc/v1/openapi.json#/components/schemas/timeStamp",
+    "https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/openapi.json#/components/schemas/timeStamp",
+    "https://api.pdok.nl/kadaster/brk-kadastrale-kaart/ogc/v1/openapi.json#/components/schemas/timeStamp",
+    "https://api.pdok.nl/kadaster/brt-achtergrondkaart/ogc/v1/openapi.json#/components/schemas/timeStamp",
+    "https://api.pdok.nl/lv/bag/ogc/v1-demo/openapi.json#/components/schemas/timeStamp",
+    "https://api.pdok.nl/lv/bag/ogc/v1/openapi.json#/components/schemas/timeStamp",
+    "https://api.pdok.nl/lv/bgt/ogc/v1/openapi.json#/components/schemas/timeStamp",
+    "https://api.pdok.nl/omgevingswet/omgevingsdocumenten/ogc/v2/openapi.json#/components/schemas/timeStamp"
+  ],
+  "description": "This property indicates the time and date when the response was generated using RFC 3339 notation.",
+  "format": "date-time",
+  "type": "string",
+  "examples": [
+    "2017-08-17T08:05:32Z"
+  ]
+}

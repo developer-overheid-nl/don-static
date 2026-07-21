@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/3d-basisvoorziening-dicf0b3hr/propertiesgeojsonbasisbestandgebouwen",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/3d-basisvoorziening/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_basisbestand_gebouwen"
+  ],
+  "properties": {
+    "bladnr": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "download_link": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "download_size_bytes": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "einddatum": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jaargang_luchtfoto": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "startdatum": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

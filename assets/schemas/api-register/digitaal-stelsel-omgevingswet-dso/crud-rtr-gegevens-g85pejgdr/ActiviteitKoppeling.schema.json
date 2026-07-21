@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/crud-rtr-gegevens-g85pejgdr/activiteitkoppeling",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167490/toepasbareregels-crud-rtr-gegevens-v2.json#/components/schemas/ActiviteitKoppeling"
+  ],
+  "required": [
+    "urn"
+  ],
+  "properties": {
+    "urn": {
+      "description": "Urn van de activiteit (In de urn mogen geen spaties voorkomen). Binnen de keten staat urn bekend als de imow-id.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250
+    }
+  }
+}

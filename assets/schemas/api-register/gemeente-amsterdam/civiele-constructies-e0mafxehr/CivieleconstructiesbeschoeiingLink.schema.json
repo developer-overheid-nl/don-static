@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/civiele-constructies-e0mafxehr/civieleconstructiesbeschoeiinglink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/civieleconstructies/openapi.json#/components/schemas/CivieleconstructiesbeschoeiingLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to beschoeiing.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke aanduiding van record."
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "id",
+    "title"
+  ]
+}

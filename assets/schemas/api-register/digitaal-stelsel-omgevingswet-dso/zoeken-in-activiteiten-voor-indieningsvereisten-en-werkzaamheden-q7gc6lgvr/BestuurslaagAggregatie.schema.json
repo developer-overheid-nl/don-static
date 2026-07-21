@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/zoeken-in-activiteiten-voor-indieningsvereisten-en-werkzaamheden-q7gc6lgvr/bestuurslaagaggregatie",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/235013/toepasbareregels-zoekinterface-v2.json#/components/schemas/BestuurslaagAggregatie"
+  ],
+  "description": "Per bestuurslaag het aantal keer dat de bestuurslaag voorkomt in de gevonden activiteiten. Let op dat het bestuurslaag filter hierin NIET wordt meegenomen (andere filters wel). Dit is handig wanneer de aggregaties worden gepresenteerd in een user interface, dan kan de gebruiker namelijk het aantal resultaten uitbreiden door ook een andere bestuurslaag te selecteren.",
+  "required": [
+    "bestuurslaag",
+    "aantal"
+  ],
+  "properties": {
+    "aantal": {
+      "description": "Het aantal resultaten voor de bestuurslaag, waarbij het bestuurslaag filter NIET wordt meegenomen",
+      "type": "number"
+    },
+    "bestuurslaag": {
+      "description": "Bestuurslaag van een Organisatie",
+      "type": "string",
+      "enum": [
+        "rijk",
+        "provincie",
+        "waterschap",
+        "gemeente"
+      ]
+    }
+  }
+}

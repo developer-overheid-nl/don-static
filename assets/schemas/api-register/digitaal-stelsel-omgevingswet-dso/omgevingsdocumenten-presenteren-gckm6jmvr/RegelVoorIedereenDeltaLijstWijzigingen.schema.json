@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/regelvooriedereendeltalijstwijzigingen",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/RegelVoorIedereenDeltaLijstWijzigingen"
+  ],
+  "title": "RegelVoorIedereenDeltaLijstWijzigingen",
+  "type": "object",
+  "properties": {
+    "gebiedsaanwijzingRefs": {
+      "$ref": "./LijstWijzigingenGebiedsaanwijzingRefs.schema.json"
+    },
+    "kaartRefs": {
+      "$ref": "./LijstWijzigingenKaartRefs.schema.json"
+    },
+    "locatieRefs": {
+      "$ref": "./LijstWijzigingenLocatieRefs.schema.json"
+    },
+    "omgevingsnormRefs": {
+      "$ref": "./LijstWijzigingenOmgevingsnormRefs.schema.json"
+    }
+  }
+}

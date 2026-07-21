@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/meetbouten-gs2ubxehg/meetboutenmeetbouten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/meetbouten/openapi.json#/components/schemas/Meetboutenmeetbouten"
+  ],
+  "type": "object",
+  "description": "meetbouten",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `meetbouten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "ligtInBouwblok": {
+          "$ref": "../_shared/GebiedenBouwblokkenLink.schema.json"
+        },
+        "ligtInBuurt": {
+          "$ref": "../_shared/GebiedenBuurtenLink.schema.json"
+        },
+        "ligtInStadsdeel": {
+          "$ref": "../_shared/GebiedenStadsdelenLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./MeetboutenmeetboutenLink.schema.json"
+        }
+      },
+      "required": [
+        "ligtInBouwblok",
+        "ligtInBuurt",
+        "ligtInStadsdeel",
+        "schema",
+        "self"
+      ]
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Meetbout ID",
+      "description": "Unieke identificatie van de meetbout"
+    },
+    "ligtInBouwblokId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meetbout ligt in bouwblok",
+      "description": "Het bouwblok waarbinnen de meetbout ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "ligtInBuurtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meetbout ligt in buurt",
+      "description": "De buurt waarbinnen de meetbout ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "ligtInStadsdeelId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meetbout ligt in stadsdeel",
+      "description": "Het stadsdeel waarbinnen de meetbout ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "locatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meetbout locatie omschrijving",
+      "description": "Beschrijving van de locatie van de meetbout, bijvoorbeeld 'in gemeenschappelijke muur'"
+    },
+    "merkCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meetbout merk code",
+      "description": "Gebruikte meetbout code"
+    },
+    "merkOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meetbout merk omschrijving",
+      "description": "Gebruikte meetbout omschrijving"
+    },
+    "nabijNummeraanduiding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nabij adres omschrijving",
+      "description": "Een adres in de nabijheid van de meetbout"
+    },
+    "publiceerbaar": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Publiceerbaar indicatie",
+      "description": "Indicatie die aangeeft of de informatie gepubliceerd mag worden"
+    },
+    "statusCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Meetbout status code",
+      "description": "Status van de meetbout (1=actueel, 2=niet te meten, 3=vervallen) code"
+    },
+    "statusOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meetbout status omschrijving",
+      "description": "Status van de meetbout (1=actueel, 2=niet te meten, 3=vervallen) omschrijving"
+    },
+    "vervaldatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Meetbout geldigheid einddatum",
+      "description": "Vervaldatum van de meetbout"
+    },
+    "windrichting": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Windrichting omschrijving",
+      "description": "De windrichting van het muurvlak is die zijde waarheen het vlak van de muur, waarin het peilmerk zich bevindt, is gericht. Is er 'Z' aangegeven, dan ligt het betreffende muurvlak op het zuiden"
+    },
+    "xCoordinaatMuurvlak": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Muurvlak x-coördinaat",
+      "description": "De muurvlakcoördinaten (in centimeters) geven de positie aan van het peilmerk op het betreffende muurvlak. De horizontale maat (x) is de maat ten opzichte van een van de uiteinden van het muurvlak"
+    },
+    "yCoordinaatMuurvlak": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Muurvlak y-coördinaat",
+      "description": "De muurvlakcoördinaten (in centimeters) geven de positie aan van het peilmerk op het betreffende muurvlak. De verticale maat (y) is de maat ten opzichte van het ondereinde van het muurvlak (positief) of ten opzichte van het boveneinde van het muurvlak (negatief)"
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie",
+    "ligtInBouwblokId",
+    "ligtInBuurtId",
+    "ligtInStadsdeelId"
+  ]
+}

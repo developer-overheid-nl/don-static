@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/digitaal-topografisch-bestand-2gfmoxqhr/propertiesgeojsonpunten",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/digitaal-topografisch-bestand/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_punten"
+  ],
+  "properties": {
+    "cte": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "datum": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dtb_id": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "dtm": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "eignam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gradenhoek": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hecto": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "laag": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mutatie_co": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "omschr": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "thema": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "themb": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "z": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

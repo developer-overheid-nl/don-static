@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/gebiedsbeheer-eenheden-kwetsbaar-gebied-rsa-inspire-geharmoniseerd-6g8gtxqhg/featurejsonamsensitivearea",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/kwetsbaar-gebied/ogc/v1/openapi.json#/components/schemas/featureJSON_am_sensitive_area"
+  ],
+  "properties": {
+    "id": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "links": {
+      "items": {
+        "$ref": "../_shared/Link.schema.json"
+      },
+      "type": "array"
+    },
+    "properties": {
+      "$ref": "./PropertiesGeoJSONAmSensitiveArea.schema.json"
+    },
+    "type": {
+      "enum": [
+        "Feature"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "properties",
+    "type"
+  ],
+  "type": "object"
+}

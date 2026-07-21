@@ -1,0 +1,403 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/ziekten-plagen-en-exoten-groen-i53pfx6hg/ziekteplagenexotengroeneikenprocessierups",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/ziekte_plagen_exoten_groen/openapi.json#/components/schemas/ZiektePlagenExotenGroeneikenprocessierups"
+  ],
+  "type": "object",
+  "description": "De data toont op welke plekken in de stad en wanneer nesten van de eikenprocessierups zijn aangetroffen. Burgers kunnen meldingen maken van de eikenprocessierups met de Signalen-app. Inspecteurs doen dit via het interne systeem van de gemeente. De data wordt dagelijks geüpdatet en is gekoppeld aan het registratiesysteem (gisib) waarin doorlopend mutaties plaatsvinden. Als een nest is verwijderd, dan wordt dat ook aangegeven. Naarmate het overlastseizoen vordert, zullen steeds meer aangetroffen en verwijderde nesten zichtbaar zijn. Aan het begin van het seizoen zijn nog niet alle eikenbomen gecontroleerd. De urgentie wordt bepaald aan de hand van de grootte van het nest, het aantal nesten per boom en het aantal aangetaste bomen.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `eikenprocessierups._links` field. It contains all relationships with objects.",
+      "properties": {
+        "gbdBuurt": {
+          "$ref": "../_shared/GebiedenBuurtenRawIdentifier.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./ZiektePlagenExotenGroeneikenprocessierupsLink.schema.json"
+        }
+      },
+      "required": [
+        "gbdBuurt",
+        "schema",
+        "self"
+      ]
+    },
+    "aantalDagenOpenBestrijding": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aantal dagen open bestrijding"
+    },
+    "aantalDagenOpenInspectie": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aantal dagen open inspectie"
+    },
+    "aantalDagenResterendBestrijding": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aantal dagen resterend bestrijding"
+    },
+    "aantalDagenResterendInspectie": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aantal dagen resterend inspectie"
+    },
+    "aantalEprNesten": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aantal eikenprocessierups nesten",
+      "description": "Aantal eikenprocessierups nesten (in categorien ingedeeld)"
+    },
+    "aantalNestenMaatDeken": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het aantal boomnesten met als maat een deken"
+    },
+    "aantalNestenMaatTennisbal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het aantal nesten met als maat een tennisbal"
+    },
+    "aantalNestenMaatVoetbal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het aantal nesten met als maat een voetbal"
+    },
+    "aantalNestenVerwijderdMaatDeken": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het aantal verwijderde nesten met als maat een deken"
+    },
+    "aantalNestenVerwijderdMaatTennisbal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het aantal verwijderde nesten met als maat een tennisbal"
+    },
+    "aantalNestenVerwijderdMaatVoetbal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het aantal verwijderde nesten met als maat een voetbal"
+    },
+    "bestrijdingsmethodeEpr": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bestrijdingsmethode eikenprocessierups",
+      "description": "Toegepaste bestrijdingsmethode eikenprocessierups"
+    },
+    "boomhoogteklasseActueel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Boom hoogte",
+      "description": "Lengte van een boom bij de laatste meting"
+    },
+    "boomid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Boom ID",
+      "description": "Uniek identificatienummer van een boom"
+    },
+    "datumBestrijding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop bestrijding heeft plaatsgevonden door uitvoer organisatie"
+    },
+    "datumMelding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop een melding is geregisteerd"
+    },
+    "datumToezicht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum toezicht"
+    },
+    "gbdBuurtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ID",
+      "description": "Unieke identificatie van een buurt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "geldigTot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Melding geldig tot",
+      "description": "De eind­da­tum van de gel­dig­heid van een be­paal­de com­bi­na­tie van ge­ge­vens over een melding"
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "geplandeUitvoeringsdatumVoor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Geplande uitvoeringsdatum voor"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unieke aanduiding van het record."
+    },
+    "inspecterendeOrganisatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam inspecterende organisatie"
+    },
+    "inspectiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Inspectiedatum"
+    },
+    "nestformaat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nest formaat",
+      "description": "Formaat van het nest"
+    },
+    "nesthoogte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nest hoogte",
+      "description": "Hoogte van het nest"
+    },
+    "nietBereikbaarMetHoogwerker": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Niet bereikbaar voor hoogwerker"
+    },
+    "nietToegankelijkVoorBestrijding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Niet toegankelijk voor bestrijding"
+    },
+    "omschrijvingAlgemeen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Omschrijving melding algemeen",
+      "description": "Algemene omschrijving"
+    },
+    "omschrijvingMelding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van een melding"
+    },
+    "opmerkingUitvoerendeOrganisatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Opmerkingen uitvoerende organisatie"
+    },
+    "ranking": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Melding ranking",
+      "description": "deze hulpkolom geeft waarde 1 als een melding de meest actuele status van een boom bevat. Van toepassing bij de kaartlaag waarop alleen de (meest) actuele status per boom wordt getoond. Elk hoger getal toont een oudere status per boom"
+    },
+    "sigNrmelding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meldingsnummer",
+      "description": "meldingsnr van de melding uit de signalen app"
+    },
+    "soortnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Boomsoort naam",
+      "description": "De naam van de boomsoort"
+    },
+    "startInspectiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Start inspectiedatum"
+    },
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Status melding",
+      "description": "In hoeverre een melding in behandeling is genomen en/of is afgehandeld"
+    },
+    "uiterlijkeInspectiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Uiterlijke inspectie datum",
+      "description": "De uiterlijke inspectiedatum"
+    },
+    "uitvoerendeOrganisatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam uitvoerende organisatie"
+    },
+    "urgentie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De urgentie wordt bepaald aan de hand van de grootte van het nest, het aantal nesten per boom en het aantal aangetaste bomen"
+    },
+    "urgentieStatusKaartlaag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Urgentiestatus kaartlaag",
+      "description": "combinatie van urgentie en status voor de openbare kaartlaag op data.amsterdam.nl"
+    }
+  },
+  "required": [
+    "_links",
+    "gbdBuurtId",
+    "id"
+  ]
+}

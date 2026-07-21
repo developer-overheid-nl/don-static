@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/winkelgebieden-5ty-fx6ng/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/winkelgebieden/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "winkelgebieden": {
+      "type": "array",
+      "items": {
+        "$ref": "./Winkelgebiedenwinkelgebieden.schema.json"
+      }
+    }
+  }
+}

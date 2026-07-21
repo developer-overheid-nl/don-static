@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/self12",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "href": {
+      "type": "string",
+      "examples": [
+        "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/plannen/NL.IMRO.9925.SVOmgvisie-vst1/structuurvisieverklaringen/NL.IMRO.9925PRIMA201200000001109"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/lijstwijzigingenhoofdlijnrefs",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/LijstWijzigingenHoofdlijnRefs"
+  ],
+  "title": "LijstWijzigingenHoofdlijnRefs",
+  "type": "object",
+  "properties": {
+    "toegevoegd": {
+      "title": "HoofdlijnRefs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.hoofdlijn.20240101"
+        ]
+      }
+    },
+    "verwijderd": {
+      "title": "HoofdlijnRefs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.hoofdlijn.20240101"
+        ]
+      }
+    }
+  }
+}

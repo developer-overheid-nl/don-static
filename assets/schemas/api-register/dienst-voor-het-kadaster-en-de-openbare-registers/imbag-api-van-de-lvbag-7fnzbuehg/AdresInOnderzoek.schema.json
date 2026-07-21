@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/adresinonderzoek",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/AdresInOnderzoek"
+  ],
+  "type": "object",
+  "properties": {
+    "adresregel5": {
+      "type": "boolean"
+    },
+    "adresregel6": {
+      "type": "boolean"
+    },
+    "huisletter": {
+      "type": "boolean"
+    },
+    "huisnummer": {
+      "type": "boolean"
+    },
+    "huisnummertoevoeging": {
+      "type": "boolean"
+    },
+    "korteNaam": {
+      "type": "boolean"
+    },
+    "nummeraanduidingLigtIn": {
+      "type": "boolean"
+    },
+    "nummeraanduidingStatus": {
+      "type": "boolean"
+    },
+    "nummeraanduidingligtAan": {
+      "type": "boolean"
+    },
+    "openbareRuimteLigtIn": {
+      "type": "boolean",
+      "description": "\"Als de nummeraanduidingLigtIn false is (deze is niet in onderzoek) en de openbareRuimteLigtIn is true (deze is wel in onderzoek) maar is gerelateerd aan een andere woonplaats dan de nummeraanduiding, \ndan wordt de boolean hier niet gezet. Deze is dan niet relevant omdat dan de woonplaats wordt gebruikt die gerelateerd is aan de nummeraanduiding.\"\n"
+    },
+    "openbareRuimteNaam": {
+      "type": "boolean"
+    },
+    "openbareRuimteStatus": {
+      "type": "boolean"
+    },
+    "postcode": {
+      "type": "boolean"
+    },
+    "toelichting": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "Woonplaatsnaam is mogelijk onjuist geschreven."
+        ]
+      }
+    },
+    "woonplaatsNaam": {
+      "type": "boolean"
+    }
+  },
+  "description": "Wanneer hier een property is opgenomen met de waarde true, dan is de waarde van het gelijknamige property in de resource in onderzoek. De juistheid van dit gegeven wordt op dit moment onderzocht. Onder property toelichting wordt toegelicht wat er mogelijk onjuist is aan het betreffende gegeven."
+}

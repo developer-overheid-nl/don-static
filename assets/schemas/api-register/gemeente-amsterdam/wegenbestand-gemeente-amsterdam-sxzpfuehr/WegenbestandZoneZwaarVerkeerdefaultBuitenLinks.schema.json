@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/wegenbestand-gemeente-amsterdam-sxzpfuehr/wegenbestandzonezwaarverkeerdefaultbuitenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/wegenbestand/zone_zwaar_verkeer/openapi.json#/components/schemas/WegenbestandZoneZwaarVerkeerdefaultBuitenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `buiten._links` field. It contains all relationships with objects.",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./WegenbestandZoneZwaarVerkeerbuitenLink.schema.json"
+    }
+  },
+  "required": [
+    "schema",
+    "self"
+  ]
+}

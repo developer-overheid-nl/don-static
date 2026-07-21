@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/geo-validatieservice-serz61gvg/rapport",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167767/omgevingsdocumenten-geovalidatie-v1.json#/components/schemas/Rapport"
+  ],
+  "required": [
+    "identificatie"
+  ],
+  "type": "object",
+  "properties": {
+    "identificatie": {
+      "type": "string",
+      "description": "De identificatie die de service teruggaf na het plaatsen van de Geovalidatieopdracht. Met deze identificatie kan het Rapport opgehaald worden."
+    },
+    "meldingen": {
+      "type": "array",
+      "description": "De validatiemeldingen.",
+      "items": {
+        "$ref": "./Melding.schema.json"
+      }
+    },
+    "referentie": {
+      "type": "string",
+      "description": "De referentie die meegegeven werd door de client bij het plaatsen van de Geovalidatieopdracht. Komt overeen met Geovalidatieopdracht.identificatie."
+    },
+    "status": {
+      "type": "string",
+      "description": "Het resultaat van de valiatieopdracht (OK/NOK)."
+    }
+  },
+  "description": "rapport"
+}

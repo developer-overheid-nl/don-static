@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/adresseerbaarobjectembedded",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/AdresseerbaarObject_embedded",
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/Ligplaats_embedded"
+  ],
+  "type": "object",
+  "properties": {
+    "heeftAlsHoofdAdres": {
+      "allOf": [
+        {
+          "$ref": "./NummeraanduidingIO.schema.json"
+        },
+        {
+          "properties": {
+            "_links": {
+              "$ref": "./NummeraanduidingLinks.schema.json"
+            }
+          }
+        }
+      ]
+    },
+    "heeftAlsNevenAdres": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "./NummeraanduidingIO.schema.json"
+          },
+          {
+            "properties": {
+              "_links": {
+                "$ref": "./NummeraanduidingLinks.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

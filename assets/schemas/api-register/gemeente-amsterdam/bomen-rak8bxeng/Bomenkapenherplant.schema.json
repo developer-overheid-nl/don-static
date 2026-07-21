@@ -1,0 +1,625 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bomen-rak8bxeng/bomenkapenherplant",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bomen/openapi.json#/components/schemas/Bomenkapenherplant"
+  ],
+  "type": "object",
+  "description": "Het kappen van bomen omvat het verwijderen van bomen uit een gebied. Herplanten van bomen betekent dat nieuwe bomen op de gekapte locatie worden geplant.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `kapenherplant._links` field. It contains all relationships with objects.",
+      "properties": {
+        "gbdBuurt": {
+          "$ref": "../_shared/GebiedenBuurtenRawIdentifier.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BomenkapenherplantLink.schema.json"
+        }
+      },
+      "required": [
+        "gbdBuurt",
+        "schema",
+        "self"
+      ]
+    },
+    "aantalDagenResterendAfronding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Automatisch berekend: aantal werkdagen totdat 'datum afronden voor' is verstreken"
+    },
+    "begindatumTechnischOnderzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Datum waarop het technisch onderzoek is of wordt gestart"
+    },
+    "belemmeringHerplant": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft aan of er belemmeringen zijn voor het aanplanten van een nieuwe boom"
+    },
+    "bereikbaarheidLeefbaarheidVeiligheidEnCommunicatiePlanNodig": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft aan of een standaard of specifiek BLVC plan nodig is"
+    },
+    "bezwaarOpVergunning": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Geeft aan of er bezwaar is gemaakt op de kap van deze boom"
+    },
+    "boomAanwezigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Is op locatie van herplant nog de oude boom aanwezig"
+    },
+    "boomAanwezigheidId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Boom aanwezigheid ID"
+    },
+    "boomId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Boom ID",
+      "description": "de vreemde sleutel (foreignkey) voor de relatie met de stamgegevens van de bomen"
+    },
+    "boomNieuwId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Boom nieuw ID",
+      "description": "Id nummer van de gekoppelde nieuw geplante boom in beheerlaag boom (boom is geplant en op deze locatie is een nieuwe boom ingelezen)"
+    },
+    "boomgebreken": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boommaatregelBesluit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boommaatregelBesluitPlant": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "conversieId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Conversie ID",
+      "description": "Tweede oude identificatie"
+    },
+    "datumAfgerond": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de kap is afgerond"
+    },
+    "datumAfrondenVoor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "datumAkkoordBoomsoort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop er een akkoord is voor de  boomsoort"
+    },
+    "datumDeelopdrachtGroeiplaatsVerstrekt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop deelopdrachtnummer in gisib is toegekend"
+    },
+    "datumDeelopdrachtHerplantVerstrekt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop deelopdrachtnummer in gisib is toegekend"
+    },
+    "datumDeelopdrachtKapVerstrekt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop deelopdrachtnummer in gisib is toegekend"
+    },
+    "datumDeelopdrachtVoorschouwVerstrekt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop deelopdrachtnummer in gisib is toegekend"
+    },
+    "datumEindeBezwaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum tot wanneer bewaar ingediend kan worden"
+    },
+    "datumHerplantinspectie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de herplantinspectie is uitgevoerd"
+    },
+    "datumOpdrachtverlening": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop V&OR opdracht heeft verleend voor uitvoeren boommaatregel"
+    },
+    "datumToezichtHerplantinspectie": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "datumVergunningDefinitief": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de kapvergunning definitief is: zes weken na verlening vergunning"
+    },
+    "datumVergunningVerleend": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de kapvergunning is verleend"
+    },
+    "datumVergunningsaanvraag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de kapvergunning is aangevraagd"
+    },
+    "datumVoorschouw": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de voorschouw is uitgevoerd"
+    },
+    "deelopdrachtGroeiplaats": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Deelopdrachtnummer waarbinnen aannemer de werkzaamheden voor groeiplaats inrichten uitvoert"
+    },
+    "deelopdrachtKap": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Deelopdrachtnummer waarbinnen aannemer de werkzaamheden voor kap uitvoert"
+    },
+    "deelopdrachtPlanten": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Deelopdrachtnummer waarbinnen aannemer de werkzaamheden voor planten uitvoert"
+    },
+    "deelopdrachtVoorschouw": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Deelopdrachtnummer waarbinnen aannemer de werkzaamheden voor voorschouw uitvoert"
+    },
+    "dichtstbijzijndeBagAdres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Dichtstbijzijnde BAG adres",
+      "description": "Dichtstbijzijnde BAG adres"
+    },
+    "dichtstbijzijndeBagPostcode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Dichtstbijzijnde BAG postcode",
+      "description": "Dichtstbijzijnde BAG postcode"
+    },
+    "ecoscanUitgevoerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft aan of een ecoscan is uitgevoerd"
+    },
+    "einddatumTechnischOnderzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop het technisch onderzoek is of wordt afgerond"
+    },
+    "gbdBuurtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "Unieke identificatie van een buurt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "groeiplaatsDatumToezicht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop toezicht heeft plaatsgevonden"
+    },
+    "groeiplaatsmaatregelDatumUitgevoerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de maatregel is uitgevoerd"
+    },
+    "herplantGewenst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft aan of herplant op deze locatie mogelijk of gewenst is"
+    },
+    "herplantinspectieToezichthouder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding van record"
+    },
+    "idUitOudebeheerindeling": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "ID uit oudebeheerindeling",
+      "description": "Uniek kenmerk van een beheerobject uit een oude beheerindeling (guid van geovisia)"
+    },
+    "informatieBestaandeBoom": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspectiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Tijdstip waarop de inspectie uitgevoerd wordt. Datum wordt automatisch ingevuld"
+    },
+    "kapDatumToezicht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop toezicht heeft plaatsgevonden"
+    },
+    "kaplijstBomen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de kaplijst (batch te kappen bomen die in opdracht is gegeven door V&OR)"
+    },
+    "kapmaatregelDatumUitgevoerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de maatregel is uitgevoerd"
+    },
+    "lastupdate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "matching": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mutatiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de meest recente mutatie is uitgevoerd"
+    },
+    "objectTypenBibliotheekAanleveringDatumAangeleverd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop OTL gegevens zijn aangeleverd"
+    },
+    "objectbegintijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop het object is opgenomen in het beheersysteem"
+    },
+    "objecteindtijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop het object is verwijderd uit het beheersyteem"
+    },
+    "plantenDatumToezicht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop toezicht heeft plaatsgevonden"
+    },
+    "plantlijstBomen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de plantlijst (batch te planten bomen die in opdracht is gegeven door V&OR)"
+    },
+    "plantlocatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Locatie waar de nieuwe boom geplant moet worden"
+    },
+    "plantmaatregelDatumUitgevoerd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de maatregel is uitgevoerd"
+    },
+    "projectnaamBomen": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "risicotoeslag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft toeslagpercentage voor beheerinspanning aan op basis van locatie gebieden met intensieve gebruiksdruk (bijvoorbeeld parken)"
+    },
+    "selectiecode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "soortnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding voor de soortnaam van het object of van de soorten die binnen het object voorkomen. Het gaat hierbij om zowel flora als fauna."
+    },
+    "stamdiameter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Diameter van de stam in cm, opgemeten bij de veiligheidsinspectie van de boom"
+    },
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Status van het beheerobject in het inwinningsproces"
+    },
+    "stobbeVerwijderen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft aan of er een stobbe is die nog verwijderd moet worden"
+    },
+    "termijnurgentie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Urgentie die is opgegeven tijdens de veiligheidsinspectie van de boom"
+    },
+    "toeTePassenBoomsoort": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "toekomstboom": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "toekomstboom"
+    },
+    "validFrom": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "validTill": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "voorschouwDatumToezicht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de toezichthouder de voorschouw heeft gecontroleerd"
+    },
+    "werkgangAcceptatieGroeiplaats": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "werkgangAcceptatieHerplantinspectie": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "werkgangAcceptatieKap": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "werkgangAcceptatiePlanten": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "werkgangAcceptatieVoorschouw": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "_links",
+    "gbdBuurtId",
+    "id"
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bodemonderzoeken-c6babx6hr/bodemgrondwater",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bodem/openapi.json#/components/schemas/Bodemgrondwater"
+  ],
+  "type": "object",
+  "description": "grondwater",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `grondwater._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BodemgrondwaterLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "bovenkant": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "eindoordeel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geometry": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "grondwaterstand": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "locatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de locatie waar de meting is uitgevoerd"
+    },
+    "naamBoring": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de uitgevoerde meting / boring bestaande"
+    },
+    "naamMonster": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "onderkant": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "rapportnummer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "typeOnderzoek": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "waardeArseen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeBarium": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeBenzeen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeCadmium": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeChloride": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeChloroform": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeCisDichlooretheen12": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeCobalt": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeDichloorbenzenen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeDichloorethaan11": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "waardeDichloorethaan12": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeDichlooretheen11": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeDichlooretheen12": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeDichloormethaan": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeDichloorpropaan12": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeDichloorpropeen13": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeEthylbenzeen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeKoper": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeKwik": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeLood": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeMineraleOlie": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeMolybdeen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeMonochloorbenzeen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeNaftaleen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeNikkel": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardePh": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeStyreen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeTetrachlooretheen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeTetrachloormethaan": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeTolueen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeTransDichlooretheen12": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeTribroommethaan": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeTrichloorethaan111": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeTrichloorethaan112": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeTrichlooretheen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeTrichloormethaan": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeVinylchloride": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeXylenen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "waardeZink": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "xcoordinaat": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    },
+    "ycoordinaat": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

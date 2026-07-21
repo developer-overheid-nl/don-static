@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/ecologie-ohh_1xenr/embedded10",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/ecologie/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "waterobjecten": {
+      "type": "array",
+      "items": {
+        "$ref": "./Ecologiewaterobjecten.schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/polygon",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/Polygon"
+  ],
+  "type": "object",
+  "description": "GeoJSON polygon geometry",
+  "externalDocs": {
+    "url": "https://tools.ietf.org/html/rfc7946#section-3.1.6"
+  },
+  "allOf": [
+    {
+      "$ref": "./Geometry.schema.json"
+    },
+    {
+      "required": [
+        "coordinates"
+      ],
+      "type": "object",
+      "properties": {
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "title": "Point2D",
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array",
+              "description": "A 2D point",
+              "items": {
+                "type": "number"
+              },
+              "examples": [
+                [
+                  5.960233,
+                  52.179515
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

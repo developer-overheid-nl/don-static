@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/ontwerpregelinglinks",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/OntwerpregelingLinks"
+  ],
+  "title": "OntwerpregelingLinks",
+  "required": [
+    "self"
+  ],
+  "type": "object",
+  "properties": {
+    "annotaties": {
+      "$ref": "./HalLink.schema.json"
+    },
+    "beoogdeOpvolgerVan": {
+      "allOf": [
+        {
+          "$ref": "./HalLink.schema.json"
+        },
+        {
+          "type": "object",
+          "description": "Een HalLink die verwijst naar de vastgestelde regelingen die de ontwerpregeling beoogt op te volgen."
+        }
+      ]
+    },
+    "documentstructuur": {
+      "$ref": "./HalLink.schema.json"
+    },
+    "self": {
+      "$ref": "./HalLink.schema.json"
+    }
+  }
+}

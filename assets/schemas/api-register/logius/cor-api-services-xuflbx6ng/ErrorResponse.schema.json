@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/logius/cor-api-services-xuflbx6ng/errorresponse",
+  "x-derived-from": [
+    "https://oinregister.logius.nl/api/v1/openapi.json#/components/schemas/ErrorResponse"
+  ],
+  "description": "Foutmeldinggegevens",
+  "type": "object",
+  "properties": {
+    "detail": {
+      "description": "Het detail van de foutmelding",
+      "type": "string"
+    },
+    "instance": {
+      "description": "Het UUID waarmee een beheerder de foutmelding eenvoudig terug kan vinden in de log",
+      "type": "string"
+    },
+    "parameterDetail": {
+      "description": "Een lijst met foutdetails over de gebruikte parameters",
+      "type": "array",
+      "items": {
+        "$ref": "./ErrorResponseParameter.schema.json"
+      }
+    },
+    "status": {
+      "format": "int32",
+      "description": "De HTTP status code",
+      "type": "integer"
+    },
+    "title": {
+      "description": "De titel van het fouttype",
+      "type": "string"
+    },
+    "type": {
+      "description": "De link naar het fouttype",
+      "type": "string"
+    }
+  }
+}

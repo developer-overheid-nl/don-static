@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/planstatusinfo",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/PlanstatusInfo"
+  ],
+  "required": [
+    "datum",
+    "planstatus"
+  ],
+  "type": "object",
+  "properties": {
+    "datum": {
+      "type": "string",
+      "format": "date"
+    },
+    "planstatus": {
+      "type": "string",
+      "enum": [
+        "concept",
+        "voorontwerp",
+        "ontwerp",
+        "vastgesteld",
+        "geconsolideerd",
+        "onherroepelijk",
+        "geconsolideerde versie",
+        "beroep afdeling bestuursrechtspraak",
+        "kabinetsvoornemen",
+        "goedgekeurd",
+        "goedgekeurd; geheel goedgekeurd",
+        "goedgekeurd; goedgekeurd met uitzondering van onthoudingen",
+        "goedkeuring onthouden",
+        "kabinetsstandpunt",
+        "resultaten van inspraak bestuurlijk overleg en advies",
+        "uitspraak afdeling bestuursrechtspraak",
+        "uitspraak afdeling bestuursrechtspraak: alsnog goedgekeurd",
+        "uitspraak afdeling bestuursrechtspraak; alsnog goedgekeurd",
+        "uitspraak afdeling bestuursrechtspraak: alsnog goedkeuring onthouden",
+        "uitspraak afdeling bestuursrechtspraak; alsnog goedkeuring onthouden",
+        "vastgesteld beleid",
+        "vigerend",
+        "voorlopige voorziening"
+      ],
+      "examples": [
+        "vastgesteld"
+      ]
+    }
+  }
+}

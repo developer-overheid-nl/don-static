@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/bagopenbareruimtesrawidentifier",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/BagOpenbareruimtesRawIdentifier"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to openbareruimtes.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "identificatie": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "identificatie",
+    "title"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeksroutering-a3hce_gdr/activiteit",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171058/toepasbareregels-verzoeksroutering-v2.json#/components/schemas/Activiteit"
+  ],
+  "description": "Een activiteit",
+  "required": [
+    "functioneleStructuurRef",
+    "typering"
+  ],
+  "properties": {
+    "functioneleStructuurRef": {
+      "description": "FunctioneleStructuurRef van de activiteit",
+      "type": "string"
+    },
+    "typering": {
+      "description": "Typering van de activiteit",
+      "type": "string",
+      "enum": [
+        "Water",
+        "Milieubelastende",
+        "Overige"
+      ]
+    }
+  }
+}

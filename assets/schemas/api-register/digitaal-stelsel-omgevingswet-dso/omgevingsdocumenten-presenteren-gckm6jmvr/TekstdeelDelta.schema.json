@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/tekstdeeldelta",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/TekstdeelDelta"
+  ],
+  "title": "TekstdeelDelta",
+  "required": [
+    "bewerking"
+  ],
+  "type": "object",
+  "properties": {
+    "bewerking": {
+      "title": "DeltaBewerking",
+      "type": "string",
+      "enum": [
+        "toevoegen",
+        "verwijderen",
+        "wijzigen"
+      ],
+      "examples": [
+        "wijzigen"
+      ]
+    },
+    "lijstWijzigingen": {
+      "$ref": "./TekstdeelDeltaLijstWijzigingen.schema.json"
+    },
+    "wijzigingen": {
+      "$ref": "./TekstdeelDeltaWijzigingen.schema.json"
+    }
+  }
+}

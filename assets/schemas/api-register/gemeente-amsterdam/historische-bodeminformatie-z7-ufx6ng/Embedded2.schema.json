@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/historische-bodeminformatie-z7-ufx6ng/embedded2",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/historische_bodeminformatie/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "dempingen_en_ophogingen": {
+      "type": "array",
+      "items": {
+        "$ref": "./HistorischeBodeminformatiedempingenEnOphogingen.schema.json"
+      }
+    }
+  }
+}

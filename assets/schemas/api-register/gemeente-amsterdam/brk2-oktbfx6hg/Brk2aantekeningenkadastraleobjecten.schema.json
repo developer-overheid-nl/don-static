@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brk2-oktbfx6hg/brk2aantekeningenkadastraleobjecten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brk2/openapi.json#/components/schemas/Brk2aantekeningenkadastraleobjecten"
+  ],
+  "type": "object",
+  "description": "aantekeningenkadastraleobjecten",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `aantekeningenkadastraleobjecten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "heeftBetrekkingOpBrkKadastraalObject": {
+          "$ref": "./Brk2KadastraleobjectenLink.schema.json"
+        },
+        "heeftBrkBetrokkenPersoon": {
+          "type": "array",
+          "items": {
+            "$ref": "./Brk2aantekeningenkadastraleobjectenHeeftBrkBetrokkenPersoon_M2M.schema.json"
+          }
+        },
+        "isGebaseerdOpBrkStukdeel": {
+          "$ref": "./Brk2stukdelenLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./Brk2AantekeningenkadastraleobjectenLink.schema.json"
+        }
+      },
+      "required": [
+        "heeftBetrekkingOpBrkKadastraalObject",
+        "heeftBrkBetrokkenPersoon",
+        "isGebaseerdOpBrkStukdeel",
+        "schema",
+        "self"
+      ]
+    },
+    "aardCode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "aardOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object geldigheid startdatum",
+      "description": "Begindatum geldigheid object"
+    },
+    "betreftGedeelteVanPerceel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gedeelte perceel indicatie",
+      "description": "Er bestaan nu nog speciale aardAantekening-varianten met de toevoeging op een gedeelte van een perceel. Voorbeeld: 81. In het vervolg zal deze aard worden vervangen door de oorspronkelijke variant, in dit geval 80 ”Voorwaarden WKPB besluiten”, waarbij de indicator betreftGedeelteVanPerceel op true gezet wordt."
+    },
+    "datumActueelTot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Einddatum van de cyclus, eventueel in combinatie met het kenmerk Status"
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object geldigheid einddatum",
+      "description": "Einddatum geldigheid object"
+    },
+    "einddatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object einddatum",
+      "description": "Einddatum geeft aan wanneer een bepaalde aantekening volgens het ingeschreven stuk niet langer meer rechtsgeldig is"
+    },
+    "einddatumRecht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Einddatum zakelijk recht",
+      "description": "Een einddatum op een zakelijk recht (via tenaamstelling) wordt nu in een apart attribuut geleverd.Voorheen werd dit geleverd in het attribuut einddatum. Tenaamstellingen van een eindig recht worden niet automatisch beëindigd. Wel krijgt zo’n tenaamstelling de aantekening dat het recht eindig is en op een bepaalde datum zal eindigen of geëindigd is"
+    },
+    "heeftBetrekkingOpBrkKadastraalObjectId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kadastraal object identificatie",
+      "description": "Identificatie van het kadastrale object (onroerende zaak)",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "De door het Kadaster toegekende landelijk unieke aanduiding aan deze aantekening"
+    },
+    "isGebaseerdOpBrkStukdeelId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Stukdeel identificatie",
+      "description": "Identificatie van het stukdeel waar de aantekening op gebaseerd is",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "omschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aantekening omschrijving",
+      "description": "Omschrijving bij de aantekening"
+    },
+    "toestandsdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop de geleverde toestand van het onderliggende kadatraal object is ontstaan in de Basisregistratie Kadaster. (normaal gesproken maximaal 2 weken later t.o.v. tijdstip inschrijving)"
+    },
+    "volgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object volgnummer",
+      "description": "Uniek volgnummer van de toestand van het object"
+    },
+    "wasIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "ID in BRK1.0",
+      "description": "De (oude) identificatie die dit object in BRK 1.0 had"
+    }
+  },
+  "required": [
+    "_links",
+    "heeftBetrekkingOpBrkKadastraalObjectId",
+    "identificatie",
+    "isGebaseerdOpBrkStukdeelId",
+    "volgnummer"
+  ]
+}

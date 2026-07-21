@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/historische-bodeminformatie-z7-ufx6ng/historischebodeminformatieonderzoeken",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/historische_bodeminformatie/openapi.json#/components/schemas/HistorischeBodeminformatieonderzoeken"
+  ],
+  "type": "object",
+  "description": "Uitgevoerde onderzoeken naar bijvoorbeeld Archeologische verwachtingen (A), Bodemkwaliteit (B), Conventionele explosieven (C) kademuren Dateren (D) en Ondergrondse Obstakels (OO).",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `onderzoeken._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HistorischeBodeminformatieonderzoekenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "auteurRapport": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Auteur(s) van rapport."
+    },
+    "beschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Korte beschrijving (aanleiding) onderzoek."
+    },
+    "datumRapport": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum van rapportage."
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding record."
+    },
+    "indicatieKwaliteit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding kwaliteitskenmerk. Dit heeft met name als doel om oudere onderzoeken een oordeel te geven. Voor aanduiding is arbitrair. Er zijn geen normen voor opgesteld."
+    },
+    "locatieOfAdres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Plaats of locatie of adres. Soms zijn er geen adresgegevens voor de locatie, of wordt de locatie aangeduid als ‘GVB-terrein west’ of dergelijke."
+    },
+    "naamRapport": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam rapport met beschrijving aard rapport en/of locatie."
+    },
+    "nummerRapport": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Rapportage identificatie nummer."
+    },
+    "opdrachtgever": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Onderzoeksbureau / instantie die opdracht heeft gegeven tot onderzoek."
+    },
+    "opdrachtnemer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Onderzoeksbureau / instantie die onderzoek heeft uitgevoerd."
+    },
+    "permalink": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "description": "Verwijzing naar meer informatie. UID van bron (SAA) of een UID bij NAZCA.",
+      "maxLength": 200
+    },
+    "typeOnderzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Beschrijving type onderzoek. ABCDOO staat bijvoorbeeld voor Archeologische verwachtingen (A), Bodemkwaliteit (B), Conventionele explosieven (C) kademuren Dateren (D) en Ondergrondse Obstakels (OO). Deze aanduiding wordt intern gebruikt. Maar het type kan ook een onderzoek zijn naar een specifieke verontreiniging of een Risicobeoordeling voor Conventionele explosieven (RCE)."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

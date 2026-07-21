@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-indienen-yktc6lgdr/adres",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/Adres"
+  ],
+  "type": "object",
+  "required": [
+    "nummeraanduidingId",
+    "straat",
+    "nummer",
+    "woonplaats"
+  ],
+  "properties": {
+    "letter": {
+      "type": "string"
+    },
+    "nummer": {
+      "type": "string"
+    },
+    "nummeraanduidingId": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "straat": {
+      "type": "string"
+    },
+    "toevoeging": {
+      "type": "string"
+    },
+    "woonplaats": {
+      "type": "string"
+    }
+  }
+}

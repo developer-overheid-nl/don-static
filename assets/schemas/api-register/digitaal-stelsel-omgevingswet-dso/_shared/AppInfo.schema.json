@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/appinfo",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/Info_appinfo",
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/verbeelden/v3/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "cimowVersion": {
+      "type": "string",
+      "description": "Versie van het CIMOW informatiemodel waar deze API zich aan houdt"
+    },
+    "description": {
+      "type": "string",
+      "description": "Mens-leesbare beschrijving van deze API"
+    },
+    "imowVersion": {
+      "type": "string",
+      "description": "versie van het IMOW informatiemodel waar deze API zich aan houdt"
+    },
+    "name": {
+      "type": "string",
+      "description": "Mens-leesbare naam van deze API."
+    },
+    "stopVersion": {
+      "type": "string",
+      "description": "Versie van de STOP/TPOD standaard waar deze API zich aan houdt"
+    },
+    "version": {
+      "type": "string",
+      "description": "De versie van deze API zoals te lezen in de API spec en overeenkomende met de API-Version response header"
+    }
+  }
+}

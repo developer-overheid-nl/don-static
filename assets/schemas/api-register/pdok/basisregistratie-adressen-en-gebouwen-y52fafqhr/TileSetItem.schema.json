@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/basisregistratie-adressen-en-gebouwen-y52fafqhr/tilesetitem",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/brt-achtergrondkaart/ogc/v1/openapi.json#/components/schemas/tileSet-item",
+    "https://api.pdok.nl/lv/bag/ogc/v1/openapi.json#/components/schemas/tileSet-item"
+  ],
+  "description": "A minimal tileset element for use within a list of tilesets linking to full description of those tilesets.",
+  "properties": {
+    "crs": {
+      "allOf": [
+        {
+          "description": "Coordinate Reference System (CRS)"
+        },
+        {
+          "oneOf": [
+            {
+              "description": "Simplification of the object into a url if the other properties are not present",
+              "type": "string"
+            },
+            {
+              "oneOf": [
+                {
+                  "properties": {
+                    "uri": {
+                      "description": "Reference to one coordinate reference system (CRS)",
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "uri"
+                  ]
+                },
+                {
+                  "properties": {
+                    "wkt": {
+                      "allOf": [
+                        {
+                          "description": "An object defining the CRS using the JSON encoding for Well-known text representation of coordinate reference systems 2.0"
+                        },
+                        {
+                          "type": "object"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "wkt"
+                  ]
+                },
+                {
+                  "properties": {
+                    "referenceSystem": {
+                      "description": "A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115",
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "referenceSystem"
+                  ]
+                }
+              ],
+              "type": "object"
+            }
+          ]
+        }
+      ]
+    },
+    "dataType": {
+      "allOf": [
+        {
+          "description": "Type of data represented in the tileset"
+        },
+        {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "enum": [
+                "map",
+                "vector",
+                "coverage"
+              ],
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    "links": {
+      "description": "Links to related resources. A 'self' link to the tileset as well as a 'http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme' link to a definition of the TileMatrixSet are required.",
+      "items": {
+        "$ref": "../_shared/Link.schema.json"
+      },
+      "type": "array"
+    },
+    "tileMatrixSetURI": {
+      "description": "Reference to a Tile Matrix Set on an offical source for Tile Matrix Sets such as the OGC NA definition server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on an open official source.",
+      "format": "uri",
+      "type": "string"
+    },
+    "title": {
+      "description": "A title for this tileset",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataType",
+    "links",
+    "crs"
+  ],
+  "type": "object"
+}

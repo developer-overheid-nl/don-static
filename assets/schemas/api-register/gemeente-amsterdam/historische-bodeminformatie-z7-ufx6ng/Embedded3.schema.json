@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/historische-bodeminformatie-z7-ufx6ng/embedded3",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/historische_bodeminformatie/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "lijnvormige_obstakels": {
+      "type": "array",
+      "items": {
+        "$ref": "./HistorischeBodeminformatielijnvormigeObstakels.schema.json"
+      }
+    }
+  }
+}

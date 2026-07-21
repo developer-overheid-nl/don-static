@@ -1,0 +1,241 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/vervoersnetwerken-waterwegen-netwerk-inspire-geharmoniseerd-ehvqmsqng/propertiesgeojsonwaterwaynode",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/vervoersnetwerken-waterwegen-netwerk/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_waterway_node"
+  ],
+  "properties": {
+    "begin_lifespan_version": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "end_lifespan_version": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_parent_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_parent_property": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_remote_schema": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "local_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nil_reason": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "owns": {
+      "description": "",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "pronunciation_sound_link": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pronunciationipa": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "script": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_of_name": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "spoke_end0_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "spoke_end1_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "spoke_end2_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "spoke_end3_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "spoke_start0_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "spoke_start1_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "spoke_start2_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "spoke_start3_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "spoke_start4_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "text": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "transliteration_scheme": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "valid_from": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "valid_to": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "xlink_role": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "xlink_title": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "xsi_nil": {
+      "description": "",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

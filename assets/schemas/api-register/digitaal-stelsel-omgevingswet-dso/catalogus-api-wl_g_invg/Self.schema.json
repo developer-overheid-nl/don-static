@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/catalogus-api-wl_g_invg/self",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/catalogus/api/opvragen/v3/openapi.json"
+  ],
+  "required": [
+    "href"
+  ],
+  "type": "object",
+  "properties": {
+    "href": {
+      "type": "string",
+      "description": "URL van de link",
+      "format": "uri",
+      "x-dws-expr": "args.host + env.dotwebstack.template.baseUrl + args.requestPathAndQuery",
+      "examples": [
+        "https://service.omgevingswet.overheid.nl/publiek/catalogus/api/opvragen/v3/concepten?page=2"
+      ]
+    }
+  },
+  "description": "Absolute link naar huidige pagina",
+  "x-dws-envelope": true
+}

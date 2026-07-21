@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/rijksdienst-voor-ondernemend-nederland/iio-api-aakgfxenr/eventfull",
+  "x-derived-from": [
+    "https://internationaal.ondernemen.overheid.nl/api/iio/v1/openapi.yaml#/components/schemas/EventFull"
+  ],
+  "description": "A Event.",
+  "required": [
+    "id",
+    "titel",
+    "tekst",
+    "link",
+    "afbeelding",
+    "startdatum",
+    "einddatum",
+    "sectoren",
+    "landen"
+  ],
+  "properties": {
+    "afbeelding": {
+      "description": "An image associated this item.",
+      "type": "object",
+      "examples": [
+        {
+          "url": "https://ih-static.rvo.nl/sites/default/files/fallback_images/5.svg",
+          "alt-text": "Default image for the event"
+        }
+      ],
+      "properties": {
+        "alt-text": {
+          "description": "Alternative text for the image, can be null.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "examples": [
+            "A beautiful sunset over the mountains"
+          ]
+        },
+        "url": {
+          "description": "The URL of the image.",
+          "type": "string",
+          "format": "uri",
+          "examples": [
+            "https://example.com/images/sunset.jpg"
+          ]
+        }
+      }
+    },
+    "einddatum": {
+      "description": "The end date and time of the event in ISO 8601 format.",
+      "type": "string",
+      "format": "date-time",
+      "examples": [
+        "2024-02-10T09:00:06+01:00"
+      ]
+    },
+    "id": {
+      "description": "A unique identifier in UUID format from a sector, country, content-item etc.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "landen": {
+      "description": "A list of countries associated with the event.",
+      "type": "array",
+      "items": {
+        "$ref": "./Country.schema.json"
+      }
+    },
+    "link": {
+      "description": "A\n   *   URL to the event's detail page.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "examples": [
+        "https://www.rvo.nl/evenementen/duitsland-healthholland-paviljoen-medica-2024"
+      ]
+    },
+    "sectoren": {
+      "description": "A list of industry sectors associated with the event.",
+      "type": "array",
+      "items": {
+        "$ref": "./Sector.schema.json"
+      }
+    },
+    "startdatum": {
+      "description": "The start date and time of the event in ISO 8601 format.",
+      "type": "string",
+      "format": "date-time",
+      "examples": [
+        "2024-02-10T09:00:06+01:00"
+      ]
+    },
+    "tekst": {
+      "description": "Raw\n   *   HTML content of the event description. Clients must ensure to properly\n   *   escape this content when rendering to prevent XSS vulnerabilities.",
+      "type": "string",
+      "format": "html",
+      "examples": [
+        "<p>This is an example of HTML content.</p>"
+      ]
+    },
+    "titel": {
+      "description": "The title of\n   *   the event.",
+      "type": "string",
+      "examples": [
+        "Germany MEDICA 2024"
+      ]
+    }
+  },
+  "type": "object"
+}

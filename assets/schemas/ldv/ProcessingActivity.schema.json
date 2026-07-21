@@ -1,0 +1,61 @@
+{
+  "$schema": "https://spec.openapis.org/oas/3.1/dialect/base",
+  "title": "Dataverwerking",
+  "description": "Dataverwerking",
+  "type": "object",
+  "properties": {
+    "traceId": {
+      "type": "string",
+      "description": "Unieke identificerende code van Trace die Dataverwerking volgt",
+      "examples": ["ef4e77b903b585fb6135fcf8d8555fb3"],
+      "externalDocs": {
+        "description": "Definitie van Trace in de standaard logboek dataverwerkingen",
+        "url": "http://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/#trace_id"
+      }
+    },
+    "spanId": {
+      "type": "string",
+      "description": "Unieke identificerende code van Actie binnen de Dataverwerking",
+      "examples": ["beb0291b5162d850"],
+      "externalDocs": {
+        "description": "Definitie van Actie in de standaard logboek dataverwerkingen",
+        "url": "http://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/#span_id"
+      }
+    },
+    "status": {
+      "description": "Status van de Actie",
+      "enum": ["Unset", "Ok", "Error"]
+    },
+    "name": {
+      "type": "string",
+      "description": "Naam van de specifieke Actie binnen de Dataverwerking",
+      "examples": ["verwerken van gegevens"]
+    },
+    "startTime": {
+      "$ref": "./startTime.schema.json"
+    },
+    "endTime": {
+      "$ref": "./endTime.schema.json"
+    },
+    "parentSpanId": {
+      "type": "string",
+      "description": "Unieke identificerende code aanroepende Actie binnen huidige Trace",
+      "examples": ["beb0291b5162d850"]
+    },
+    "resource": {
+      "description": "Een object met velden dat gebruikt wordt om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Denk hierbij aan velden als naam en versienummer van een applicatie, of een verwijzing naar een record in een CMDB",
+      "type": "object",
+      "properties": {
+        "attributes": {}
+      },
+      "externalDocs": {
+        "description": "Uitleg van CMDB volgens ITIL v3",
+        "url": "https://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/#resource"
+      }
+    },
+    "attributes": {
+      "$comment": "Dit is een verwijzing naar de atributes volgens de logboek dataverwerkingen core standaard. Later wijzigen in een referentie naar schema register",
+      "$ref": "./attributes.schema.json"
+    }
+  }
+}

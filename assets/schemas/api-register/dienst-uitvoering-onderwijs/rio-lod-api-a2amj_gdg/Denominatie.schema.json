@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/denominatie",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Denominatie"
+  ],
+  "type": "string",
+  "description": "De levensbeschouwing of godsdienst die een organisatie uitdraagt.",
+  "enum": [
+    "ABZ",
+    "ASF",
+    "BAP",
+    "BIJ",
+    "EVA",
+    "EVB",
+    "EVL",
+    "GER",
+    "GEV",
+    "HIN",
+    "HUM",
+    "IC",
+    "ISL",
+    "JOL",
+    "JOO",
+    "JOR",
+    "NH",
+    "OKA",
+    "OPB",
+    "PC",
+    "REF",
+    "REM",
+    "RK",
+    "RST",
+    "RYK"
+  ]
+}

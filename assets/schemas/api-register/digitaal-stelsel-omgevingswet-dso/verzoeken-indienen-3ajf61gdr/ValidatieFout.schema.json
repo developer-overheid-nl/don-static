@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-indienen-3ajf61gdr/validatiefout",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/ValidatieFout",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/ValidatieFout",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/ValidatieFout"
+  ],
+  "properties": {
+    "instance": {
+      "type": "string"
+    },
+    "status": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "type": "https://content.omgevingswet.overheid.nl/id/concept/ValidatieMislukt",
+      "title": "Validatie mislukt",
+      "status": 400,
+      "invalid-params": [
+        {
+          "type": "https://content.omgevingswet.overheid.nl/id/concept/validatie/Verplicht",
+          "name": "doelVerzoek",
+          "reason": "doelVerzoek is een verplicht veld"
+        }
+      ]
+    }
+  ],
+  "required": [
+    "type",
+    "title",
+    "status"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/rdw-ewup1xehr/rdwvoertuigbrandstof",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/rdw/openapi.json#/components/schemas/Rdwvoertuig_brandstof"
+  ],
+  "type": "object",
+  "description": "Auto-generated table for nested field: voertuig.brandstof",
+  "properties": {
+    "brandstofOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Soort brandstof dat wordt gebruikt door voertuig."
+    },
+    "emissiecodeOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De emissieklasse is een cijfer waarmee wordt aangegeven hoe schoon het voertuig is. Hoe hoger het cijfer, hoe schoner het voertuig."
+    }
+  }
+}

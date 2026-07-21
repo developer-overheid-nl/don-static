@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/datum",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/165401/toepasbareregels-samengesteldertrservices-v2.json#/components/schemas/Datum",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167490/toepasbareregels-crud-rtr-gegevens-v2.json#/components/schemas/Datum",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v2.json#/components/schemas/Datum",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v3.json#/components/schemas/Datum",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171058/toepasbareregels-verzoeksroutering-v2.json#/components/schemas/Datum",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/235013/toepasbareregels-zoekinterface-v2.json#/components/schemas/Datum"
+  ],
+  "description": "Datum in het formaat dd-MM-yyyy.",
+  "type": "string",
+  "pattern": "^\\d{2}-\\d{2}-\\d{4}$",
+  "examples": [
+    "01-01-2023"
+  ]
+}

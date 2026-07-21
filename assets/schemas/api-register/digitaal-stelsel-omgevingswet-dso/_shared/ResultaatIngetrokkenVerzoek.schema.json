@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/resultaatingetrokkenverzoek",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/ResultaatIngetrokkenVerzoek",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/ResultaatIngetrokkenVerzoek",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/ResultaatIngetrokkenVerzoek"
+  ],
+  "description": "Het antwoord na een succesvolle intrekking",
+  "examples": [
+    {
+      "verzoeknummer": "2019012100003",
+      "volgnummer": "999",
+      "datumIngediend": "2019-01-21T10:01:47.457+01:00",
+      "bevoegdGezag": {
+        "organisatieIdentificatieNummer": "00000000000123456789",
+        "naam": "Provincie Zuid-Holland"
+      },
+      "behandeldienst": {
+        "organisatieIdentificatieNummer": "00000000000987654321",
+        "naam": "Behandeldienst Zuid-Holland"
+      }
+    }
+  ],
+  "$ref": "./ResultaatVerwerktVerzoek.schema.json"
+}

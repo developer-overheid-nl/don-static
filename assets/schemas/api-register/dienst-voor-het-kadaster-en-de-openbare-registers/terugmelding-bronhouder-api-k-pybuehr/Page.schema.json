@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/terugmelding-bronhouder-api-k-pybuehr/page",
+  "x-derived-from": [
+    "https://service10.kadaster.nl/tms/bronhouders/v2/openapi.json"
+  ],
+  "type": "object",
+  "description": "Paginatie-informatie zoals het huidige paginanummer en het totale aantal pagina's",
+  "properties": {
+    "currentPage": {
+      "type": "integer",
+      "description": "Het huidige paginanummer",
+      "examples": [
+        1
+      ]
+    },
+    "pageSize": {
+      "type": "integer",
+      "description": "De grootte van de pagina (aantal items per pagina)",
+      "examples": [
+        25
+      ]
+    },
+    "totalItems": {
+      "type": "integer",
+      "description": "Het totale aantal beschikbare items",
+      "examples": [
+        250
+      ]
+    },
+    "totalPages": {
+      "type": "integer",
+      "description": "Het totale aantal beschikbare pagina's",
+      "examples": [
+        10
+      ]
+    }
+  }
+}

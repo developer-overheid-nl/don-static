@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/413",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/413",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/413",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/413"
+  ],
+  "properties": {
+    "instance": {
+      "type": "string"
+    },
+    "status": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "type": "https://content.omgevingswet.overheid.nl/fout/id/concept/knooppunt/contentscanning/bestand-te-groot",
+      "title": "Te groot",
+      "status": 413,
+      "detail": "Het bestand 'test.png' is te groot. Voeg een kleiner bestand toe (max. 250 MB).",
+      "instance": "539f14d69f2fba81"
+    }
+  ],
+  "required": [
+    "type",
+    "title",
+    "status"
+  ]
+}

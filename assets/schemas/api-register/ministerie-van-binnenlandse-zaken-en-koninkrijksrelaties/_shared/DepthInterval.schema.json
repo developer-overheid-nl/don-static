@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/_shared/depthinterval",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/gm/gmw/v1/openapi#/components/schemas/VerticalPositionRange",
+    "https://publiek.broservices.nl/sr/bhrg/v3/openapi#/components/schemas/DepthInterval",
+    "https://publiek.broservices.nl/sr/bhrgt/v2/openapi#/components/schemas/DepthInterval",
+    "https://publiek.broservices.nl/sr/bhrp/v2/openapi#/components/schemas/VerticalInterval",
+    "https://publiek.broservices.nl/sr/sfr/v2/openapi#/components/schemas/DepthInterval"
+  ],
+  "properties": {
+    "endDepth": {
+      "type": "number"
+    },
+    "startDepth": {
+      "type": "number"
+    }
+  },
+  "type": "object"
+}

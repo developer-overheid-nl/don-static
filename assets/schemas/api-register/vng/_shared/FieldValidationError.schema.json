@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/vng/_shared/fieldvalidationerror",
+  "x-derived-from": [
+    "https://autorisaties-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/FieldValidationError",
+    "https://besluiten-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/FieldValidationError",
+    "https://notificaties-api.vng.cloud/api/v1/schema/openapi.json#/components/schemas/FieldValidationError"
+  ],
+  "required": [
+    "name",
+    "code",
+    "reason"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "title": "Code",
+      "description": "Systeemcode die het type fout aangeeft",
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "title": "Name",
+      "description": "Naam van het veld met ongeldige gegevens",
+      "type": "string",
+      "minLength": 1
+    },
+    "reason": {
+      "title": "Reason",
+      "description": "Uitleg wat er precies fout is met de gegevens",
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

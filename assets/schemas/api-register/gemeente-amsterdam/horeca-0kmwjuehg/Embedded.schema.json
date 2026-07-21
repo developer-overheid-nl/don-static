@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/horeca-0kmwjuehg/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/horeca/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "exploitatievergunning": {
+      "type": "array",
+      "items": {
+        "$ref": "./Horecaexploitatievergunning.schema.json"
+      }
+    }
+  }
+}

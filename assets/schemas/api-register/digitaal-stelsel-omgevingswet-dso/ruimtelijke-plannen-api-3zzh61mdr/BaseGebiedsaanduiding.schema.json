@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/basegebiedsaanduiding",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/BaseGebiedsaanduiding"
+  ],
+  "required": [
+    "_links",
+    "artikelnummers",
+    "bestemmingsfuncties",
+    "gebiedsaanduidinggroep",
+    "id",
+    "labelInfo",
+    "naam",
+    "styleId",
+    "verwijzingNaarTekst"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./GebiedsaanduidingLinks.schema.json"
+    },
+    "artikelnummers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "33.3"
+        ]
+      }
+    },
+    "bestemmingsfuncties": {
+      "type": "array",
+      "description": "Beschikbaar in IMRO2006",
+      "items": {
+        "$ref": "./Item24.schema.json"
+      }
+    },
+    "gebiedsaanduidinggroep": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Beschikbaar in IMRO2008 en IMRO2012",
+      "examples": [
+        "veiligheidszone"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "NL.IMRO.0200.GP2213788321-00"
+      ]
+    },
+    "labelInfo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "naam"
+      ]
+    },
+    "naam": {
+      "type": "string",
+      "examples": [
+        "veiligheidszone - bevi"
+      ]
+    },
+    "styleId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "dubbelbestemming_waterstaat"
+      ]
+    },
+    "verwijzingNaarTekst": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "https://www.ruimtelijkeplannen.nl/historic/NL.IMRO.0200.bp1002-ont1_2019.01.10_14.54.32/r_NL.IMRO.0200.bp1002-ont1_3.33.html#_33.3_veiligheidszone-bevi"
+        ]
+      }
+    }
+  }
+}

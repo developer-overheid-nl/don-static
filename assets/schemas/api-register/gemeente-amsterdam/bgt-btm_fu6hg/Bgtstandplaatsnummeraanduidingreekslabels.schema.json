@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bgt-btm_fu6hg/bgtstandplaatsnummeraanduidingreekslabels",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bgt/openapi.json#/components/schemas/Bgtstandplaatsnummeraanduidingreekslabels"
+  ],
+  "type": "object",
+  "description": "Naam en plaatsingspunten van bij een standplaats horende nummeraanduidingreeks- Groep: - Code: -",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `standplaatsnummeraanduidingreekslabels._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BgtstandplaatsnummeraanduidingreekslabelsLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "adres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Adres standplaats uitgeschreven",
+      "description": "Het uitgeschreven adres behorend bij de standplaats"
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "geometriePunt": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "hoortBijBagStandplaats": {
+      "type": "string",
+      "title": "Standplaats nummeraanduiding reekslabel",
+      "description": "Standplaats nummeraanduiding reekslabel, zoals is toegekend in de BAG-registratie"
+    },
+    "labelHoek": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "De rotatie van het label bij visualisatie, met de klok mee ten opzichte van de normale tekstrichting"
+    },
+    "nummeraanduidingreeks": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nummeraanduidingreeks standplaats",
+      "description": "De reeks nummeraanduidingen afgeleid uit de nummeraanduidingen behorend bij de standplaats ten behoeve van visualisatie"
+    }
+  },
+  "required": [
+    "_links",
+    "hoortBijBagStandplaats"
+  ]
+}

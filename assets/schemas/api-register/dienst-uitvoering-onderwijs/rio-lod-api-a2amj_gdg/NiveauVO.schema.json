@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/niveauvo",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/NiveauVO"
+  ],
+  "type": "string",
+  "description": "Een unieke code voor het opleidingsniveau ten behoeve van het Voortgezet Onderwijs.",
+  "enum": [
+    "VO-PRO",
+    "VO-VMBO-BB",
+    "VO-VMBO-KB",
+    "VO-VMBO-GL",
+    "VO-VMBO-TL",
+    "VO-HAVO",
+    "VO-VWO",
+    "VO-VBO"
+  ]
+}

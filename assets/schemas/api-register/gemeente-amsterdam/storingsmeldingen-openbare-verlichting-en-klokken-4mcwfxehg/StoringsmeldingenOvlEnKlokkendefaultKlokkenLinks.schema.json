@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/storingsmeldingen-openbare-verlichting-en-klokken-4mcwfxehg/storingsmeldingenovlenklokkendefaultklokkenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/storingsmeldingen_ovl_en_klokken/openapi.json#/components/schemas/StoringsmeldingenOvlEnKlokkendefaultKlokkenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `klokken._links` field. It contains all relationships with objects.",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./StoringsmeldingenOvlEnKlokkenklokkenLink.schema.json"
+    }
+  },
+  "required": [
+    "schema",
+    "self"
+  ]
+}

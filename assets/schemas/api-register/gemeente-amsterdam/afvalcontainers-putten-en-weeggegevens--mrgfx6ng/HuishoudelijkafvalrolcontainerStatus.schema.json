@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/huishoudelijkafvalrolcontainerstatus",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/Huishoudelijkafvalrolcontainer_status"
+  ],
+  "type": "object",
+  "description": "Deze tabel bevat informatie over de status historie van de rolcontainers.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `rolcontainerStatus._links` field. It contains all relationships with objects.",
+      "properties": {
+        "rolcontainer": {
+          "$ref": "./HuishoudelijkafvalrolcontainerLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HuishoudelijkafvalrolcontainerStatusLink.schema.json"
+        }
+      },
+      "required": [
+        "rolcontainer",
+        "schema",
+        "self"
+      ]
+    },
+    "aanmaakdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Rolconatiner aanmaakdatum",
+      "description": "Datum tijd waarop de rolcontainer in het systeem is aangemaakt"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "ID status record",
+      "description": "Unieke aanduiding van een status record"
+    },
+    "rolcontainerId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Rolcontainer ID",
+      "description": "Unieke aanduiding van een rolcontainer",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Rolcontainer status",
+      "description": "Dit attribuut geeft de vorige status van een rolcontainer aan. De volgende statussen zijn mogelijk.  Active, inactive en blocked."
+    },
+    "totDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De datum en tijd waarop de satus van een rolcontiner eindigt."
+    },
+    "vanafDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De datum en tijd waarop de status van een rolcontiner begint."
+    },
+    "wijzigingsdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Rolcontainer wijzigingsdatum",
+      "description": "Datum tijd waarop de rolcontainer in het systeem voor het laatst is aangepast"
+    }
+  },
+  "required": [
+    "_links",
+    "id",
+    "rolcontainerId"
+  ]
+}

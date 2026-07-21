@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/basemaatvoering",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/BaseMaatvoering"
+  ],
+  "required": [
+    "_links",
+    "id",
+    "naam",
+    "omvang",
+    "styleId",
+    "verwijzingNaarTekst"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./FunctieaanduidingLinks.schema.json"
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "NL.IMRO.1a169935c6634c5aad4276a9cc275a96"
+      ]
+    },
+    "naam": {
+      "type": "string",
+      "examples": [
+        "maximum goothoogte (m), maximum bouwhoogte (m)"
+      ]
+    },
+    "omvang": {
+      "type": "array",
+      "items": {
+        "$ref": "./Item32.schema.json"
+      }
+    },
+    "styleId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "dubbelbestemming_waterstaat"
+      ]
+    },
+    "verwijzingNaarTekst": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "https://ruimtelijkeplannen.nl/documents/NL.IMRO.0200.ov1015-vas1/b_NL.IMRO.0200.ov1015-vas1.pdf"
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoekenoverzicht-raadplegen-xkb56_gdg/verzoekenoverzichtresultaatverzoek",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/VerzoekenoverzichtResultaatVerzoek"
+  ],
+  "description": "Een verzoek item uit het verzoekenoverzicht. Bevat basisgegevens van een verzoek.\n",
+  "required": [
+    "verzoeknummer",
+    "volgnummer"
+  ],
+  "properties": {
+    "verzoeknummer": {
+      "type": "string"
+    },
+    "volgnummer": {
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "examples": [
+    {
+      "verzoeknummer": "2017010100001",
+      "volgnummer": "000"
+    }
+  ]
+}

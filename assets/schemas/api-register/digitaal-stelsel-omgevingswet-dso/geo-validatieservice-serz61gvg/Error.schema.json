@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/geo-validatieservice-serz61gvg/error",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167767/omgevingsdocumenten-geovalidatie-v1.json#/components/schemas/Error"
+  ],
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "status": {
+      "type": "integer"
+    },
+    "timestamp": {
+      "type": "string"
+    }
+  },
+  "description": "Foutmelding"
+}

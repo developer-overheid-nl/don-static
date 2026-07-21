@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/lijstwijzigingenomgevingswaarderefs",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/LijstWijzigingenOmgevingswaardeRefs"
+  ],
+  "title": "LijstWijzigingenOmgevingswaardeRefs",
+  "type": "object",
+  "properties": {
+    "toegevoegd": {
+      "title": "OmgevingswaardeRefs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.omgevingswaarde.20240101"
+        ]
+      }
+    },
+    "verwijderd": {
+      "title": "OmgevingswaardeRefs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.omgevingswaarde.20240101"
+        ]
+      }
+    }
+  }
+}

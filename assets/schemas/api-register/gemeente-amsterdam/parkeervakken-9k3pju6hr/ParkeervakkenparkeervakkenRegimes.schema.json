@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/parkeervakken-9k3pju6hr/parkeervakkenparkeervakkenregimes",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/parkeervakken/openapi.json#/components/schemas/Parkeervakkenparkeervakken_regimes"
+  ],
+  "type": "object",
+  "description": "Auto-generated table for nested field: parkeervakken.regimes",
+  "properties": {
+    "aantal": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Schatting van het aantal geparkeerde voertuigen dat in deze geometrie zou passen"
+    },
+    "beginDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Begindatum van TVM"
+    },
+    "beginTijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "time",
+      "description": "Begin van venstertijd of TVM"
+    },
+    "bord": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Toelichting bij type parkeervak"
+    },
+    "dagen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "Reeks weekdagen waarop een venstertijd van toepassing is"
+    },
+    "eType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type parkeervak"
+    },
+    "eTypeDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van het type parkeervak"
+    },
+    "eindDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Einddatum van TVM"
+    },
+    "eindTijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "time",
+      "description": "Eind van venstertijd of TVM"
+    },
+    "kenteken": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Indien het een gehandicaptenparkeerplaats betreft: het kenteken van het voertuig dat bestemd is voor dit parkeervak"
+    },
+    "opmerking": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Toelichting bij venstertijd of TVM"
+    },
+    "soort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geeft aan of het een fiscaal, niet-fiscaal of mulder parkeerplaats betreft"
+    },
+    "typeUitzondering": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type van de uitzondering die van toepassing is op het parkeervak: TVM of Venstertijden"
+    }
+  }
+}

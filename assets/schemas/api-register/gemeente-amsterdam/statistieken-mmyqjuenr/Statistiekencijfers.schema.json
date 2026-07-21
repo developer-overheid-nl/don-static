@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/statistieken-mmyqjuenr/statistiekencijfers",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/statistieken/openapi.json#/components/schemas/Statistiekencijfers"
+  ],
+  "type": "object",
+  "description": "Alle cijfers, gerelateerd aan de bijhorende indicatoren en dimensies",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `cijfers._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./StatistiekencijfersLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "begindatum": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Begindatum waarop de tijddimensie is begonnen"
+    },
+    "einddatum": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Einddatum waarop de tijddimensie is geëindigd"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke identificatie van het cijfer i.c.m. de bijhorende indicator en dimensies"
+    },
+    "indicator": {
+      "type": "string",
+      "description": "Naam van de indicator waarop het cijfer betrekking heeft"
+    },
+    "ruimtelijkeDimensieCode": {
+      "type": "string",
+      "description": "Unieke code van de ruimtelijke indeling binnen hetzelfde type en datum"
+    },
+    "ruimtelijkeDimensieDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de ruimtelijke indeling van kracht is geworden"
+    },
+    "ruimtelijkeDimensieNaam": {
+      "type": "string",
+      "description": "Unieke naam van de ruimtelijke indeling binnen hetzelfde type en datum"
+    },
+    "ruimtelijkeDimensieType": {
+      "type": "string",
+      "description": "Type ruimtelijke indeling"
+    },
+    "temporeleDimensieType": {
+      "type": "string",
+      "description": "Type van de tijddimensie. Dit kan een vaste peildatum zijn of een periode"
+    },
+    "waarde": {
+      "type": "number",
+      "format": "double",
+      "description": "Waarde van het cijfer met het aantal decimalen, zoals vastgelegd bij de indicator"
+    }
+  },
+  "required": [
+    "_links",
+    "begindatum",
+    "einddatum",
+    "id",
+    "indicator",
+    "ruimtelijkeDimensieCode",
+    "ruimtelijkeDimensieNaam",
+    "ruimtelijkeDimensieType",
+    "temporeleDimensieType",
+    "waarde"
+  ]
+}

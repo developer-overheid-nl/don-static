@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/kaderrichtlijn-mariene-strategie-nederland-jp9mtx3nr/featurejsonbevrorenmonitoringsdata",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/kaderrichtlijn-mariene-strategie/ogc/v1/openapi.json#/components/schemas/featureJSON_bevroren_monitoringsdata"
+  ],
+  "properties": {
+    "id": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "links": {
+      "items": {
+        "$ref": "../_shared/Link.schema.json"
+      },
+      "type": "array"
+    },
+    "properties": {
+      "$ref": "./PropertiesGeoJSONBevrorenMonitoringsdata.schema.json"
+    },
+    "type": {
+      "enum": [
+        "Feature"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "properties",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/_shared/tilematrixlimits",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top10nl/ogc/v1/openapi.json#/components/schemas/tileMatrixLimits",
+    "https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/openapi.json#/components/schemas/tileMatrixLimits",
+    "https://api.pdok.nl/kadaster/brk-kadastrale-kaart/ogc/v1/openapi.json#/components/schemas/tileMatrixLimits",
+    "https://api.pdok.nl/kadaster/brt-achtergrondkaart/ogc/v1/openapi.json#/components/schemas/tileMatrixLimits",
+    "https://api.pdok.nl/lv/bag/ogc/v1-demo/openapi.json#/components/schemas/tileMatrixLimits",
+    "https://api.pdok.nl/lv/bag/ogc/v1/openapi.json#/components/schemas/tileMatrixLimits",
+    "https://api.pdok.nl/lv/bgt/ogc/v1/openapi.json#/components/schemas/tileMatrixLimits",
+    "https://api.pdok.nl/omgevingswet/omgevingsdocumenten/ogc/v2/openapi.json#/components/schemas/tileMatrixLimits"
+  ],
+  "description": "The limits for an individual tile matrix of a TileSet's TileMatrixSet, as defined in the OGC 2D TileMatrixSet and TileSet Metadata Standard",
+  "properties": {
+    "maxTileCol": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "maxTileRow": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "minTileCol": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "minTileRow": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "tileMatrix": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "tileMatrix",
+    "minTileRow",
+    "maxTileRow",
+    "minTileCol",
+    "maxTileCol"
+  ],
+  "type": "object"
+}

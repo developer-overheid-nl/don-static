@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoekconfiguratie-opvragen-ap8celgvg/notificatieversieconfiguratie",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/232881/verzoekconfiguratie-opvragen-v1.json#/components/schemas/NotificatieversieConfiguratie"
+  ],
+  "required": [
+    "oin",
+    "versie"
+  ],
+  "properties": {
+    "oin": {
+      "type": "string",
+      "pattern": "^\\d{20}$",
+      "description": "het OIN van het bevoegd gezag"
+    },
+    "versie": {
+      "type": "string",
+      "description": "de notificatieversie die wordt ondersteund.",
+      "examples": [
+        "6"
+      ]
+    }
+  }
+}

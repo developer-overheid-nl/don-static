@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/benkagg-lqtl1u6hg/benkaggbrkkaartlaagerfpachtuitgevers",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/benkagg/openapi.json#/components/schemas/Benkaggbrkkaartlaagerfpachtuitgevers"
+  ],
+  "type": "object",
+  "description": "BRK-tabel speciaal samengesteld voor de kaartlaag erfpachtuitgevers",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `brkkaartlaagerfpachtuitgevers._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BenkaggbrkkaartlaagerfpachtuitgeversLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "erfpachtUitgegevenDoor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Uitgegeven door",
+      "description": "Categorie van de erfpachtuitgever. 'Gemeente Amsterdam' of 'Overige'"
+    },
+    "geometrieVlak": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding van het record"
+    },
+    "kadastraalobjectId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "De unieke aanduiding van een Kadastraal object, inclusief volgnummer"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

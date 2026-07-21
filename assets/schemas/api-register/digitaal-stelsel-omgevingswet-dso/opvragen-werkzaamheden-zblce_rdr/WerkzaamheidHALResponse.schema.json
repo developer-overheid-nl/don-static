@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/opvragen-werkzaamheden-zblce_rdr/werkzaamheidhalresponse",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/239140/toepasbareregels-opvragenwerkzaamheden-v1.json#/components/schemas/WerkzaamheidHALResponse"
+  ],
+  "description": "Werkzaamheid met HAL links",
+  "allOf": [
+    {
+      "description": "Werkzaamheid gegevens",
+      "required": [
+        "urn"
+      ],
+      "properties": {
+        "urn": {
+          "description": "Urn van de werkzaamheid",
+          "type": "string",
+          "pattern": "^\\w{1,100}$",
+          "examples": [
+            "BoomKappen"
+          ]
+        }
+      }
+    },
+    {
+      "required": [
+        "_links"
+      ],
+      "properties": {
+        "_links": {
+          "required": [
+            "versies"
+          ],
+          "properties": {
+            "versies": {
+              "description": "HAL link",
+              "required": [
+                "href"
+              ],
+              "properties": {
+                "href": {
+                  "description": "URI",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

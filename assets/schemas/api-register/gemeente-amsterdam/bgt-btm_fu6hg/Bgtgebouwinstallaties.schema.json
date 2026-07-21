@@ -1,0 +1,290 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bgt-btm_fu6hg/bgtgebouwinstallaties",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bgt/openapi.json#/components/schemas/Bgtgebouwinstallaties"
+  ],
+  "type": "object",
+  "description": "Een component aan de buitenzijde van een gebouw, die het aanzicht van het gebouw mede bepaalt. - Groep: kunstwerk-bouwwerk - Code: 180",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `gebouwinstallaties._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BgtGebouwinstallatiesLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "bgtStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object status",
+      "description": "De status gekoppeld aan het levenscyclus van een geo-object"
+    },
+    "bgtType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gebouwinstallatie type",
+      "description": "Specificatie van het soort gebouwinstallatie. Bij Gebouwinstallatie is dit altijd 'niet-bgt'"
+    },
+    "bronhouder": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object bronhouder code",
+      "description": "De bronhouderscode van het object"
+    },
+    "datumActueelTot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Actueel tot datum",
+      "description": "Einddatum van de cyclus, eventueel in combinatie met het kenmerk Status"
+    },
+    "eindRegistratie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object eindregistratie datumtijd",
+      "description": "Eind van de periode waarop deze instantie van het object geldig is bij de bronhouder. Wanneer deze waarde niet is ingevuld is de instantie nog geldig"
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "geometrieVlak": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "Uniek identificerend kenmerk voor het object dat onveranderlijk is zolang het object bestaat"
+    },
+    "inOnderzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "In onderzoek indicatie",
+      "description": "Een aanduiding waarmee wordt aangegeven dat een onderzoek wordt uitgevoerd naar de juistheid van een of meer gegevens van het betreffende object ('J'/'N')"
+    },
+    "lvPublicatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object landelijke voorziening publicatie datumtijd",
+      "description": "Tijdstip waarop deze instantie van het object is opgenomen in de landelijke Voorziening"
+    },
+    "objectBegintijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Object begindatum",
+      "description": "Datum waar op het object bij de bronhouder is ontstaan"
+    },
+    "objectEindtijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Object einddatum",
+      "description": "Datum waarop het object bij de bronhouder niet meer geldig is"
+    },
+    "plusStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object status plus",
+      "description": "De status gekoppeld aan de levenscyclus van een geo-object, indien dit een uitbreiding van de populatie betreft"
+    },
+    "plusType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gebouwinstallatie plus type",
+      "description": "Specificatie van het soort gebouwinstallatie, indien dit een IMGeo uitbreiding van de populatie betreft"
+    },
+    "relatieveHoogteligging": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object relatieve hoogte ligging",
+      "description": "Aanduiding voor de relatieve hoogte van het object"
+    },
+    "tijdstipRegistratie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object registratie datumtijd",
+      "description": "Tijdstip waarop deze instantie van het object is opgenomen door de bronhouder"
+    },
+    "volgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object volgnummer",
+      "description": "Uniek volgnummer van de toestand van het object"
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie"
+  ]
+}

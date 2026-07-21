@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/touringcars-lkbffxehr/touringcarshaltes",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/touringcars/openapi.json#/components/schemas/Touringcarshaltes"
+  ],
+  "type": "object",
+  "description": "haltes",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `haltes._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./TouringcarshaltesLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "bijzonderheden": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geometry": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    },
+    "omschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Naam halte"
+    },
+    "plaatsen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aantallen busplaatsen of coaches"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

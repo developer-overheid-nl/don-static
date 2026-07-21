@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/hoofdwegen-ghf_fxehg/hoofdroutesuroutes",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/hoofdroutes/openapi.json#/components/schemas/Hoofdroutesu_routes"
+  ],
+  "type": "object",
+  "description": "uRoutes",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `uRoutes._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HoofdroutesuRoutesLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "geometry": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "MultiLineString"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "route": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

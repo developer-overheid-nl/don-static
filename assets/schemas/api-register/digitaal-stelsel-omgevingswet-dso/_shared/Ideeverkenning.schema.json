@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/ideeverkenning",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/Ideeverkenning",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/Ideeverkenning"
+  ],
+  "type": "object",
+  "required": [
+    "verzoekMetadata",
+    "bevoegdGezag",
+    "locatie",
+    "ideeverkenning",
+    "contactgegevens"
+  ],
+  "properties": {
+    "bevoegdGezag": {
+      "$ref": "../verzoeken-indienen-bgk5e_rdg/BevoegdGezag.schema.json"
+    },
+    "contactgegevens": {
+      "$ref": "./Contactgegevens.schema.json"
+    },
+    "document": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": {
+        "$ref": "./Document.schema.json"
+      }
+    },
+    "ideeverkenning": {
+      "$ref": "./Ideeverkenning2.schema.json"
+    },
+    "locatie": {
+      "$ref": "../verzoeken-indienen-bgk5e_rdg/Locatie.schema.json"
+    },
+    "rolaanduiding": {
+      "$ref": "./Rolaanduiding.schema.json"
+    },
+    "verzoekMetadata": {
+      "$ref": "./IdeeverkenningMetadata.schema.json"
+    }
+  }
+}

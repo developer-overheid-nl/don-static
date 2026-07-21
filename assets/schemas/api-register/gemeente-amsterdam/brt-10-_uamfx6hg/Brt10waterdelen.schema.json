@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brt-10-_uamfx6hg/brt10waterdelen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brt10/openapi.json#/components/schemas/Brt10waterdelen"
+  ],
+  "type": "object",
+  "description": "Kleinste functioneel onafhankelijk stukje water met gelijkblijvende homogene eigenschappen en relaties dat er binnen een water wordt onderscheiden.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `waterdelen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./Brt10waterdelenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "breedteklasse": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Water breedte klasse code",
+      "description": "De breedte van het water ingedeeld in klassen"
+    },
+    "bronactualiteit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Bron actualiteit datum",
+      "description": "De actualiteit van de gebruikte bron"
+    },
+    "bronbeschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bron beschrijving",
+      "description": "De beschrijving van de gebruikte bron"
+    },
+    "bronnauwkeurigheid": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Bron nauwkeurigheid meters",
+      "description": "De nauwkeurigheid van de gebruikte bron in meters"
+    },
+    "brontype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bron type",
+      "description": "Het type van de gebruikte bron"
+    },
+    "brugnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Brug naam",
+      "description": "De naam van een brug"
+    },
+    "functie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Water functie omschrijving",
+      "description": "Omschrijving van de functie van het water"
+    },
+    "fysiekVoorkomen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object relatieve positie",
+      "description": "De plaats waar het object zich bevindt t.o.v. andere constructies"
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "geometrieLijn": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "description": "Point in 3D space",
+                "minItems": 2,
+                "maxItems": 3,
+                "items": {
+                  "type": "number"
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "LineString"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "geometriePunt": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "geometrieVlak": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "getijdeInvloed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Waterdeel getijdeinvloed indicatie",
+      "description": "Aanduiding of het water getijdeinvloed heeft"
+    },
+    "hoofdafwatering": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Hoofdafwatering indicatie",
+      "description": "Aanduiding of het water deel uitmaakt van het hoofdafwateringspatroon (het stelsel van waterlopen in gebruik als primaire afvoermogelijkheid van overtollig oppervlaktewater c.q. aanvoermogelijkheid bij een tekort aan oppervlaktewater, plus bijbehorende kunstwerken)"
+    },
+    "hoogteniveau": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object hoogteniveau",
+      "description": "Het hoogteniveau van het object"
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "De unieke identiteit van het geo-object"
+    },
+    "isBagNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Naam BAG geverifieerd indicatie",
+      "description": "Aanduiding of de naam geverifieerd is met de BAG"
+    },
+    "mutatietype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object mutatie type",
+      "description": "Het soort mutatie dat een object als laatste ondergaan heeft"
+    },
+    "naamFries": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Water Friese naam",
+      "description": "De Friese naam van het water"
+    },
+    "naamNl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Water Nederlandse naam",
+      "description": "De Nederlandse naam van het water"
+    },
+    "naamOfficieel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Water officiële naam",
+      "description": "De officiële naam van het water"
+    },
+    "objectBeginTijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Object geldigheid begintijd",
+      "description": "Tijdstip waarop het object ontstaan is"
+    },
+    "sluisnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Sluis naam",
+      "description": "De naam van de sluis"
+    },
+    "tdnCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object TOP10vector code",
+      "description": "Code die het object in TOP10vector had"
+    },
+    "tijdstipRegistratie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Object registratie tijdstip",
+      "description": "Tijdstip waarop een versie van het object ontstaan is"
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Water type",
+      "description": "Het type water"
+    },
+    "vaarwegklasse": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Vaarweg klasse code",
+      "description": "CEMT klasses van vaarwegen, welke gebaseerd zijn op de afmetingen en laadvermogen van standaardschepen en duwstellen voor de binnen- en riviervaart in West-Europa. De klasses I t/m VII zijn in 1992 bepaald door de Conferentie van Europese Ministers van Verkeer (C.E.M.T.). Naderhand is klasse 0 (vaarwegen kleiner dan die van klasse I) daaraan toegevoegd. Klasse VII komt in Nederland niet voor"
+    },
+    "visualisatieCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object visualisatie code",
+      "description": "Code voor het visualiseren van het object"
+    },
+    "voorkomen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Waterdeel voorkomen indicatie",
+      "description": "Aanduiding dat er riet op het waterdeel voorkomt"
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie"
+  ]
+}

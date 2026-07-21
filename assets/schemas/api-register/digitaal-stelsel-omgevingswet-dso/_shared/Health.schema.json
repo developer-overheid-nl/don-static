@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/health",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/Health",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/Health",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json#/components/schemas/Health",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/Health",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/232859/verzoekconfiguratie-beheren-v1.json#/components/schemas/Health",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/232881/verzoekconfiguratie-opvragen-v1.json#/components/schemas/Health",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/Health",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/Health"
+  ],
+  "description": "Health",
+  "properties": {
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "UP",
+        "DOWN",
+        "OUT_OF_SERVICE"
+      ]
+    }
+  },
+  "examples": [
+    {
+      "status": "UP",
+      "groups": [
+        "downstreamServices",
+        "self"
+      ]
+    }
+  ]
+}

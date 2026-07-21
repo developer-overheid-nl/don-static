@@ -1,0 +1,322 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/ecologie-ohh_1xenr/ecologieinspectiesfaunavoorzieningen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/ecologie/openapi.json#/components/schemas/Ecologieinspecties_faunavoorzieningen"
+  ],
+  "type": "object",
+  "description": "Deze tabel bevat de resultaten van inspecties aan faunavoorzieningen. Deze objecten zijn terug te vinden in de andere ecologie tabellen faunavoorzieningen, faunameubilair, faunaverblijftplaatsen en waterobjecten.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `inspectiesFaunavoorzieningen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./EcologieinspectiesFaunavoorzieningenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aanwezigheidLandhabitat": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Geeft aan of in de voorziening landhabitat aanwezig is."
+    },
+    "aanwezigheidZwerfvuil": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Mate waarin zwerfvuil is aangetroffen."
+    },
+    "acceptatieEcomonitoring": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Resultaat van inspectiebeoordeling door controleur."
+    },
+    "afleidingAanwezig": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Afleiding vanaf eventueel gevaar in de nabijheid van de voorziening."
+    },
+    "afstandTotWinterbiotoop": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Afstand van de voorziening tot een winterbiotoop."
+    },
+    "datum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de inspectie is uitgevoerd."
+    },
+    "datumToezicht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de toezichthouder de inspectie heeft gecontroleerd."
+    },
+    "dikteSliblaag": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Waargenomen dikte van de sliblaag."
+    },
+    "faunameubilairId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Faunameubilair ID",
+      "description": "ID van het faunameubilair."
+    },
+    "faunaverblijfplaatsId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Faunaverblijfplaats ID",
+      "description": "ID van de faunaverblijfplaats."
+    },
+    "faunavoorzieningId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Faunavoorziening ID",
+      "description": "ID van de faunavoorziening."
+    },
+    "faunavoorzieningstype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Type faunavoorziening."
+    },
+    "geleidingAanwezig": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Geleiding naar en vanaf de voorziening."
+    },
+    "geplandeEinddatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de inspectieperiode eindigt."
+    },
+    "geplandeStartdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Datum waarop de inspectieperiode start."
+    },
+    "hellinggraadPoel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Mate van helling van de oever."
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek identificerend kenmerk van een inspectieopdracht."
+    },
+    "importId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Import ID",
+      "description": "ID uit oude beheerindeling."
+    },
+    "inspectieTeHerstellen": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Onderde(e)l(en) van de inspectie moeten worden hersteld."
+    },
+    "kpiTotaalscore": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "KPI Totaalscore",
+      "description": "Overall inspectiescore van de faunavoorziening."
+    },
+    "kpiWaardering": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "KPI Waardering",
+      "description": "Overall kwaliteitsscore van de faunavoorziening."
+    },
+    "mateVegetatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Mate waarin vegetatie aanwezig is."
+    },
+    "memoBeheerobject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Gedetailleerde typering van de faunavoorziening."
+    },
+    "mutatieDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De datum waarop de digitale gegevens van deze inspectie voor het laatst gewijzigd zijn."
+    },
+    "nietTeInspecteren": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Geeft aan dat het niet mogelijk was de voorziening te inspecteren."
+    },
+    "oevervegetatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Mate waarin oevervegetatie aanwezig is."
+    },
+    "overgroeiing": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Mate waarin de faunavoorziening is overgroeid."
+    },
+    "poeldiepte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Waargenomen diepte van de faunavoorziening."
+    },
+    "poeldoorsnede": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Waargenomen doorsnee van de faunavoorziening."
+    },
+    "revisie": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Volgnummer van de herziening."
+    },
+    "statusInspectie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Status van de inspectieopdracht."
+    },
+    "technischeStaat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Waargenomen technische staat van de faunavoorziening."
+    },
+    "timingInspectie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Tijdstatus van het inspectiemoment; verleden, actueel, toekomst."
+    },
+    "toegankelijkheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Waargenomen toegankelijkheid van de faunavoorziening."
+    },
+    "verbossing": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Mate waarin de directe omgeving van de faunavoorziening struiken, en/of bomen en boomvormers bevat."
+    },
+    "waterAanwezig": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Geeft aan of in de faunavoorziening water aanwezig is."
+    },
+    "waterobjectId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Waterobject ID",
+      "description": "ID van het waterobject"
+    },
+    "waterplantenPercentage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Mate waarin waterplanten aanwezig zijn in de faunavoorziening."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

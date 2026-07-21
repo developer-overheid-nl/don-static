@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/stedelijk-water-riolering-nndnox3nr/propertiesgeojsonbeheerput",
+  "x-derived-from": [
+    "https://api.pdok.nl/rioned/beheer-stedelijk-watersystemen-gwsw/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_beheerput"
+  ],
+  "properties": {
+    "aantal_ie_bedrijven": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_ie_recreatie": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_woningen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "afvoerend_oppervlak": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "begindatum": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bergend_oppervlak": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "breedte_put": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "dataset": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "datum_inspectie": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "datum_inwinning_maaiveld": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "datum_reiniging": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "einddatum": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fundering": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hoogte_put": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lengte_put": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "maaiveldhoogte": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "materiaal_put": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stelsel": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stelseltype": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "uri": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vorm_put": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wanddikte": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "wijze_inwinning_maaiveld": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

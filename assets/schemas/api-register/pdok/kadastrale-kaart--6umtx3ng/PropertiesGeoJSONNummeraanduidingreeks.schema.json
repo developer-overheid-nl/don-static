@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/kadastrale-kaart--6umtx3ng/propertiesgeojsonnummeraanduidingreeks",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/brk-kadastrale-kaart/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_nummeraanduidingreeks"
+  ],
+  "properties": {
+    "bag_vbo_hoogste_huisnummer": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bag_vbo_laagste_huisnummer": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bebouwing_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hoek": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "mshoek": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "tekst": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

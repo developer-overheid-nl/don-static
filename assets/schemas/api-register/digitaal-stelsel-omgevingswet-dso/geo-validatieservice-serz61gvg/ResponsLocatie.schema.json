@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/geo-validatieservice-serz61gvg/responslocatie",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167767/omgevingsdocumenten-geovalidatie-v1.json#/components/schemas/ResponsLocatie"
+  ],
+  "type": "string",
+  "description": "Naar deze HTTPS URL wordt het Rapport gestuurd wanneer verwerken van de Geovalidatieopdracht klaar is.",
+  "format": "url",
+  "examples": [
+    "https://gemeente.nl/api/rapport"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/erkendeorganisatietype",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/ErkendeOrganisatietype"
+  ],
+  "type": "string",
+  "description": "Geeft aan wat voor soort erkenning het betreft.",
+  "enum": [
+    "BEVOEGD_GEZAG",
+    "ERKENDE_ONDERWIJSINSTELLING",
+    "ERKENDE_ONDERWIJSONDERSTEUNER",
+    "ERKENDE_SAMENWERKING",
+    "ERKENDE_VESTIGING"
+  ]
+}

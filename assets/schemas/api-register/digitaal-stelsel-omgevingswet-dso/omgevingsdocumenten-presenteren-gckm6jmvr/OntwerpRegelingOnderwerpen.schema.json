@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/ontwerpregelingonderwerpen",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/OntwerpRegelingOnderwerpen"
+  ],
+  "title": "OntwerpRegelingOnderwerpen",
+  "required": [
+    "_links",
+    "technischId"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./OntwerpRegelingOnderwerpenLinks.schema.json"
+    },
+    "activiteiten": {
+      "title": "OntwerpActiviteitOnderwerpen",
+      "type": "array",
+      "items": {
+        "title": "OntwerpActiviteitOnderwerp",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./ActiviteitOnderwerp.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./ActiviteitOnderwerpDelta.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "beoogdTijdelijkDeelVan": {
+      "type": "string"
+    },
+    "beoogdeOpvolgerVan": {
+      "type": "string"
+    },
+    "gebiedsaanwijzingen": {
+      "title": "OntwerpGebiedsaanwijzingOnderwerpen",
+      "type": "array",
+      "items": {
+        "title": "OntwerpGebiedsaanwijzingOnderwerp",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./GebiedsaanwijzingOnderwerp.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./GebiedsaanwijzingOnderwerpDelta.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "technischId": {
+      "type": "string"
+    },
+    "themas": {
+      "title": "OntwerpThemasOnderwerpen",
+      "type": "array",
+      "items": {
+        "title": "OntwerpThemaOnderwerp",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./ThemaOnderwerp.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "_delta": {
+                "$ref": "./ThemaOnderwerpDelta.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

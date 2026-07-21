@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/locatieserver-dh0nob3hr/error",
+  "x-derived-from": [
+    "https://api.pdok.nl/bzk/locatieserver/search/v3_1/openapi.json#/components/schemas/error"
+  ],
+  "properties": {
+    "code": {
+      "type": "integer",
+      "examples": [
+        400
+      ]
+    },
+    "metadata": {
+      "items": {
+        "type": "string",
+        "examples": [
+          "error-class"
+        ]
+      },
+      "type": "array"
+    },
+    "msg": {
+      "type": "string",
+      "examples": [
+        "undefined field"
+      ]
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/typegebiedsaanwijzingdeltawijzigingen",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/TypeGebiedsaanwijzingDeltaWijzigingen"
+  ],
+  "title": "TypeGebiedsaanwijzingDeltaWijzigingen",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "examples": [
+        "http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Bodem"
+      ]
+    },
+    "waarde": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "bodem"
+      ]
+    }
+  },
+  "description": "Bevat wijzigingen ten opzichte van de originele annotatie. Velden die niet aanwezig zijn, zijn ongewijzigd. \nWaarde is `nullable`: indien aanwezig zonder waarde (`null`) betekent dat de veld aanwezig was, maar in renvooi is verwijderd.\n"
+}

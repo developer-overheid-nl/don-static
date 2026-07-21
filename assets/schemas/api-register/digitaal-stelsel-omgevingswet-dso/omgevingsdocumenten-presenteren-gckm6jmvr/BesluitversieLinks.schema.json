@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/besluitversielinks",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/BesluitversieLinks"
+  ],
+  "title": "BesluitversieLinks",
+  "required": [
+    "self"
+  ],
+  "type": "object",
+  "properties": {
+    "annotaties": {
+      "$ref": "./HalLink.schema.json"
+    },
+    "consolideertRegelingversie": {
+      "$ref": "./HalLink.schema.json"
+    },
+    "documentstructuur": {
+      "$ref": "./HalLink.schema.json"
+    },
+    "self": {
+      "$ref": "./HalLink.schema.json"
+    },
+    "wijzigtRegelingversie": {
+      "$ref": "./HalLink.schema.json"
+    }
+  }
+}

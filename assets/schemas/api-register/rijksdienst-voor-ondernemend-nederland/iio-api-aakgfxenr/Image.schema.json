@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/rijksdienst-voor-ondernemend-nederland/iio-api-aakgfxenr/image",
+  "x-derived-from": [
+    "https://internationaal.ondernemen.overheid.nl/api/iio/v1/openapi.yaml#/components/schemas/Image"
+  ],
+  "description": "An image associated this item.",
+  "properties": {
+    "alt-text": {
+      "description": "Alternative text for the image, can be null.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "A beautiful sunset over the mountains"
+      ]
+    },
+    "url": {
+      "description": "The URL of the image.",
+      "type": "string",
+      "format": "uri",
+      "examples": [
+        "https://example.com/images/sunset.jpg"
+      ]
+    }
+  },
+  "type": "object"
+}

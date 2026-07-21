@@ -1,0 +1,439 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/uitvoeren-gegevens-hogd61mvg/toepasbareregelshalresponse",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/183874/toepasbareregels-uitvoerengegevens-v1.json#/components/schemas/ToepasbareRegelsHalResponse"
+  ],
+  "allOf": [
+    {
+      "required": [
+        "identifier",
+        "sttrVersie",
+        "functioneleStructuurRef",
+        "begindatum",
+        "laatsteWijzigingDatum",
+        "oin"
+      ],
+      "properties": {
+        "aansluiting": {
+          "required": [
+            "standaardAansluiting",
+            "aansluitpuntSoort"
+          ],
+          "description": "aansluiting informatie van deze toepasbare regels",
+          "properties": {
+            "aansluitpuntSoort": {
+              "description": "De functionele versie van de aansluiting.",
+              "type": "string",
+              "enum": [
+                "V1",
+                "V2"
+              ]
+            },
+            "locaties": {
+              "description": "De identifiers van de locaties waar deze aansluiting actief is",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "standaardAansluiting": {
+              "description": "Is standaard aansluiting?",
+              "type": "boolean"
+            }
+          }
+        },
+        "aansluitpunt": {
+          "description": "aansluitpunt informatie van deze toepasbare regels",
+          "required": [
+            "naam",
+            "bestuurslaag",
+            "modelName",
+            "decisionName",
+            "aansluitpuntSoort"
+          ],
+          "properties": {
+            "aansluitpuntSoort": {
+              "description": "De functionele versie van het aansluitpunt.",
+              "type": "string",
+              "enum": [
+                "V1",
+                "V2"
+              ]
+            },
+            "bestuurslaag": {
+              "type": "string",
+              "allOf": [
+                {
+                  "description": "Bestuurslaag van een Organisatie",
+                  "type": "string",
+                  "enum": [
+                    "rijk",
+                    "provincie",
+                    "waterschap",
+                    "gemeente"
+                  ]
+                },
+                {
+                  "description": "De aangegeven bestuurslaag van de bestuursorganen die aansluitingen kunnen aanleveren"
+                }
+              ]
+            },
+            "decisionName": {
+              "description": "De decision name van de topdecision die moet wordt gebruikt in het STTR bestand van de aansluiting.",
+              "type": "string"
+            },
+            "modelName": {
+              "description": "De model (definition) name die moet worden gebruikt in het STTR bestand van de aansluiting.",
+              "type": "string"
+            },
+            "naam": {
+              "description": "De naam van het aansluitpunt van deze toepasbare regels",
+              "type": "string"
+            }
+          }
+        },
+        "begindatum": {
+          "description": "De datum vanaf wanneer deze toepasbare regels actief zijn. Het formaat van de datum is dd-MM-yyyy",
+          "type": "string"
+        },
+        "einddatum": {
+          "description": "De datum tot wanneer deze toepasbare regels actief zijn. Het formaat van de datum is dd-MM-yyyy",
+          "type": "string"
+        },
+        "functioneleStructuurRef": {
+          "description": "de functionele structuur referentie waaronder deze toepasbare regels bekend zijn in de registratie toepasbare regels",
+          "type": "string"
+        },
+        "identifier": {
+          "type": "integer"
+        },
+        "laatsteWijzigingDatum": {
+          "description": "De datum waarop deze toepasbare regels voor het laatst gewijzigd zijn. Het formaat van de datum is dd-MM-yyyy",
+          "type": "string"
+        },
+        "oin": {
+          "description": "oin van bet bestuursorgaan dat eigenaar is van deze toepasbare regels",
+          "type": "string"
+        },
+        "sttrVersie": {
+          "description": "De versie van de STTR-standaard van het bestand",
+          "type": "integer"
+        }
+      }
+    },
+    {
+      "required": [
+        "_links"
+      ]
+    },
+    {
+      "properties": {
+        "_embedded": {
+          "properties": {
+            "aansluitingen": {
+              "description": "Alleen gevuld als het een aansluitpunt betreft. Als de datumVanaf filter wordt gebruikt: Aansluitingen die vanaf datumVanaf, en vanaf de begindatum tot en met de einddatum van het aansluitpunt, minstens 1 dag actief zijn. Anders: Aansluitingen die op de datum actief zijn.",
+              "type": "array",
+              "items": {
+                "required": [
+                  "identifier",
+                  "sttrVersie",
+                  "functioneleStructuurRef",
+                  "begindatum",
+                  "laatsteWijzigingDatum",
+                  "oin"
+                ],
+                "properties": {
+                  "aansluiting": {
+                    "required": [
+                      "standaardAansluiting",
+                      "aansluitpuntSoort"
+                    ],
+                    "description": "aansluiting informatie van deze toepasbare regels",
+                    "properties": {
+                      "aansluitpuntSoort": {
+                        "description": "De functionele versie van de aansluiting.",
+                        "type": "string",
+                        "enum": [
+                          "V1",
+                          "V2"
+                        ]
+                      },
+                      "locaties": {
+                        "description": "De identifiers van de locaties waar deze aansluiting actief is",
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "standaardAansluiting": {
+                        "description": "Is standaard aansluiting?",
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "aansluitpunt": {
+                    "description": "aansluitpunt informatie van deze toepasbare regels",
+                    "required": [
+                      "naam",
+                      "bestuurslaag",
+                      "modelName",
+                      "decisionName",
+                      "aansluitpuntSoort"
+                    ],
+                    "properties": {
+                      "aansluitpuntSoort": {
+                        "description": "De functionele versie van het aansluitpunt.",
+                        "type": "string",
+                        "enum": [
+                          "V1",
+                          "V2"
+                        ]
+                      },
+                      "bestuurslaag": {
+                        "type": "string",
+                        "allOf": [
+                          {
+                            "description": "Bestuurslaag van een Organisatie",
+                            "type": "string",
+                            "enum": [
+                              "rijk",
+                              "provincie",
+                              "waterschap",
+                              "gemeente"
+                            ]
+                          },
+                          {
+                            "description": "De aangegeven bestuurslaag van de bestuursorganen die aansluitingen kunnen aanleveren"
+                          }
+                        ]
+                      },
+                      "decisionName": {
+                        "description": "De decision name van de topdecision die moet wordt gebruikt in het STTR bestand van de aansluiting.",
+                        "type": "string"
+                      },
+                      "modelName": {
+                        "description": "De model (definition) name die moet worden gebruikt in het STTR bestand van de aansluiting.",
+                        "type": "string"
+                      },
+                      "naam": {
+                        "description": "De naam van het aansluitpunt van deze toepasbare regels",
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "begindatum": {
+                    "description": "De datum vanaf wanneer deze toepasbare regels actief zijn. Het formaat van de datum is dd-MM-yyyy",
+                    "type": "string"
+                  },
+                  "einddatum": {
+                    "description": "De datum tot wanneer deze toepasbare regels actief zijn. Het formaat van de datum is dd-MM-yyyy",
+                    "type": "string"
+                  },
+                  "functioneleStructuurRef": {
+                    "description": "de functionele structuur referentie waaronder deze toepasbare regels bekend zijn in de registratie toepasbare regels",
+                    "type": "string"
+                  },
+                  "identifier": {
+                    "type": "integer"
+                  },
+                  "laatsteWijzigingDatum": {
+                    "description": "De datum waarop deze toepasbare regels voor het laatst gewijzigd zijn. Het formaat van de datum is dd-MM-yyyy",
+                    "type": "string"
+                  },
+                  "oin": {
+                    "description": "oin van bet bestuursorgaan dat eigenaar is van deze toepasbare regels",
+                    "type": "string"
+                  },
+                  "sttrVersie": {
+                    "description": "De versie van de STTR-standaard van het bestand",
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            "aansluitpunt": {
+              "description": "Alleen gevuld als het een aansluiting betreft. Het aansluitpunt waarop de aansluiting aansluit.",
+              "required": [
+                "identifier",
+                "sttrVersie",
+                "functioneleStructuurRef",
+                "begindatum",
+                "laatsteWijzigingDatum",
+                "oin"
+              ],
+              "properties": {
+                "aansluiting": {
+                  "required": [
+                    "standaardAansluiting",
+                    "aansluitpuntSoort"
+                  ],
+                  "description": "aansluiting informatie van deze toepasbare regels",
+                  "properties": {
+                    "aansluitpuntSoort": {
+                      "description": "De functionele versie van de aansluiting.",
+                      "type": "string",
+                      "enum": [
+                        "V1",
+                        "V2"
+                      ]
+                    },
+                    "locaties": {
+                      "description": "De identifiers van de locaties waar deze aansluiting actief is",
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "standaardAansluiting": {
+                      "description": "Is standaard aansluiting?",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "aansluitpunt": {
+                  "description": "aansluitpunt informatie van deze toepasbare regels",
+                  "required": [
+                    "naam",
+                    "bestuurslaag",
+                    "modelName",
+                    "decisionName",
+                    "aansluitpuntSoort"
+                  ],
+                  "properties": {
+                    "aansluitpuntSoort": {
+                      "description": "De functionele versie van het aansluitpunt.",
+                      "type": "string",
+                      "enum": [
+                        "V1",
+                        "V2"
+                      ]
+                    },
+                    "bestuurslaag": {
+                      "type": "string",
+                      "allOf": [
+                        {
+                          "description": "Bestuurslaag van een Organisatie",
+                          "type": "string",
+                          "enum": [
+                            "rijk",
+                            "provincie",
+                            "waterschap",
+                            "gemeente"
+                          ]
+                        },
+                        {
+                          "description": "De aangegeven bestuurslaag van de bestuursorganen die aansluitingen kunnen aanleveren"
+                        }
+                      ]
+                    },
+                    "decisionName": {
+                      "description": "De decision name van de topdecision die moet wordt gebruikt in het STTR bestand van de aansluiting.",
+                      "type": "string"
+                    },
+                    "modelName": {
+                      "description": "De model (definition) name die moet worden gebruikt in het STTR bestand van de aansluiting.",
+                      "type": "string"
+                    },
+                    "naam": {
+                      "description": "De naam van het aansluitpunt van deze toepasbare regels",
+                      "type": "string"
+                    }
+                  }
+                },
+                "begindatum": {
+                  "description": "De datum vanaf wanneer deze toepasbare regels actief zijn. Het formaat van de datum is dd-MM-yyyy",
+                  "type": "string"
+                },
+                "einddatum": {
+                  "description": "De datum tot wanneer deze toepasbare regels actief zijn. Het formaat van de datum is dd-MM-yyyy",
+                  "type": "string"
+                },
+                "functioneleStructuurRef": {
+                  "description": "de functionele structuur referentie waaronder deze toepasbare regels bekend zijn in de registratie toepasbare regels",
+                  "type": "string"
+                },
+                "identifier": {
+                  "type": "integer"
+                },
+                "laatsteWijzigingDatum": {
+                  "description": "De datum waarop deze toepasbare regels voor het laatst gewijzigd zijn. Het formaat van de datum is dd-MM-yyyy",
+                  "type": "string"
+                },
+                "oin": {
+                  "description": "oin van bet bestuursorgaan dat eigenaar is van deze toepasbare regels",
+                  "type": "string"
+                },
+                "sttrVersie": {
+                  "description": "De versie van de STTR-standaard van het bestand",
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "_links": {
+          "description": "Links naar gerelateerde toepasbare regels en het bijbehorende STTR bestand van deze toepasbare regels.",
+          "required": [
+            "self",
+            "sttrBestand"
+          ],
+          "properties": {
+            "aansluitingen": {
+              "description": "Alleen gevuld als het een aansluitpunt betreft. Als de datumVanaf filter wordt gebruikt: Links naar de aansluitingen die vanaf datumVanaf, en vanaf de begindatum tot en met de einddatum van het aansluitpunt, minstens 1 dag actief zijn. Anders: Links naar de aansluitingen die op de datum actief zijn.",
+              "type": "array",
+              "items": {
+                "description": "HAL link",
+                "required": [
+                  "href"
+                ],
+                "properties": {
+                  "href": {
+                    "description": "URI",
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "aansluitpunt": {
+              "description": "HAL link",
+              "required": [
+                "href"
+              ],
+              "properties": {
+                "href": {
+                  "description": "URI",
+                  "type": "string"
+                }
+              }
+            },
+            "self": {
+              "description": "HAL link",
+              "required": [
+                "href"
+              ],
+              "properties": {
+                "href": {
+                  "description": "URI",
+                  "type": "string"
+                }
+              }
+            },
+            "sttrBestand": {
+              "description": "HAL link",
+              "required": [
+                "href"
+              ],
+              "properties": {
+                "href": {
+                  "description": "URI",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

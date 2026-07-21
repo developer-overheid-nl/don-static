@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/dataverkenner-bagpandenm-ezs8jxehg/dataverkennerbagpandenmbagpanden",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bagpandenm/openapi.json#/components/schemas/DataverkennerBagpandenmbagpanden"
+  ],
+  "type": "object",
+  "description": "bagpanden",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `bagpanden._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "../_shared/BenkaggBagpandenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "pandAantalBouwlagen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aantal bouwlagen van een pand."
+    },
+    "pandBeginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Begindatum van de geldigheid van de gegevens van het pand."
+    },
+    "pandDocumentdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop het brondocument is vastgesteld."
+    },
+    "pandDocumentnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het unieke nummer van het brondocument."
+    },
+    "pandEindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Einddatum van de geldigheid van de gegevens van het pand."
+    },
+    "pandGeconstateerd": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Dit geeft aan dat een PAND in de registratie is opgenomen als gevolg van een feitelijke constatering en niet op basis van een regulier brondocument (J/N)."
+    },
+    "pandGeometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "pandHoogsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Hoogste bouwlaag van een pand."
+    },
+    "pandIdentificatie": {
+      "type": "string",
+      "description": "Landelijke identificerende sleutel."
+    },
+    "pandLaagsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Laagste bouwlaag van een pand."
+    },
+    "pandLiggingOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Situering pand met verblijfsobject (vrijstaand, tussenwoning, etc.). omschrijving"
+    },
+    "pandNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naamgeving van een pand (bv. naam van metrostation of bijzonder gebouw)."
+    },
+    "pandOorspronkelijkBouwjaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "De aanduiding van het jaar waarin een pand oorspronkelijk als bouwkundig gereed is of wordt opgeleverd."
+    },
+    "pandStatusOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De fase van de levenscyclus van een pand, waarin het betreffende pand zich bevindt."
+    },
+    "pandTypeWoonobject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Eén woning, Meerdere woningen."
+    },
+    "pandVolgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    },
+    "verblijfsobjectenIdentificaties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Verblijfsobjecten identificaties"
+      },
+      "description": "Relatie naar verblijfsobject(en)"
+    }
+  },
+  "required": [
+    "_links",
+    "pandIdentificatie",
+    "pandVolgnummer"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-verbeelden-ibyvejgdg/mapboxzoekobject",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/verbeelden/v3/openapi.json#/components/schemas/MapboxZoekobject"
+  ],
+  "required": [
+    "zoekObjecten"
+  ],
+  "type": "object",
+  "properties": {
+    "zoekObjecten": {
+      "type": "array",
+      "description": "Lijst met ZoekObjecten.",
+      "items": {
+        "$ref": "./GeneriekZoekobject.schema.json"
+      }
+    }
+  },
+  "description": "Zoekobject voor mapbox bevragingen."
+}

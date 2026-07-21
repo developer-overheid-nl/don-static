@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/benkagg-lqtl1u6hg/benkaggbrkbasiszondersubjectenlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/benkagg/openapi.json#/components/schemas/BenkaggbrkbasiszondersubjectenLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to brkbasiszondersubjecten.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "id": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "De unieke id, een combinatie van kadastraal object en tenaamstelling, inclusief volgnummer"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "id",
+    "title"
+  ]
+}

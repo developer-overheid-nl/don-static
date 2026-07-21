@@ -1,0 +1,515 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/nuts-en-overheidsdiensten-riool-milieu-management-voorziening-rsa-inspire-geharmoniseerd-euinobqnr/propertiesgeojsonenvironmentalmanagementfacility",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/rioolnetwerk-milieumanagementvoorziening/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_environmental_management_facility"
+  ],
+  "properties": {
+    "amount": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "begin_lifespan_version": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "character_string": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ci__date_type_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ci__on_line_function_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ci__presentation_form_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ci__role_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "code_list": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "code_list_value": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "code_space": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "country": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date_time": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dq__evaluation_method_type_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ds__association_type_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ds__initiative_type_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "end_lifespan_version": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "facility_description": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "function_description_nilreason": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "function_text_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gco_nil_reason": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_parent_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_parent_property": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gml_remote_schema": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identifier": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identifier_scheme": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "local_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "locale": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "localised_character_string": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__cell_geometry_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__character_set_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__classification_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__coverage_content_type_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__datatype_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__dimension_name_type_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__distribution_units": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__geometric_object_type_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__imaging_condition_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__keyword_type_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__maintenance_frequency_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__medium_format_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__medium_name_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__obligation_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__pixel_orientation_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__progress_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__restriction_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__scope_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__spatial_representation_type_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__topic_category_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "md__topology_level_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nil_reason": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "owns": {
+      "description": "",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "parent_facility": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "permission": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "time": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "uom": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "uuid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "uuidref": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "valid_from": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "valid_to": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "xlink_role": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "xlink_title": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "xsi_nil": {
+      "description": "",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

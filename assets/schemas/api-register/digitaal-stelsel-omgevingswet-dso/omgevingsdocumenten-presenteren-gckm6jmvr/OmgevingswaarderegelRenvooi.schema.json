@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/omgevingswaarderegelrenvooi",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/OmgevingswaarderegelRenvooi"
+  ],
+  "title": "OmgevingswaarderegelRenvooi",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./OmgevingswaarderegelSpec.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "_delta": {
+          "$ref": "./OmgevingswaarderegelDelta.schema.json"
+        },
+        "idealisatie": {
+          "title": "IdealisatieRenvooi",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "./Idealisatie.schema.json"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "_delta": {
+                  "$ref": "./IdealisatieDelta.schema.json"
+                }
+              }
+            }
+          ]
+        },
+        "themas": {
+          "type": "array",
+          "items": {
+            "title": "ThemaRenvooi",
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "./Thema.schema.json"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "_delta": {
+                    "$ref": "./ThemaDelta.schema.json"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/activiteitregelkwalificatie",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/ActiviteitRegelkwalificatie"
+  ],
+  "title": "ActiviteitRegelkwalificatie",
+  "required": [
+    "code",
+    "waarde"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "examples": [
+        "http://standaarden.omgevingswet.overheid.nl/activiteitregelkwalificatie/id/concept/Gebod"
+      ]
+    },
+    "waarde": {
+      "type": "string",
+      "examples": [
+        "gebod"
+      ]
+    }
+  },
+  "description": "De naam van de kwalificatie van de Juridische regel over een activiteit. \nThema is één van de waarden op de limitatieve waardelijst https://standaarden.omgevingswet.overheid.nl/id/waardelijst/Activiteitregelkwalificatie.\n"
+}

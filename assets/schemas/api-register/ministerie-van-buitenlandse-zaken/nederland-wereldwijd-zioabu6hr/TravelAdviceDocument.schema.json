@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-buitenlandse-zaken/nederland-wereldwijd-zioabu6hr/traveladvicedocument",
+  "x-derived-from": [
+    "https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/openapi.yaml#/components/schemas/travel-advice-document"
+  ],
+  "type": "object",
+  "properties": {
+    "additionalinformation": {
+      "type": "string"
+    },
+    "authorities": {
+      "type": "array",
+      "xml": {
+        "nodeType": "element"
+      },
+      "items": {
+        "type": "string",
+        "xml": {
+          "name": "department"
+        }
+      }
+    },
+    "available": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "canonical": {
+      "type": "string"
+    },
+    "content": {
+      "type": "array",
+      "xml": {
+        "nodeType": "element"
+      },
+      "items": {
+        "$ref": "./Category.schema.json"
+      }
+    },
+    "creators": {
+      "type": "array",
+      "xml": {
+        "nodeType": "element"
+      },
+      "items": {
+        "type": "string",
+        "xml": {
+          "name": "department"
+        }
+      }
+    },
+    "dataurl": {
+      "type": "string"
+    },
+    "files": {
+      "type": "array",
+      "xml": {
+        "nodeType": "element"
+      },
+      "items": {
+        "$ref": "./File.schema.json"
+      }
+    },
+    "id": {
+      "type": "string"
+    },
+    "introduction": {
+      "type": "string"
+    },
+    "isocode": {
+      "type": "string"
+    },
+    "issued": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "language": {
+      "type": "string"
+    },
+    "lastmodified": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "license": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "locationkey": {
+      "type": "string"
+    },
+    "modificationdate": {
+      "type": "string"
+    },
+    "modifications": {
+      "type": "string"
+    },
+    "rightsholders": {
+      "type": "array",
+      "xml": {
+        "nodeType": "element"
+      },
+      "items": {
+        "type": "string",
+        "xml": {
+          "name": "department"
+        }
+      }
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "xml": {
+    "name": "document"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/_shared/meldingfeature",
+  "x-derived-from": [
+    "https://api.kadaster.nl/tms/v2/openapi.json#/components/schemas/MeldingFeature",
+    "https://service10.kadaster.nl/tms/bronhouders/v2/openapi.json#/components/schemas/MeldingFeature"
+  ],
+  "title": "MeldingFeature",
+  "type": "object",
+  "properties": {
+    "geometry": {
+      "$ref": "./Geometry.schema.json"
+    },
+    "properties": {
+      "type": "object"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "geometry",
+    "properties",
+    "type"
+  ]
+}

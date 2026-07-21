@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/basestructuurvisiecomplex",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/BaseStructuurvisiecomplex"
+  ],
+  "required": [
+    "_links",
+    "beleid",
+    "cartografieInfo",
+    "id",
+    "illustraties",
+    "naam",
+    "relatiesMetExternePlannen",
+    "styleId",
+    "thema",
+    "verwijzingNaarTekst"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./StructuurvisiecomplexLinks.schema.json"
+    },
+    "beleid": {
+      "type": "array",
+      "items": {
+        "$ref": "./Item39.schema.json"
+      }
+    },
+    "cartografieInfo": {
+      "type": "array",
+      "items": {
+        "$ref": "./CartografieInfo.schema.json"
+      }
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "NL.IMRO.9925PRIMA201200000001122"
+      ]
+    },
+    "illustraties": {
+      "type": "array",
+      "items": {
+        "$ref": "./IllustratieReferentie.schema.json"
+      }
+    },
+    "naam": {
+      "type": "string",
+      "examples": [
+        "Waterveiligheid tot 2015"
+      ]
+    },
+    "relatiesMetExternePlannen": {
+      "$ref": "./RelatiesMetExternePlannen2.schema.json"
+    },
+    "styleId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "dubbelbestemming_waterstaat"
+      ]
+    },
+    "thema": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        "waterkwantiteit"
+      ]
+    },
+    "verwijzingNaarTekst": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "https://ruimtelijkeplannen.nl/documents/NL.IMRO.9925.SVOmgvisie-vst1/pt_NL.IMRO.9925.SVOmgvisie-vst1.xml#NL.IMRO.PT.s132"
+        ]
+      }
+    }
+  }
+}

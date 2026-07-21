@@ -1,0 +1,267 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/huishoudelijkafvalplanningvoertuigen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/Huishoudelijkafvalplanning_voertuigen"
+  ],
+  "type": "object",
+  "description": "Planningsgegevens van afvalinzamelingsvoertuigen voor huishoudelijk- en bedrijfsafval",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `planningVoertuigen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HuishoudelijkafvalplanningVoertuigenLink.schema.json"
+        },
+        "werkzaamhedenDatumRef": {
+          "$ref": "../_shared/ReferentiekalenderdatumLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self",
+        "werkzaamhedenDatumRef"
+      ]
+    },
+    "aantalMedewerkers": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aantal medewerkers dat op het voertuig is gepland."
+    },
+    "aantalMedewerkersInhuur": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aantal externe medewerkers dat op het voertuig is gepland."
+    },
+    "aantalMedewerkersIntern": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Aantal interne medewerkers dat op het voertuig is gepland."
+    },
+    "activiteit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Afval fractiesoort code",
+      "description": "Fractie van de afvalverwerking (afgeleid van categorie, werkzaamheden en of memo)."
+    },
+    "categorie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Afvalverwerking categorie code",
+      "description": "Categorie afvalverwerking waar het voertuig op is gepland."
+    },
+    "datumAanwezigBron": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Indicatie over de actualiteit van de gegevens in deze set (laatste wijziging in de bron)."
+    },
+    "datumVerwerktStadsdelen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Datum laden datawarehouse",
+      "description": "Moment van laden data vanuit het (planningsdata)bronsysteem in het DWH stadsdelen (als intermediair voor datalevering)."
+    },
+    "fase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Plannings fase omschrijving",
+      "description": "Label van de fase waarin de planning zich bevindt."
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Planningvoertuig ID",
+      "description": "Uniek identificerend kenmerk van het record."
+    },
+    "kenteken": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Kenteken afvalinzamelingsvoertuig."
+    },
+    "kentekenKort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Kenteken afvalinzamelingsvoertuig zonder koppeltekens (-)."
+    },
+    "memo": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Opmerking",
+      "description": "Extra toelichting zoals opgegeven in (planningsdata)bronsysteem."
+    },
+    "pauzeEindtijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Eindtijd van de pauze op de WERKZAAMHEDEN_DATUM."
+    },
+    "pauzeStarttijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Starttijd van de pauze op de WERKZAAMHEDEN_DATUM."
+    },
+    "pauzeUrenGepland": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Aantal pauze uren gepland",
+      "description": "Berekening van het aantal bruto uren van de pauze (= eindtijd - starttijd)."
+    },
+    "soortWerkzaamheden": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Werkzaamheden soort omschrijving",
+      "description": "Specificatie van soort planning (Inzet of Onderhoud)."
+    },
+    "team": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Team omschrijving",
+      "description": "Team waarvoor de voertuigplanning is gemaakt. In veel gevallen een stadsdeel, maar kan ook bijvoorbeeld Bedrijfsafval Centrum (BAC) zijn)."
+    },
+    "urenInzetMedewerkerInhuur": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Aantal uren inzet medewerker inhuur",
+      "description": "Som van het totaal aantal netto uren van de externe medewerkers die op de planning zijn gezet (excl pauze)."
+    },
+    "urenInzetMedewerkerIntern": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Aantal uren inzet medewerker intern",
+      "description": "Som van het totaal aantal netto uren van de interne medewerkers die op de planning zijn gezet (excl pauze)."
+    },
+    "urenInzetVoertuig": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Aantal uren inzet voertuig",
+      "description": "Netto inzeturen van het voertuig (bruto - pauze)."
+    },
+    "voertuigInhuurIndicatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Is het voertuig ingehuurd (Ja / Nee)."
+    },
+    "werkzaamhedenCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Code voor de werkzaamheden waarop het voertuig is gepland."
+    },
+    "werkzaamhedenDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Geplande datum",
+      "description": "Datum waarop de werkzaamheden zijn gepland."
+    },
+    "werkzaamhedenDatumRefId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Verwijzing naar datum dimensie.",
+      "title": "Datum referentie",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "werkzaamhedenEindtijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Eindtijd van de werkzaamheden op de WERKZAAMHEDEN_DATUM."
+    },
+    "werkzaamhedenOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving voor de werkzaamheden waarop het voertuig is gepland."
+    },
+    "werkzaamhedenStarttijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Starttijd van de werkzaamheden op de WERKZAAMHEDEN_DATUM"
+    },
+    "werkzaamhedenUrenGepland": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Aantal werkzaamheden uren gepland",
+      "description": "Berekening van het aantal bruto uren van de werkzaamheden (= eindtijd - starttijd)."
+    }
+  },
+  "required": [
+    "_links",
+    "id",
+    "werkzaamhedenDatumRefId"
+  ]
+}

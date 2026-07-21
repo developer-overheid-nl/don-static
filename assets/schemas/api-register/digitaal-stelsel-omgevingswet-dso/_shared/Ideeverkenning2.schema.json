@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/ideeverkenning2",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/"
+  ],
+  "type": "object",
+  "required": [
+    "naam",
+    "omschrijving"
+  ],
+  "properties": {
+    "naam": {
+      "type": "string",
+      "pattern": "^(?=.*\\S).{1,200}$"
+    },
+    "omschrijving": {
+      "type": "string",
+      "pattern": "^[\\s\\S]{0,6144}$"
+    }
+  },
+  "examples": [
+    {
+      "naam": "Woongroep in de polder",
+      "omschrijving": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula placerat lobortis. Etiam ultricies ultrices molestie."
+    }
+  ]
+}

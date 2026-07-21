@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/brt-top10nl-m72f0f3hg/featurecollectionjsonfgfunctioneelgebiedmultivlak",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top10nl/ogc/v1/openapi.json#/components/schemas/featureCollectionJSONFG_functioneel_gebied_multivlak"
+  ],
+  "properties": {
+    "conformsTo": {
+      "items": {
+        "format": "uri",
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "coordRefSys": {
+      "format": "uri",
+      "type": "string"
+    },
+    "features": {
+      "items": {
+        "$ref": "./FeatureJSONFGFunctioneelGebiedMultivlak.schema.json"
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "../_shared/Link.schema.json"
+      },
+      "type": "array"
+    },
+    "numberReturned": {
+      "description": "The number of elements in the collection.\n\nA server may omit this information in a response, if the information\nabout the number of elements is not known or difficult to compute.\n\nIf the value is provided, the value shall be identical to the number\nof items in the returned array.",
+      "minimum": 0,
+      "type": "integer",
+      "examples": [
+        10
+      ]
+    },
+    "timeStamp": {
+      "description": "This property indicates the time and date when the response was generated using RFC 3339 notation.",
+      "format": "date-time",
+      "type": "string",
+      "examples": [
+        "2017-08-17T08:05:32Z"
+      ]
+    }
+  },
+  "required": [
+    "features",
+    "type"
+  ],
+  "type": "object"
+}

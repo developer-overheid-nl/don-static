@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/overlastgebieden-gemeente-amsterdam-ueppbx6hg/links",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json",
+    "https://api.data.amsterdam.nl/v1/overlastgebieden/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "next": {
+      "$ref": "../_shared/Next.schema.json"
+    },
+    "previous": {
+      "$ref": "../_shared/Previous.schema.json"
+    },
+    "self": {
+      "$ref": "../_shared/Self2.schema.json"
+    }
+  }
+}

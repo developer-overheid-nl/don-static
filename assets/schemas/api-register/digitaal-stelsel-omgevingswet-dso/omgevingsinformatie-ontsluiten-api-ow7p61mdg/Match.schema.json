@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/match",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/Match"
+  ],
+  "required": [
+    "end",
+    "matchedElement",
+    "start",
+    "type",
+    "zoekterm"
+  ],
+  "type": "object",
+  "properties": {
+    "end": {
+      "type": "integer",
+      "format": "int32",
+      "examples": [
+        20
+      ]
+    },
+    "matchedElement": {
+      "type": "string",
+      "enum": [
+        "IDENTIFICATIE",
+        "OPGESTELD_DOOR",
+        "TITEL",
+        "TYPE"
+      ],
+      "examples": [
+        "TITEL"
+      ]
+    },
+    "start": {
+      "type": "integer",
+      "format": "int32",
+      "examples": [
+        15
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "Geeft het type overeenkomst aan tussen de zoekopdracht en het gevonden resultaat.",
+      "enum": [
+        "EXACT",
+        "FUZZY"
+      ]
+    },
+    "zoekterm": {
+      "type": "string",
+      "examples": [
+        "fiets"
+      ]
+    }
+  },
+  "description": "Verklaring van de gevonden match. In welk veld is de match gevonden, en welke karakters in het veld betreft het."
+}

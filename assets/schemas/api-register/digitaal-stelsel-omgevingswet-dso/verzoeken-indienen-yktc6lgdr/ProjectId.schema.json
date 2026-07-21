@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-indienen-yktc6lgdr/projectid",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/ProjectId"
+  ],
+  "description": "Geeft een mogelijkheid (voor een Bevoegd Gezag) tot het relateren van verschillende aanvragen onder eenzelfde project id. Indien er een machtiging is, moet dit projectId gelijk zijn aan het projectId van de machtiging.",
+  "type": "string"
+}

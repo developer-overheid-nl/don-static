@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/mijnbouwconstructie-epc-0puebxehg/epccriteriaset",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/ep/epc/v1/openapi#/components/schemas/EpcCriteriaSet"
+  ],
+  "properties": {
+    "area": {
+      "$ref": "../_shared/Area.schema.json"
+    },
+    "boreholeSegmentDrillingEndPeriod": {
+      "$ref": "../_shared/DatePeriod.schema.json"
+    },
+    "boreholeSegmentDrillingStartPeriod": {
+      "$ref": "../_shared/DatePeriod.schema.json"
+    },
+    "correctionPeriod": {
+      "$ref": "../_shared/DatePeriod.schema.json"
+    },
+    "deliveryAccountableParty": {
+      "type": "string"
+    },
+    "explorationProductionLicence": {
+      "type": "string"
+    },
+    "legalStatus": {
+      "type": "string"
+    },
+    "miningConstructionKind": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "qualityRegime": {
+      "enum": [
+        "IMBRO",
+        "IMBRO_A"
+      ],
+      "type": "string"
+    },
+    "registrationPeriod": {
+      "$ref": "../_shared/DatePeriod.schema.json"
+    },
+    "underReview": {
+      "enum": [
+        "JA",
+        "NEE"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "area"
+  ],
+  "type": "object"
+}

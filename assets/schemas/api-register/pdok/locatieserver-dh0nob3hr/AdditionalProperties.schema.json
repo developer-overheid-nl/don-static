@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/locatieserver-dh0nob3hr/additionalproperties",
+  "x-derived-from": [
+    "https://api.pdok.nl/bzk/locatieserver/search/v3_1/openapi.json"
+  ],
+  "properties": {
+    "suggest": {
+      "items": {
+        "type": "string",
+        "examples": [
+          ""
+        ]
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

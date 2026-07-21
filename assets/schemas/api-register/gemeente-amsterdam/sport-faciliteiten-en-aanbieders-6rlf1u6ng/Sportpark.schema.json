@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/sport-faciliteiten-en-aanbieders-6rlf1u6ng/sportpark",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/sport/openapi.json#/components/schemas/Sportpark"
+  ],
+  "type": "object",
+  "description": "park",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `park._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./SportparkLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Code van de sportfaciliteit."
+    },
+    "geometry": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "description": "Point in 3D space",
+                    "minItems": 2,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "MultiPolygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding van de sportfaciliteit."
+    },
+    "jaarVanActiviteit": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Jaar van start van de sportfaciliteit."
+    },
+    "objectsubtype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Objectsubtype waaronder de sportfaciliteit valt."
+    },
+    "objecttype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Objecttype waaronder sportfaciliteit valt."
+    },
+    "omschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van de sportfaciliteit."
+    },
+    "omtrek": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Omtrek in meters van sportfaciliteit."
+    },
+    "oppervlakte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Oppervlakte in vierkante meters van de sportfaciliteit."
+    },
+    "windrichting": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Windrichting van de sportfaciliteit."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

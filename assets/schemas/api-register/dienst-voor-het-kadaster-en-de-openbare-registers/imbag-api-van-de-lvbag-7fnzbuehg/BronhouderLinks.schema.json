@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/bronhouderlinks",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/Bronhouder_links"
+  ],
+  "required": [
+    "self"
+  ],
+  "type": "object",
+  "properties": {
+    "self": {
+      "$ref": "./HalLink.schema.json"
+    }
+  }
+}

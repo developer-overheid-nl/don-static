@@ -1,0 +1,751 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/benkagg-lqtl1u6hg/benkaggbrkbasisdataselectie",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/benkagg/openapi.json#/components/schemas/Benkaggbrkbasisdataselectie"
+  ],
+  "type": "object",
+  "description": "BRK-tabel waar alle actueel tenaamgestelde Kadastrale Objecten gecombineerd worden met hun zakelijke rechten en tenaamstellingen. Aangevuld met extra kenmerken ten behoeve van de dataselectie",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `brkbasisdataselectie._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BenkaggbrkbasisdataselectieLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aandeel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aandeel in Recht",
+      "description": "Aandeel in Recht is het aandeel waarvoor een persoon deelneemt in het Recht"
+    },
+    "aantekeningenKadastraalObject": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Aantekeningen kadastraal object"
+      },
+      "title": "Aantekeningen kadastraal object omschrijvingen",
+      "description": "De unieke op dit object betrekking hebbende omschrijvingen van Aantekeningen. Een Aantekening kadastraal object vult de registratie van een registergoed aan met betrekking tot feiten over een kadastraal object die gevolgen kunnen hebben voor de uitoefening van de rechten op dit registergoed"
+    },
+    "aantekeningenZakelijkrecht": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Aantekeningen zakelijkrecht"
+      },
+      "title": "Aantekeningen zakelijk recht omschrijvingen",
+      "description": "De unieke op dit object betrekking hebbende omschrijvingen van Aantekeningen. Een Aantekening recht vult de registratie van een registergoed aan met betrekking tot feiten die gevolgen kunnen hebben voor de uitoefening van het (zakelijk) recht (of de tenaamstelling daarvan) op dit registergoed"
+    },
+    "aardZakelijkRecht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Zakelijk recht aard",
+      "description": "De aard van het zakelijk recht"
+    },
+    "adressen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "title": "Adressen waaraan gerelateerd",
+      "description": "Relatie naar adressen, met postcode en woonplaats"
+    },
+    "adressenNummeraanduidingen": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Adressen nummeraanduidingen"
+      },
+      "title": "Nummeraanduidingen van adressen waaraan gerelateerd",
+      "description": "Relatie naar de nummeraanduidingen van de adressen"
+    },
+    "adressenOpgemaakt": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Adressen opgemaakt"
+      },
+      "title": "Opgemaakte adressen waaraan gerelateerd",
+      "description": "Relatie naar adressen, met postcode en woonplaats"
+    },
+    "appartementseigenaar": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Indicatie appartementseigenaar",
+      "description": "Afgeleide indicatie of de tenaamstelling een appartementseigenaar is of niet. Zie: https://www.amsterdam.nl/stelselpedia/brk-index/producten-brk/uitleg-kadastertabel/"
+    },
+    "appartementsrechtsplitsingType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het type appartementsrechtsplitsing. De mogelijke waarden zijn: hoofdsplitsing of ondersplitsing of splitsing afkoop erfpacht"
+    },
+    "betrokkenBijAppartementsrechtsplitsing": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Als deze waarde is gevuld, dan is dit recht betrokken bij een appartementssplitsing, die hier met zijn identificerende kenmerk aangegeven wordt"
+    },
+    "betrokkenBijKadastraalObject": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Betrokken bij kadastraal object"
+      },
+      "title": "Betrokken bij kadastrale percelen",
+      "description": "Landelijke identificatie(s) van uit het object ontstane percelen"
+    },
+    "betrokkenBijKadastraleAanduiding": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Betrokken bij kadastrale aanduiding"
+      },
+      "title": "Betrokken bij kadastrale percelen, aanduiding",
+      "description": "Kadastrale aanduiding(en) van uit het object ontstane percelen"
+    },
+    "bsn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Persoon BSN",
+      "description": "Burgerservicenummer (BSN) voorheen SoFi-nummer"
+    },
+    "buurtCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object code",
+      "description": "Volledige, samengestelde, code, bestaande uit stadsdeelcode, wijkcode en buurtcode"
+    },
+    "buurtIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "Unieke identificatie van de buurt"
+    },
+    "buurtNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object naam",
+      "description": "De naam van de buurt"
+    },
+    "cultuurBebouwd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Soort cultuur bebouwd",
+      "description": "De soort cultuur bebouwd van een bebouwd kadastraal object, weergegeven als ‘omschrijving kadastraal object’ in Mijn.kadaster.nl (Kadaster-on-line; KOL). Dit kenmerk is afgeleid van wat degene die een notariële akte laat inschrijven, heeft verklaard (artikel 87, eerste lid, onder a, van de Kadasterregeling 1994). Dit kan afwijken van:soort objectcode in de WOZ;gebruiksdoel in de BAG;SBI-code in het HR"
+    },
+    "cultuurOnbebouwd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Soort cultuur onbebouwd",
+      "description": "De soort cultuur onbebouwd is een aanduiding voor de aard van de meest significante cultuur van het onbebouwde deel van het kadastraal object, weergegeven als ‘omschrijving kadastraal object’ in Mijn.kadaster.nl Dit kenmerk is in beginsel afgeleid van de notariële akte, maar kan worden bijgesteld op grond van een verzoek van de eigenaar (of een schriftelijk gevolmachtigde namens de eigenaar)per brief, fax of e-mailbericht. Dit kan afwijken van: het feitelijk gebruik in de WOZ; gebruiksdoel in de BAG; SBI-code in het HR. code"
+    },
+    "datumOverlijden": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Subject overlijdensdatum",
+      "description": "De overlijdensdatum is de datum waarop een natuurlijk persoon is overleden"
+    },
+    "erfpachtUitgegevenDoor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Uitgegeven door",
+      "description": "Categorie van de erfpachtuitgever. 'Gemeente Amsterdam' of 'Overige'"
+    },
+    "geboortedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Subject geboortedatum",
+      "description": "De datum waarop een natuurlijk persoon is geboren"
+    },
+    "geboorteland": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject geboorteland",
+      "description": "Geboorteland is een aanduiding van het land waar de natuurlijke persoon geboren is"
+    },
+    "geboorteplaats": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject geboorteplaats",
+      "description": "De geboorteplaats is een plaatsaanduiding, die aangeeft waar de natuurlijke persoon geboren is"
+    },
+    "geldtVoor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gezamenlijk aandeel in Recht",
+      "description": "Twee of meer personen kunnen gezamenlijk een aandeel hebben in een recht, waarbij het afzonderlijke aandeel in het gezamenlijk aandeel niet bekend is (als gezamenlijkAandeel bekend is dan is het individuele aandeel niet bekend en omgekeerd)"
+    },
+    "gemeenteNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De burgerlijke gemeente"
+    },
+    "geometriePunt": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "geometrieVlak": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "geslacht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject geslacht",
+      "description": "Geslacht van het geregistreerd persoon"
+    },
+    "geslachtsnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject geslachtsnaam",
+      "description": "Geslachtsnaam van de geregistreerde persoon"
+    },
+    "ggwCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object code",
+      "description": "Volledige code gebiedsgerichtwerken gebied"
+    },
+    "ggwIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "Unieke identificatie van het gebiedsgerichtwerken gebied"
+    },
+    "ggwNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object naam",
+      "description": "De naam van het gebiedsgerichtwerken gebied"
+    },
+    "grondeigenaar": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Indicatie grondeigenaar",
+      "description": "Afgeleide indicatie of de tenaamstelling een grondeigenaar is of niet. Zie: https://www.amsterdam.nl/stelselpedia/brk-index/producten-brk/uitleg-kadastertabel/"
+    },
+    "grootte": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Kadastraal object grootte",
+      "description": "De grootte van een kadastraal object is de oppervlakte van het kadastrale perceel. Dit kan bij een deelperceel een geschatte grootte zijn"
+    },
+    "id": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "De unieke id, een combinatie van kadastraal object en tenaamstelling, inclusief volgnummer"
+    },
+    "identifier": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object identifier",
+      "description": "De unieke id, een combinatie van kadastraal object en tenaamstelling, inclusief volgnummer, waarbij de punten vervangen zijn door underscores"
+    },
+    "indexletter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kadastraal object indexletter",
+      "description": "Letter Kadastraal object, dit geeft een indicatie voor het type object. G Grond perceel. A Appartementsrecht"
+    },
+    "indexnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Kadastraal object indexnummer",
+      "description": "Volgnummer van het Appartementsrecht"
+    },
+    "kadastraalobjectId": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "De unieke aanduiding van een Kadastraal object, inclusief volgnummer"
+    },
+    "kadastraalobjectIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "De unieke aanduiding van een Kadastraal object"
+    },
+    "kadastraalobjectInOnderzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "In onderzoek indicatie",
+      "description": "Als dit veld is gevuld geeft dit de omschrijving waarom dit gegeven in onderzoek staat (art. 7n en 7r Kadasterwet)"
+    },
+    "kadastraalsubjectIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "De aan dit subject toegekende landelijk unieke aanduiding"
+    },
+    "kadastraleAanduiding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kadastraal object kadastrale aanduiding",
+      "description": "De unieke aanduiding van een Kadastraal Object samengesteld uit gemeentecode, kadastrale sectie, perceelnummer, indexletter en indexnummer"
+    },
+    "kadastralegemeente": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kadastrale gemeente naam",
+      "description": "De kadastrale gemeente. Bij de oprichting van het Kadaster waren de kadastrale gemeenten gelijk aan de burgerlijke gemeenten, inmiddels al lang niet meer"
+    },
+    "kadastralegemeentecodeNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kadastrale gemeentecode naam",
+      "description": "De kadastrale gemeentecode. Het eerste deel van de kadastrale aanduiding. Bijvoorbeeld: ASD01, STN02"
+    },
+    "koopjaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Koop jaar",
+      "description": "Transactiejaar van de aankoop"
+    },
+    "koopsom": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het in een ter inschrijving aangeboden stuk vermelde bedrag, waarvoor 1 of meer onroerende zaken zijn verkregen"
+    },
+    "kvkNummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject Maatschappelijke activiteit KvK-nummer",
+      "description": "Betreft het identificerende gegeven voor de Maatschappelijke Activiteit"
+    },
+    "objectnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Perceel nummer",
+      "description": "Een numerieke aanduiding van het kadastrale perceel per sectie, deel van de kadastrale aanduiding van de onroerende zaak"
+    },
+    "ontstaanUitApptrechtsplitsing": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Ontstaan uit VVE appartementsrechtsplitsing",
+      "description": "De identificatie van de vereniging van eigenaren van de appartementsrechtssplitsing waaruit het zakelijk recht ontstaan is"
+    },
+    "ontstaanUitKadastraalObject": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Ontstaan uit kadastraal object"
+      },
+      "title": "Ontstaan uit kadastrale percelen",
+      "description": "Landelijke identificatie(s) van onderliggende percelen, waar het object uit ontstaan is. Dit veld is alléén gevuld wanneer het beschreven kadastrale object een A-perceel betreft"
+    },
+    "ontstaanUitKadastraleAanduiding": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string",
+        "title": "Ontstaan uit kadastrale aanduiding"
+      },
+      "title": "Ontstaan uit kadastrale percelen, aanduiding",
+      "description": "Kadastrale aanduiding(en) van onderliggende percelen, waar het object uit ontstaan is. Dit veld is alléén gevuld wanneer het beschreven kadastrale object een A-perceel betreft"
+    },
+    "pandeigenaar": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Indicatie pandeigenaar",
+      "description": "Afgeleide indicatie of de tenaamstelling een pandeigenaar is of niet. Zie: https://www.amsterdam.nl/stelselpedia/brk-index/producten-brk/uitleg-kadastertabel/"
+    },
+    "postadres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject postadres",
+      "description": "Het opgemaakte postadres van de (natuurlijke of niet natuurlijke) persoon"
+    },
+    "rechtsvorm": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject rechtsvorm",
+      "description": "De juridische vorm van een niet-natuurlijk persoon"
+    },
+    "rsin": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject Niet natuurlijke persoon RSIN",
+      "description": "Rechtspersonen en Samenwerkingsverbanden Informatienummer (RSIM). Het door een kamer toegekend uniek nummer voor de Niet Natuurlijk Persoon"
+    },
+    "sectie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kadastrale sectie identificatie",
+      "description": "De kadastrale sectie, het tweede gedeelte van de aanduiding van een kadastraal object"
+    },
+    "stadsdeelCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object code",
+      "description": "Volledige stadsdeelcode"
+    },
+    "stadsdeelIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "Unieke identificatie van het stadsdeel"
+    },
+    "stadsdeelNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object naam",
+      "description": "De naam van het stadsdeel"
+    },
+    "statutaireNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject statutaire naam",
+      "description": "De naam van de rechtspersoon. Het betreft de naam die is opgenomen in de oprichtingsakte"
+    },
+    "statutaireZetel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject statutaire naam",
+      "description": "De statutaire plaats van vestiging"
+    },
+    "subjectCategorie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De omschrijving van de categorie waarbinnen het kadastrale subject valt. Voor uitleg over de categorieën: https://www.amsterdam.nl/stelselpedia/brk-index/producten-brk/uitleg-kadastertabel/ onder het kopje 'Filter op Zakelijk gerechtigde'"
+    },
+    "tenaamstellingId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "De identificatie is een unieke aanduiding aan deze tenaamstelling binnen de kadastrale registratie, inclusief volgnummer"
+    },
+    "tenaamstellingIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "De identificatie is een unieke aanduiding aan deze tenaamstelling binnen de kadastrale registratie"
+    },
+    "tenaamstellingInOnderzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Reden onderzoek",
+      "description": "Wanneer gevuld, de reden waarvoor in onderzoek"
+    },
+    "typeSubject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject type omschrijving",
+      "description": "Afgeleid gegeven. Is het subject een natuurlijk persoon of een niet-natuurlijk persoon"
+    },
+    "verblijfsobjectidentificaties": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "title": "Verblijfsobjecten waaraan gerelateerd",
+      "description": "Relatie naar verblijfsobject"
+    },
+    "voornamen": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject voornamen",
+      "description": "Voornamen van het subject"
+    },
+    "voorvoegsels": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject voorvoegsels",
+      "description": "Voorvoegsels bij de geslachtsnaam"
+    },
+    "vveIdentificatieBetrokkenBij": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Betrokken bij VVE appartementsrechtsplitsing",
+      "description": "De identificatie van de vereniging van eigenaren van de appartementsrechtssplitsing waarbij het zakelijk recht betrokken is"
+    },
+    "vveIdentificatieOntstaanUit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Ontstaan uit VVE appartementsrechtsplitsing",
+      "description": "De identificatie van de vereniging van eigenaren van de appartementsrechtssplitsing waaruit het zakelijk recht ontstaan is"
+    },
+    "wijkCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object code",
+      "description": "Volledige, samengestelde, code, bestaande uit stadsdeelcode en wijkcode"
+    },
+    "wijkIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "Unieke identificatie van de wijk"
+    },
+    "wijkNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object naam",
+      "description": "De naam van de wijk"
+    },
+    "woonadres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subject woonadres",
+      "description": "Het opgemaakte woonadres van de (natuurlijke of niet natuurlijke) persoon"
+    },
+    "zakelijkrechtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "De Kadaster identificatie is een door het Kadaster toegekende landelijk unieke aanduiding aan dit zakelijk recht binnen de kadastrale registratie, inclusief volgnummer"
+    },
+    "zakelijkrechtIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object ID",
+      "description": "De Kadaster identificatie is een door het Kadaster toegekende landelijk unieke aanduiding aan dit zakelijk recht binnen de kadastrale registratie"
+    },
+    "zakelijkrechtInOnderzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Reden waarvoor in onderzoek",
+      "description": "Als dit veld is gevuld geeft dit de omschrijving waarom dit gegeven in onderzoek staat (art. 7n en 7r Kadasterwet)"
+    }
+  },
+  "required": [
+    "_links",
+    "id",
+    "kadastraalobjectId"
+  ]
+}

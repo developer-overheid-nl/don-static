@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/gemeentelijk-vastgoed-u4hy1xeng/gemeentelijkvastgoedverhuurbareeenhedenlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/gemeentelijk_vastgoed/openapi.json#/components/schemas/GemeentelijkVastgoedverhuurbare_eenhedenLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to verhuurbareEenheden.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "vheId": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Verhuurbare eenheid ID",
+      "description": "Unieke identificatie van de verhuurbare eenheid."
+    }
+  },
+  "required": [
+    "href",
+    "title",
+    "vheId"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeksroutering-a3hce_gdr/conceptverzoek",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171058/toepasbareregels-verzoeksroutering-v2.json#/components/schemas/Conceptverzoek"
+  ],
+  "description": "Uitkomst van bepalen conceptverzoek",
+  "required": [
+    "toegestaan"
+  ],
+  "properties": {
+    "toegestaan": {
+      "description": "Is conceptverzoek toegestaan?",
+      "type": "boolean"
+    }
+  }
+}

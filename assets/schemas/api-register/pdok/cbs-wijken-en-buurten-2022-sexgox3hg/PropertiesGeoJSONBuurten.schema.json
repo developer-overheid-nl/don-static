@@ -1,0 +1,1572 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/cbs-wijken-en-buurten-2022-sexgox3hg/propertiesgeojsonbuurten",
+  "x-derived-from": [
+    "https://api.pdok.nl/cbs/wijken-en-buurten-2022/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_buurten"
+  ],
+  "properties": {
+    "aantal_bedrijfsvestigingen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_bedrijven_cultuur_recreatie_overige": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_bedrijven_financieel_onroerend_goed": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_bedrijven_handel_en_horeca": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_bedrijven_landbouw_bosbouw_visserij": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_bedrijven_nijverheid_energie": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_bedrijven_overheid_onderwijs_en_zorg": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_bedrijven_vervoer_informatie_communicatie": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_bedrijven_zakelijke_dienstverlening": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_huishoudens": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_inkomensontvangers": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_inwoners": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_jongeren_met_jeugdzorg_in_natura": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_personen_met_een_alg_bijstandsuitkering_tot": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_personen_met_een_ao_uitkering_totaal": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_personen_met_een_aow_uitkering_totaal": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_personen_met_een_ww_uitkering_totaal": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_personenautos_met_brandstof_benzine": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_personenautos_met_overige_brandstof": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_wmo_clienten": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "aantal_wmo_clienten_per_1000_inwoners": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "apotheek_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "attractiepark_gemiddeld_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "attractiepark_gemiddeld_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "attractiepark_gemiddeld_aantal_binnen_50_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "attractiepark_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "basisonderwijs_gemiddeld_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "basisonderwijs_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "basisonderwijs_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "basisonderwijs_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bevolkingsdichtheid_inwoners_per_km2": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bibliotheek_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bioscoop_gemiddeld_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bioscoop_gemiddeld_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bioscoop_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bioscoop_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "brandweerkazerne_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "buitenschoolse_opvang_gem_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "buitenschoolse_opvang_gemiddeld_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "buitenschoolse_opvang_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "buitenschoolse_opvang_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "buurtcode": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "buurtnaam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cafe_gemiddeld_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafe_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafe_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafe_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafetaria_gemiddeld_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafetaria_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafetaria_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "cafetaria_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "dekkingspercentage": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "geboorte_totaal": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "geboortes_per_1000_inwoners": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gem_elektriciteitsverbruik_2_onder_1_kap_woning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gem_elektriciteitsverbruik_vrijstaande_woning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemeentecode": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gemeentenaam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gemiddeld_aantal_musea_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "gemiddeld_aantal_musea_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "gemiddeld_aantal_musea_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "gemiddeld_elektriciteitsverbruik_appartement": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_elektriciteitsverbruik_hoekwoning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_elektriciteitsverbruik_huurwoning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_elektriciteitsverbruik_totaal": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_elektriciteitsverbruik_tussenwoning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_elektriciteitsverbruikkoopwoning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_gasverbruik_2_onder_1_kap_woning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_gasverbruik_appartement": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_gasverbruik_hoekwoning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_gasverbruik_huurwoning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_gasverbruik_totaal": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_gasverbruik_tussenwoning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_gasverbruik_vrijstaande_woning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_gasverbruikkoopwoning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_gestandaardiseerd_inkomen_van_huishoudens": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "gemiddeld_inkomen_per_inkomensontvanger": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddeld_inkomen_per_inwoner": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemiddelde_afstand_tot_museum": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "gemiddelde_huishoudsgrootte": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "gemiddelde_woningwaarde": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "grote_supermarkt_gemiddeld_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "grote_supermarkt_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "grote_supermarkt_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "grote_supermarkt_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "havo_vwo_gemiddeld_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "havo_vwo_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "havo_vwo_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "havo_vwo_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hotel_gemiddeld_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hotel_gemiddeld_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hotel_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "hotel_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "huisartsenpost_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "huisartsenpraktijk_gemiddeld_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "huisartsenpraktijk_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "huisartsenpraktijk_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "huisartsenpraktijk_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "huishoudens_tot_110_percent_van_sociaal_minimum": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "huishoudens_tot_120_percent_van_sociaal_minimum": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "indelingswijziging_wijken_en_buurten": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "jaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "jrstatcode": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kinderdagverblijf_gemiddeld_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "kinderdagverblijf_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "kinderdagverblijf_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "kinderdagverblijf_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "kunstijsbaan_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "mannen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mediaan_vermogen_van_particuliere_huish": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "meest_voorkomende_postcode": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "motortweewielers_totaal": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "netto_arbeidsparticipatie": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "omgevingsadressendichtheid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "opleidingsniveau_hoog": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "opleidingsniveau_laag": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "opleidingsniveau_middelbaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "oppervlakte_land_in_ha": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "oppervlakte_totaal_in_ha": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "oppervlakte_water_in_ha": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "oprit_hoofdverkeersweg_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "overstapstation_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "perc_huurwoningen_in_bezit_overige_verhuurders": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "perc_huurwoningen_in_bezit_woningcorporaties": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_bewoond": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_bouwjaarklasse_tot_2000": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_bouwjaarklasse_vanaf_2000": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_eengezinswoning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_eenpersoonshuishoudens": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_gehuwd": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_gescheid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_huishoudens_met_hoog_inkomen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_huishoudens_met_kinderen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_huishoudens_met_laag_inkomen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_huishoudens_met_lage_koopkracht": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_huishoudens_onder_of_rond_sociaal_minimum": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_huishoudens_zonder_kinderen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_huurwoningen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_jongeren_met_jeugdzorg_in_natura": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "percentage_koopwoningen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_leegstand_woningen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_meergezinswoning": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_niet_westerse_migratieachtergrond": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_ongehuwd": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_overige_nietwestersemigratieachtergrond": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_personen_0_tot_15_jaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_personen_15_tot_25_jaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_personen_25_tot_45_jaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_personen_45_tot_65_jaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_personen_65_jaar_en_ouder": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_personen_met_hoog_inkomen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_personen_met_laag_inkomen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_uit_marokko": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_uit_nederlandse_antillen_en_aruba": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_uit_suriname": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_uit_turkije": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_verweduwd": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_werknemers": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_westerse_migratieachtergrond": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_woningen_met_eigendom_onbekend": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_woningen_met_stadsverwarming": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "percentage_zelfstandigen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "personenautos_per_huishouden": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "personenautos_per_km2": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "personenautos_totaal": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "poppodium_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "restaurant_gemiddeld_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "restaurant_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "restaurant_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "restaurant_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "sauna_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "stedelijkheid_adressen_per_km2": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "sterfte_relatief": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "sterfte_totaal": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "theater_gemiddeld_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "theater_gemiddeld_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "theater_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "theater_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "treinstation_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "vmbo_gemiddeld_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "vmbo_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "vmbo_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "vmbo_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "voortgezet_onderwijs_gem_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "voortgezet_onderwijs_gemiddeld_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "voortgezet_onderwijs_gemiddeld_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "voortgezet_onderwijs_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "vrouwen": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "warenhuis_gemiddeld_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "warenhuis_gemiddeld_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "warenhuis_gemiddeld_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "warenhuis_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "water": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wijkcode": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "winkels_ov_dagel_levensm_gem_aantal_binnen_1_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "winkels_ov_dagel_levensm_gem_aantal_binnen_3_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "winkels_ov_dagel_levensm_gem_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "winkels_ov_dagelijkse_levensm_gem_afst_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "woningvoorraad": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "ziekenhuis_excl_buitenpoli_gem_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_excl_buitenpoli_gem_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_excl_buitenpoli_gem_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_excl_buitenpolikliniek_gem_afst_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_incl_buitenpoli_gem_aantal_binnen_10_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_incl_buitenpoli_gem_aantal_binnen_20_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_incl_buitenpoli_gem_aantal_binnen_5_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ziekenhuis_incl_buitenpolikliniek_gem_afst_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "zonnebank_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "zwembad_gemiddelde_afstand_in_km": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/rd-info-len7tb3nr/propertiesgeojsonstations",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/rdinfo/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_stations"
+  ],
+  "properties": {
+    "blad": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dag": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gps": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "h": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "jaar": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lambda": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "maand": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "omschrext": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "omschrint": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "peilmerk": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "phi": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "punt": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "punten_external_fid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "station": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "xrd": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "yrd": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

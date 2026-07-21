@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/geldigtot",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/GeldigTot"
+  ],
+  "type": "string",
+  "description": "Datum die aangeeft tot wanneer een document geldig is. (Omgevingsdocument)",
+  "format": "date",
+  "examples": [
+    "2015-03-25"
+  ]
+}

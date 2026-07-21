@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/besluitversie",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/BesluitVersie"
+  ],
+  "required": [
+    "aangeleverdDoorEen",
+    "beschikbaarVanaf",
+    "expressionId",
+    "geldigVanaf",
+    "identificatie",
+    "inwerkingVanaf",
+    "isToekomstig",
+    "publicatiedatum",
+    "titel",
+    "uriIdentificatie",
+    "versie"
+  ],
+  "properties": {
+    "aangeleverdDoorEen": {
+      "$ref": "./BevoegdGezag.schema.json"
+    },
+    "beginInzagetermijn": {
+      "type": "string",
+      "description": "Datum van het begin van de inzagetermijn van een ontwerpdocument. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2024-01-01"
+      ]
+    },
+    "beschikbaarTot": {
+      "type": "string",
+      "description": "Tijdstip dat aangeeft tot wanneer een document is geregistreerd. (Omgevingsdocument)",
+      "format": "date-time"
+    },
+    "beschikbaarVanaf": {
+      "type": "string",
+      "description": "Tijdstip dat aangeeft vanaf wanneer een document is geregistreerd. (Omgevingsdocument)",
+      "format": "date-time"
+    },
+    "besluitCiteertitel": {
+      "type": "string",
+      "description": "De citeertitel van het besluit van een regeling. (Omgevingsdocument)",
+      "examples": [
+        "Actieplan Geluid"
+      ]
+    },
+    "consolideertRegelingVersie": {
+      "type": "string",
+      "description": "Identificatie van een specifieke versie van een document. (Omgevingdocument)",
+      "examples": [
+        "/akn/nl/act/gm0362/2020/omgevingsplan/nld@2024-03-12;3"
+      ]
+    },
+    "eindeInzagetermijn": {
+      "type": "string",
+      "description": "Datum van het einde van de inzagetermijn van een ontwerpdocument. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2024-10-11"
+      ]
+    },
+    "expressionId": {
+      "type": "string",
+      "description": "Identificatie van een specifieke versie van een document. (Omgevingdocument)",
+      "examples": [
+        "/akn/nl/act/gm0362/2020/omgevingsplan/nld@2024-03-12;3"
+      ]
+    },
+    "geldigTot": {
+      "type": "string",
+      "description": "Datum die aangeeft tot wanneer een document geldig is. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2015-03-25"
+      ]
+    },
+    "geldigVanaf": {
+      "type": "string",
+      "description": "Datum die aangeeft vanaf wanneer een document geldig is. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2015-03-25"
+      ]
+    },
+    "identificatie": {
+      "type": "string",
+      "description": "Identificatie van het document (AKN bij omgevingsdocument, planId bij IMRO-document).",
+      "examples": [
+        "/akn/nl/act/gm0301/2020/omgevingsplan"
+      ]
+    },
+    "inwerkingTot": {
+      "type": "string",
+      "description": "Datum die aangeeft tot wanneer een document juridisch geldend is. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2015-03-25"
+      ]
+    },
+    "inwerkingVanaf": {
+      "type": "string",
+      "description": "Datum die aangeeft vanaf wanneer een document juridisch geldend is. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2015-03-25"
+      ]
+    },
+    "isToekomstig": {
+      "type": "boolean",
+      "description": "Geeft aan of het document in de toekomst geldig wordt. (Omgevingsdocument)",
+      "examples": [
+        true
+      ]
+    },
+    "publicatiedatum": {
+      "type": "string",
+      "description": "Datum van publiceren. (Omgevingsdocument)",
+      "format": "date",
+      "examples": [
+        "2024-01-01"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "description": "De status van een omgevingsdocument waarme aangegeven kan worden dat het document niet meer geldig is.",
+      "enum": [
+        "B"
+      ],
+      "examples": [
+        "B"
+      ]
+    },
+    "titel": {
+      "type": "string",
+      "description": "Titel van het document. Voor omgevingsdocumenten is dit de `citeertitel`, als die niet bekend is wordt de\n`officieleTitel` gebruikt. Voor IMRO-documenten is dit `naam`.",
+      "examples": [
+        "Bestemmingplan Lemmer Centrum"
+      ]
+    },
+    "uriIdentificatie": {
+      "type": "string",
+      "description": "URI-veilige identificatie, waarbij `/` is vervangen door `_`.",
+      "examples": [
+        "_akn_nl_act_gm0301_2020_omgevingsplan"
+      ]
+    },
+    "versie": {
+      "type": "integer",
+      "description": "Versienummer van het document.",
+      "format": "int32",
+      "examples": [
+        2
+      ]
+    },
+    "wijzigtRegelingVersie": {
+      "type": "string",
+      "description": "Identificatie van een specifieke versie van een document. (Omgevingdocument)",
+      "examples": [
+        "/akn/nl/act/gm0362/2020/omgevingsplan/nld@2024-03-12;3"
+      ]
+    }
+  },
+  "description": "Specifieke BesluitVersie van een omgevingsdocument."
+}

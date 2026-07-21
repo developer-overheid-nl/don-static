@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/explosieven-lntsjxeng/explosievengevrijwaardgebiedlink",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/explosieven/openapi.json#/components/schemas/ExplosievengevrijwaardgebiedLink"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to gevrijwaardgebied.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Gevrijwaard gebied ID",
+      "description": "Unieke identificatie van een gevrijwaard gebied"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "id",
+    "title"
+  ]
+}

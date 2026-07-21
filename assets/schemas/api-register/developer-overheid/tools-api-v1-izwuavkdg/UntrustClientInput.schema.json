@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/developer-overheid/tools-api-v1-izwuavkdg/untrustclientinput",
+  "x-derived-from": [
+    "http://localhost:1338/v1/openapi.json#/components/schemas/UntrustClientInput"
+  ],
+  "properties": {
+    "email": {
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "examples": [
+    {
+      "email": "email"
+    }
+  ]
+}

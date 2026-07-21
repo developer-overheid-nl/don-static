@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-buitenlandse-zaken/nederland-wereldwijd-zioabu6hr/category",
+  "x-derived-from": [
+    "https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/openapi.yaml#/components/schemas/category"
+  ],
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": "string"
+    },
+    "contentblocks": {
+      "type": "array",
+      "xml": {
+        "name": "contentblock"
+      },
+      "items": {
+        "$ref": "./Contentblock.schema.json"
+      }
+    }
+  },
+  "xml": {
+    "name": "category"
+  }
+}

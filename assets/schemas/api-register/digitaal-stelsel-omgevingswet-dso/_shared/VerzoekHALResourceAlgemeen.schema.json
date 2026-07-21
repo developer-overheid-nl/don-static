@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/verzoekhalresourcealgemeen",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/VerzoekHALResourceAlgemeen",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/VerzoekHALResourceAlgemeen",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/VerzoekHALResourceAlgemeen"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./Links.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "format": "int64"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/_shared/terugmeldingfeaturecollection",
+  "x-derived-from": [
+    "https://api.kadaster.nl/tms/v2/openapi.json#/components/schemas/TerugmeldingFeatureCollection",
+    "https://service10.kadaster.nl/tms/bronhouders/v2/openapi.json#/components/schemas/TerugmeldingFeatureCollection"
+  ],
+  "title": "TerugmeldingFeatureCollection",
+  "type": "object",
+  "properties": {
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "./MeldingFeature.schema.json"
+      }
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "features",
+    "name",
+    "type"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/kamer-van-koophandel/ondernemersplein-overheid-nl-open-data-api-8-be1ueng/articlecontract",
+  "x-derived-from": [
+    "https://opendata.ondernemersplein.nl/swagger/v1/swagger.json#/components/schemas/ArticleContract"
+  ],
+  "type": "object",
+  "properties": {
+    "about": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Article short description."
+    },
+    "additionalType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Article type (a.k.a. additionalType). Article types include: artikel-nl, regel-nl, subsidie-nl,\r\nwetswijziging-nl, video."
+    },
+    "articleBody": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Article content body (HTML)."
+    },
+    "author": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "./Author.schema.json"
+      },
+      "description": "Article authors. Note: field naming of 'author' is singular, but author field contains an array of authors."
+    },
+    "contact": {
+      "$ref": "./Contact.schema.json"
+    },
+    "dateCreated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Creation date."
+    },
+    "dateModified": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Last modified date."
+    },
+    "datePublished": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Last published date."
+    },
+    "hasPart": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "./PartItem.schema.json"
+      },
+      "description": "Related articles."
+    },
+    "headLine": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Article title."
+    },
+    "identifier": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Article ID"
+    },
+    "inLanguage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Locale.",
+      "readOnly": true
+    },
+    "isPartOf": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "./PartItem.schema.json"
+      },
+      "description": "List of other articles that are related (referenced) to the same article."
+    },
+    "keywords": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "Article meta keywords."
+    },
+    "publisher": {
+      "$ref": "./Author.schema.json"
+    },
+    "subjects": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "Subjects"
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Article URL."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Represents the datacontract of an article."
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/natura-2000-inspire-geharmoniseerd-ewgntx3nr/propertiesgeojsonprotectedsite",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/natura2000-geharmoniseerd/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_protectedsite"
+  ],
+  "properties": {
+    "gml_id": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspireid_identifier_localid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inspireid_identifier_namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sitedesignation_designationtype_designation_xlink_href": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sitedesignation_designationtype_designationscheme_xlink_h": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sitename_geographicalname_language": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sitename_geographicalname_spelling_spellingofname_text": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

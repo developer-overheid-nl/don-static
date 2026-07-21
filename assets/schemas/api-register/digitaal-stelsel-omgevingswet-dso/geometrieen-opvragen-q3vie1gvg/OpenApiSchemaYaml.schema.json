@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/geometrieen-opvragen-q3vie1gvg/openapischemayaml",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/geometrieopvragen/v1/openapi.json#/components/schemas/OpenApiSchemaYaml"
+  ],
+  "description": "Het YAML schema van de OpenAPI specificatie.",
+  "type": "object"
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/beleidsmatigverantwoordelijkeoverheid",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json"
+  ],
+  "required": [
+    "code",
+    "naam",
+    "type"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "CBS-code van de beleidsmatig verantwoordelijke overheid. Altijd 4 cijfers, indien nodig aangevuld met voorloopnullen.",
+      "examples": [
+        "0200"
+      ]
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "gemeente Apeldoorn"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "gemeentelijke overheid",
+        "deelgemeente/stadsdeel",
+        "provinciale overheid",
+        "nationale overheid"
+      ],
+      "examples": [
+        "gemeentelijke overheid"
+      ]
+    }
+  }
+}

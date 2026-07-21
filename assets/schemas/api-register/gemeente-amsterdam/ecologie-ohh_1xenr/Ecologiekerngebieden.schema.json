@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/ecologie-ohh_1xenr/ecologiekerngebieden",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/ecologie/openapi.json#/components/schemas/Ecologiekerngebieden"
+  ],
+  "type": "object",
+  "description": "Tabel met gegevens over kerngebieden. Kerngebieden zijn onderdeel van het ecologisch areaal van Amsterdam.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `kerngebieden._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./EcologiekerngebiedenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "categorieKerngebied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het ecologische beheerobject is ingedeeld in de natuurcategorie nat of droog."
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "gidssoort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de diersoort, waaraan getoetst (kan) worden om de kwaliteit van het ecologische beheerobject in kaart te brengen."
+    },
+    "guid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Global Unique Identifier: unieke aanduiding van het object."
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object ID",
+      "description": "Uniek identificerend kenmerk van een object."
+    },
+    "mutatieDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Datum mutatie",
+      "description": "Datum waarop laatste mutatie heeft plaatsgevonden."
+    },
+    "objectnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van het ecologisch beheerobject."
+    },
+    "objectnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Nummer van het beheerobject, door de organisatie gegeven."
+    },
+    "objecttype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van het beheerobject conform IMBOR."
+    },
+    "omtrekGis": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Omtrek GIS",
+      "description": "Op geometrie automatisch berekende lengte (lijn) of omtrek (vlak) in meters."
+    },
+    "oppervlakteGis": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Oppervlakte GIS",
+      "description": "Oppervlakte van het beheerobject, overname van BGT/IMGeo."
+    },
+    "stadsdeelNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Stadsdeel, niet te verwarren met Stadsdeel BGT-IMGeo: zie hiervoor Woonplaats. Voor de meeste gemeenten gelijk aan Woonplaats, maar kan ook functioneren als hiërarchische laag tussen de niveaus wijk en woonplaats."
+    },
+    "waterschapNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van het waterschap, waarbinnen het beheerobject ligt. Overname uit IMGeo-bestand met waterschapsgrenzen."
+    },
+    "wijkNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van de wijk waarbinnen het beheerobject ligt. Overname uit IMGeo-bestand met wijkgrenzen."
+    },
+    "woonplaatsNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Woonplaats, overeenkomstig met Stadsdeel of Woonplaats conform BGT-IMGeo."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

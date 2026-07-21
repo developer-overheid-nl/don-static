@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/bouwjaarfilter",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/BouwjaarFilter"
+  ],
+  "type": "object",
+  "properties": {
+    "max": {
+      "maximum": 9999,
+      "minimum": 0,
+      "type": "integer",
+      "description": "Zoek naar waarden kleiner dan de opgegeven waarde."
+    },
+    "min": {
+      "maximum": 9999,
+      "minimum": 0,
+      "type": "integer",
+      "description": "Zoek naar waarden groter of gelijk aan de opgegeven waarde."
+    }
+  },
+  "description": "\"Zoek binnen een bereik van de opgegeven minimumwaarde tot maximumwaarde. \nDe opgegeven minimumwaarde moet lager zijn dan de opgegeven maximumwaarde.\"\n"
+}

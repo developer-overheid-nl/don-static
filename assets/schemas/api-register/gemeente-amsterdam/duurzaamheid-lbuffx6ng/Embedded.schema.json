@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/duurzaamheid-lbuffx6ng/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/duurzaamheid/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "energielabel": {
+      "type": "array",
+      "items": {
+        "$ref": "./Duurzaamheidenergielabel.schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/_shared/bagwoonplaatsenrawidentifier",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/BagWoonplaatsenRawIdentifier",
+    "https://api.data.amsterdam.nl/v1/indicatoren/openapi.json#/components/schemas/BagWoonplaatsenRawIdentifier",
+    "https://api.data.amsterdam.nl/v1/meldingen/acc/openapi.json#/components/schemas/BagWoonplaatsenRawIdentifier",
+    "https://api.data.amsterdam.nl/v1/meldingen/openapi.json#/components/schemas/BagWoonplaatsenRawIdentifier"
+  ],
+  "type": "object",
+  "description": "The identifier of the relationship to woonplaatsen.",
+  "properties": {
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "identificatie": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "href",
+    "identificatie",
+    "title"
+  ]
+}

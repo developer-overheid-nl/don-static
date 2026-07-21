@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/benkagg-lqtl1u6hg/benkaggbrkaantekeningenkadobjecten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/benkagg/openapi.json#/components/schemas/Benkaggbrkaantekeningenkadobjecten"
+  ],
+  "type": "object",
+  "description": "Specifiek voor Data Verkenner gemaakte BRK-tabel van Aantekeningen Kadastrale Objecten.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `brkaantekeningenkadobjecten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BenkaggBrkaantekeningenkadobjectenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aardOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De aard van de aantekening."
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Begindatum geldigheid object."
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Einddatum geldigheid object."
+    },
+    "hftBtrkOpKotIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Identificatie van het kadastrale object (onroerende zaak)."
+    },
+    "identificatie": {
+      "type": "string",
+      "description": "De door het Kadaster toegekende landelijk unieke aanduiding aan deze aantekening."
+    },
+    "omschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Nadere beschrijving van de aantekening."
+    },
+    "volgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het object."
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie",
+    "volgnummer"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/_shared/queryableboolean",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top10nl/ogc/v1/openapi.json#/components/schemas/queryable-boolean",
+    "https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/openapi.json#/components/schemas/queryable-boolean",
+    "https://api.pdok.nl/kadaster/brk-kadastrale-kaart/ogc/v1/openapi.json#/components/schemas/queryable-boolean",
+    "https://api.pdok.nl/kadaster/brt-achtergrondkaart/ogc/v1/openapi.json#/components/schemas/queryable-boolean",
+    "https://api.pdok.nl/lv/bag/ogc/v1-demo/openapi.json#/components/schemas/queryable-boolean",
+    "https://api.pdok.nl/lv/bag/ogc/v1/openapi.json#/components/schemas/queryable-boolean",
+    "https://api.pdok.nl/lv/bgt/ogc/v1/openapi.json#/components/schemas/queryable-boolean"
+  ],
+  "examples": [
+    {
+      "description": "indicator whether the area is walled or fenced",
+      "id": "fenced",
+      "type": "boolean"
+    }
+  ],
+  "discriminator": {
+    "mapping": {
+      "boolean": "queryable-boolean",
+      "date": "queryable-date",
+      "dateTime": "queryable-dateTime",
+      "enum": "queryable-enum",
+      "integer": "queryable-number",
+      "number": "queryable-number",
+      "string": "queryable-string",
+      "uri": "queryable-string"
+    },
+    "propertyName": "type"
+  },
+  "properties": {
+    "description": {
+      "description": "a description of the property",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "description": "the property name for use in expressions",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mediaTypes": {
+      "description": "In cases where a property is available only in a subset of the\nsupported feature encodings, the list of the media types of the\nencodings can be specified.\n\nThis capabilitiy is also needed for cases where the names of\nproperties may differ between feature encodings. For example, \nidentifiers in an XML/GML encoding may include a namespace, \nin GeoJSON or MVT this is not the case. \n\nThere are other reasons, too. For example, the property identifier\nin a Shapefile may be different because of length restrictions.",
+      "items": {
+        "type": "string"
+      },
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "required": {
+      "default": false,
+      "description": "indicator whether the property is always present in features",
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "title": {
+      "description": "the title of the property for presentation to a human user",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "description": "the data type of the property",
+      "enum": [
+        "string",
+        "uri",
+        "enum",
+        "number",
+        "integer",
+        "date",
+        "dateTime",
+        "boolean"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type"
+  ],
+  "type": [
+    "object",
+    "null"
+  ]
+}

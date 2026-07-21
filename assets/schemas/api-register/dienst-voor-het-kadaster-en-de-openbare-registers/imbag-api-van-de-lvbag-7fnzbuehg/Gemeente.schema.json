@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/gemeente",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/Gemeente"
+  ],
+  "title": "Gemeente",
+  "required": [
+    "beginGeldigheid",
+    "code",
+    "naam",
+    "provincie",
+    "status",
+    "tijdstipRegistratieLV",
+    "versie"
+  ],
+  "type": "object",
+  "properties": {
+    "beginGeldigheid": {
+      "title": "beginGeldigheid",
+      "type": "string",
+      "description": "De datum waarop een versie van een bronhouder geldig is in de werkelijkheid. \nDit tijdstip wordt vastgelegd in de beginGeldigheid.\n",
+      "format": "date",
+      "examples": [
+        "2019-06-01"
+      ]
+    },
+    "code": {
+      "title": "code",
+      "pattern": "^[0-9]{4}$",
+      "type": "string",
+      "description": "Een officiële code die aan een gemeente is toegekend, ontleend is aan \ntabel 33 en zoals bijgehouden in de LVBAG. \nDit gegeven is geen officieel BAG gegeven en wordt niet als kenmerk van \nhet BAG object Woonplaats object bijgehouden. \nHet wordt als hulpgegeven meegeleverd.\n",
+      "examples": [
+        "0226"
+      ]
+    },
+    "eindGeldigheid": {
+      "title": "eindGeldigheid",
+      "type": "string",
+      "description": "De datum waarop de periode van geldigheid van een versie van een bronhouder \neindigt. \nWanneer er geen tijdstip is ingevuld, dan is de versie nog geldig. \nDit tijdstip wordt vastgelegd in de eindGeldigheid.\n",
+      "format": "date",
+      "examples": [
+        "2019-06-01"
+      ]
+    },
+    "naam": {
+      "title": "naam",
+      "maxLength": 80,
+      "minLength": 1,
+      "type": "string",
+      "description": "Een officiële naam die aan een gemeente is toegekend.",
+      "examples": [
+        "Duiven"
+      ]
+    },
+    "provincie": {
+      "$ref": "./Provincie.schema.json"
+    },
+    "status": {
+      "title": "StatusGemeente",
+      "type": "string",
+      "description": "Een aanduiding van alle waarden die de status van een gemeente kan aannemen.",
+      "enum": [
+        "Actief",
+        "Beëindigd"
+      ]
+    },
+    "tijdstipEindRegistratieLV": {
+      "title": "tijdstipEindRegistratieLV",
+      "type": "string",
+      "description": "Dit is het tijdstip (conform RFC 3339) waarop een versie van een object of een relatie is beëindigd in de registratie van de landelijke voorziening.",
+      "format": "date-time",
+      "examples": [
+        "2019-06-01T12:00:00+01:00"
+      ]
+    },
+    "tijdstipRegistratieLV": {
+      "title": "tijdstipRegistratieLV",
+      "type": "string",
+      "description": "Dit is het tijdstip (conform RFC 3339) waarop een versie van een object of een relatie is opgenomen in de registratie van de landelijke voorziening. De gegevens komen daarmee beschikbaar voor afnemers.",
+      "format": "date-time",
+      "examples": [
+        "2019-06-01T12:00:00+01:00"
+      ]
+    },
+    "versie": {
+      "title": "versie",
+      "type": "integer",
+      "description": "De identificatie van een voorkomen van een object.",
+      "examples": [
+        3
+      ]
+    }
+  },
+  "description": "Een bronhouder is een gemeente of samenwerkingsverband van gemeenten en \nheeft een code en naam net als een gemeente.\n"
+}

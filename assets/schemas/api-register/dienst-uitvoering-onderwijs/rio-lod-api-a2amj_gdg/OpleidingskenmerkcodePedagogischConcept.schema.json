@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/opleidingskenmerkcodepedagogischconcept",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/OpleidingskenmerkcodePedagogischConcept"
+  ],
+  "type": "string",
+  "description": "Een onderscheidende eigenschap van een opleiding ten aanzien van het opvoedkundig en onderwijzend handelen.",
+  "enum": [
+    "AGORA",
+    "DALTON",
+    "FREINET",
+    "HBGO",
+    "INTERNATIONAL_PRIMARY_CURRICULUM",
+    "JENAPLAN",
+    "MONTESSORI",
+    "VRIJESCHOOL"
+  ]
+}

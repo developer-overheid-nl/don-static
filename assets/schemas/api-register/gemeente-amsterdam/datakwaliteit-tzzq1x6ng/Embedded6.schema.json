@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/datakwaliteit-tzzq1x6ng/embedded6",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/datakwaliteit/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "regel": {
+      "type": "array",
+      "items": {
+        "$ref": "./Datakwaliteitregel.schema.json"
+      }
+    }
+  }
+}

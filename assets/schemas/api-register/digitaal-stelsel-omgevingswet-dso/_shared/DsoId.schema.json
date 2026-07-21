@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/dsoid",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/DsoId",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v2.json#/components/schemas/DsoId",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v3.json#/components/schemas/DsoId",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/DsoId"
+  ],
+  "type": "string",
+  "description": "DSO id (UUID)",
+  "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+  "minLength": 36,
+  "maxLength": 36,
+  "examples": [
+    "ff4cd97f-1d24-4f42-86c4-61a8a1e9f066"
+  ]
+}

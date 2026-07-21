@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brt-50-nxes1ueng/links",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bomen/openapi.json",
+    "https://api.data.amsterdam.nl/v1/brt50/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "next": {
+      "$ref": "../_shared/Next.schema.json"
+    },
+    "previous": {
+      "$ref": "../_shared/Previous.schema.json"
+    },
+    "self": {
+      "$ref": "../_shared/Self2.schema.json"
+    }
+  }
+}

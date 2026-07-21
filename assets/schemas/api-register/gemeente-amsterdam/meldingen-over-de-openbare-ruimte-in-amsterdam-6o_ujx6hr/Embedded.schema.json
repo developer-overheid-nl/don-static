@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/meldingen-over-de-openbare-ruimte-in-amsterdam-6o_ujx6hr/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/meldingen/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "meldingen": {
+      "type": "array",
+      "items": {
+        "$ref": "./Meldingenmeldingen.schema.json"
+      }
+    }
+  }
+}

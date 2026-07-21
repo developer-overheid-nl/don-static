@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/_shared/conflict",
+  "x-derived-from": [
+    "https://publiek.broservices.nl/gm/gmw/v1/material-history/openapi#/components/schemas/Conflict",
+    "https://publiek.broservices.nl/gm/gmw/v1/material-history/openapi.json#/components/schemas/Conflict"
+  ],
+  "properties": {
+    "cableNumber": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "conflictType": {
+      "enum": [
+        "HISTORY",
+        "WELL",
+        "TUBE",
+        "ELECTRODE"
+      ],
+      "type": "string"
+    },
+    "electrodeNumber": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "eventDate": {
+      "type": "string"
+    },
+    "eventName": {
+      "type": "string"
+    },
+    "fullName": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "name": {
+      "enum": [
+        "OWNER",
+        "MAINTAINER",
+        "WELLHEADPROTECTOR",
+        "GROUNDLEVEL",
+        "TUBE_TOP_DIAMETER",
+        "TUBE_TOP_POSITION",
+        "TUBE_STATUS",
+        "TUBE_PLAIN_PART_LENGTH",
+        "TUBE_MATERIAL",
+        "TUBE_GLUE",
+        "ELECTRODE_STATUS"
+      ],
+      "type": "string"
+    },
+    "offendingValue": {
+      "type": "string"
+    },
+    "tubeNumber": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

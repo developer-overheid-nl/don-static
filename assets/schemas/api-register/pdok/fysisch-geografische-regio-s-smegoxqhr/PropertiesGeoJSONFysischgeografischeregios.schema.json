@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/fysisch-geografische-regio-s-smegoxqhr/propertiesgeojsonfysischgeografischeregios",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/fysisch-geografische-regios/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_fysischgeografischeregios"
+  ],
+  "properties": {
+    "afk": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fgr": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/point2d",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/Point2D"
+  ],
+  "title": "Point2D",
+  "maxItems": 2,
+  "minItems": 2,
+  "type": "array",
+  "description": "A 2D point",
+  "items": {
+    "type": "number"
+  },
+  "examples": [
+    [
+      5.960233,
+      52.179515
+    ]
+  ]
+}

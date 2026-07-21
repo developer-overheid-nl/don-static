@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/activiteitlocatieaanduiding",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/ActiviteitLocatieaanduiding"
+  ],
+  "title": "ActiviteitLocatieaanduiding",
+  "required": [
+    "activiteitRef",
+    "activiteitregelkwalificatie",
+    "identificatie",
+    "locatieRefs"
+  ],
+  "type": "object",
+  "properties": {
+    "activiteitRef": {
+      "type": "string",
+      "examples": [
+        "nl.imow-gm1911.activiteit.20240101"
+      ]
+    },
+    "activiteitregelkwalificatie": {
+      "$ref": "./ActiviteitRegelkwalificatie.schema.json"
+    },
+    "identificatie": {
+      "type": "string",
+      "examples": [
+        "nl.imow-gm1911.activiteit.20240101"
+      ]
+    },
+    "locatieRefs": {
+      "title": "LocatieRefs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.gebied.of.gebiedengroep.20240101"
+        ]
+      }
+    }
+  }
+}

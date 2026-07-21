@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/embedded25",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "structuurvisiegebieden": {
+      "type": "array",
+      "items": {
+        "$ref": "./BaseStructuurvisiegebied.schema.json"
+      }
+    },
+    "structuurvisieverklaringen": {
+      "type": "array",
+      "items": {
+        "$ref": "./BaseStructuurvisieverklaring.schema.json"
+      }
+    },
+    "teksten": {
+      "type": "array",
+      "items": {
+        "$ref": "./Item42.schema.json"
+      }
+    }
+  }
+}

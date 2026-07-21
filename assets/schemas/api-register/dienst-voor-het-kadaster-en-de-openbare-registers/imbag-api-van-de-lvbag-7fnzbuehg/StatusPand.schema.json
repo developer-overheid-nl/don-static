@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/statuspand",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/StatusPand"
+  ],
+  "title": "StatusPand",
+  "type": "string",
+  "description": "Een codering van de verschillende waarden die de status van een pand kan aannemen.\n",
+  "enum": [
+    "Bouwvergunning verleend",
+    "Niet gerealiseerd pand",
+    "Bouw gestart",
+    "Pand in gebruik (niet ingemeten)",
+    "Pand in gebruik",
+    "Verbouwing pand",
+    "Sloopvergunning verleend",
+    "Pand gesloopt",
+    "Pand buiten gebruik",
+    "Pand ten onrechte opgevoerd"
+  ]
+}

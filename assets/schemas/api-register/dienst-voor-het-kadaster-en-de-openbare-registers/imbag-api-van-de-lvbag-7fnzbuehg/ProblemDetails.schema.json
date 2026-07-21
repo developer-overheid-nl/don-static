@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/problemdetails",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/ProblemDetails"
+  ],
+  "title": "ProblemDetails",
+  "type": "object",
+  "properties": {
+    "detail": {
+      "type": "string",
+      "description": "Een gedetailleerde beschrijving van de HTTP status code.",
+      "examples": [
+        "Het verzoek vereist gebruikers authenticatie."
+      ]
+    },
+    "instance": {
+      "type": "string",
+      "description": "URI van de aanroep die fout heeft veroorzaakt.",
+      "format": "uri"
+    },
+    "status": {
+      "type": "integer",
+      "description": "De HTTP status code.",
+      "examples": [
+        401
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "De titel behorende bij de HTTP status code.",
+      "examples": [
+        "Niet correct geauthenticeerd"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "URI naar een pagina met meer informatie over deze foutmelding voor de ontwikkelaar.\n",
+      "format": "uri",
+      "examples": [
+        "https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.2 401 Unauthorized"
+      ]
+    }
+  },
+  "description": "Dit type bevat een definitief van het basis JSON object voor problem details conform RFC 7807."
+}

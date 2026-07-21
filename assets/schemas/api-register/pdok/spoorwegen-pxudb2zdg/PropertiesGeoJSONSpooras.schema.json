@@ -1,0 +1,355 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/spoorwegen-pxudb2zdg/propertiesgeojsonspooras",
+  "x-derived-from": [
+    "https://api.pdok.nl/prorail/spoorwegen/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_spooras"
+  ],
+  "properties": {
+    "geldig_vanaf": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geocode_begin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geocode_eind": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geocode_naam_begin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geocode_naam_eind": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geocode_nr_begin": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "geocode_nr_eind": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "geosubcode_begin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geosubcode_eind": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kantcode_spoortak_begin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kantcode_spoortak_eind": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "km_geocode_tot": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "km_geocode_tot_t": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "km_geocode_van": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "km_geocode_van_t": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kmlint_begin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kmlint_eind": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kmlint_omschrijving_begin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kmlint_omschrijving_eind": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "latitude_begin": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "latitude_eind": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "lengte": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "levenscyclus_status": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "longitude_begin": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "longitude_eind": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "naam_lang": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "objecttype_begin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objecttype_eind": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "positionele_nauwkeurigheid_mm": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "publicatiedatum": {
+      "description": "",
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "puic": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ref_func_spoortak_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ref_func_spoortak_puic": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ref_object_begin_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ref_object_begin_puic": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ref_object_eind_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ref_object_eind_puic": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "subcode_begin": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "subcode_eind": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "x_begin": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "x_eind": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "y_begin": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "y_eind": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "z_begin": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "z_eind": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/opleidingskenmerkcodeonderwijsintensiteit",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/OpleidingskenmerkcodeOnderwijsintensiteit"
+  ],
+  "type": "string",
+  "description": "De mogelijke manieren waarop de kennisoverdracht is ingericht in het hoger onderwijs wat betreft aanwezigheid  en de duur van de aanwezigheid.",
+  "enum": [
+    "DEELTIJD",
+    "DUAAL",
+    "VOLTIJD"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/precariobelasting-dzvlfu6ng/precariobelastingbedrijfsvaartuigen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/precariobelasting/openapi.json#/components/schemas/Precariobelastingbedrijfsvaartuigen"
+  ],
+  "type": "object",
+  "description": "bedrijfsvaartuigen",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `bedrijfsvaartuigen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./PrecariobelastingbedrijfsvaartuigenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "categorie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Functionele categorienaam van het percariobelastinggebied."
+    },
+    "gebied": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Precariobelastinggebied"
+    },
+    "geometry": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "description": "Point in 3D space",
+                    "minItems": 2,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "MultiPolygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke technische identificatie van het data record."
+    },
+    "jaar": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Jaar van publicatie",
+      "description": "Jaar van publicatie"
+    },
+    "stadsdeel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Stadsdeel waarop tarieven van toepassing zijn"
+    },
+    "tariefPerJaarPerM2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Tarief",
+      "description": "Tarief in Euro per jaar per vierkante meter oppervlakte voortuig"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

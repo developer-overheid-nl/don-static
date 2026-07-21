@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bag-6-fsfxehg/bagstandplaatsenheeftonderzoeken_m2m",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json#/components/schemas/BagstandplaatsenHeeftOnderzoeken_M2M"
+  ],
+  "type": "object",
+  "description": "The M2M table for `Standplaatsen.heeftOnderzoeken` that links to `Onderzoeken`",
+  "properties": {
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "href": {
+      "type": "string",
+      "format": "uri",
+      "readOnly": true
+    },
+    "identificatie": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "readOnly": true
+    },
+    "volgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64"
+    }
+  },
+  "required": [
+    "href",
+    "title"
+  ]
+}

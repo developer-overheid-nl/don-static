@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/rijksdienst-voor-ondernemend-nederland/iio-api-aakgfxenr/sector",
+  "x-derived-from": [
+    "https://internationaal.ondernemen.overheid.nl/api/iio/v1/openapi.yaml#/components/schemas/Sector"
+  ],
+  "description": "A list of industry sectors associated with this item.",
+  "properties": {
+    "id": {
+      "description": "A unique identifier in UUID format from a sector, country, content-item etc.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "link": {
+      "description": "A link to the sector detailed page, can be null if not available.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "examples": [
+        "https://internationaal.ondernemen.overheid.nl/api/iio/v1/sectoren/3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      ]
+    },
+    "sector": {
+      "description": "The sector name.",
+      "type": "string",
+      "examples": [
+        "Energy"
+      ]
+    }
+  },
+  "type": "object"
+}

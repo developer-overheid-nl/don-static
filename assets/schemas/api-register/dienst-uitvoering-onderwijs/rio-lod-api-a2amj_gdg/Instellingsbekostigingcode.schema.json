@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/instellingsbekostigingcode",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Instellingsbekostigingcode"
+  ],
+  "type": "string",
+  "description": "Geeft aan of en zo ja in welke vorm er sprake is van bekostiging van een organisatie met een erkenning.",
+  "enum": [
+    "AANGEWEZEN",
+    "BEKOSTIGD",
+    "DECLARATIE",
+    "ERKEND",
+    "INDIRECT_BEKOSTIGD",
+    "LUMPSUM",
+    "NIET_BEKOSTIGD",
+    "NIET_VAN_TOEPASSING",
+    "RECHTSPERSOON_HO",
+    "RIJKS"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brk2-oktbfx6hg/brk2v1zakelijkerechtenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brk2/openapi.json#/components/schemas/Brk2v1ZakelijkerechtenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `zakelijkerechten._links` field. It contains all relationships with objects.",
+  "properties": {
+    "belastBrkZakelijkeRechten": {
+      "type": "array",
+      "items": {
+        "$ref": "./Brk2zakelijkerechtenBelastBrkZakelijkeRechten_M2M.schema.json"
+      }
+    },
+    "belastMetBrkZakelijkeRechten": {
+      "type": "array",
+      "items": {
+        "$ref": "./Brk2zakelijkerechtenBelastMetBrkZakelijkeRechten_M2M.schema.json"
+      }
+    },
+    "betrokkenBijBrkZakelijkeRechten": {
+      "type": "array",
+      "items": {
+        "$ref": "./Brk2zakelijkerechtenBetrokkenBijBrkZakelijkeRechten_M2M.schema.json"
+      }
+    },
+    "isBeperktTotBrkTenaamstellingen": {
+      "type": "array",
+      "items": {
+        "$ref": "./Brk2zakelijkerechtenIsBeperktTotBrkTenaamstellingen_M2M.schema.json"
+      }
+    },
+    "ontstaanUitBrkZakelijkeRechten": {
+      "type": "array",
+      "items": {
+        "$ref": "./Brk2zakelijkerechtenOntstaanUitBrkZakelijkeRechten_M2M.schema.json"
+      }
+    },
+    "rustOpBrkKadastraalObject": {
+      "$ref": "./Brk2KadastraleobjectenLink.schema.json"
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./Brk2ZakelijkerechtenLink.schema.json"
+    },
+    "vveIdentificatieBetrokkenBij": {
+      "$ref": "./Brk2kadastralesubjectenLink.schema.json"
+    },
+    "vveIdentificatieOntstaanUit": {
+      "$ref": "./Brk2kadastralesubjectenLink.schema.json"
+    }
+  },
+  "required": [
+    "belastBrkZakelijkeRechten",
+    "belastMetBrkZakelijkeRechten",
+    "betrokkenBijBrkZakelijkeRechten",
+    "isBeperktTotBrkTenaamstellingen",
+    "ontstaanUitBrkZakelijkeRechten",
+    "rustOpBrkKadastraalObject",
+    "schema",
+    "self",
+    "vveIdentificatieBetrokkenBij",
+    "vveIdentificatieOntstaanUit"
+  ]
+}

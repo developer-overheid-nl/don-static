@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/onderdeel",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/Onderdeel"
+  ],
+  "required": [
+    "href",
+    "objectgerichteTeksten",
+    "type"
+  ],
+  "type": "object",
+  "properties": {
+    "href": {
+      "type": "array",
+      "items": {
+        "$ref": "./HalLink.schema.json"
+      }
+    },
+    "objectgerichteTeksten": {
+      "type": "array",
+      "items": {
+        "$ref": "./ObjectgerichteTekst.schema.json"
+      }
+    },
+    "type": {
+      "type": "string",
+      "examples": [
+        "regels"
+      ]
+    }
+  },
+  "description": "Verwijzing naar planteksten die bij een document horen, gegroepeerd per type (regels, bijlage, toelichting,\netc...). (IMRO-document)\nEen onderdeel kan verwijzen naar een objectgerichte tekst, of naar een externe HTML-pagina als er geen\nobjectgerichte teksten zijn."
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-verbeelden-ibyvejgdg/symboolmetadatadeprecated",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/verbeelden/v3/openapi.json#/components/schemas/SymboolMetadataDeprecated"
+  ],
+  "type": "object",
+  "properties": {
+    "identificator": {
+      "type": "string"
+    },
+    "locaties": {
+      "type": "array",
+      "items": {
+        "$ref": "./Locatie.schema.json"
+      }
+    },
+    "objecttype": {
+      "type": "string",
+      "enum": [
+        "activiteitlocatieaanduiding",
+        "gebiedsaanwijzing",
+        "normwaarde",
+        "kaartlaag",
+        "ontwerpactiviteitlocatieaanduiding",
+        "ontwerpgebiedsaanwijzing",
+        "ontwerpnormwaarde",
+        "ontwerpkaartlaag"
+      ]
+    },
+    "symboolcode": {
+      "type": "string"
+    }
+  }
+}

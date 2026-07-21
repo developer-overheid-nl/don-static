@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-indienen-yktc6lgdr/machtiging",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/Machtiging"
+  ],
+  "description": "Geeft aan dat dit verzoek wordt ingediend middels een machtiging.",
+  "type": "object",
+  "required": [
+    "initiatiefnemer",
+    "gemachtigde",
+    "projectId"
+  ],
+  "properties": {
+    "gemachtigde": {
+      "description": "Het DSO id van de gemachtigde. Als dit een organisatie betreft, dan het DSO id van de organisatie.",
+      "type": "string"
+    },
+    "initiatiefnemer": {
+      "description": "Het DSO id van de initiatiefnemer. Als dit een organisatie betreft, dan het DSO id van de organisatie.",
+      "type": "string"
+    },
+    "projectId": {
+      "description": "Het project id waarvoor de gemachtigde gemachtigd is. Indien er ook een projectId is gevuld in de VerzoekMetadata moeten deze gelijk zijn.",
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "initiatiefnemer": "3f9d875a-bc34-11ea-b3de-0242ac130004",
+      "gemachtigde": "8e37be08-bc34-11ea-b3de-0242ac130004",
+      "projectId": "202"
+    }
+  ]
+}

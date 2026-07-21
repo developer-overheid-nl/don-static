@@ -1,0 +1,797 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/cbs-bevolkingskernen-2011-rvhmtb3nr/propertiesgeojsonbevolkingskern_2011",
+  "x-derived-from": [
+    "https://api.pdok.nl/cbs/bevolkingskernen-2011/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_bevolkingskern_2011"
+  ],
+  "properties": {
+    "aantkern01": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "afs_apoth": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_basond": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_bsop": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_hapost": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_haprak": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_havwo": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_kdvblf": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_oprit": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_ovlevm": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_super": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_vmbo": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "afs_ziekhs": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "av5_haprak": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "av5_ovlevm": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "bev01tot": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bev11tot": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bev_man": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bev_t0_14": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bev_t15_24": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bev_t25_44": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bev_t45_64": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bev_t65pl": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bev_vrw": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "bkgr_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "eenp15_24": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "eenp15_44": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "eenp45_64": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "eenp65pl": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "gemlft": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "kern_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kern_naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kn_allo_nw": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "kn_allo_w": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "kn_autoch": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "landn": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mp_mk0_14": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mp_mk15_24": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mp_mk25_44": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mp_mk45_64": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mp_mk65pl": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mp_zk0_14": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mp_zk15_24": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mp_zk25_44": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mp_zk45_64": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "mp_zk65pl": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "oad": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "opptot": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_hogopl15": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_lagopl15": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_midopl15": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wbv_1524": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wbv_2544": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wbv_4554": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wbv_5564": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wbv_6574": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wrk_cmd": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wrk_lndb": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wrk_ncmd": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wrk_nijv": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wrk_onb": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "p_wrk_ov": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "ppart0_14": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "ppart15_24": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "ppart25_44": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "ppart45_64": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "ppart65pl": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "ppart_tot": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "prov_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recrwon": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "saldo_bin": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "saldo_buit": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "sted": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_eenoud": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_eenp": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_geh_mk": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_geh_zk": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_gehuwd": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_instit": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_mp_mk": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_mp_zk": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_ong_mk": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_ong_zk": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_ongeh": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tot_samenw": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tothh_1": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tothh_2": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tothh_3": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tothh_4": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tothh_5": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tothh_6pl": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tothh_eenp": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tothh_mpmk": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tothh_mpzk": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "tothh_t": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "watern": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "won_bez_e": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "won_bez_h": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "won_bez_t": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "won_prc_e": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "won_prc_h": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "won_prc_o": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "won_woz_e": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "won_woz_h": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "won_woz_t": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "woning01": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "woning11": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "wooneenh": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "x_gba": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "y_gba": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

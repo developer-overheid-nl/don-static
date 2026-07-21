@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/openapischemajson",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json#/components/schemas/OpenApiSchemaJson"
+  ],
+  "title": "OpenApiSchemaJson",
+  "type": "object",
+  "description": "Het JSON schema van de OpenAPI specificatie."
+}

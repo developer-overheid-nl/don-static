@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeksroutering-a3hce_gdr/bevoegdgezag",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171058/toepasbareregels-verzoeksroutering-v2.json#/components/schemas/BevoegdGezag"
+  ],
+  "description": "Een bevoegd gezag",
+  "required": [
+    "oin",
+    "naam",
+    "bestuurslaag",
+    "afgeleid"
+  ],
+  "properties": {
+    "afgeleid": {
+      "description": "Definieert of dit het afgeleide bevoegd gezag is waar het verzoek heen moet worden gestuurd. Als deze op true staat is dit het bevoegd gezag waar het verzoek volgens de afleiding heen moet worden gestuurd. false betekent dat dit een alternatief bevoegd gezag is wat de gebruiker kan kiezen. Normaal zal in een response één bevoegd gezag afgeleid=true hebben, maar bij een project locatie over bestuurlijke grenzen kunnen alle bevoegd gezagen van dezelfde bestuurslaag afgeleid=true hebben.",
+      "type": "boolean"
+    },
+    "bestuurslaag": {
+      "description": "Bestuurslaag van een Organisatie",
+      "type": "string",
+      "enum": [
+        "rijk",
+        "provincie",
+        "waterschap",
+        "gemeente"
+      ]
+    },
+    "naam": {
+      "description": "Naam van het bevoegd gezag. Als de naam niet opgehaald kon worden uit het OIN register, staat hier het OIN.",
+      "type": "string"
+    },
+    "oin": {
+      "description": "OIN van het bevoegd gezag",
+      "type": "string"
+    }
+  }
+}

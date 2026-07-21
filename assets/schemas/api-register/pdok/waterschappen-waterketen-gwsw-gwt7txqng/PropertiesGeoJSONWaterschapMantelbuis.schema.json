@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/waterschappen-waterketen-gwsw-gwt7txqng/propertiesgeojsonwaterschapmantelbuis",
+  "x-derived-from": [
+    "https://api.pdok.nl/rioned/waterschappen-waterketen-gwsw/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_waterschap_mantelbuis"
+  ],
+  "properties": {
+    "begindatum": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "diameter_leiding": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "lengte_leiding": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "materiaal_leiding": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "naam": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status_functioneren": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

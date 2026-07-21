@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/referentiepercelen-e74ntb3hg/propertiesgeojsonreferentiepercelen",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/referentiepercelen/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_referentiepercelen"
+  ],
+  "properties": {
+    "type": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "versiebron": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,663 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/vaarwegmarkeringen-mwontbqnr/propertiesgeojsonvaarwegmarkeringenvastrd",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/vaarwegmarkeringen-nederland/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_vaarweg_markeringen_vast_rd"
+  ],
+  "properties": {
+    "benam_cod": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "benaming": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "e_wgs_gm": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "e_wgs_gms": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "iala_cat": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inbedrijf": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kleurpatr": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kleurpatr_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_10_1": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_10_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_10_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_11_1": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_11_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_11g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_12_1": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_12_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_12_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_13_1": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_13_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_13_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_14_1": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_14_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_14_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_15_1": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_15_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_15_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_16_1": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_16_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_16_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_1_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_1_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_1_k_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_2_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_2_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_2_k_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_3_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_3_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_3_k_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_4_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_4_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_4_k_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_5_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_5_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_5_k_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_6_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_6_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_6_k_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_7_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_7_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_7_k_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_8_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_8_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_8_k_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_9_g": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_9_k": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_9_k_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_hgt": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_hoek": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_kl": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_kl_c": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_nr": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_rich": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licht_sync": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "n_wgs_gm": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "n_wgs_gms": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "naut_funct": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "obj_hoogte": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "obj_kleur": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "obj_kleur_": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "obj_soort": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "object_vorm_c": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "object_vorm_o": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objectid": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "opgeheven": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "racon_code": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "s57_id": {
+      "description": "",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "sign_gr_c": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sign_groep": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sign_kar": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sign_kar_c": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sign_perio": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tt_kleur": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tt_kleur_c": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tt_klr_pat": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tt_pat_c": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "v_toptek": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "v_tt_c": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vaarwater": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vorm_kleur": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "x_rd": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "x_wgs84": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "y_rd": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "y_wgs84": {
+      "description": "",
+      "format": "double",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

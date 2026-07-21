@@ -1,0 +1,1211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/stand-van-de-vastgoedgegevens-soqqfx6hg/standvastgoedgebouwen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/standvastgoed/openapi.json#/components/schemas/Standvastgoedgebouwen"
+  ],
+  "type": "object",
+  "description": "Alle adresseerbare objecten (verblijfsobjecten, lig- en standplaatsen) met hun kenmerken en gebiedsindeling",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `gebouwen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./StandvastgoedGebouwenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aantalEenhedenComplex": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aantal eenheden complex per verblijfsobject (alléén bij een speciale  woonfunctie of gezondheidszorgfunctie)."
+    },
+    "aantalPanden": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Geeft aan in hoeveel panden het verblijfsobject ligt"
+    },
+    "adres17": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Combinatie van adres kenmerken (17 karakters lang): postcode, huisnummer, huisletter en huisnummertoevoeging"
+    },
+    "adres27": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Combinatie van adres kenmerken (27 karakters lang): openbareruimteIdentificatie, huisnummer, huisletter en huisnummertoevoeging"
+    },
+    "adresseerbaarobjectAanduidingInOnderzoek": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Hiermee wordt aangegeven dat een onderzoek wordt uitgevoerd naar de juistheid van een of meer gegevens van het betreffende object"
+    },
+    "adresseerbaarobjectBegingeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De ingangsdatum van de geldigheid van een bepaalde combinatie van gegevens over een adresseerbaar object"
+    },
+    "adresseerbaarobjectEindgeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De einddatum van de geldigheid van een bepaalde combinatie van gegevens over een adresseerbaar object"
+    },
+    "adresseerbaarobjectGeconstateerd": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Dit geeft aan dat een gegeven in de registratie is opgenomen als gevolg van een feitelijke constatering en niet op basis van een regulier brondocument"
+    },
+    "adresseerbaarobjectGeometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "adresseerbaarobjectIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel van adresseerbaar object (verblijfsobject, ligplaats, standplaats)"
+    },
+    "adresseerbaarobjectRedenafvoer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van de reden van de afvoer van het adresseerbare object"
+    },
+    "adresseerbaarobjectRedenopvoer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van de reden van de opvoer van het adresseerbare object"
+    },
+    "adresseerbaarobjectRegistratiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "De datum waarop de toestand van het adresseerbaar object is geregistreerd"
+    },
+    "adresseerbaarobjectStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving voor de fase van de levenscyclus van een adresseerbaar object verblijfsobject, waarin het zich bevindt"
+    },
+    "adresseerbaarobjectVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het adresseerbaar object"
+    },
+    "aotBegingeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "AdresseerbaarobjectBegingeldigheid",
+      "description": "De ingangsdatum van de geldigheid van een bepaalde combinatie van gegevens over een adresseerbaar object",
+      "deprecated": true
+    },
+    "aotEindgeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "AdresseerbaarobjectEindgeldigheid",
+      "description": "De einddatum van de geldigheid van een bepaalde combinatie van gegevens over een adresseerbaar object",
+      "deprecated": true
+    },
+    "aotGeconstateerd": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "AdresseerbaarobjectGeconstateerd",
+      "description": "Dit geeft aan dat een gegeven in de registratie is opgenomen als gevolg van een feitelijke constatering en niet op basis van een regulier brondocument",
+      "deprecated": true
+    },
+    "aotGeometrie": {
+      "deprecated": true,
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "aotId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "AdresseerbaarobjectIdentificatie",
+      "description": "Landelijke identificerende sleutel van adresseerbaar object (verblijfsobject, ligplaats, standplaats)",
+      "deprecated": true
+    },
+    "aotInOnderzoek": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "AdresseerbaarobjectAanduidingInOnderzoek",
+      "description": "Hiermee wordt aangegeven dat een onderzoek wordt uitgevoerd naar de juistheid van een of meer gegevens van het betreffende object",
+      "deprecated": true
+    },
+    "aotRedenAfvoer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "AdresseerbaarobjectRedenafvoer",
+      "description": "Omschrijving van de reden van de afvoer van het adresseerbare object",
+      "deprecated": true
+    },
+    "aotRedenOpvoer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "AdresseerbaarobjectRedenopvoer",
+      "description": "Omschrijving van de reden van de opvoer van het adresseerbare object",
+      "deprecated": true
+    },
+    "aotRegistratiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "AdresseerbaarobjectRegistratiedatum",
+      "description": "De datum waarop de toestand van het adresseerbaar object is geregistreerd",
+      "deprecated": true
+    },
+    "aotStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "AdresseerbaarobjectStatus",
+      "description": "Omschrijving voor de fase van de levenscyclus van een adresseerbaar object verblijfsobject, waarin het zich bevindt",
+      "deprecated": true
+    },
+    "aotVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "AdresseerbaarobjectVolgnummer",
+      "description": "Uniek volgnummer van de toestand van het adresseerbaar object",
+      "deprecated": true
+    },
+    "bbkCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "BouwblokCode",
+      "description": "Officiële code van het bouwblok",
+      "deprecated": true
+    },
+    "bbkId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "BouwblokIdentificatie",
+      "description": "Unieke identificatie van het bouwblok",
+      "deprecated": true
+    },
+    "bbkVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "BouwblokVolgnummer",
+      "description": "Uniek volgnummer van de toestand van het bouwblok",
+      "deprecated": true
+    },
+    "bouwblokCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële code van het bouwblok"
+    },
+    "bouwblokIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het bouwblok"
+    },
+    "bouwblokVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het bouwblok"
+    },
+    "brtCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "BuurtCode",
+      "description": "Officiële code van de buurt",
+      "deprecated": true
+    },
+    "brtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "BuurtIdentificatie",
+      "description": "Unieke identificatie van de buurt",
+      "deprecated": true
+    },
+    "brtNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "BuurtNaam",
+      "description": "De naam van de buurt.",
+      "deprecated": true
+    },
+    "brtVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "BuurtVolgnummer",
+      "description": "Uniek volgnummer van de toestand van de buurt",
+      "deprecated": true
+    },
+    "buurtCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële code van de buurt"
+    },
+    "buurtIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van de buurt"
+    },
+    "buurtNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van de buurt."
+    },
+    "buurtVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van de buurt"
+    },
+    "energieklasse": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Hoe energiezuinig een huis is wordt weergegeven op een schaal van energielabel A tot en met energielabel G",
+      "deprecated": true
+    },
+    "gebruiksdoel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een categorisering van de gebruiksdoelen van het betreffende verblijfsobject, zoals dit door de overheid als zodanig is toegestaan."
+    },
+    "gebruiksdoelGezondheidszorgfunctie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "GebruiksdoelGezondheidszorgfunctieOmschrijving",
+      "description": "Omschrijving van de Amsterdamse uitbreiding op gebruiksdoel gezondheidszorgfunctie"
+    },
+    "gebruiksdoelWoonfunctie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van de Amsterdamse uitbreiding op gebruiksdoel woonfunctie"
+    },
+    "gemeenteIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van de gemeente (afkomstig van het Kadaster)"
+    },
+    "gemeenteNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van de gemeente (afkomstig van het Kadaster)"
+    },
+    "ggwCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "GgwgebiedCode",
+      "description": "Officiële code van het gebiedsgericht werken gebied",
+      "deprecated": true
+    },
+    "ggwId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "GgwgebiedIdentificatie",
+      "description": "Unieke identificatie van het gebiedsgericht werken gebied",
+      "deprecated": true
+    },
+    "ggwNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "GgwgebiedNaam",
+      "description": "De naam van het gebiedsgericht werken gebied",
+      "deprecated": true
+    },
+    "ggwVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "GgwgebiedVolgnummer",
+      "description": "Uniek volgnummer van de toestand van het gebiedsgericht werken gebied",
+      "deprecated": true
+    },
+    "ggwgebiedCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële code van het gebiedsgericht werken gebied"
+    },
+    "ggwgebiedIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het gebiedsgericht werken gebied"
+    },
+    "ggwgebiedNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het gebiedsgericht werken gebied"
+    },
+    "ggwgebiedVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het gebiedsgericht werken gebied"
+    },
+    "gmeId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "GemeenteIdentificatie",
+      "description": "Unieke identificatie van de gemeente (afkomstig van het Kadaster)",
+      "deprecated": true
+    },
+    "gmeNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "GemeenteNaam",
+      "description": "De naam van de gemeente (afkomstig van het Kadaster)",
+      "deprecated": true
+    },
+    "huisletter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken"
+    },
+    "huisnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nummering"
+    },
+    "huisnummertoevoeging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter"
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "OpenbareruimteNaam",
+      "description": "Officiële naam openbare ruimte",
+      "deprecated": true
+    },
+    "nagId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "NummeraanduidingIdentificatie",
+      "description": "Landelijke identificerende sleutel van de nummeraanduiding",
+      "deprecated": true
+    },
+    "nagStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "NummeraanduidingStatus",
+      "description": "Omschrijving voor de fase van de levenscyclus van een adresseerbaar object verblijfsobject, waarin het zich bevindt",
+      "deprecated": true
+    },
+    "nagVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "NummeraanduidingVolgnummer",
+      "description": "Uniek volgnummer van de toestand van de nummeraanduiding",
+      "deprecated": true
+    },
+    "nummeraanduidingIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel van de nummeraanduiding"
+    },
+    "nummeraanduidingStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving voor de fase van de levenscyclus van een adresseerbaar object verblijfsobject, waarin het zich bevindt"
+    },
+    "nummeraanduidingVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van de nummeraanduiding"
+    },
+    "openbareruimteIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel van de openbare ruimte"
+    },
+    "openbareruimteNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële naam openbare ruimte"
+    },
+    "openbareruimteVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van de openbare ruimte"
+    },
+    "oreVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "OpenbareruimteVolgnummer",
+      "description": "Uniek volgnummer van de toestand van de openbare ruimte",
+      "deprecated": true
+    },
+    "oreid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "OpenbareruimteIdentificatie",
+      "description": "Landelijke identificerende sleutel van de openbare ruimte",
+      "deprecated": true
+    },
+    "pandAantalBouwlagen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aantal bouwlagen van een pand."
+    },
+    "pandGeometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "pandHoogsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Hoogste bouwlaag van een pand."
+    },
+    "pandIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel van het pand"
+    },
+    "pandLaagsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Laagste bouwlaag van een pand."
+    },
+    "pandLigging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van de situering pand met verblijfsobject (vrijstaand, tussenwoning, etc.)"
+    },
+    "pandOorspronkelijkBouwjaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "De aanduiding van het jaar waarin een pand oorspronkelijk als bouwkundig gereed is of wordt opgeleverd."
+    },
+    "pandStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van de fase van de levenscyclus van een pand"
+    },
+    "pandTypeWoonobject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Eén woning, Meerdere woningen."
+    },
+    "pandVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het pand"
+    },
+    "peildatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Peildatum van de stand"
+    },
+    "pndAantalBouwlagen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "PandAantalBouwlagen",
+      "description": "Aantal bouwlagen van een pand.",
+      "deprecated": true
+    },
+    "pndBouwjaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "PandOorspronkelijkBouwjaar",
+      "description": "De aanduiding van het jaar waarin een pand oorspronkelijk als bouwkundig gereed is of wordt opgeleverd.",
+      "deprecated": true
+    },
+    "pndGeometrie": {
+      "deprecated": true,
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "pndHoogsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "PandHoogsteBouwlaag",
+      "description": "Hoogste bouwlaag van een pand.",
+      "deprecated": true
+    },
+    "pndId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "PandIdentificatie",
+      "description": "Landelijke identificerende sleutel van het pand",
+      "deprecated": true
+    },
+    "pndLaagsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "PandLaagsteBouwlaag",
+      "description": "Laagste bouwlaag van een pand.",
+      "deprecated": true
+    },
+    "pndLigging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "PandLigging",
+      "description": "Omschrijving van de situering pand met verblijfsobject (vrijstaand, tussenwoning, etc.)",
+      "deprecated": true
+    },
+    "pndStatus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "PandStatus",
+      "description": "Omschrijving van de fase van de levenscyclus van een pand",
+      "deprecated": true
+    },
+    "pndTypeWoonobject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "PandTypeWoonobject",
+      "description": "Eén woning, Meerdere woningen.",
+      "deprecated": true
+    },
+    "pndVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "PandVolgnummer",
+      "description": "Uniek volgnummer van de toestand van het pand",
+      "deprecated": true
+    },
+    "postcode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De door PostNL vastgestelde code bestaande uit 4 cijfers en 2 letters (1234AB)."
+    },
+    "sdlCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "StadsdeelCode",
+      "description": "Officiële code van het stadsdeel",
+      "deprecated": true
+    },
+    "sdlId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "StadsdeelIdentificatie",
+      "description": "Unieke identificatie van het stadsdeel",
+      "deprecated": true
+    },
+    "sdlNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "StadsdeelNaam",
+      "description": "De naam van het stadsdeel",
+      "deprecated": true
+    },
+    "sdlVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "StadsdeelVolgnummer",
+      "description": "Uniek volgnummer van de toestand van het stadsdeel",
+      "deprecated": true
+    },
+    "stadsdeelCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële code van het stadsdeel"
+    },
+    "stadsdeelIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van het stadsdeel"
+    },
+    "stadsdeelNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het stadsdeel"
+    },
+    "stadsdeelVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van het stadsdeel"
+    },
+    "standBegingeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De ingangsdatum van de geldigheid van de stand"
+    },
+    "standEindgeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De einddatum van de geldigheid van de stand"
+    },
+    "typeAdres": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Hiermee wordt aangegeven of het een relatie betreft vanuit een hoofdadres. Anders is er sprake van een nevenadres"
+    },
+    "typeAdresseerbaarobject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De omschrijving van het type adresseerbaar object, waaraan een nummeraanduiding is toegekend"
+    },
+    "typeAot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "TypeAdresseerbaarobject",
+      "description": "De omschrijving van het type adresseerbaar object, waaraan een nummeraanduiding is toegekend",
+      "deprecated": true
+    },
+    "verblijfsobjectAantalBouwlagen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aantal bouwlagen van een verblijfsobject"
+    },
+    "verblijfsobjectAantalKamers": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Geeft het aantal kamers aan binnen het verblijfsobject"
+    },
+    "verblijfsobjectBouwjaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "De aanduiding van het jaar waarin een verblijfsobject als bouwkundig gereed is of wordt opgeleverd. Alleen indien verblijfsobject voorkomt in woningvoorraad"
+    },
+    "verblijfsobjectHoogsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Hoogste bouwlaag van een verblijfsobject"
+    },
+    "verblijfsobjectLaagsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Laagste bouwlaag van een verblijfsobject"
+    },
+    "verblijfsobjectOppervlakte": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "De gebruiksoppervlakte van het verblijfsobject conform hetgeen in NEN 2580 is vastgelegd omtrent gebruiksoppervlakte"
+    },
+    "verblijfsobjectToegang": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Plaats waar zich de toegang tot het verblijfsobject bevindt"
+    },
+    "verblijfsobjectVerdiepingToegang": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Aanduiding op welke verdieping zich de toegang tot het verblijfsobject bevindt"
+    },
+    "votAantalBouwlagen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "VerblijfsobjectAantalBouwlagen",
+      "description": "Aantal bouwlagen van een verblijfsobject",
+      "deprecated": true
+    },
+    "votAantalKamers": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "VerblijfsobjectAantalKamers",
+      "description": "Geeft het aantal kamers aan binnen het verblijfsobject",
+      "deprecated": true
+    },
+    "votBouwjaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "VerblijfsobjectBouwjaar",
+      "description": "De aanduiding van het jaar waarin een verblijfsobject als bouwkundig gereed is of wordt opgeleverd. Alleen indien verblijfsobject voorkomt in woningvoorraad",
+      "deprecated": true
+    },
+    "votHoogsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "VerblijfsobjectHoogsteBouwlaag",
+      "description": "Hoogste bouwlaag van een verblijfsobject",
+      "deprecated": true
+    },
+    "votLaagsteBouwlaag": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "VerblijfsobjectLaagsteBouwlaag",
+      "description": "Laagste bouwlaag van een verblijfsobject",
+      "deprecated": true
+    },
+    "votOppervlakte": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "VerblijfsobjectOppervlakte",
+      "description": "De gebruiksoppervlakte van het verblijfsobject conform hetgeen in NEN 2580 is vastgelegd omtrent gebruiksoppervlakte",
+      "deprecated": true
+    },
+    "votToegangOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "VerblijfsobjectToegang",
+      "description": "Plaats waar zich de toegang tot het verblijfsobject bevindt",
+      "deprecated": true
+    },
+    "votVerdiepingToegang": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "VerblijfsobjectVerdiepingToegang",
+      "description": "Aanduiding op welke verdieping zich de toegang tot het verblijfsobject bevindt",
+      "deprecated": true
+    },
+    "wijkCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële code van de wijk"
+    },
+    "wijkId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "WijkIdentificatie",
+      "description": "Unieke identificatie van de wijk",
+      "deprecated": true
+    },
+    "wijkIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Unieke identificatie van de wijk"
+    },
+    "wijkNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van de wijk"
+    },
+    "wijkVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van de wijk"
+    },
+    "woningvoorraad": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Verblijfsobjecten met een woonfunctie en status in gebruik of in verbouwing worden tot de woningvoorraad gerekend"
+    },
+    "woonplaats": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "WoonplaatsNaam",
+      "description": "Officiële naam van de woonplaats",
+      "deprecated": true
+    },
+    "woonplaatsIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel van de woonplaats"
+    },
+    "woonplaatsNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële naam van de woonplaats"
+    },
+    "woonplaatsVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Uniek volgnummer van de toestand van de woonplaats"
+    },
+    "wpsId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "WoonplaatsIdentificatie",
+      "description": "Landelijke identificerende sleutel van de woonplaats",
+      "deprecated": true
+    },
+    "wpsVolgnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "WoonplaatsVolgnummer",
+      "description": "Uniek volgnummer van de toestand van de woonplaats",
+      "deprecated": true
+    }
+  },
+  "required": [
+    "_links"
+  ]
+}

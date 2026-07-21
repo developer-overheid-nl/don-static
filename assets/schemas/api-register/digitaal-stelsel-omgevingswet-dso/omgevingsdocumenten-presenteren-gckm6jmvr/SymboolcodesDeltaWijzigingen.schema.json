@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/symboolcodesdeltawijzigingen",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/SymboolcodesDeltaWijzigingen"
+  ],
+  "title": "SymboolcodesDeltaWijzigingen",
+  "type": "object",
+  "properties": {
+    "lijn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "l001"
+      ]
+    },
+    "punt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "p103"
+      ]
+    },
+    "vlak": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "v035"
+      ]
+    }
+  },
+  "description": "Bevat wijzigingen ten opzichte van de originele annotatie. Velden die niet aanwezig zijn, zijn ongewijzigd. \nSommige velden zijn aangemerkt als `nullable`. Een nullable veld met waarde `null` betekent dat het veld in de vastgestelde regeling aanwezig is, maar afwezig in de ontwerpregeling.\n"
+}

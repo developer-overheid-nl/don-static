@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/top250nl-download-api-fa30-rgvr/fullcustomdownloadrequest",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top250nl/download/v1_0/openapi.json#/components/schemas/FullCustomDownloadRequest"
+  ],
+  "properties": {
+    "featuretypes": {
+      "items": {
+        "enum": [
+          "functioneelgebied",
+          "gebouw",
+          "geografischgebied",
+          "hoogte",
+          "inrichtingselement",
+          "plaats",
+          "registratiefgebied",
+          "relief",
+          "spoorbaandeel",
+          "terrein",
+          "waterdeel",
+          "wegdeel"
+        ],
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "format": {
+      "enum": [
+        "gml"
+      ],
+      "type": "string"
+    },
+    "geofilter": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "format",
+    "featuretypes"
+  ],
+  "type": "object"
+}

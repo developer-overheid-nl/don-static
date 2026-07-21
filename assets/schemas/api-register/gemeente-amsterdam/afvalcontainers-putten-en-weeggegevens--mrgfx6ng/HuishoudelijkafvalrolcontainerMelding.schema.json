@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/afvalcontainers-putten-en-weeggegevens--mrgfx6ng/huishoudelijkafvalrolcontainermelding",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/huishoudelijkafval/openapi.json#/components/schemas/Huishoudelijkafvalrolcontainer_melding"
+  ],
+  "type": "object",
+  "description": "Deze tabel bevat informatie over de meldingen die door de bewoners zijn gedaan. De meldingen gaan over een of meer containers.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `rolcontainerMelding._links` field. It contains all relationships with objects.",
+      "properties": {
+        "bagNummeraanduiding": {
+          "$ref": "./BagNummeraanduidingenRawIdentifier.schema.json"
+        },
+        "bagVerblijfsobject": {
+          "$ref": "./BagVerblijfsobjectenRawIdentifier.schema.json"
+        },
+        "rolcontainer": {
+          "$ref": "./HuishoudelijkafvalrolcontainerLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./HuishoudelijkafvalrolcontainerMeldingLink.schema.json"
+        }
+      },
+      "required": [
+        "bagNummeraanduiding",
+        "bagVerblijfsobject",
+        "rolcontainer",
+        "schema",
+        "self"
+      ]
+    },
+    "aanmaakdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Melding aanmaakdatum",
+      "description": "De datum en tijd waarop de registratie van de melding in het systeem is vastgelegd"
+    },
+    "afkomstVerzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Verzoek afkomst",
+      "description": "Dit attribuut geeft aan of de melding intern of extern is gedaan."
+    },
+    "bagNummeraanduidingId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nummeraanduiding ID",
+      "description": "BAG Nummeraanduiding identificatie",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "bagVerblijfsobjectId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "BAG Verblijfsobject identificatie",
+      "description": "Een identificatiecode van een verblijfsobject is een authentiek gegeven en een unieke aanduiding van het verblijfsobject.",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Melding ID",
+      "description": "Unieke aanduiding van een melding"
+    },
+    "meldingType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het type van een melding. Bijvoorbeeld: Algemene informatie"
+    },
+    "rolcontainerId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Rolcontainer ID",
+      "description": "Unieke aanduiding van een rolcontainer. (foreign key)",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "soortVerzoek": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Verzoek soort",
+      "description": "Dit attribuut geeft aan welk communicatiemiddel is gebruikt om de melding te registreren."
+    },
+    "wijzigingsdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Melding wijzigingsdatum",
+      "description": "De datum en tijd waarop de registratie van de melding voor het laatst in het systeem is aangepast"
+    }
+  },
+  "required": [
+    "_links",
+    "bagNummeraanduidingId",
+    "bagVerblijfsobjectId",
+    "id",
+    "rolcontainerId"
+  ]
+}

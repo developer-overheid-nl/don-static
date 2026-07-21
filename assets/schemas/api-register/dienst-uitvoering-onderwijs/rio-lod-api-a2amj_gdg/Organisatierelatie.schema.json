@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-uitvoering-onderwijs/rio-lod-api-a2amj_gdg/organisatierelatie",
+  "x-derived-from": [
+    "https://lod.onderwijsregistratie.nl/rio-api/assets/RIO_LOD_API_v2.yml#/components/schemas/Organisatierelatie"
+  ],
+  "x-class-extra-annotation": "@Relation(collectionRelation = \"Organisatierelaties\")",
+  "required": [
+    "begindatum",
+    "naarOrganisatorischeEenheid",
+    "soort",
+    "vanOrganisatorischeEenheid"
+  ],
+  "type": "object",
+  "properties": {
+    "begindatum": {
+      "type": "string",
+      "description": "De datum die het begin van de periode aangeeft (inclusief).",
+      "format": "date"
+    },
+    "einddatum": {
+      "type": "string",
+      "description": "De datum die het einde van de periode aangeeft (exclusief).",
+      "format": "date"
+    },
+    "naarOrganisatorischeEenheid": {
+      "maxLength": 7,
+      "minLength": 7,
+      "pattern": "\\d{3}[A-Z]{1}\\d{3}",
+      "type": "string",
+      "description": "Identificerend kenmerk voor een organisatorische eenheid ten behoeve van uitwisseling in de keten."
+    },
+    "soort": {
+      "type": "string",
+      "description": "Mogelijke relatiesoorten tussen organisatorische-eenheden.",
+      "enum": [
+        "HIERARCHISCH",
+        "OVERGANG"
+      ]
+    },
+    "vanOrganisatorischeEenheid": {
+      "maxLength": 7,
+      "minLength": 7,
+      "pattern": "\\d{3}[A-Z]{1}\\d{3}",
+      "type": "string",
+      "description": "Identificerend kenmerk voor een organisatorische eenheid ten behoeve van uitwisseling in de keten."
+    }
+  }
+}

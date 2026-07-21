@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/ontwerpregeling",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/Ontwerpregeling"
+  ],
+  "title": "Ontwerpregeling",
+  "type": "object",
+  "description": "Een ontwerp tekst (met eventuele afbeeldingen en andere multimedia-elementen) die juridische voorschriften van algemene strekking of beleidsregels bevat.",
+  "allOf": [
+    {
+      "$ref": "./Omgevingsdocument.schema.json"
+    },
+    {
+      "required": [
+        "geregistreerdMet",
+        "ontwerpbesluitIdentificatie",
+        "technischId",
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "_embedded": {
+          "$ref": "./Ontwerpregeling_Embedded.schema.json"
+        },
+        "_links": {
+          "$ref": "./OntwerpregelingLinks.schema.json"
+        },
+        "besluitMetadata": {
+          "$ref": "./BesluitMetadata.schema.json"
+        },
+        "citeerTitel": {
+          "title": "citeerTitel",
+          "type": "string",
+          "description": "De titel van de regeling zoals deze wordt gebruikt in aanhalingen."
+        },
+        "conditie": {
+          "title": "conditie",
+          "type": "string",
+          "description": "De verhouding is tussen dit tijdelijk deel en de hoofdregeling."
+        },
+        "expressionId": {
+          "title": "StopIdentificatie",
+          "type": "string",
+          "description": "STOP-Identificatie: De IRI van een document volgens de STOP standaard (https://koop.gitlab.io/STOP/standaard/1.3.0/identificatie_doc_pub.html).",
+          "format": "uri"
+        },
+        "geregistreerdMet": {
+          "$ref": "./Ontwerpregistratiegegevens.schema.json"
+        },
+        "heeftBijlagen": {
+          "title": "heeftBijlagen",
+          "type": "boolean"
+        },
+        "heeftToelichtingen": {
+          "title": "heeftToelichtingen",
+          "type": "boolean"
+        },
+        "isVervangRegeling": {
+          "title": "isVervangRegeling",
+          "type": "boolean"
+        },
+        "ontwerpbesluitIdentificatie": {
+          "title": "StopIdentificatie",
+          "type": "string",
+          "description": "STOP-Identificatie: De IRI van een document volgens de STOP standaard (https://koop.gitlab.io/STOP/standaard/1.3.0/identificatie_doc_pub.html).",
+          "format": "uri"
+        },
+        "opschrift": {
+          "title": "opschrift",
+          "type": "string",
+          "description": "Het opschrift van de regeling. Deze dient overeen te komen met de officiële titel van de regeling."
+        },
+        "procedureverloop": {
+          "$ref": "./OntwerpProcedureverloop.schema.json"
+        },
+        "publicatieID": {
+          "type": "string",
+          "description": "Verwijzing naar het besluit dat ten grondslag heeft gelegen aan het ontwerpbesluit."
+        },
+        "technischId": {
+          "title": "TechnischId",
+          "type": "string",
+          "description": "Een technische identificatie voor ontwerpobjecten, samengesteld uit de IMOW-identificatie en de ontwerpbesluitIdentificatie, die gebruikt kan worden als pad parameter en in zoekopdrachten. De escaping gebeurt met de volgende regex: [^\\w]+ wordt vervangen door _"
+        },
+        "type": {
+          "$ref": "./SoortRegeling.schema.json"
+        }
+      }
+    }
+  ]
+}

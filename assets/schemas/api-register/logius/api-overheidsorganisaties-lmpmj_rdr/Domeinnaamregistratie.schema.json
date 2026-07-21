@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/logius/api-overheidsorganisaties-lmpmj_rdr/domeinnaamregistratie",
+  "x-derived-from": [
+    "https://api-organisaties.overheid.nl/v1/openapi.json#/components/schemas/Domeinnaamregistratie"
+  ],
+  "properties": {
+    "administratiefContactpersoon": {
+      "examples": [
+        "null"
+      ]
+    },
+    "doel": {
+      "examples": [
+        "Hosting"
+      ]
+    },
+    "eersteRegistratieDatum": {
+      "format": "date"
+    },
+    "eindeRegistratie": {
+      "format": "date"
+    },
+    "houder": {
+      "examples": [
+        "Gemeente Simpel"
+      ]
+    },
+    "naam": {
+      "examples": [
+        "dorpswinkel.web"
+      ]
+    },
+    "registrar": {
+      "examples": [
+        "The Registrar Company B.V. Jan Piet 8 4321VW Ede Nederland"
+      ]
+    },
+    "registratieDatum": {
+      "format": "date",
+      "examples": [
+        "2013-04-23"
+      ]
+    },
+    "technischContactpersoon": {
+      "examples": [
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "houder",
+    "naam"
+  ]
+}

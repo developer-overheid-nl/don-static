@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-indienen-yktc6lgdr/ideeverkenning",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/Ideeverkenning"
+  ],
+  "type": "object",
+  "required": [
+    "verzoekMetadata",
+    "bevoegdGezag",
+    "locatie",
+    "ideeverkenning",
+    "contactgegevens"
+  ],
+  "properties": {
+    "bevoegdGezag": {
+      "$ref": "./BevoegdGezag.schema.json"
+    },
+    "contactgegevens": {
+      "$ref": "../_shared/Contactgegevens.schema.json"
+    },
+    "document": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": {
+        "$ref": "../_shared/Document.schema.json"
+      }
+    },
+    "ideeverkenning": {
+      "$ref": "../_shared/Ideeverkenning2.schema.json"
+    },
+    "locatie": {
+      "$ref": "./Locatie.schema.json"
+    },
+    "machtiging": {
+      "$ref": "./Machtiging.schema.json"
+    },
+    "verzoekMetadata": {
+      "$ref": "./IdeeverkenningMetadata.schema.json"
+    }
+  }
+}

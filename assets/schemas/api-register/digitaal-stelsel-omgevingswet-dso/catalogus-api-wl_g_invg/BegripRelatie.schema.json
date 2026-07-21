@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/catalogus-api-wl_g_invg/begriprelatie",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/catalogus/api/opvragen/v3/openapi.json#/components/schemas/BegripRelatie"
+  ],
+  "required": [
+    "naam",
+    "uri"
+  ],
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "naam": {
+      "type": "string",
+      "nullable": false,
+      "examples": [
+        "Dienst voor het kadaster en de openbare registers"
+      ]
+    },
+    "uri": {
+      "type": "string",
+      "nullable": false,
+      "examples": [
+        "http://standaarden.omgevingswet.overheid.nl/id/leverancier/00000001802327497000"
+      ]
+    }
+  }
+}

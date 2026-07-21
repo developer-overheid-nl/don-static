@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/loopfietsnetwerk-tnewbx6ng/loopfietsnetwerkpoiadressen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/loopfietsnetwerk/openapi.json#/components/schemas/Loopfietsnetwerkpoi_adressen"
+  ],
+  "type": "object",
+  "description": "Alle hoofdadressen van adresseerbare objecten gerelateerd aan de points of interest",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `poiAdressen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./LoopfietsnetwerkpoiAdressenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "adresseerbaarobjectIdentificatie": {
+      "type": "string",
+      "description": "unieke identificatie van de BAG verblijfsobject, ligplaats of standplaats"
+    },
+    "datumExtractie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "datum creatie dataset"
+    },
+    "gebruiksdoel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "gebruiksdoel van het adresseerbare object uit de BAG"
+    },
+    "gemeenteNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van de gemeente (afkomstig van het Kadaster)"
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "huisletter": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken"
+    },
+    "huisnummer": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nummering"
+    },
+    "huisnummertoevoeging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter"
+    },
+    "indicatieHoofdadres": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "indicatie of het een hoofadres betreft"
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "OpenbareruimteNaam",
+      "description": "Officiële naam openbare ruimte conform BAG",
+      "deprecated": true
+    },
+    "openbareruimteNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële naam openbare ruimte conform BAG"
+    },
+    "pandIdentificatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Landelijke identificerende sleutel van het pand"
+    },
+    "peilDatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "peildatum van de BAG gegevens"
+    },
+    "poiId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "unieke identificatie van de point of interest"
+    },
+    "postcode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De door PostNL vastgestelde code bestaande uit 4 cijfers en 2 letters (1234AB)."
+    },
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "status van het adresseerbare object indien verblijfsobject {gevormd, ingebruik-niet ingemeten, in gebruik}"
+    },
+    "typeAdresseerbaarObject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "typering van het adresseerbare object uit de BAG {verblijfsobject, ligplaats, standplaats}"
+    },
+    "woonplaatsNaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Officiële naam van de woonplaats"
+    }
+  },
+  "required": [
+    "_links",
+    "adresseerbaarobjectIdentificatie"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/kamer-van-koophandel/ondernemersplein-overheid-nl-open-data-api-8-be1ueng/subsidiecontract",
+  "x-derived-from": [
+    "https://opendata.ondernemersplein.nl/swagger/v1/swagger.json#/components/schemas/SubsidieContract"
+  ],
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Subsidy content body (HTML)."
+    },
+    "dateCreated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Creation date."
+    },
+    "dateModified": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Last modified date."
+    },
+    "datePublished": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Publish date."
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Subsidy short description."
+    },
+    "identifier": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Subsidy ID."
+    },
+    "inLanguage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Locale.",
+      "readOnly": true
+    },
+    "regions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "Subsidy applicable regions."
+    },
+    "regulationType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Regulation type.",
+      "examples": [
+        "subsidie, prijs, krediet, fiscale stimuleringsmaatregel."
+      ]
+    },
+    "subjects": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "Subsidy subjects."
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Subsidy title."
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Subsidy URL."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Represents the datacontract of a subsidy."
+}

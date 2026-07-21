@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/3d-basisvoorziening-dicf0b3hr/implicittiling",
+  "x-derived-from": [
+    "https://api.pdok.nl/kadaster/3d-basisvoorziening/ogc/v1/openapi.json#/components/schemas/ImplicitTiling"
+  ],
+  "properties": {
+    "availableLevels": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "subdivisionScheme": {
+      "type": "string"
+    },
+    "subtreeLevels": {
+      "format": "int32",
+      "type": "integer"
+    },
+    "subtrees": {
+      "$ref": "./Content.schema.json"
+    }
+  },
+  "required": [
+    "availableLevels",
+    "subdivisionScheme",
+    "subtreeLevels",
+    "subtrees"
+  ],
+  "type": "object"
+}

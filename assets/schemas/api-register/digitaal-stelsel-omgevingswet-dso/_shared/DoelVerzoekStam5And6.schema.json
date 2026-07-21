@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/doelverzoekstam5and6",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/DoelVerzoekStam5And6",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/238080/verzoekenoverzicht-raadplegen-v1.json#/components/schemas/DoelVerzoekStam5And6"
+  ],
+  "description": "Het doel van het verzoek. Op basis van de gevraagde STAM-versie zal de corresponderende enumeratie worden teruggegeven.",
+  "type": "string",
+  "enum": [
+    "Indienen",
+    "Aanvullen",
+    "Intrekken"
+  ]
+}

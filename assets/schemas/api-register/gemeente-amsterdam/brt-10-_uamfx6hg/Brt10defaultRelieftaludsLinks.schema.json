@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brt-10-_uamfx6hg/brt10defaultrelieftaludslinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brt10/openapi.json#/components/schemas/Brt10defaultRelieftaludsLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `relieftaluds._links` field. It contains all relationships with objects.",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./Brt10relieftaludsLink.schema.json"
+    }
+  },
+  "required": [
+    "schema",
+    "self"
+  ]
+}

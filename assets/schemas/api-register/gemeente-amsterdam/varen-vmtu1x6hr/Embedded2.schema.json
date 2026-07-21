@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/varen-vmtu1x6hr/embedded2",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/varen/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "opafstapplaats": {
+      "type": "array",
+      "items": {
+        "$ref": "./Varenopafstapplaats.schema.json"
+      }
+    }
+  }
+}

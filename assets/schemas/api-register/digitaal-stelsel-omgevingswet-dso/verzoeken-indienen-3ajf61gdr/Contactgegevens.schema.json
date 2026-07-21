@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-indienen-3ajf61gdr/contactgegevens",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/"
+  ],
+  "description": "Het Idee wordt ingediend door een gemachtigde òf door de initiatiefnemer.  Van deze persoon wordt voorletters, eventueel tussenvoegsel, naam en telefoonnummer en/of emailadres ingevuld.  Daarnaast als het een NNP is bedrijfsnaam en optioneel kvkNummer.  Dit alles wordt als het een gemachtigde is ingevuld met property gemachtigde en anders met property initiatiefnemer.  Als het een gemachtigde is wordt daarnaast ook informatie over de initiatiefnemer ingediend met als property initiatiefnemer: als het een NP is: voorletters, eventueel tussenvoegsel en naam.  En als het een NNP is bedrijfsnaam en optioneel kvkNummer.",
+  "type": "object",
+  "required": [
+    "initiatiefnemer"
+  ],
+  "properties": {
+    "gemachtigde": {
+      "$ref": "../_shared/IdeeverkenningContactgegevens.schema.json"
+    },
+    "initiatiefnemer": {
+      "$ref": "../_shared/IdeeverkenningContactgegevens.schema.json"
+    }
+  }
+}

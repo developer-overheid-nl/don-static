@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/verzoeken-indienen-bgk5e_rdg/bevoegdgezag",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/BevoegdGezag",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/BevoegdGezag",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v2.json#/components/schemas/BevoegdGezagWijzigen",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/196036/verzoeken-afhandelen-v3.json#/components/schemas/BevoegdGezagWijzigen",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/BevoegdGezag"
+  ],
+  "type": "object",
+  "required": [
+    "organisatieIdentificatieNummer"
+  ],
+  "properties": {
+    "organisatieIdentificatieNummer": {
+      "type": "string",
+      "pattern": "^\\d{20}$"
+    }
+  },
+  "examples": [
+    {
+      "organisatieIdentificatieNummer": "00000000000123456789"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/instructieregeldelta",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/InstructieregelDelta"
+  ],
+  "title": "InstructieregelDelta",
+  "required": [
+    "bewerking"
+  ],
+  "type": "object",
+  "properties": {
+    "bewerking": {
+      "title": "DeltaBewerking",
+      "type": "string",
+      "enum": [
+        "toevoegen",
+        "verwijderen",
+        "wijzigen"
+      ],
+      "examples": [
+        "wijzigen"
+      ]
+    },
+    "lijstWijzigingen": {
+      "$ref": "./InstructieregelDeltaLijstWijzigingen.schema.json"
+    },
+    "wijzigingen": {
+      "$ref": "./InstructieregelDeltaWijzigingen.schema.json"
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/civiele-constructies-e0mafxehr/civieleconstructiesinspectiesdimobjectpaspoort",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/civieleconstructies/openapi.json#/components/schemas/Civieleconstructiesinspecties_dim_objectpaspoort"
+  ],
+  "type": "object",
+  "description": "Gemeente Amsterdam is verantwoordelijk voor het onderhouden van civiele constructies (zoals bruggen, sluizen en steigers). Iedere regel in deze tabel is één civiele constructie die beheerd wordt door de gemeente met ‘paspoortgegevens’: zoals de naam, het type, de beheerder, de gebruiksfunctie en de locatie. Deze gegevens komen uit de beheerapplicatie iAsset. Afnemers van deze tabel kunnen filteren op o.a. het type object en de vaarroute. De object id’s zijn sleutels voor een join met de tabel 'feit_subinspecties'. Let op: de data komt uit een uitvoeringsapplicatie, de gegevens kunnen daarom afwijken van het centrale asset managementsysteem met brontabellen voor assets: GISIB. Voor een overzicht van alle bruggen, sluizen en steigers adviseren we bij de brontabellen van de betreffende civiele constructies te kijken.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `inspectiesDimObjectpaspoort._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./CivieleconstructiesinspectiesDimObjectpaspoortLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "gebruiksfunctie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De gebruiksfunctie beschrijft waarvoor een object in de openbare ruimte bedoeld is – zoals Fiets-voetverkeer of Normaal verkeer – en bepaalt het type onderhoud, inrichting en beleid."
+    },
+    "hoofddraagconstructie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De constructieve onderdelen die de hoofdlast van het object dragen en zorgen voor de stabiliteit en stevigheid."
+    },
+    "hoofdvaarroute": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van de hoofdvaarroute waarbinnen het object ligt."
+    },
+    "latitude": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Breedtegraad van de geografische positie van het object."
+    },
+    "longitude": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Lengtegraad van de geografische positie van het object."
+    },
+    "monumentnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Nummer van een monument, alleen van toepssing bij Rijksmonumenten."
+    },
+    "object": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Omschrijving van het specifieke object, zoals Beweegbare brug, Steiger of Schutsluis."
+    },
+    "objectId": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "Een unieke aanduiding voor het object"
+    },
+    "objectType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Specifieke categorienaam voor het type object, zoals Brug, Kade, Sluis, Steiger, afhankelijk van object."
+    },
+    "objectnaamPaspoort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Objectnaam",
+      "description": "Een betekenisvolle aanduiding waaronder het object bekend is."
+    },
+    "objectnummerPaspoort": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Objectnummer",
+      "description": "Nummer van het beheerobject, door de organisatie zelf in te delen."
+    },
+    "openbareRuimte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding van de openbare ruimte, zoals gedefinieerd in IMGeo of in de BAG, waarbinnen het beheerobject ligt. Overname uit IMGeo-bestand met grenzen openbare ruimtes of uit de Basisregistraties voor Adressen en Gebouwen (zonder begrenzing)."
+    },
+    "perceel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Perceel paspoort",
+      "description": "Het perceel geeft aan welk team over het beheer gaat. Dit is in principe gelijk aan het Stadsdeel behalve voor veel beweegbare bruggen, daar is hij 'beweegbaar'."
+    },
+    "stadsdeel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Stadsdeel naam",
+      "description": "Deel van een stad of wijk."
+    },
+    "subthema": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Civiele constructie subthema",
+      "description": "Specifieke objectgroepen binnen een thema, zoals Sluizen, Steigers, Vaste bruggen of Beweegbare bruggen, afhankelijk van het type object."
+    },
+    "thema": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Civiele constructie thema",
+      "description": "Is een aanduiding voor een specifiek vakgebied binnen civiele openbare ruimte, zoals 'kunstwerk' of 'scheiding'."
+    },
+    "typeAandrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Aandrijving type",
+      "description": "De wijze waarop een object wordt aangedreven of in beweging wordt gebracht, zoals bijvoorbeeld Electrohydraulisch of Mechanisch."
+    },
+    "typeBeheerderPlus": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Beheerder gedetailleerd",
+      "description": "Nadere aanduiding van de beheerder van het beheerobject."
+    },
+    "typeEigenaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "(Rechts)persoon die het meest  omvattend recht op een zaak heeft. De typen eigenaren zijn conform de indeling in bronhouders (BGT)."
+    },
+    "typeMonument": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Monument type",
+      "description": "Aanduiding of het beheerobject een monument is."
+    },
+    "verkeersnet": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Aanduiding of het object onderdeel is van een verkeersnet zoals auto of rail."
+    }
+  },
+  "required": [
+    "_links",
+    "objectId"
+  ]
+}

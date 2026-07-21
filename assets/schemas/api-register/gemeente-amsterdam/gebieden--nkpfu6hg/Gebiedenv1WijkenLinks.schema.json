@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/gebieden--nkpfu6hg/gebiedenv1wijkenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/gebieden/openapi.json#/components/schemas/Gebiedenv1WijkenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `wijken._links` field. It contains all relationships with objects.",
+  "properties": {
+    "ligtInGgwgebied": {
+      "$ref": "./GebiedenGgwgebiedenLink.schema.json"
+    },
+    "ligtInStadsdeel": {
+      "$ref": "../_shared/GebiedenStadsdelenLink.schema.json"
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./GebiedenWijkenLink.schema.json"
+    }
+  },
+  "required": [
+    "ligtInGgwgebied",
+    "ligtInStadsdeel",
+    "schema",
+    "self"
+  ]
+}

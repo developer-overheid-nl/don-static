@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/toepasbare-regels-uitvoeren-services-g1mc6lrvg/indieningsvereistenrequest",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v3.json#/components/schemas/IndieningsvereistenRequest"
+  ],
+  "description": "Request voor ophalen en beantwoorden van vragen",
+  "required": [
+    "functioneleStructuurRefs",
+    "_geo"
+  ],
+  "properties": {
+    "_geo": {
+      "description": "Filter op geografisch punt of vlak. Zie de [DSO API/URI strategie](https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie).",
+      "required": [
+        "intersects"
+      ],
+      "properties": {
+        "intersects": {
+          "description": "Punt of vlak waarmee het resultaat raakvlak moet hebben. Analoog aan ElasticSearch GeoShape Query (https://www.elastic.co/guide/en/elasticsearch/reference/5.0/query-dsl-geo-shape-query.html)",
+          "oneOf": [
+            {
+              "$ref": "./Point.schema.json"
+            },
+            {
+              "$ref": "./Polygon.schema.json"
+            },
+            {
+              "$ref": "../_shared/MultiPolygon.schema.json"
+            },
+            {
+              "description": "GeoJSon geometry collection volgens https://tools.ietf.org/html/rfc7946#section-3.1.8",
+              "type": "object",
+              "required": [
+                "geometries",
+                "type"
+              ],
+              "properties": {
+                "geometries": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "$ref": "./Point.schema.json"
+                      },
+                      {
+                        "$ref": "./Polygon.schema.json"
+                      },
+                      {
+                        "$ref": "../_shared/MultiPolygon.schema.json"
+                      }
+                    ],
+                    "minItems": 0
+                  }
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "GeometryCollection"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "examples": [
+        {
+          "intersects": {
+            "type": "Point",
+            "coordinates": [
+              155000,
+              463000
+            ]
+          }
+        }
+      ]
+    },
+    "datum": {
+      "allOf": [
+        {
+          "description": "Het verzoek wordt uitgevoerd met de versie van de sttr-bestanden die geldig zijn op deze datum. Indien geen datum meegegeven wordt het verzoek uitgevoerd tegen de op dit moment geldende sttr-bestanden. Het formaat van de datum is dd-MM-yyyy"
+        },
+        {
+          "description": "Datum in het formaat dd-MM-yyyy.",
+          "type": "string",
+          "pattern": "^\\d{2}-\\d{2}-\\d{4}$",
+          "examples": [
+            "01-01-2023"
+          ]
+        }
+      ]
+    },
+    "functioneleStructuurRefs": {
+      "description": "De verwijzingen naar een regelbeheerobject van de activiteit in de functionele structuur met eventueel bijbehorende antwoorden",
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "required": [
+              "functioneleStructuurRef"
+            ],
+            "properties": {
+              "antwoorden": {
+                "description": "Optionele lijst van Antwoord objecten",
+                "type": "array",
+                "maxItems": 500,
+                "items": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "antwoord": {
+                      "type": "string",
+                      "maxLength": 6144,
+                      "description": "Het antwoord op de uitvoeringsregel met het desbetreffende id. Indien meerdere antwoorden bij een lijstwaarde dan komma gescheiden met spaties. Indien het antwoord op de vraag vooringevuld is door de service maar leeg moet worden gemaakt (denk aan huisletter) dan dit antwoord als een lege string aanleveren, ongeacht het antwoordType (dus ook bij numeriek)."
+                    },
+                    "id": {
+                      "type": "integer",
+                      "description": "Het id waarmee het antwoord aan de juiste uitvoeringsregel (vraag/bijlage) wordt gekoppeld."
+                    }
+                  }
+                }
+              },
+              "functioneleStructuurRef": {
+                "description": "De verwijzing naar een regelbeheerobject van een geselecteerde activiteit in de functionele structuur in de Registratie Toepasbare Regels.",
+                "type": "string"
+              }
+            }
+          },
+          {
+            "properties": {
+              "subFunctioneleStructuurRefs": {
+                "deprecated": true,
+                "type": "array",
+                "description": "Verwijzing naar regelbeheerobjecten van geselecteerde subactiviteiten in de functionele structuur in de Registratie Toepasbare Regels. Voor verfijnbare activiteiten dient de lijst minimaal 1 item bevatten. Voor niet-verfijnbare activiteiten dient de lijst leeg te zijn. Deprecated omdat de verfijnbaar functionaliteit deprecated is.",
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 100
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 100
+    },
+    "rolaanduiding": {
+      "description": "Rol van de gebruiker ten behoeve van het voorinvullen van gegevens over de gebruiker en/of initiatiefnemer.",
+      "required": [
+        "rol"
+      ],
+      "properties": {
+        "initiatiefnemer": {
+          "required": [
+            "dsoId"
+          ],
+          "description": "De initiatiefnemer namens wie wordt ingediend, indien de rol niet initiatiefnemer is. Indien de rol intiatiefnemer is, wordt dit veld genegeerd.",
+          "properties": {
+            "dsoId": {
+              "type": "string",
+              "description": "DSO id (UUID)",
+              "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+              "minLength": 36,
+              "maxLength": 36,
+              "examples": [
+                "ff4cd97f-1d24-4f42-86c4-61a8a1e9f066"
+              ]
+            }
+          }
+        },
+        "rol": {
+          "description": "Rol van de gebruiker.",
+          "type": "string",
+          "enum": [
+            "INITIATIEFNEMER",
+            "GEMACHTIGDE",
+            "OVERIG"
+          ]
+        }
+      }
+    }
+  }
+}

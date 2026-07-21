@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/coordinaat",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v4.json#/components/schemas/Coordinaat",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/162228/verzoeken-indienen-v5.json#/components/schemas/Coordinaat",
+    "https://service.omgevingswet.overheid.nl/publiek/verzoeken/api/indienen/v5/#/components/schemas/Coordinaat"
+  ],
+  "type": "object",
+  "required": [
+    "stelsel",
+    "geometrie"
+  ],
+  "properties": {
+    "geometrie": {
+      "description": "Punt of vlak waar het project wordt uitgevoerd.",
+      "oneOf": [
+        {
+          "$ref": "./Point.schema.json"
+        },
+        {
+          "$ref": "./Polygon.schema.json"
+        },
+        {
+          "$ref": "./GeometryCollection.schema.json"
+        }
+      ]
+    },
+    "stelsel": {
+      "type": "string",
+      "enum": [
+        "WGS84",
+        "ETRS89",
+        "RD"
+      ]
+    }
+  }
+}

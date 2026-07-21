@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/dataverkenner-bagadresinformatie-voblbuehg/embedded",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/dataverkenner/bagadresinformatie/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "bagadresinformatie": {
+      "type": "array",
+      "items": {
+        "$ref": "./DataverkennerBagadresinformatiebagadresinformatie.schema.json"
+      }
+    }
+  }
+}

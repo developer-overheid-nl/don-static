@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsinformatie-ontsluiten-api-ow7p61mdg/planondergrond",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsinformatie/api/ontsluiten/v2/openapi.json#/components/schemas/PlanOndergrond"
+  ],
+  "required": [
+    "type"
+  ],
+  "type": "object",
+  "properties": {
+    "datum": {
+      "type": "string",
+      "format": "date",
+      "examples": [
+        "2015-03-25"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "examples": [
+        "grootschalige basiskaart (GBK)"
+      ]
+    }
+  },
+  "description": "Naam van de gebruikte ondergrond volgens domein Ondergronden. (IMRO-document)"
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/ruimtelijke-plannen-api-3zzh61mdr/embedded8",
+  "x-derived-from": [
+    "https://ruimte.omgevingswet.overheid.nl/ruimtelijke-plannen/api/opvragen/v4/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "besluitsubvlakken": {
+      "type": "array",
+      "items": {
+        "$ref": "./BaseBesluitsubvlak.schema.json"
+      }
+    },
+    "besluitvlakken": {
+      "type": "array",
+      "items": {
+        "$ref": "./BaseBesluitvlak.schema.json"
+      }
+    },
+    "bestemmingsvlakken": {
+      "type": "array",
+      "items": {
+        "$ref": "./BaseBestemmingsvlak.schema.json"
+      }
+    },
+    "bouwaanduidingen": {
+      "type": "array",
+      "items": {
+        "$ref": "./BaseBouwaanduiding.schema.json"
+      }
+    },
+    "children": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "./BaseTekst.schema.json"
+          },
+          {
+            "properties": {
+              "_embedded": {
+                "$ref": "./Embedded4.schema.json"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "figuren": {
+      "type": "array",
+      "items": {
+        "$ref": "./BaseFiguur.schema.json"
+      }
+    },
+    "functieaanduidingen": {
+      "type": "array",
+      "items": {
+        "$ref": "./BaseFunctieaanduiding.schema.json"
+      }
+    },
+    "gebiedsaanduidingen": {
+      "type": "array",
+      "items": {
+        "$ref": "./BaseGebiedsaanduiding.schema.json"
+      }
+    },
+    "maatvoeringen": {
+      "type": "array",
+      "items": {
+        "$ref": "./BaseMaatvoering.schema.json"
+      }
+    }
+  }
+}

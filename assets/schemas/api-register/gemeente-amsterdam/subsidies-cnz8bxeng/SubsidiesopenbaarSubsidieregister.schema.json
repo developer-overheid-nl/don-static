@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/subsidies-cnz8bxeng/subsidiesopenbaarsubsidieregister",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/subsidies/openapi.json#/components/schemas/Subsidiesopenbaar_subsidieregister"
+  ],
+  "type": "object",
+  "description": "Het openbaar subsidieregister bevat informatie over de verleende subsidies van de gemeente Amsterdam.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `openbaarSubsidieregister._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./SubsidiesopenbaarSubsidieregisterLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "aanvrager": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Subsidieaanvrager",
+      "description": "De aanvrager van de subsidie"
+    },
+    "bedragAangevraagd": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het bedrag dat is aangevraagd"
+    },
+    "bedragVastgesteld": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het bedrag dat is vastgesteld"
+    },
+    "bedragVerleend": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "description": "Het bedrag dat is verleend"
+    },
+    "beleidsterrein": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het project dat verband houdt met de subsidie"
+    },
+    "datumOverzicht": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop het overzicht is gemaakt"
+    },
+    "dossiernummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het unieke dossiernummer van de subsidieverlening"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding van de subsidieverlening."
+    },
+    "organisatieonderdeel": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Het organisatieonderdeel dat de subsidie heeft verstrekt"
+    },
+    "projectnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De naam van het project dat verband houdt met de subsidie"
+    },
+    "publicatiedatumVaststellingsbesluit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop het vaststellingsbesluit is gepubliceerd"
+    },
+    "publicatiedatumVerleningsbesluit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "De datum waarop het verleningsbesluit is gepubliceerd"
+    },
+    "regelingnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Regeling",
+      "description": "De naam van de regeling van de subsidie"
+    },
+    "subsidiejaar": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Het jaar waarin de subsidie is verleend"
+    },
+    "typePeriodiciteit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Periodiciteit",
+      "description": "De periodiciteit van de subsidie"
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

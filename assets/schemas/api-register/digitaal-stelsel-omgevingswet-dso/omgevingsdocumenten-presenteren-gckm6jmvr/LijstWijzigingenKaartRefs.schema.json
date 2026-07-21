@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/lijstwijzigingenkaartrefs",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/LijstWijzigingenKaartRefs"
+  ],
+  "title": "LijstWijzigingenKaartRefs",
+  "type": "object",
+  "properties": {
+    "toegevoegd": {
+      "title": "KaartRefs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.kaart.20240101"
+        ]
+      }
+    },
+    "verwijderd": {
+      "title": "KaartRefs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "nl.imow-gm1911.kaart.20240101"
+        ]
+      }
+    }
+  }
+}

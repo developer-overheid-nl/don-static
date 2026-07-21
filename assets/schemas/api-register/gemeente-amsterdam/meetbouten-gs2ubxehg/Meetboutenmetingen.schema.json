@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/meetbouten-gs2ubxehg/meetboutenmetingen",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/meetbouten/openapi.json#/components/schemas/Meetboutenmetingen"
+  ],
+  "type": "object",
+  "description": "metingen",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `metingen._links` field. It contains all relationships with objects.",
+      "properties": {
+        "hoortBijMeetbout": {
+          "$ref": "./MeetboutenmeetboutenLink.schema.json"
+        },
+        "refereertAanReferentiepunten": {
+          "type": "array",
+          "items": {
+            "$ref": "./MeetboutenmetingenRefereertAanReferentiepunten_M2M.schema.json"
+          }
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./MeetboutenmetingenLink.schema.json"
+        }
+      },
+      "required": [
+        "hoortBijMeetbout",
+        "refereertAanReferentiepunten",
+        "schema",
+        "self"
+      ]
+    },
+    "aantalDagen": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Vorige meting aantal dagen",
+      "description": "Het aantal dagen sinds de vorige meting"
+    },
+    "datum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Meting datum",
+      "description": "Datum waarop de meting heeft plaatsgevonden"
+    },
+    "hoeveelsteMeting": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Meting nummer",
+      "description": "Hoeveelste meting van de meetbout"
+    },
+    "hoogteTovNap": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Meting hoogte",
+      "description": "Gemeten hoogte van de meetbout t.o.v. NAP (m)"
+    },
+    "hoortBijMeetboutId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meting hoort bij meetbout",
+      "description": "De meetbout waarop de meting is gedaan",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Meting ID",
+      "description": "Unieke identificatie van de meting"
+    },
+    "isGemetenDoor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Onderneming ID",
+      "description": "Identificatie van de onderneming die de meting heeft uitgevoerd"
+    },
+    "publiceerbaar": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Publiceerbaar indicatie",
+      "description": "Indicatie die aangeeft of de informatie gepubliceerd mag worden"
+    },
+    "typeMeting": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meting type",
+      "description": "Type meting (N=nulmeting, H=herhalingsmeting, T=tussentijdse meting, S=schatting)"
+    },
+    "wijzeVanInwinnenCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meting wijze code",
+      "description": "Wijze waarop de meting is ingewonnen code"
+    },
+    "wijzeVanInwinnenOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Meting wijze omschrijving",
+      "description": "Wijze waarop de meting is ingewonnen omschrijving"
+    },
+    "zakking": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Meting zakking",
+      "description": "Zakking van de meting t.o.v. vorige meting (mm)"
+    },
+    "zakkingCumulatief": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Meting zakking cumulatief",
+      "description": "Cumulatieve zakking sinds de plaatsing van de meetbout (mm)"
+    },
+    "zakkingssnelheid": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Zakkingssnelheid mm per jaar",
+      "description": "Zakkingssnelheid van de meetbout (mm/jaar) sinds de meting"
+    }
+  },
+  "required": [
+    "_links",
+    "hoortBijMeetboutId",
+    "identificatie"
+  ]
+}

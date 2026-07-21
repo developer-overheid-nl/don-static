@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/gebiedsaanwijzinggroep",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/Gebiedsaanwijzinggroep"
+  ],
+  "title": "Gebiedsaanwijzinggroep",
+  "required": [
+    "code",
+    "waarde"
+  ],
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "examples": [
+        "http://standaarden.omgevingswet.overheid.nl/bodem/id/concept/Bodembeheergebied"
+      ]
+    },
+    "waarde": {
+      "type": "string",
+      "examples": [
+        "bodembeheergebied"
+      ]
+    }
+  },
+  "description": "Een categorie, of groep, waaronder het object valt.\nGebiedsaanwijzingGroep is één van de waarden op één van de limitatieve waardelijsten\nbehorende bij een specifiek type gebiedsaanwijzing. Bijvoorbeeld, voor het type gebiedsaanwijzing\n'Bodem' is de bijbehorende waardelijst https://standaarden.omgevingswet.overheid.nl/id/waardelijst/Bodemgroep.\nZie voor de verschillende types gebiedsaanwijzing de limitatieve waardelijst \nhttps://standaarden.omgevingswet.overheid.nl/id/waardelijst/TypeGebiedsaanwijzing\n"
+}

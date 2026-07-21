@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/overlastgebieden-gemeente-amsterdam-ueppbx6hg/embedded4",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/overlastgebieden/openapi.json"
+  ],
+  "type": "object",
+  "properties": {
+    "barbecueverbod": {
+      "type": "array",
+      "items": {
+        "$ref": "./Overlastgebiedenbarbecueverbod.schema.json"
+      }
+    }
+  }
+}

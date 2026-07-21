@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/catalogus-api-wl_g_invg/conceptschema",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/catalogus/api/opvragen/v3/openapi.json#/components/schemas/Conceptschema"
+  ],
+  "required": [
+    "begindatumGeldigheid",
+    "eigenaar",
+    "einddatumGeldigheid",
+    "metadata",
+    "naam",
+    "uitleg",
+    "uri"
+  ],
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "$ref": "./Embedded2.schema.json"
+    },
+    "begindatumGeldigheid": {
+      "pattern": "^(\\d{4}-[01]\\d-[0-3]\\d)$",
+      "type": "string",
+      "examples": [
+        "2020-04-17"
+      ]
+    },
+    "eigenaar": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "https://standaarden.overheid.nl/owms/terms/Geonovum"
+      ]
+    },
+    "einddatumGeldigheid": {
+      "pattern": "^(\\d{4}-[01]\\d-[0-3]\\d)$",
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "2020-04-27"
+      ]
+    },
+    "metadata": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "examples": [
+        "http://stelselcatalogus.omgevingswet.overheid.nl/doc/2018041200000000/conceptscheme/Stelselcatalogus"
+      ]
+    },
+    "naam": {
+      "type": "string",
+      "description": "rdfs:label",
+      "examples": [
+        "Stelselcatalogus"
+      ]
+    },
+    "uitleg": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "rdfs:comment",
+      "examples": [
+        "Korte uitleg waarom dit conceptschema tot stand is gekomen."
+      ]
+    },
+    "uri": {
+      "type": "string",
+      "description": "Unieke identificatie van het Conceptschema",
+      "examples": [
+        "http://stelselcatalogus.omgevingswet.overheid.nl/id/conceptscheme/Stelselcatalogus"
+      ]
+    }
+  }
+}

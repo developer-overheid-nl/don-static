@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/ministerie-van-buitenlandse-zaken/nederland-wereldwijd-zioabu6hr/emergencyaiddocuments",
+  "x-derived-from": [
+    "https://opendata.nederlandwereldwijd.nl/v2/sources/nederlandwereldwijd/openapi.yaml#/components/schemas/emergency-aid-documents"
+  ],
+  "type": "object",
+  "properties": {
+    "NoodhulpSummaries": {
+      "$ref": "./EmergencyAidDocument.schema.json"
+    }
+  },
+  "xml": {
+    "name": "documents"
+  }
+}

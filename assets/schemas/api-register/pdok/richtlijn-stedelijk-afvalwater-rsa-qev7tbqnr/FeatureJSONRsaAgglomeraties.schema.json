@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/richtlijn-stedelijk-afvalwater-rsa-qev7tbqnr/featurejsonrsaagglomeraties",
+  "x-derived-from": [
+    "https://api.pdok.nl/rws/richtlijn-stedelijk-afvalwater/ogc/v1/openapi.json#/components/schemas/featureJSON_rsa_agglomeraties"
+  ],
+  "properties": {
+    "id": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "links": {
+      "items": {
+        "$ref": "../_shared/Link.schema.json"
+      },
+      "type": "array"
+    },
+    "properties": {
+      "$ref": "./PropertiesGeoJSONRsaAgglomeraties.schema.json"
+    },
+    "type": {
+      "enum": [
+        "Feature"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "properties",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/openbareruimteidentificatie",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/OpenbareRuimteIdentificatie"
+  ],
+  "title": "OpenbareRuimteIdentificatie",
+  "pattern": "^[0-9]{4}30[0-9]{10}$",
+  "type": "string",
+  "description": "De unieke aanduiding van een openbare ruimte.",
+  "examples": [
+    "0226300000136124"
+  ]
+}

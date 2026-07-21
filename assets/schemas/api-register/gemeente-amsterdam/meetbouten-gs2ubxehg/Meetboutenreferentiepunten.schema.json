@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/meetbouten-gs2ubxehg/meetboutenreferentiepunten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/meetbouten/openapi.json#/components/schemas/Meetboutenreferentiepunten"
+  ],
+  "type": "object",
+  "description": "referentiepunten",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `referentiepunten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "isNapPeilmerk": {
+          "$ref": "../_shared/NappeilmerkenLink.schema.json"
+        },
+        "ligtInBouwblok": {
+          "$ref": "../_shared/GebiedenBouwblokkenLink.schema.json"
+        },
+        "ligtInBuurt": {
+          "$ref": "../_shared/GebiedenBuurtenLink.schema.json"
+        },
+        "ligtInStadsdeel": {
+          "$ref": "../_shared/GebiedenStadsdelenLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./MeetboutenreferentiepuntenLink.schema.json"
+        }
+      },
+      "required": [
+        "isNapPeilmerk",
+        "ligtInBouwblok",
+        "ligtInBuurt",
+        "ligtInStadsdeel",
+        "schema",
+        "self"
+      ]
+    },
+    "datum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Referentiepunt datum",
+      "description": "Datum van plaatsing van het referentiepunt"
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "hoogteTovNap": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Hoogte in meters",
+      "description": "Gemeten hoogte van het referentiepunt t.o.v. NAP "
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Referentiepunt ID",
+      "description": "Unieke identificatie van het referentiepunt"
+    },
+    "isNapPeilmerkId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Referentiepunt is peilmerk",
+      "description": "Het NAP-peilmerk dat het referentiepunt is",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "ligtInBouwblokId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Referentiepunt ligt in bouwblok",
+      "description": "Het bouwblok waarbinnen het referentiepunt ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "ligtInBuurtId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Referentiepunt ligt in buurt",
+      "description": "De buurt waarbinnen het referentiepunt ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "ligtInStadsdeelId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Referentiepunt ligt in stadsdeel",
+      "description": "Het stadsdeel waarbinnen het referentiepunt ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "locatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Referentiepunt locatie omschrijving",
+      "description": "Beschrijving van de locatie van het referentiepunt bijv 'nabij noordoostelijke gevelhoek'"
+    },
+    "merkCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Referentiepunt merk code",
+      "description": "Gebruikte referentiepunt code"
+    },
+    "merkOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Referentiepunt merk omschrijving",
+      "description": "Gebruikte referentiepunt omschrijving"
+    },
+    "nabijNummeraanduiding": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Nabij adres omschrijving",
+      "description": "Een adres in de nabijheid van het referentiepunt"
+    },
+    "publiceerbaar": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "title": "Publiceerbaar indicatie",
+      "description": "Indicatie die aangeeft of de informatie gepubliceerd mag worden"
+    },
+    "statusCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Referentiepunt status code",
+      "description": "Status van het referentiepunt (1=actueel, 2=niet te meten, 3=vervallen) code"
+    },
+    "statusOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Referentiepunt status omschrijving",
+      "description": "Status van het referentiepunt (1=actueel, 2=niet te meten, 3=vervallen) omschrijving"
+    },
+    "vervaldatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Referentiepunt geldigheid einddatum",
+      "description": "Vervaldatum van het referentiepunt"
+    },
+    "windrichting": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "De windrichting van het muurvlak is die zijde waarheen het vlak van de muur, waarin het peilmerk zich bevindt, is gericht. Is er 'Z' aangegeven, dan ligt het betreffende muurvlak op het zuiden"
+    },
+    "xCoordinaatMuurvlak": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Muurvlak x-coördinaat",
+      "description": "De muurvlakcoördinaten (in centimeters) geven de positie aan van het peilmerk op het betreffende muurvlak. De horizontale maat (x) is de maat ten opzichte van een van de uiteinden van het muurvlak"
+    },
+    "yCoordinaatMuurvlak": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Muurvlak y-coördinaat",
+      "description": "De muurvlakcoördinaten (in centimeters) geven de positie aan van het peilmerk op het betreffende muurvlak. De verticale maat (y) is de maat ten opzichte van het ondereinde van het muurvlak (positief) of ten opzichte van het boveneinde van het muurvlak (negatief)"
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie",
+    "isNapPeilmerkId",
+    "ligtInBouwblokId",
+    "ligtInBuurtId",
+    "ligtInStadsdeelId"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/monumenten-1xuffu6hr/monumentenunesco",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/monumenten/openapi.json#/components/schemas/Monumentenunesco"
+  ],
+  "type": "object",
+  "description": "De Amsterdamse grachtengordel staat op de UNESCO-Werelderfgoedlijst, wat betekent dat er internationale erkenning is van het bijzondere karakter van dit deel van de historische binnenstad. Het aanwijzen van cultureel erfgoed is bedoeld om het beter te kunnen bewaren voor toekomstige generaties.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `unesco._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./MonumentenunescoLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Unesco gebied geldigheid begindatumtijd",
+      "description": "De ingangsdatum en -tijd van de geldigheid waarop de beschermde status van het Unesco gebied in werking treedt"
+    },
+    "datumActueelTot": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Actueel tot datum",
+      "description": "Einddatum van de cyclus, eventueel in combinatie met het kenmerk Status"
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Unesco gebied geldigheid einddatumtijd",
+      "description": "De einddatum en -tijd van de geldigheid waarop de beschermde status van het Unesco gebied is afgevoerd"
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "Unieke identificatie van het Unesco gebied"
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object naam",
+      "description": "De naam van het object"
+    },
+    "redengevendeOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Reden publieke omschrijving",
+      "description": "De publieke, historische omschrijving, behorend bij het besluit"
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie"
+  ]
+}

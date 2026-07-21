@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/crud-rtr-gegevens-g85pejgdr/locatie",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167490/toepasbareregels-crud-rtr-gegevens-v2.json#/components/schemas/Locatie"
+  ],
+  "required": [
+    "identificatie",
+    "beginDatum"
+  ],
+  "properties": {
+    "beginDatum": {
+      "description": "Datum in het formaat dd-MM-yyyy.",
+      "type": "string",
+      "pattern": "^\\d{2}-\\d{2}-\\d{4}$",
+      "examples": [
+        "01-01-2023"
+      ]
+    },
+    "eindDatum": {
+      "description": "Datum in het formaat dd-MM-yyyy.",
+      "type": "string",
+      "pattern": "^\\d{2}-\\d{2}-\\d{4}$",
+      "examples": [
+        "01-01-2023"
+      ]
+    },
+    "identificatie": {
+      "description": "Unieke imow identificatie van de locatie",
+      "type": "string"
+    }
+  }
+}

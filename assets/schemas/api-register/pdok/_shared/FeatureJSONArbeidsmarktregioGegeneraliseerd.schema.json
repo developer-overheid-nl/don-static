@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/_shared/featurejsonarbeidsmarktregiogegeneraliseerd",
+  "x-derived-from": [
+    "https://api.pdok.nl/cbs/gebiedsindelingen-historisch/ogc/v1/openapi.json#/components/schemas/featureJSON_arbeidsmarktregio_gegeneraliseerd",
+    "https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/openapi.json#/components/schemas/featureJSON_arbeidsmarktregio_gegeneraliseerd"
+  ],
+  "properties": {
+    "id": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "links": {
+      "items": {
+        "$ref": "./Link.schema.json"
+      },
+      "type": "array"
+    },
+    "properties": {
+      "$ref": "./PropertiesGeoJSONArbeidsmarktregioGegeneraliseerd.schema.json"
+    },
+    "type": {
+      "enum": [
+        "Feature"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "properties",
+    "type"
+  ],
+  "type": "object"
+}

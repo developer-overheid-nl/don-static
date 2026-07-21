@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/toelichtingdetails",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v2.json#/components/schemas/ToelichtingDetails",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v3.json#/components/schemas/ToelichtingDetails"
+  ],
+  "description": "Verwijzing naar de toelichting bij de vraag. De inhoud van de toelichting kan opgehaald worden bij de toelichtingen service",
+  "required": [
+    "belangrijk"
+  ],
+  "properties": {
+    "belangrijk": {
+      "description": "Definieert of de toelichting belangrijk is voor het ondersteunen en begrijpen van de vraag of het antwoord. Dit kan bijvoorbeeld gebruikt worden door frontend-applicaties als indicatie dat de toelichting direct getoond dient te worden.",
+      "type": "boolean"
+    },
+    "korteToelichtingId": {
+      "description": "identifier waarmee de korte toelichting geidentificeerd wordt in de toelichtingen service. Indien er geen toelichting beschikbaar is is dit veld afwezig",
+      "type": "integer"
+    },
+    "langeToelichtingId": {
+      "description": "identifier waarmee de lange toelichting geidentificeerd wordt in de toelichtingen service. Indien er geen toelichting beschikbaar is is dit veld afwezig",
+      "type": "integer"
+    }
+  }
+}

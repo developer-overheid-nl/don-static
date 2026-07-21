@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/zoeken-in-activiteiten-voor-indieningsvereisten-en-werkzaamheden-q7gc6lgvr/activiteitresponse",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/235013/toepasbareregels-zoekinterface-v2.json#/components/schemas/ActiviteitResponse"
+  ],
+  "required": [
+    "urn",
+    "type",
+    "omschrijving",
+    "functioneleStructuurRef",
+    "bestuursorgaan",
+    "locaties"
+  ],
+  "properties": {
+    "bestuursorgaan": {
+      "description": "Organisatie",
+      "required": [
+        "oin",
+        "bestuurslaag"
+      ],
+      "properties": {
+        "bestuurslaag": {
+          "description": "Bestuurslaag van een Organisatie",
+          "type": "string",
+          "enum": [
+            "rijk",
+            "provincie",
+            "waterschap",
+            "gemeente"
+          ]
+        },
+        "oin": {
+          "description": "OIN van de organisatie",
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 20
+        }
+      }
+    },
+    "functioneleStructuurRef": {
+      "description": "De functioneleStructuurRef die verwijst naar de regels (STTR) m.b.t. indieningsvereisten",
+      "type": "string"
+    },
+    "locaties": {
+      "description": "Locaties waarop de activiteit actief is",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "omschrijving": {
+      "description": "Omschrijving van de activiteit",
+      "type": "string"
+    },
+    "toestemming": {
+      "type": "string",
+      "description": "Code van de toestemming",
+      "enum": [
+        "Vergunning",
+        "Melding",
+        "Informatie",
+        "InformatieOngewoonVoorval",
+        "AanvraagMaatwerkvoorschrift",
+        "MeldingGelijkwaardigeMaatregel",
+        "AanvraagToestemmingGelijkwaardigeMaatregel"
+      ]
+    },
+    "type": {
+      "description": "Typering van de activiteit",
+      "type": "string",
+      "enum": [
+        "Water",
+        "Milieubelastende",
+        "Overige"
+      ]
+    },
+    "urn": {
+      "description": "Urn van de activiteit (In de urn mogen geen spaties voorkomen). Binnen de keten staat urn bekend als de imow-id.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250
+    }
+  }
+}

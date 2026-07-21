@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/omgevingsdocumenten-presenteren-gckm6jmvr/regelingonderwerpen",
+  "x-derived-from": [
+    "https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/presenteren/v8/openapi.json#/components/schemas/RegelingOnderwerpen"
+  ],
+  "title": "RegelingOnderwerpen",
+  "required": [
+    "_links",
+    "identificatie"
+  ],
+  "type": "object",
+  "properties": {
+    "_links": {
+      "$ref": "./RegelingOnderwerpenLinks.schema.json"
+    },
+    "activiteiten": {
+      "title": "ActiviteitOnderwerpen",
+      "type": "array",
+      "items": {
+        "$ref": "./ActiviteitOnderwerp.schema.json"
+      }
+    },
+    "gebiedsaanwijzingen": {
+      "title": "GebiedsaanwijzingOnderwerpen",
+      "type": "array",
+      "items": {
+        "$ref": "./GebiedsaanwijzingOnderwerp.schema.json"
+      }
+    },
+    "identificatie": {
+      "type": "string"
+    },
+    "themas": {
+      "title": "ThemaOnderwerpen",
+      "type": "array",
+      "items": {
+        "$ref": "./ThemaOnderwerp.schema.json"
+      }
+    }
+  }
+}

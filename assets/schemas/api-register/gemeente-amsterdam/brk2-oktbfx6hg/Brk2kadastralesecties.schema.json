@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brk2-oktbfx6hg/brk2kadastralesecties",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brk2/openapi.json#/components/schemas/Brk2kadastralesecties"
+  ],
+  "type": "object",
+  "description": "kadastralesecties",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `kadastralesecties._links` field. It contains all relationships with objects.",
+      "properties": {
+        "isOnderdeelVanBrkKadastraleGemeentecode": {
+          "$ref": "./Brk2kadastralegemeentecodesLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./Brk2kadastralesectiesLink.schema.json"
+        }
+      },
+      "required": [
+        "isOnderdeelVanBrkKadastraleGemeentecode",
+        "schema",
+        "self"
+      ]
+    },
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Unieke code",
+      "description": "Een alfanumerieke aanduiding van de kadastrale sectie, deel van de kadastrale aanduiding van de onroerende zaak"
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Kadastrale sectie ID",
+      "description": "De unieke aanduiding van een Kadastrale sectie"
+    },
+    "isOnderdeelVanBrkKadastraleGemeentecodeId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Kadastrale gemeentecode identificatie",
+      "description": "Een alfanumerieke aanduiding van de kadastrale gemeentecode, deel van de kadastrale aanduiding van de onroerende zaak. (bv. ASD02)",
+      "readOnly": true,
+      "deprecated": true
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie",
+    "isOnderdeelVanBrkKadastraleGemeentecodeId"
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/brt-10-_uamfx6hg/brt10functionelegebieden",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/brt10/openapi.json#/components/schemas/Brt10functionelegebieden"
+  ],
+  "type": "object",
+  "description": "Begrensd en benoemd gebied dat door een functionele eenheid beschreven wordt.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `functionelegebieden._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./Brt10functionelegebiedenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "bronactualiteit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Bron actualiteit datum",
+      "description": "De actualiteit van de gebruikte bron"
+    },
+    "bronbeschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bron beschrijving",
+      "description": "De beschrijving van de gebruikte bron"
+    },
+    "bronnauwkeurigheid": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "format": "double",
+      "title": "Bron nauwkeurigheid meters",
+      "description": "De nauwkeurigheid van de gebruikte bron in meters"
+    },
+    "brontype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bron type",
+      "description": "Het type van de gebruikte bron"
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "geometriePunt": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "description": "Point in 3D space",
+              "minItems": 2,
+              "maxItems": 3,
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "geometrieVlak": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "$ref": "../_shared/Geometry.schema.json"
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "description": "Point in 3D space",
+                    "minItems": 2,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "MultiPolygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Geo object ID",
+      "description": "De unieke identiteit van het geo-object"
+    },
+    "mutatietype": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object mutatie type",
+      "description": "Het soort mutatie dat een object als laatste ondergaan heeft"
+    },
+    "naamFries": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gebied Friese naam",
+      "description": "De Friese naam van het gebied"
+    },
+    "naamNl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Gebied Nederlandse naam",
+      "description": "De Nederlandse naam van het gebied"
+    },
+    "objectBeginTijd": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Object geldigheid begintijd",
+      "description": "Tijdstip waarop het object ontstaan is"
+    },
+    "soortnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Functioneel gebied soort naam",
+      "description": "Verdere specificatie van het type functioneel gebied"
+    },
+    "tdnCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object TOP10vector code",
+      "description": "Code die het object in TOP10vector had"
+    },
+    "tijdstipRegistratie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Object registratie tijdstip",
+      "description": "Tijdstip waarop een versie van het object ontstaan is"
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Functioneel gebied type",
+      "description": "Het soort functioneel gebied"
+    },
+    "visualisatieCode": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object visualisatie code",
+      "description": "Code voor het visualiseren van het object"
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie"
+  ]
+}

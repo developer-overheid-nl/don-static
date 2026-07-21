@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/veilige-afstanden-d-o-fu6hr/veiligeafstandenveiligeafstanden",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/veiligeafstanden/openapi.json#/components/schemas/Veiligeafstandenveiligeafstanden"
+  ],
+  "type": "object",
+  "description": "Locaties van vuurwerkopslagplaatsen, bunkerschepen, munitie-opslagplaatsen, sluizen, gasdrukregel- en meetstations en wachtplaatsen.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `veiligeafstanden._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./VeiligeafstandenveiligeafstandenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "geometrie": {
+      "$ref": "../_shared/Geometry.schema.json"
+    },
+    "id": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "description": "Unieke aanduiding van een veilige-afstandobject."
+    },
+    "locatie": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Beschrijving locatie object."
+    },
+    "thema": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van thema waaronder object valt."
+    },
+    "themaDatumLaatsteWijziging": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Datum (bijv september 2020) van wijziging van wet of regelgeving waaronder object valt."
+    },
+    "themaToelichting": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Toelichting thema waaronder object valt."
+    },
+    "themaWetOfRegelgeving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Naam van wet of regelgeving waaronder object valt."
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Typering van soort veilige-afstandobject."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

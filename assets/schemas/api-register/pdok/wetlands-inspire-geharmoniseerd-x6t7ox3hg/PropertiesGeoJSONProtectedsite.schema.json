@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/wetlands-inspire-geharmoniseerd-x6t7ox3hg/propertiesgeojsonprotectedsite",
+  "x-derived-from": [
+    "https://api.pdok.nl/rvo/wetlands-geharmoniseerd/ogc/v1/openapi.json#/components/schemas/propertiesGeoJSON_protectedsite"
+  ],
+  "properties": {
+    "designation": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legalfoundationdate": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legalfoundationdocument": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "localid": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "namespace": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sitename": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "siteprotectionclassification": {
+      "description": "",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "type": "object"
+}

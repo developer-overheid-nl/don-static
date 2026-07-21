@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/bgt-download-api-iex0a9rvg/deltacustomdownloadrequest",
+  "x-derived-from": [
+    "https://api.pdok.nl/lv/bgt/download/v1_0/openapi.json#/components/schemas/DeltaCustomDownloadRequest"
+  ],
+  "properties": {
+    "deltaId": {
+      "type": "string"
+    },
+    "featuretypes": {
+      "items": {
+        "enum": [
+          "bak",
+          "begroeidterreindeel",
+          "bord",
+          "buurt",
+          "functioneelgebied",
+          "gebouwinstallatie",
+          "installatie",
+          "kast",
+          "kunstwerkdeel",
+          "mast",
+          "onbegroeidterreindeel",
+          "ondersteunendwaterdeel",
+          "ondersteunendwegdeel",
+          "ongeclassificeerdobject",
+          "openbareruimte",
+          "openbareruimtelabel",
+          "overbruggingsdeel",
+          "overigbouwwerk",
+          "overigescheiding",
+          "paal",
+          "pand",
+          "plaatsbepalingspunt",
+          "put",
+          "scheiding",
+          "sensor",
+          "spoor",
+          "stadsdeel",
+          "straatmeubilair",
+          "tunneldeel",
+          "vegetatieobject",
+          "waterdeel",
+          "waterinrichtingselement",
+          "waterschap",
+          "wegdeel",
+          "weginrichtingselement",
+          "wijk"
+        ],
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "format": {
+      "enum": [
+        "citygml"
+      ],
+      "type": "string"
+    },
+    "geofilter": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "format",
+    "featuretypes"
+  ],
+  "type": "object"
+}

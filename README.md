@@ -4,6 +4,12 @@ Repository with static files supporting Open API, open repositories and other fu
 
 All files in the [assets](./assets/) folder are published at https://static.developer.overheid.nl.
 
+The schema assets are also published as a separate container image for source-meta:
+
+```text
+ghcr.io/developer-overheid-nl/source-meta-schemas
+```
+
 ## Development
 
 To build & run locally, execute the following commands:
@@ -16,3 +22,9 @@ docker run --rm -p 8080:80 don-static
 Open the index document in the browser:
 
 http://localhost:8080
+
+To build the source-meta schema image locally:
+
+```bash
+docker build -f Dockerfile.schemas -t source-meta-schemas .
+```

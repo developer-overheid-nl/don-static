@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/logius/cor-api-services-xuflbx6ng/healthchecklistitem",
+  "x-derived-from": [
+    "https://oinregister.logius.nl/api/v1/openapi.json#/components/schemas/HealthCheckListItem"
+  ],
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "exceptionClass": {
+          "type": "object"
+        },
+        "exceptionMessage": {
+          "type": "object"
+        },
+        "rootCause": {
+          "type": "object"
+        }
+      }
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "UP",
+        "DOWN"
+      ],
+      "type": "string"
+    }
+  }
+}

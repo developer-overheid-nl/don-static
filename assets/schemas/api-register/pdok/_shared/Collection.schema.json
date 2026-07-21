@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/pdok/_shared/collection",
+  "x-derived-from": [
+    "https://api.pdok.nl/brt/top10nl/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/bzk/bro-gminsamenhang-karakteristieken/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/bestand-bodemgebruik-2010/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/bestand-bodemgebruik-2015/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/bestand-bodemgebruik-2017/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/bevolkingskernen-2011/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/bevolkingskernen-2021/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/gebiedsindelingen-historisch/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/human-health-statistics/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/landuse/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/population-distribution/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/postcode4/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/postcode6/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/statistical-units-vector/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/vierkant-1km-laea/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/vierkant-500m/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/vierkantstatistieken100m/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/vierkantstatistieken500m/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/wijken-en-buurten-2022/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/wijken-en-buurten-2023/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/cbs/wijken-en-buurten-2024/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/hwh/waterschappen-hydrografie/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/kadaster/3d-basisvoorziening/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/kadaster/3d-geluid/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/kadaster/bestuurlijkegebieden/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/kadaster/brk-kadastrale-kaart/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/kadaster/brt-bodemgebruik/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/kadaster/brt-geografische-namen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/kadaster/brt-hydrografie/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/kadaster/brt-vervoersnetwerken/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/kadaster/brt-zeegebieden/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/kadaster/rdinfo/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/lv/bag/ogc/v1-demo/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/lv/bgt/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/lvnl/drone-no-flyzones/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/prorail/spoorwegen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rce/beschermde-gebieden-cultuurhistorie/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rioned/beheer-stedelijk-watersystemen-gwsw/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rioned/waterschappen-waterketen-gwsw/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/fysisch-geografische-regios/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/gesloten-gebieden-visserij/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/gewaspercelen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/habitatrichtlijn-verspreiding-soorten/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/habitatrichtlijn-verspreiding-typen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/indicatieve-aandachtsgebieden-funderingsproblematiek/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/invasieve-exoten-geharmoniseerd/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/mossel-en-oesterhabitats/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/mosselzaad-invanginstallaties/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/nationaal-beschermde-gebieden-cdda/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/nationale-parken-geharmoniseerd/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/nationale-parken/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/natura2000-geharmoniseerd/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/natura2000/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/natuurmeting-op-kaart-2014/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/potentieel-warmte-koude-opslagsystemen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/potentiekaart-omgevingswarmte/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/potentiekaart-reststromen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/potentiekaart-restwarmte/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/referentiepercelen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/schelpdierpercelen-geharmoniseerd/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/schelpdierpercelen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/vogelrichtlijn-verspreiding-soorten/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/vogelrichtlijn-verspreidingsgebied-soorten/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/wetlands-geharmoniseerd/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/wetlands/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rvo/windsnelheden/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/digitaal-topografisch-bestand/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/hydrografie-netwerk/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/kaderrichtlijn-mariene-strategie/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/kwetsbaar-gebied-agglomeraties/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/kwetsbaar-gebied/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/nationaal-hydrologisch-instrumentarium-netwerkschematisatie/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/nationaal-wegenbestand-vaarwegen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/nationaal-wegenbestand-wegen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/overstromingen-gebeurtenis/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/overstromingen-risicogebied/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/productie-en-industrie-productie-installaties/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/productie-en-industrie-productiefaciliteiten/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/richtlijn-stedelijk-afvalwater/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/rioolnetwerk-leidingelementen/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/rioolnetwerk-milieumanagementvoorziening/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/scheepvaart-verkeersscheidingsstelsel-noordzee/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/vaarweg-netwerk-data-service-bevaarbaarheid/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/vaarwegmarkeringen-nederland/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/vervoersnetwerken-waterwegen-netwerk/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/vervoersnetwerken-wegen-netwerk/ogc/v1/openapi.json#/components/schemas/collection",
+    "https://api.pdok.nl/rws/weggegevens/ogc/v1/openapi.json#/components/schemas/collection"
+  ],
+  "properties": {
+    "crs": {
+      "default": [
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      ],
+      "description": "The list of coordinate reference systems supported by the service. The first item is the default coordinate reference system.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "examples": [
+        [
+          "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+          "http://www.opengis.net/def/crs/EPSG/0/4326"
+        ]
+      ]
+    },
+    "description": {
+      "description": "a description of the collection",
+      "type": "string",
+      "examples": [
+        "This collection contains buildings"
+      ]
+    },
+    "extent": {
+      "$ref": "./Extent.schema.json"
+    },
+    "id": {
+      "description": "identifier of the collection used, for example, in URIs",
+      "type": "string",
+      "examples": [
+        "buildings"
+      ]
+    },
+    "itemType": {
+      "default": "feature",
+      "description": "indicator about the type of the items in a collection. Example values: 'feature', 'record', 'attribute'. The default value is 'feature'",
+      "type": "string"
+    },
+    "keywords": {
+      "description": "keywords about the elements in the collection",
+      "items": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "examples": [
+              "4612"
+            ]
+          },
+          "codeSpace": {
+            "type": "string",
+            "examples": [
+              "https://www.eionet.europa.eu/gemet/en/concept/"
+            ]
+          },
+          "keyword": {
+            "type": "string",
+            "examples": [
+              "land cover"
+            ]
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "type": [
+          "object",
+          "null"
+        ]
+      },
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "$ref": "./Link.schema.json"
+      },
+      "type": "array",
+      "examples": [
+        [
+          {
+            "href": "http://example.com/collections/buildings?f=json",
+            "rel": "item",
+            "title": "this document",
+            "type": "application/json"
+          },
+          {
+            "href": "http://example.com/concepts/buildings?f=html",
+            "rel": "it",
+            "title": "this document as HTML",
+            "type": "text/html"
+          }
+        ]
+      ]
+    },
+    "storageCrs": {
+      "description": "the CRS identifier, from the list of supported CRS identifiers, that may be used to retrieve features from a collection without the need to apply a CRS transformation",
+      "format": "uri",
+      "type": "string"
+    },
+    "storageCrsCoordinateEpoch": {
+      "description": "point in time at which coordinates in the spatial feature collection are referenced to the dynamic coordinate reference system in `storageCrs`, that may be used to retrieve features from a collection without the need to apply a change of coordinate epoch. It is expressed as a decimal year in the Gregorian calendar",
+      "type": "number",
+      "examples": [
+        "2017-03-25 in the Gregorian calendar is epoch 2017.23"
+      ]
+    },
+    "title": {
+      "description": "human readable title of the collection",
+      "type": "string",
+      "examples": [
+        "Buildings in the city of Bonn"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "links",
+    "crs"
+  ],
+  "type": "object"
+}

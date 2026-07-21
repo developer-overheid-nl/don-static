@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/beheerobjecten-openbare-ruimte-gavb1x6nr/objectenopenbareruimtedefaultgroenobjectenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/objectenopenbareruimte/openapi.json#/components/schemas/ObjectenopenbareruimtedefaultGroenobjectenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `groenobjecten._links` field. It contains all relationships with objects.",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./ObjectenopenbareruimtegroenobjectenLink.schema.json"
+    }
+  },
+  "required": [
+    "schema",
+    "self"
+  ]
+}

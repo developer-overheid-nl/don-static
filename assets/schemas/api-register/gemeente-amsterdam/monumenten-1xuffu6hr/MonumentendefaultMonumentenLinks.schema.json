@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/monumenten-1xuffu6hr/monumentendefaultmonumentenlinks",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/monumenten/openapi.json#/components/schemas/MonumentendefaultMonumentenLinks"
+  ],
+  "type": "object",
+  "description": "The contents of the `monumenten._links` field. It contains all relationships with objects.",
+  "properties": {
+    "betreftBagPand": {
+      "type": "array",
+      "items": {
+        "$ref": "./MonumentenmonumentenBetreftBagPand_M2M.schema.json"
+      }
+    },
+    "heeftMonumentenSitueringen": {
+      "type": "array",
+      "items": {
+        "$ref": "./MonumentenmonumentenHeeftMonumentenSitueringen_M2M.schema.json"
+      }
+    },
+    "ligtInMonumentenComplex": {
+      "$ref": "./MonumentencomplexenLink.schema.json"
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "The schema field is exposed with every record",
+      "readOnly": true
+    },
+    "self": {
+      "$ref": "./MonumentenmonumentenLink.schema.json"
+    }
+  },
+  "required": [
+    "betreftBagPand",
+    "heeftMonumentenSitueringen",
+    "ligtInMonumentenComplex",
+    "schema",
+    "self"
+  ]
+}

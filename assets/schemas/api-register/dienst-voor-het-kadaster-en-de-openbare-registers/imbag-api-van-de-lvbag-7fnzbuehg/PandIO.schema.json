@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/pandio",
+  "x-derived-from": [
+    "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/PandIO"
+  ],
+  "title": "PandIO",
+  "required": [
+    "pand"
+  ],
+  "type": "object",
+  "properties": {
+    "inonderzoek": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "$ref": "./KenmerkPandInOnderzoek.schema.json"
+      }
+    },
+    "pand": {
+      "$ref": "./Pand.schema.json"
+    }
+  },
+  "description": "Een Pand is de kleinste, bij de totstandkoming functioneel en bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden en betreedbaar en afsluitbaar is. Inclusief aanduiding of deze in onderzoek is"
+}

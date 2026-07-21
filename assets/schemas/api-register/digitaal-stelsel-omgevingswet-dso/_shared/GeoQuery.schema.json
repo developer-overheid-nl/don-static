@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/digitaal-stelsel-omgevingswet-dso/_shared/geoquery",
+  "x-derived-from": [
+    "https://developer.omgevingswet.overheid.nl/publish/pages/165401/toepasbareregels-samengesteldertrservices-v2.json#/components/schemas/GeoQuery",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/167490/toepasbareregels-crud-rtr-gegevens-v2.json#/components/schemas/GeoQuery",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v2.json#/components/schemas/GeoQuery",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171046/toepasbareregels-uitvoerenservices-v3.json#/components/schemas/GeoQuery",
+    "https://developer.omgevingswet.overheid.nl/publish/pages/171058/toepasbareregels-verzoeksroutering-v2.json#/components/schemas/GeoQuery"
+  ],
+  "description": "Filter op geografisch punt of vlak. Zie de [DSO API/URI strategie](https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie).",
+  "required": [
+    "intersects"
+  ],
+  "properties": {
+    "intersects": {
+      "description": "Punt of vlak waarmee het resultaat raakvlak moet hebben. Analoog aan ElasticSearch GeoShape Query (https://www.elastic.co/guide/en/elasticsearch/reference/5.0/query-dsl-geo-shape-query.html)",
+      "oneOf": [
+        {
+          "$ref": "../crud-rtr-gegevens-g85pejgdr/Point.schema.json"
+        },
+        {
+          "$ref": "../crud-rtr-gegevens-g85pejgdr/Polygon.schema.json"
+        },
+        {
+          "$ref": "./MultiPolygon.schema.json"
+        },
+        {
+          "description": "GeoJSon geometry collection volgens https://tools.ietf.org/html/rfc7946#section-3.1.8",
+          "type": "object",
+          "required": [
+            "geometries",
+            "type"
+          ],
+          "properties": {
+            "geometries": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "$ref": "../crud-rtr-gegevens-g85pejgdr/Point.schema.json"
+                  },
+                  {
+                    "$ref": "../crud-rtr-gegevens-g85pejgdr/Polygon.schema.json"
+                  },
+                  {
+                    "$ref": "./MultiPolygon.schema.json"
+                  }
+                ],
+                "minItems": 0
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "GeometryCollection"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "intersects": {
+        "type": "Point",
+        "coordinates": [
+          155000,
+          463000
+        ]
+      }
+    }
+  ]
+}

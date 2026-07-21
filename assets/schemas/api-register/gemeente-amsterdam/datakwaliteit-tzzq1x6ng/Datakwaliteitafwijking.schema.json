@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/datakwaliteit-tzzq1x6ng/datakwaliteitafwijking",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/datakwaliteit/openapi.json#/components/schemas/Datakwaliteitafwijking"
+  ],
+  "type": "object",
+  "description": "Attribuutwaarden uit tabellen die niet voldoen aan opgestelde regels.",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `afwijking._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./DatakwaliteitafwijkingLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "attrnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Attribuutnaam",
+      "description": "Naam van het geanalyseerde attribuut."
+    },
+    "datum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Validatie datum",
+      "description": "Datum van validatie."
+    },
+    "id": {
+      "type": "string",
+      "description": "Samenstelling van Id uit tabel regels en datum van uitvoering"
+    },
+    "identificatieVeldWaarde": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Identificatie veldwaarde",
+      "description": "Waarde van het attribuut uit de brontabel met het identificerende kenmerk behorende bij afwijkening, waarmee de record terug kan worden gevonden in de brontabel."
+    },
+    "regelId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Regel Id",
+      "description": "Id van de datakwaliteitsregel waarop  afwijking gebaseerd is."
+    },
+    "tabelnaam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Naam tabel",
+      "description": "Naam van de geanalyseerde tabel."
+    },
+    "value": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Attribuut waarde",
+      "description": "Waarde van het attribuut."
+    }
+  },
+  "required": [
+    "_links",
+    "id"
+  ]
+}

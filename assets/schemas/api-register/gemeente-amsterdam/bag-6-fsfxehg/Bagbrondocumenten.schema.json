@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/bag-6-fsfxehg/bagbrondocumenten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/bag/openapi.json#/components/schemas/Bagbrondocumenten"
+  ],
+  "type": "object",
+  "description": "In  deze tabel staat geen data meer en wordt binnenkort verwijderd",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `brondocumenten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "./BagbrondocumentenLink.schema.json"
+        }
+      },
+      "required": [
+        "schema",
+        "self"
+      ]
+    },
+    "bronleverancierCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bron leverancier code",
+      "description": "Verstrekker van brondocumenten en/​of gegevens voortkomend uit het uitoefenen of voorbereiden van een gemeentelijke bevoegdheid, die nodig zijn voor een registratie aan de bronhouder, conform vastgestelde aanleverspecificaties. code"
+    },
+    "bronleverancierOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Bron leverancier omschrijving",
+      "description": "Verstrekker van brondocumenten en/​of gegevens voortkomend uit het uitoefenen of voorbereiden van een gemeentelijke bevoegdheid, die nodig zijn voor een registratie aan de bronhouder, conform vastgestelde aanleverspecificaties. omschrijving"
+    },
+    "documentnummer": {
+      "type": "string",
+      "title": "Brondocument nummer",
+      "description": "Identificerende nummer van het document"
+    },
+    "registratiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Registratie datum",
+      "description": "De datum waarop het brondocument is opgeslagen in het register"
+    },
+    "typeBrondocumentCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Brondocument type code",
+      "description": "Code van het type brondocument. Bijvoorbeeld: Bouwvergunning, Splitsingvergunning, etc"
+    },
+    "typeBrondocumentOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Brondocument type omschrijving",
+      "description": "Het type brondocument. omschrijving"
+    },
+    "typeDossierCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Dossier type code",
+      "description": "Code van het type dossier. Bijvoorbeeld: Omgevingsvergunning of Terugmelding of sloopvergunning, etc"
+    },
+    "typeDossierOmschrijving": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Dossier type omschrijving",
+      "description": "Het type dossier. omschrijving"
+    }
+  },
+  "required": [
+    "_links",
+    "documentnummer"
+  ]
+}

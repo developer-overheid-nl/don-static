@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.don.apps.digilab.network/gemeente-amsterdam/gebieden--nkpfu6hg/gebiedenbuurten",
+  "x-derived-from": [
+    "https://api.data.amsterdam.nl/v1/gebieden/openapi.json#/components/schemas/Gebiedenbuurten"
+  ],
+  "type": "object",
+  "description": "Amsterdam is opgedeeld in buurten ten behoeve van statistieken, een buurt is aaneengesloten gedeelte binnen een wijk, waarvan de grenzen zo veel mogelijk gebaseerd zijn op topografische elementen",
+  "properties": {
+    "_links": {
+      "title": " links",
+      "type": "object",
+      "description": "The contents of the `buurten._links` field. It contains all relationships with objects.",
+      "properties": {
+        "ligtInGgpgebied": {
+          "$ref": "./GebiedenGgpgebiedenLink.schema.json"
+        },
+        "ligtInGgwgebied": {
+          "$ref": "./GebiedenGgwgebiedenLink.schema.json"
+        },
+        "ligtInWijk": {
+          "$ref": "./GebiedenWijkenLink.schema.json"
+        },
+        "schema": {
+          "type": "string",
+          "format": "uri",
+          "description": "The schema field is exposed with every record",
+          "readOnly": true
+        },
+        "self": {
+          "$ref": "../_shared/GebiedenBuurtenLink.schema.json"
+        }
+      },
+      "required": [
+        "ligtInGgpgebied",
+        "ligtInGgwgebied",
+        "ligtInWijk",
+        "schema",
+        "self"
+      ]
+    },
+    "beginGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object geldigheid startdatum",
+      "description": "De begindatum van de geldigheid van een bepaalde combinatie van gegevens over een buurt"
+    },
+    "cbsCode": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object CBS code",
+      "description": "De CBS-code van het object"
+    },
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object code",
+      "description": "Volledige, samengestelde, code, bestaande uit stadsdeelcode, wijkcode en buurtcode"
+    },
+    "documentdatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "Brondocument datum",
+      "description": "De datum waarop het document is vastgesteld, op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van het object heeft plaatsgevonden"
+    },
+    "documentnummer": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Brondocument nummer",
+      "description": "De unieke aanduiding van het brondocument op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van het object heeft plaatsgevonden"
+    },
+    "eindGeldigheid": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object geldigheid einddatum",
+      "description": "De einddatum van de geldigheid van een bepaalde combinatie van gegevens over een buurt"
+    },
+    "geometrie": {
+      "type": "object",
+      "description": "GeoJSON geometry",
+      "allOf": [
+        {
+          "type": "object",
+          "description": "GeoJSON geometry",
+          "discriminator": {
+            "propertyName": "type"
+          },
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Based on the geometry type, a point or collection of points.",
+              "items": {
+                "type": "number"
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point",
+                "LineString",
+                "Polygon",
+                "MultiPoint",
+                "MultiLineString",
+                "MultiPolygon"
+              ],
+              "description": "the geometry type"
+            }
+          }
+        },
+        {
+          "properties": {
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "description": "Point in 3D space",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "identificatie": {
+      "type": "string",
+      "title": "Object ID",
+      "description": "Uniek identificerend kenmerk voor het object dat onveranderlijk is zolang het object bestaat"
+    },
+    "ligtInGgpgebiedId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in GGP gebied",
+      "description": "Het GGP gebied waar de buurt in ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "ligtInGgwgebiedId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in GGW gebied",
+      "description": "Het gebiedsgericht werken gebied waar de buurt in ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "ligtInWijkId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Buurt ligt in wijk",
+      "description": "De wijk waar de buurt in ligt",
+      "readOnly": true,
+      "deprecated": true
+    },
+    "naam": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Object naam",
+      "description": "De naam van het object"
+    },
+    "registratiedatum": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "title": "Object registratiedatum",
+      "description": "Datum waarop het gegeven in de bron geregistreerd is"
+    },
+    "volgnummer": {
+      "type": "integer",
+      "maximum": 9223372036854776000,
+      "minimum": -9223372036854776000,
+      "format": "int64",
+      "title": "Object volgnummer",
+      "description": "Uniek volgnummer van de toestand van het object"
+    }
+  },
+  "required": [
+    "_links",
+    "identificatie",
+    "ligtInGgpgebiedId",
+    "ligtInGgwgebiedId",
+    "ligtInWijkId",
+    "volgnummer"
+  ]
+}
