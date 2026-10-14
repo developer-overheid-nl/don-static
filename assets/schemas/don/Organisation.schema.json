@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://static.developer.overheid.nl/schemas/don/Organisation.schema.json",
+  "title": "Organisation",
+  "description": "A government organisation, identified by its TOOI URI",
+  "type": "object",
+  "properties": {
+    "uri": {
+      "description": "The TOOI identifier of the organisation",
+      "type": "string",
+      "format": "uri",
+      "examples": [
+        "https://identifier.overheid.nl/tooi/id/gemeente/gm0518",
+        "https://identifier.overheid.nl/tooi/id/gemeente/gm0142"
+      ]
+    },
+    "label": {
+      "description": "The label of the organisation. This is a human-readable name of the organisation, derived from the TOOI identifier.",
+      "type": "string",
+      "examples": [
+        "gemeente Ambt Delden",
+        "KOOP",
+        "developer.overheid.nl"
+      ]
+    }
+  },
+  "required": [
+    "uri"
+  ]
+}

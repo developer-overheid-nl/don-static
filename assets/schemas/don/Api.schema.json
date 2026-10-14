@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://static.developer.overheid.nl/schemas/don/Api.schema.json",
+  "title": "API",
+  "description": "An API",
+  "type": "object",
+  "properties": {
+    "contact": {
+      "description": "Contact details",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The email address of the contact",
+          "examples": [
+            "developer.overheid@geonovum.nl",
+            "api@geonovum.nl"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the contact",
+          "examples": [
+            "developer.overheid.nl",
+            "Geonovum"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "The URL of the contact",
+          "examples": [
+            "https://github.com/developer-overheid-nl",
+            "https://github.com/geonovum"
+          ]
+        }
+      },
+      "required": [
+        "email",
+        "name",
+        "url"
+      ]
+    },
+    "title": {
+      "description": "The title of the API",
+      "type": "string",
+      "examples": [
+        "API register API v1",
+        "OSS register API v1"
+      ]
+    },
+    "summary": {
+      "description": "Short plain-text summary of the API. Derived from description when no explicit summary is available.",
+      "type": "string",
+      "examples": [
+        "Catalogue of the APIs of the Dutch government.",
+        "Register of open source repositories of the Dutch government."
+      ]
+    },
+    "description": {
+      "description": "The description of the API",
+      "type": "string",
+      "examples": [
+        "This is version 1 of the API register. This description can also contain Markdown.",
+        "Register of open source repositories published by Dutch government organisations."
+      ]
+    },
+    "organisation": {
+      "$ref": "Organisation.schema.json"
+    },
+    "lifecycle": {
+      "$ref": "ApiLifecycle.schema.json"
+    },
+    "oasUrl": {
+      "description": "The URL of the OAS document",
+      "type": "string",
+      "format": "uri",
+      "examples": [
+        "https://api.developer.overheid.nl/api-register/v1/openapi.json",
+        "https://api.developer.overheid.nl/oss-register/v1/openapi.json"
+      ]
+    },
+    "auth": {
+      "type": "array",
+      "description": "The authentication methods supported by the API",
+      "items": {
+        "type": "string",
+        "examples": [
+          "OAuth2",
+          "API Key"
+        ]
+      }
+    },
+    "docsUrl": {
+      "type": "string",
+      "description": "The URL to the documentation of the API",
+      "format": "uri",
+      "examples": [
+        "https://developer.overheid.nl/kennisbank/",
+        "https://www.geonovum.nl/api"
+      ]
+    },
+    "servers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL of the server",
+            "examples": [
+              "https://api.developer.overheid.nl/api-register/v1",
+              "https://api.developer.overheid.nl/oss-register/v1"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "A description of the server",
+            "examples": [
+              "Production server",
+              "Test server"
+            ]
+          }
+        },
+        "required": [
+          "url",
+          "description"
+        ]
+      }
+    }
+  },
+  "required": [
+    "contact",
+    "title",
+    "summary",
+    "description",
+    "organisation",
+    "lifecycle",
+    "auth",
+    "servers"
+  ]
+}

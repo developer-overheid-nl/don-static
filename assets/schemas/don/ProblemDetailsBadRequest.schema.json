@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://static.developer.overheid.nl/schemas/don/ProblemDetailsBadRequest.schema.json",
+  "title": "Problem Details for Bad Request",
+  "description": "Problem Details (RFC 9457) for a 400 Bad Request, extended with the validation errors that caused it",
+  "allOf": [
+    {
+      "$ref": "https://static.developer.overheid.nl/schemas/adr/2.2/ProblemDetails.schema.json"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "errors": {
+      "description": "List of errors encountered during processing",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "in": {
+            "description": "Location of the error (e.g., body, query, header)",
+            "type": "string",
+            "enum": [
+              "body",
+              "path",
+              "query",
+              "header"
+            ],
+            "examples": [
+              "body",
+              "query"
+            ]
+          },
+          "location": {
+            "description": "Where the error occurred: a JSON Pointer (RFC 6901) into the request body when `in` is `body`, otherwise the name of the path, query or header parameter",
+            "type": "string",
+            "examples": [
+              "/foo/0/bar",
+              "page"
+            ]
+          },
+          "code": {
+            "description": "A code representing the type of error",
+            "type": "string",
+            "examples": [
+              "date.format",
+              "string.minLength"
+            ]
+          },
+          "detail": {
+            "description": "A detailed message describing the error",
+            "type": "string",
+            "examples": [
+              "must be ISO 8601",
+              "must be at least 3 characters"
+            ]
+          }
+        },
+        "required": [
+          "in",
+          "location",
+          "code",
+          "detail"
+        ]
+      }
+    }
+  }
+}
