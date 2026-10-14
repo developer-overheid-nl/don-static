@@ -5,7 +5,8 @@
     "adr": {
       "title": "API Design Rules",
       "description": "API Design Rules schemas, including guidelines and best practices",
-      "path": "./schemas/adr"
+      "path": "./schemas/adr",
+      "baseUri": "https://static.developer.overheid.nl/schemas/adr"
     }
   }
 }
