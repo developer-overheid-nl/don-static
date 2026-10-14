@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://static.developer.overheid.nl/schemas/don/AgendaEvent.schema.json",
+  "title": "Agenda event",
+  "description": "An event in an agenda, such as a conference, meetup or knowledge session",
+  "type": "object",
+  "properties": {
+    "title": {
+      "description": "The title of the event",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "examples": [
+        "PGDay Lowlands 2026",
+        "Kennissessie API Design Rules"
+      ]
+    },
+    "summary": {
+      "description": "Short plain-text summary of the event",
+      "type": "string",
+      "maxLength": 2000,
+      "examples": [
+        "PostgreSQL-conferentie van PostgreSQL Europe, voor developers en databaseprofessionals.",
+        "Online sessie over het toepassen van de API Design Rules in nieuwe API's."
+      ]
+    },
+    "startsAt": {
+      "description": "Start of the event (RFC 3339, with UTC offset)",
+      "type": "string",
+      "format": "date-time",
+      "examples": [
+        "2026-09-10T09:00:00+02:00",
+        "2026-11-19T14:00:00+01:00"
+      ]
+    },
+    "endsAt": {
+      "description": "End of the event (RFC 3339, with UTC offset). Must not be before `startsAt`.",
+      "type": "string",
+      "format": "date-time",
+      "examples": [
+        "2026-09-10T17:00:00+02:00",
+        "2026-11-19T15:30:00+01:00"
+      ]
+    },
+    "location": {
+      "description": "Where the event takes place: a venue and city, or an indication that it is online",
+      "type": "string",
+      "maxLength": 300,
+      "examples": [
+        "TivoliVredenburg, Utrecht",
+        "Online"
+      ]
+    },
+    "url": {
+      "description": "Page with more information about the event",
+      "type": "string",
+      "format": "uri",
+      "maxLength": 2000,
+      "examples": [
+        "https://2026.pgday.nl/",
+        "https://developer.overheid.nl/"
+      ]
+    }
+  },
+  "required": [
+    "title",
+    "startsAt",
+    "endsAt",
+    "url"
+  ]
+}
