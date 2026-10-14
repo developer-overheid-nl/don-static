@@ -1,0 +1,449 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://static.developer.overheid.nl/schemas/don/Repository.schema.json",
+  "title": "Repository",
+  "description": "An open source repository",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the source code repository.",
+      "examples": [
+        "https://github.com/developer-overheid-nl/oas-generator",
+        "https://gitlab.com/gemeente-den-haag/parkeren"
+      ]
+    },
+    "forkType": {
+      "type": "string",
+      "description": "Fork classification of the repository, derived from the fork flag of the code hosting platform and the `url` and `isBasedOn` keys in its publiccode.yml:\n\n- `TECHNICAL_FORK`: a fork created to contribute changes back to the original software. Its publiccode.yml still describes the original: the `url` points to the original repository.\n- `VARIANT_FORK`: a fork that is maintained as separate software. Its publiccode.yml has its own `url` and refers to the original software in `isBasedOn`.\n- `GIT_FORK`: marked as a fork by the code hosting platform, without publiccode.yml metadata that identifies it as a technical fork or a variant.\n- `URL_MISTAKE`: not marked as a fork, but the `url` in its publiccode.yml points to a different repository. The repository is either an unmarked fork, or the `url` was filled in incorrectly.",
+      "enum": [
+        "TECHNICAL_FORK",
+        "VARIANT_FORK",
+        "GIT_FORK",
+        "URL_MISTAKE"
+      ],
+      "examples": [
+        "GIT_FORK",
+        "VARIANT_FORK"
+      ]
+    },
+    "organisation": {
+      "$ref": "Organisation.schema.json"
+    },
+    "publiccodeUrl": {
+      "type": "string",
+      "description": "URL of publiccode.yml in the repository.",
+      "examples": [
+        "https://github.com/developer-overheid-nl/oas-generator/blob/main/publiccode.yml",
+        "https://gitlab.com/gemeente-den-haag/parkeren/-/blob/main/publiccode.yml"
+      ]
+    },
+    "shortDescription": {
+      "type": "string",
+      "description": "Description of the repository from the git hosting (e.g. the repository description). Used as a fallback when no publiccode.yml is available.",
+      "examples": [
+        "Generator for OpenAPI documents that comply with the API Design Rules",
+        "Parking permits for residents"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the repository from the git hosting. Used as a fallback when no publiccode.yml is available.",
+      "examples": [
+        "oas-generator",
+        "parkeren"
+      ]
+    },
+    "lastActivityAt": {
+      "type": "string",
+      "format": "date-time",
+      "examples": [
+        "2026-10-14T09:01:52Z",
+        "2026-09-30T15:42:10+02:00"
+      ]
+    },
+    "archived": {
+      "type": "boolean",
+      "description": "Whether the repository is archived and hidden from default repository listings.",
+      "examples": [
+        false,
+        true
+      ]
+    },
+    "publiccode": {
+      "type": "object",
+      "description": "Mandatory and conditionally mandatory fields extracted from publiccode.yml v0.5.0.",
+      "additionalProperties": false,
+      "properties": {
+        "publiccodeYmlVersion": {
+          "type": "string",
+          "description": "Version of the publiccode.yml schema.",
+          "enum": [
+            "0",
+            "0.2",
+            "0.2.0",
+            "0.2.1",
+            "0.2.2",
+            "0.3",
+            "0.3.0",
+            "0.4",
+            "0.4.0",
+            "0.5",
+            "0.5.0"
+          ],
+          "examples": [
+            "0.5",
+            "0.4"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "Software name from publiccode.yml.",
+          "examples": [
+            "OAS Generator",
+            "Parkeren"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Repository or project URL from publiccode.yml.",
+          "examples": [
+            "https://github.com/developer-overheid-nl/oas-generator",
+            "https://gitlab.com/gemeente-den-haag/parkeren"
+          ]
+        },
+        "landingURL": {
+          "type": "string",
+          "format": "uri",
+          "description": "Landing page URL from publiccode.yml.",
+          "examples": [
+            "https://developer-overheid-nl.github.io/oas-generator/",
+            "https://www.denhaag.nl/parkeren"
+          ]
+        },
+        "platforms": {
+          "type": "array",
+          "description": "Supported platforms.",
+          "items": {
+            "type": "string",
+            "examples": [
+              "web",
+              "linux"
+            ]
+          }
+        },
+        "developmentStatus": {
+          "type": "string",
+          "description": "Development status from publiccode.yml.",
+          "enum": [
+            "concept",
+            "development",
+            "beta",
+            "stable",
+            "obsolete"
+          ],
+          "examples": [
+            "beta",
+            "stable"
+          ]
+        },
+        "softwareType": {
+          "type": "string",
+          "description": "Software type from publiccode.yml.",
+          "enum": [
+            "standalone/mobile",
+            "standalone/iot",
+            "standalone/desktop",
+            "standalone/web",
+            "standalone/backend",
+            "standalone/other",
+            "addon",
+            "library",
+            "configurationFiles"
+          ],
+          "examples": [
+            "standalone/web",
+            "library"
+          ]
+        },
+        "legal": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "license": {
+              "type": "string",
+              "description": "SPDX license expression.",
+              "examples": [
+                "EUPL-1.2",
+                "MIT"
+              ]
+            }
+          },
+          "required": [
+            "license"
+          ]
+        },
+        "description": {
+          "type": "object",
+          "description": "Localized description blocks keyed by language tag.",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "shortDescription": {
+                "type": "string",
+                "maxLength": 150,
+                "examples": [
+                  "Genereert een OpenAPI-document dat voldoet aan de API Design Rules.",
+                  "Generates an OpenAPI document that complies with the API Design Rules."
+                ]
+              },
+              "longDescription": {
+                "type": "string",
+                "minLength": 150,
+                "maxLength": 10000,
+                "examples": [
+                  "De OAS Generator maakt op basis van een korte configuratie een OpenAPI-document dat voldoet aan de API Design Rules. Het document dient als startpunt voor het ontwikkelen van API's voor de overheid.",
+                  "The OAS Generator creates an OpenAPI document from a short configuration that complies with the Dutch API Design Rules. The document serves as a starting point for developing government APIs."
+                ]
+              },
+              "features": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "examples": [
+                    "OpenAPI-document genereren uit een korte configuratie",
+                    "Invoer valideren tegen een schema"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "shortDescription"
+            ]
+          }
+        },
+        "maintenance": {
+          "description": "This section provides information on the maintenance status of the software, useful to evaluate whether the software is actively developed or not.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "internal",
+                "contract",
+                "community",
+                "none"
+              ],
+              "examples": [
+                "internal",
+                "contract"
+              ]
+            },
+            "contacts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "examples": [
+                      "Developer Overheid",
+                      "Team Parkeren"
+                    ]
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            },
+            "contractors": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "examples": [
+                      "Geonovum",
+                      "Logius"
+                    ]
+                  },
+                  "until": {
+                    "type": "string",
+                    "format": "date",
+                    "examples": [
+                      "2027-12-31",
+                      "2026-06-30"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "until"
+                ]
+              }
+            }
+          },
+          "required": [
+            "type"
+          ]
+        },
+        "localisation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "localisationReady": {
+              "type": "boolean",
+              "examples": [
+                true,
+                false
+              ]
+            },
+            "availableLanguages": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "examples": [
+                  "nl",
+                  "en"
+                ]
+              }
+            }
+          },
+          "required": [
+            "localisationReady",
+            "availableLanguages"
+          ]
+        },
+        "organisation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "uri": {
+              "description": "The unique identifier for an organisation",
+              "type": "string",
+              "format": "uri",
+              "examples": [
+                "https://identifier.overheid.nl/tooi/id/gemeente/gm0518",
+                "https://identifier.overheid.nl/tooi/id/gemeente/gm0142"
+              ]
+            }
+          },
+          "required": [
+            "uri"
+          ]
+        },
+        "dependsOn": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "open": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "examples": [
+                      "PostgreSQL",
+                      "Node.js"
+                    ]
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            },
+            "proprietary": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "examples": [
+                      "Microsoft SQL Server",
+                      "Oracle Database"
+                    ]
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            },
+            "hardware": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "examples": [
+                      "Raspberry Pi",
+                      "NVIDIA GPU"
+                    ]
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            }
+          }
+        },
+        "fundedBy": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "examples": [
+                  "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+                  "Gemeente Den Haag"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "publiccodeYmlVersion",
+        "name",
+        "url",
+        "platforms",
+        "developmentStatus",
+        "softwareType",
+        "description",
+        "legal",
+        "maintenance",
+        "localisation"
+      ]
+    },
+    "longDescription": {
+      "type": "string",
+      "description": "Long description of the repository, typically from publiccode.yml.",
+      "examples": [
+        "The OAS Generator creates an OpenAPI document from a short configuration that complies with the Dutch API Design Rules. The document serves as a starting point for developing government APIs.",
+        "Application for residents of The Hague to apply for and manage parking permits."
+      ]
+    }
+  },
+  "required": [
+    "url",
+    "organisation"
+  ]
+}

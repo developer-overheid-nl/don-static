@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://static.developer.overheid.nl/schemas/don/ApiLifecycle.schema.json",
+  "title": "API Lifecycle",
+  "description": "The lifecycle status of the API",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "description": "The lifecycle status of the API, derived from the `deprecated` and `sunset` dates:\n\n- `active`: the API is supported and may still be developed further.\n- `deprecated`: the `deprecated` date has passed. The API can still be used, but is no longer supported or developed further. Consumers should migrate.\n- `sunset`: the API is being phased out and will be taken offline on the `sunset` date, which lies in the future.\n- `retired`: the `sunset` date has passed. The API is offline and can no longer be used.",
+      "enum": [
+        "active",
+        "deprecated",
+        "sunset",
+        "retired"
+      ],
+      "examples": [
+        "active",
+        "deprecated"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of the API",
+      "examples": [
+        "1.0.0",
+        "3.2.1"
+      ]
+    },
+    "deprecated": {
+      "type": "string",
+      "format": "date",
+      "description": "The date from which the API is no longer supported or developed further. Until this date the status is `active`.",
+      "examples": [
+        "2025-10-10",
+        "2026-03-01"
+      ]
+    },
+    "sunset": {
+      "type": "string",
+      "format": "date",
+      "description": "The date from which the API is taken offline. Before this date the status is `sunset`, after it `retired`.",
+      "examples": [
+        "2027-11-11",
+        "2026-12-31"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "version"
+  ]
+}
