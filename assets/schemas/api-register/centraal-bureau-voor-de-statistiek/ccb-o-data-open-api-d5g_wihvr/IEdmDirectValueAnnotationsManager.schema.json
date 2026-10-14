@@ -1,9 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.don.apps.digilab.network/centraal-bureau-voor-de-statistiek/ccb-o-data-open-api-d5g_wihvr/iedmdirectvalueannotationsmanager",
-  "x-derived-from": [
-    "https://datasets.cbs.nl/odata/v1/openapi.json#/components/schemas/IEdmDirectValueAnnotationsManager"
-  ],
-  "type": "object",
-  "additionalProperties": false
-}
