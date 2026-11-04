@@ -10,6 +10,13 @@ The schema assets are also published as a separate container image for source-me
 ghcr.io/developer-overheid-nl/source-meta-schemas
 ```
 
+## Schemas
+
+The schemas in [assets/schemas](./assets/schemas/) are read by the
+[Schema-register](https://schemas.developer.overheid.nl). See the
+[README there](./assets/schemas/README.md) for what the folder holds and how to
+add a schema.
+
 ## Development
 
 To build & run locally, execute the following commands:
