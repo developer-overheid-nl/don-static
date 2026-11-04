@@ -15,8 +15,8 @@
         "retired"
       ],
       "examples": [
-        "active",
-        "deprecated"
+        "deprecated",
+        "active"
       ]
     },
     "version": {
@@ -39,7 +39,7 @@
     "sunset": {
       "type": "string",
       "format": "date",
-      "description": "The date from which the API is taken offline. Before this date the status is `sunset`, after it `retired`.",
+      "description": "The date from which the API is taken offline. After this date the status is `retired`.",
       "examples": [
         "2027-11-11",
         "2026-12-31"
